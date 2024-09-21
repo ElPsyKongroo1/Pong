@@ -1,0 +1,88 @@
+bool BallOfflineCollision(entity currentEntity, entity otherEntity)
+{
+	bool collisionHandled = false;
+	string otherEntityTag = otherEntity.Tag.GetTag();
+	
+	if (otherEntityTag == "Left Wall")
+	{
+		GameState::SetField("PlayerTwoScore", GameState::GetFieldUInt16("PlayerTwoScore") + 1);
+		UI::SetWidgetText("base_window", "score_player_2", str(GameState::GetFieldUInt16("PlayerTwoScore")));
+		currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
+		Audio::PlaySound("Audio/lose_sound.wav");
+		UI::DisplayWindow("pre_game_warning", true);
+		Input::LoadInputMode("Input/Pre_Start.kginput");
+		collisionHandled = true;
+	}
+	else if (otherEntityTag == "Right Wall")
+	{
+		GameState::SetField("PlayerOneScore", GameState::GetFieldUInt16("PlayerOneScore") + 1);
+		UI::SetWidgetText("base_window", "score_player_1", str(GameState::GetFieldUInt16("PlayerOneScore")));
+		currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
+		Audio::PlaySound("Audio/lose_sound.wav");
+		UI::DisplayWindow("pre_game_warning", true);
+		Input::LoadInputMode("Input/Pre_Start.kginput");
+		collisionHandled = true;
+	}
+	else if (otherEntityTag == "Top Wall" || otherEntityTag == "Bottom Wall")
+	{
+		vector2 horizontalDirection;
+		vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
+		if (currentVelocity.x > 0.0f)
+		{
+			horizontalDirection = {1.0f, 0.0f};
+		}
+		else
+		{
+			horizontalDirection =  {-1.0f, 0.0f};
+		}
+		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + horizontalDirection * 0.1f) * currentEntity.GetFieldFloat("Speed");
+		currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
+		Audio::PlaySound("Audio/pop-sound.wav");
+		collisionHandled = true;
+	}
+	
+	else if (otherEntityTag == "Player1")
+	{
+		if (Input::IsKeyPressed(Key::W))
+		{
+			float deflectionFactor = Input::IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
+			vector2 up = {0.0f, 1.0f};
+			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
+			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.GetFieldFloat("Speed");
+			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
+		}
+		if (Input::IsKeyPressed(Key::A))
+		{
+			float deflectionFactor = Input::IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
+			vector2 up = {0.0f, -1.0f};
+			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
+			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.GetFieldFloat("Speed");
+			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
+		}
+		Audio::PlaySound("Audio/pop-sound.wav");
+		collisionHandled = true;
+	}
+	else if (otherEntityTag == "Player2")
+	{
+		if (Input::IsKeyPressed(Key::O))
+		{
+			float deflectionFactor = Input::IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
+			vector2 up = {0.0f, 1.0f};
+			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
+			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.GetFieldFloat("Speed");
+			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
+		}
+		if (Input::IsKeyPressed(Key::Semicolon))
+		{
+			float deflectionFactor = Input::IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
+			vector2 up = {0.0f, -1.0f};
+			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
+			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.GetFieldFloat("Speed");
+			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
+		}
+		Audio::PlaySound("Audio/pop-sound.wav");
+		collisionHandled = true;
+	}
+	
+	return collisionHandled;
+}

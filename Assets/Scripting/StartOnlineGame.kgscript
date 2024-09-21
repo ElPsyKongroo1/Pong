@@ -1,0 +1,37 @@
+void StartOnlineGame()
+{
+	uint16 userSlot = Network::GetActiveSessionSlot();
+	if (userSlot == 0)
+	{
+		Input::LoadInputMode("Input/Online_Player1_Runtime.kginput");
+	}
+	else if (userSlot == 1)
+	{
+		Input::LoadInputMode("Input/Online_Player2_Runtime.kginput");
+	}
+	UI::DisplayWindow("pre_game_warning", false);
+	UI::DisplayWindow("online_lobby", false);
+	UI::DisplayWindow("base_window", true);
+	entity player1 = Scenes::GetEntity("Player1");
+	player1.Transform.SetTranslation(player1.GetFieldVector3("InitialPosition"));
+	
+	entity player2 = Scenes::GetEntity("Player2");
+	player2.Transform.SetTranslation(player2.GetFieldVector3("InitialPosition"));
+	
+	entity ball = Scenes::GetEntity("Ball");
+	ball.Transform.SetTranslation(ball.GetFieldVector3("InitialPosition"));
+	
+	uint16 ballDirection = GameState::GetFieldUInt16("BallDirection");
+	vector2 velocity = {0.0f, 0.0f};
+	if (ballDirection == 0)
+	{
+		velocity.x = -1.0f;
+		GameState::SetField("BallDirection", 1);
+	}
+	else
+	{
+		velocity.x = 1.0f;
+		GameState::SetField("BallDirection", 0);
+	}
+	ball.RigidBody.SetLinearVelocity(velocity * ball.GetFieldFloat("Speed"));
+}

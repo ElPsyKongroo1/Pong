@@ -1,0 +1,8 @@
+void Player1OnUpdate(entity currentEntity, float deltaTime)
+{
+	uint16 userSlot = Network::GetActiveSessionSlot();
+	if (userSlot == 0)
+	{
+		Network::PushAllEntityLocation(currentEntity, currentEntity.Transform.GetTranslation());
+	}
+}

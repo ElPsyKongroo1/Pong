@@ -1,0 +1,11 @@
+Name: RuntimeState
+Fields:
+  - Name: BallDirection
+    Type: UInteger16
+    Value: 1
+  - Name: PlayerOneScore
+    Type: UInteger16
+    Value: 0
+  - Name: PlayerTwoScore
+    Type: UInteger16
+    Value: 0

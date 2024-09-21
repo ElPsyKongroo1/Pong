@@ -1,0 +1,17 @@
+void Player1MoveDown(entity currentEntity, float timeStep)
+{
+	vector3 translation = currentEntity.Transform.GetTranslation();
+	bool upperLimit = translation.y >= 11.15;
+	bool lowerLimit = translation.y <= -11.15;
+	
+	float speed = Input::IsKeyPressed(Key::LeftShift) ? currentEntity.GetFieldFloat("Speed") * currentEntity.GetFieldFloat("SpeedUpFactor") : currentEntity.GetFieldFloat("Speed");
+	vector3 velocity = {0.0f, 0.0f, 0.0f};
+
+	if (!lowerLimit) 
+	{
+		velocity.y = -1.0f; 
+	}
+
+	velocity = velocity * speed * timeStep;
+	currentEntity.Transform.SetTranslation(currentEntity.Transform.GetTranslation() + velocity);
+}

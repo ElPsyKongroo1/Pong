@@ -1,0 +1,4 @@
+void PlayMenuSelect()
+{
+	Audio::PlaySound("Audio/menu_select.wav");
+}
