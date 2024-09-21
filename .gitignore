@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Private Files
+*.env
+
+# Specific Folders
+/Assets/Scripting/Binary/**

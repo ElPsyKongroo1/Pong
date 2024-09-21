@@ -1,0 +1,8 @@
+void UpdateOnlineCount(uint32 count)
+{
+	string onlineCount = "Online: " + str(count);
+	UI::SetWidgetText("main_window", "online_count", onlineCount);
+	UI::WidgetSelectable("main_window", "online_multiplayer", true);
+	UI::WidgetTextColor("main_window", "online_multiplayer", {1.0f, 1.0f, 1.0f, 1.0f});
+	UI::WidgetBackgroundColor("main_window", "online_multiplayer", {103.0f / 255.0f, 17.0f / 255.0f, 175.0f / 255.0f, 54.0f / 255.0f});
+}

@@ -1,0 +1,20 @@
+Project:
+  Name: Pong
+  StartSceneHandle: 13036162138140767594
+  StartGameState: 13630226515263756832
+  AssetDirectory: Assets
+  ScriptModulePath: Scripts/Binaries/Pong.dll
+  ScriptDLLPath: Scripting/bin/Pong.dll
+  DefaultFullscreen: false
+  TargetResolution: 1600x900
+  OnRuntimeStart: 14683932765512752045
+  OnUpdateUserCount: 18163504705534252383
+  OnApproveJoinSession: 14942570159458352892
+  OnUserLeftSession: 7445822592925037095
+  OnCurrentSessionInit: 8444652895326507655
+  OnConnectionTerminated: 4342390925410131221
+  OnUpdateSessionUserSlot: 3176244785148247992
+  OnStartSession: 1819971799574496652
+  OnSessionReadyCheckConfirm: 6410065240318073462
+  OnReceiveSignal: 11068697129652250038
+  AppIsNetworked: true

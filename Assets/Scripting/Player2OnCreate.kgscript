@@ -1,0 +1,6 @@
+void Player2OnCreate(entity currentEntity)
+{
+	currentEntity.HasComponent("TransformComponent");
+	currentEntity.HasComponent("Rigidbody2DComponent");
+	currentEntity.SetFieldVector3("InitialPosition", currentEntity.Transform.GetTranslation());
+}

@@ -1,0 +1,33 @@
+bool BallOnPhysicsCollisionEnd(entity currentEntity,entity otherEntity)
+{
+	uint16 userSlot = Network::GetActiveSessionSlot();
+	if (userSlot == Math::MaxUInt16())
+	{
+		return false;
+	}
+
+	bool collisionHandled = false;
+	string otherEntityTag = otherEntity.Tag.GetTag();
+	
+	if (otherEntityTag == "Player1")
+	{
+		if (userSlot == 0)
+		{
+			vector3 updateVector = currentEntity.Transform.GetTranslation();
+			updateVector.x = updateVector.x + 0.2f;
+			Network::SendAllEntityPhysics(currentEntity, updateVector, currentEntity.RigidBody.GetLinearVelocity());
+		}
+		collisionHandled = true;
+	}
+	else if (otherEntityTag == "Player2")
+	{
+		if (userSlot == 1)
+		{
+			vector3 updateVector = currentEntity.Transform.GetTranslation();
+			updateVector.x = updateVector.x - 0.2f;
+			Network::SendAllEntityPhysics(currentEntity, updateVector, currentEntity.RigidBody.GetLinearVelocity());
+		}
+		collisionHandled = true;
+	}
+	return collisionHandled;
+}

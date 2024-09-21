@@ -1,0 +1,8 @@
+void OpenMainMenu()
+{
+	UI::LoadUI("UserInterface/Main Menu.kgui");
+	Scenes::LoadScene("Scenes/main_menu.kgscene");
+	Input::LoadInputMode("Input/MainMenu.kginput");
+	Audio::PlayMusic("Audio/blueA.wav");
+	Network::RequestUserCount();
+}

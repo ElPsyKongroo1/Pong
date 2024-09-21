@@ -1,0 +1,14 @@
+void ApproveJoinSession(uint16 userSlot)
+{
+	uint16 direction = 0; 
+	GameState::SetField("BallDirection", direction);
+	UI::LoadUI("UserInterface/RuntimeUI.kgui");
+	UI::DisplayWindow("online_lobby", true);
+	UI::DisplayWindow("base_window", false);
+	Scenes::LoadScene("Scenes/main_gameplay.kgscene");
+	Input::LoadInputMode("Input/Online_Lobby_Input.kginput");
+	Audio::PlaySound("Audio/menu_confirm.wav");
+	Audio::PlayMusic("Audio/greenA.wav");
+	string selectedWidget = "player_slot_" + str(userSlot);
+	UI::SetWidgetText("online_lobby", selectedWidget, "Connected!");
+}

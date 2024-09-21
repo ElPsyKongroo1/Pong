@@ -1,0 +1,10 @@
+void OpenPongGameplay()
+{
+	UI::LoadUI("UserInterface/RuntimeUI.kgui");
+	UI::DisplayWindow("pre_game_warning", true);
+	UI::DisplayWindow("base_window", false);
+	Scenes::LoadScene("Scenes/main_gameplay.kgscene");
+	Input::LoadInputMode("Input/Pre_Start.kginput");
+	Audio::PlaySound("Audio/menu_confirm.wav");
+	Audio::PlayMusic("Audio/greenA.wav");
+}

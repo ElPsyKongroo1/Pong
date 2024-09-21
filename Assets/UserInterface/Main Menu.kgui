@@ -1,0 +1,115 @@
+SelectColor: [0.403921574, 0.0666666701, 0.686274529, 0.745098054]
+FunctionPointerOnMove: 16979334666329041451
+Font: 7507720298335089313
+Windows:
+  - Tag: main_window
+    ScreenPosition: [0, 0, 0]
+    Size: [1, 1]
+    BackgroundColor: [1, 0.176470593, 1, 0.141176477]
+    ParentIndex: -1
+    ChildBufferIndex: -1
+    ChildBufferSize: 0
+    DefaultActiveWidget: 0
+    Widgets:
+      - Tag: local_multiplayer
+        WindowPosition: [0.0500000007, 0.529999971]
+        Size: [0.280000001, 0.119999997]
+        DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
+        WidgetType: TextWidget
+        Selectable: true
+        DirectionPointerUp: -1
+        DirectionPointerDown: 1
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 1863101606230896085
+        TextWidget:
+          Text: Local Multiplayer
+          TextSize: 0.430000007
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [7.04638672, 0.833333313]
+          TextCentered: true
+      - Tag: exit_app
+        WindowPosition: [0.129999995, 0.109999999]
+        Size: [0.100000001, 0.100000001]
+        DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
+        WidgetType: TextWidget
+        Selectable: true
+        DirectionPointerUp: 0
+        DirectionPointerDown: -1
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 10882227211325647722
+        TextWidget:
+          Text: Exit
+          TextSize: 0.550000012
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [1.42773438, 0.833333313]
+          TextCentered: true
+      - Tag: title
+        WindowPosition: [0.100000001, 0.74000001]
+        Size: [0.170000002, 0.140000001]
+        DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
+        WidgetType: TextWidget
+        Selectable: false
+        DirectionPointerUp: -1
+        DirectionPointerDown: 0
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 0
+        TextWidget:
+          Text: Pong
+          TextSize: 0.850000024
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [2.0546875, 0.833333313]
+          TextCentered: true
+      - Tag: logo
+        WindowPosition: [0.699999988, 0]
+        Size: [0.300000012, 0.100000001]
+        DefaultBackgroundColor: [1, 1, 1, 0]
+        WidgetType: TextWidget
+        Selectable: false
+        DirectionPointerUp: 1
+        DirectionPointerDown: -1
+        DirectionPointerLeft: 1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 0
+        TextWidget:
+          Text: ElPsy Incorporated
+          TextSize: 0.300000012
+          TextColor: [1, 1, 0.827450991, 1]
+          TextAbsoluteDimensions: [7.68896484, 0.857142866]
+          TextCentered: true
+      - Tag: online_multiplayer
+        WindowPosition: [0.0399999991, 0.319999993]
+        Size: [0.300000012, 0.109999999]
+        DefaultBackgroundColor: [0.117647059, 0.117647059, 0.117647059, 0.145098045]
+        WidgetType: TextWidget
+        Selectable: false
+        DirectionPointerUp: 0
+        DirectionPointerDown: 1
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 4669916971671854194
+        TextWidget:
+          Text: Online Multiplayer
+          TextSize: 0.430000007
+          TextColor: [1, 1, 1, 0.870588243]
+          TextAbsoluteDimensions: [7.53369141, 0.857142866]
+          TextCentered: true
+      - Tag: online_count
+        WindowPosition: [0.769999981, 0.870000005]
+        Size: [0.140000001, 0.100000001]
+        DefaultBackgroundColor: [0.549019635, 0.172549024, 0.172549024, 0]
+        WidgetType: TextWidget
+        Selectable: false
+        DirectionPointerUp: -1
+        DirectionPointerDown: 0
+        DirectionPointerLeft: 0
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 0
+        TextWidget:
+          Text: Offline
+          TextSize: 0.469999999
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [2.70654297, 0.857142866]
+          TextCentered: true

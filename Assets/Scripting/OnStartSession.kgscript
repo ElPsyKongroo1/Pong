@@ -1,0 +1,18 @@
+void OnStartSession()
+{	
+		uint16 userSlot = Network::GetActiveSessionSlot();
+		UI::DisplayWindow("pre_game_warning", true);
+		UI::DisplayWindow("base_window", false);
+		UI::DisplayWindow("online_lobby", false);
+		Input::LoadInputMode("Input/Online_Pre_Start.kginput");
+		Audio::PlaySound("Audio/menu_confirm.wav");
+		if (userSlot == 0)
+		{
+			UI::SetWidgetText("pre_game_warning", "controls_2", "");
+		}
+		else if (userSlot == 1)
+		{
+			UI::SetWidgetText("pre_game_warning", "controls_1", "");
+		}
+		Network::EnableReadyCheck();
+}

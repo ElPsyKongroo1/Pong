@@ -1,0 +1,24 @@
+void OnReceiveSignal(uint16 signalNum)
+{
+	uint16 userSlot = Network::GetActiveSessionSlot();
+	
+	if (signalNum == 1)
+	{
+		entity ball = Scenes::GetEntity("Ball");
+		if (userSlot == 0)
+		{
+			GameState::SetField("PlayerOneScore", GameState::GetFieldUInt16("PlayerOneScore") + 1);
+			UI::SetWidgetText("base_window", "score_player_1", str(GameState::GetFieldUInt16("PlayerOneScore")));
+		}
+		else if (userSlot == 1)
+		{
+			GameState::SetField("PlayerTwoScore", GameState::GetFieldUInt16("PlayerTwoScore") + 1);
+			UI::SetWidgetText("base_window", "score_player_2", str(GameState::GetFieldUInt16("PlayerTwoScore")));
+		}
+		ball.RigidBody.SetLinearVelocity({0.0f, 0.0f});
+		Audio::PlaySound("Audio/lose_sound.wav");
+		UI::DisplayWindow("pre_game_warning", true);
+		Input::LoadInputMode("Input/Online_Pre_Start.kginput");
+		Network::EnableReadyCheck();
+	}
+}

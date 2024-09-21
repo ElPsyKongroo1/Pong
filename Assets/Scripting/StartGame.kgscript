@@ -1,0 +1,27 @@
+void StartGame()
+{
+	Input::LoadInputMode("Input/Runtime.kginput");
+	UI::DisplayWindow("pre_game_warning", false);
+	UI::DisplayWindow("online_lobby", false);
+	UI::DisplayWindow("base_window", true);
+	entity player1 = Scenes::GetEntity("Player1");
+	player1.Transform.SetTranslation(player1.GetFieldVector3("InitialPosition"));
+	entity player2 = Scenes::GetEntity("Player2");
+	player2.Transform.SetTranslation(player2.GetFieldVector3("InitialPosition"));
+	
+	entity ball = Scenes::GetEntity("Ball");
+	ball.Transform.SetTranslation(ball.GetFieldVector3("InitialPosition"));
+	
+	int32 directionChoice = Random::GetInteger(0, 1);
+	vector2 velocity = {0.0f, 0.0f};
+	
+	if (directionChoice == 0)
+	{
+		velocity.x = -1.0f;
+	}
+	else
+	{
+		velocity.x = 1.0f;
+	}
+	ball.RigidBody.SetLinearVelocity(velocity * ball.GetFieldFloat("Speed"));
+}
