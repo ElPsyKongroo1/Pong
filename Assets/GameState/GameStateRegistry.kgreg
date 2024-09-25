@@ -3,6 +3,6 @@ Assets:
   - AssetHandle: 13630226515263756832
     MetaData:
       CheckSum: f66a0b1f38a829518fa2d693d7376abe8bfd564b6c5f11e46056631a228ebdb2
-      IntermediateLocation: GameState/RuntimeState.kgstate
+      FileLocation: GameState/RuntimeState.kgstate
       AssetType: GameState
       Name: RuntimeState
