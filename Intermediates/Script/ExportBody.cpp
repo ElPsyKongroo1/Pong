@@ -141,11 +141,6 @@ void TransformComponent_SetTranslation(uint64_t a, Math::vec3 b)
 {
 	TransformComponent_SetTranslationPtr(a, b);
 }
-static std::function<void*(uint64_t a, const std::string& b)> GetEntityFieldByNamePtr {};
-void* GetEntityFieldByName(uint64_t a, const std::string& b)
-{
-	return GetEntityFieldByNamePtr(a, b);
-}
 static std::function<void(const std::string& a, const std::string& b, bool c)> SetWidgetSelectablePtr {};
 void SetWidgetSelectable(const std::string& a, const std::string& b, bool c)
 {
@@ -166,15 +161,20 @@ void SetWidgetBackgroundColor(const std::string& a, const std::string& b, Math::
 {
 	SetWidgetBackgroundColorPtr(a, b, c);
 }
-static std::function<void(uint64_t a, const std::string& b, void* c)> SetEntityFieldByNamePtr {};
-void SetEntityFieldByName(uint64_t a, const std::string& b, void* c)
+static std::function<void*(uint64_t a, uint64_t b, uint64_t c)> Scenes_GetProjectComponentFieldPtr {};
+void* Scenes_GetProjectComponentField(uint64_t a, uint64_t b, uint64_t c)
 {
-	SetEntityFieldByNamePtr(a, b, c);
+	return Scenes_GetProjectComponentFieldPtr(a, b, c);
 }
 static std::function<void(uint64_t a, Math::vec3 b, Math::vec2 c)> SendAllEntityPhysicsPtr {};
 void SendAllEntityPhysics(uint64_t a, Math::vec3 b, Math::vec2 c)
 {
 	SendAllEntityPhysicsPtr(a, b, c);
+}
+static std::function<void(uint64_t a, uint64_t b, uint64_t c,  void* d)> Scenes_SetProjectComponentFieldPtr {};
+void Scenes_SetProjectComponentField(uint64_t a, uint64_t b, uint64_t c, void* d)
+{
+	Scenes_SetProjectComponentFieldPtr(a, b, c, d);
 }
 void AddVoidNone(const std::string& funcName, std::function<void()> funcPtr)
 {
@@ -256,7 +256,6 @@ if (funcName == "FindEntityHandleByName") { FindEntityHandleByNamePtr = funcPtr;
 }
 void AddVoidUInt64StringVoidPtr(const std::string& funcName, std::function<void(uint64_t, const std::string&, void*)> funcPtr)
 {
-if (funcName == "SetEntityFieldByName") { SetEntityFieldByNamePtr = funcPtr; return; }
 }
 void AddVoidUInt64Vec3Vec2(const std::string& funcName, std::function<void(uint64_t, Math::vec3, Math::vec2)> funcPtr)
 {
@@ -264,7 +263,6 @@ if (funcName == "SendAllEntityPhysics") { SendAllEntityPhysicsPtr = funcPtr; ret
 }
 void AddVoidPtrUInt64String(const std::string& funcName, std::function<void*(uint64_t, const std::string&)> funcPtr)
 {
-if (funcName == "GetEntityFieldByName") { GetEntityFieldByNamePtr = funcPtr; return; }
 }
 void AddVoidPtrString(const std::string& funcName, std::function<void*(const std::string&)> funcPtr)
 {
@@ -286,18 +284,27 @@ void AddStringUInt64(const std::string& funcName, std::function<const std::strin
 {
 if (funcName == "TagComponent_GetTag") { TagComponent_GetTagPtr = funcPtr; return; }
 }
+void AddVoidPtrUInt64UInt64UInt64(const std::string& funcName, std::function<void*(uint64_t, uint64_t, uint64_t)> funcPtr)
+{
+if (funcName == "Scenes_GetProjectComponentField") { Scenes_GetProjectComponentFieldPtr = funcPtr; return; }
+}
+void AddVoidUInt64UInt64UInt64VoidPtr(const std::string& funcName, std::function<void(uint64_t, uint64_t, uint64_t, void*)> funcPtr)
+{
+if (funcName == "Scenes_SetProjectComponentField") { Scenes_SetProjectComponentFieldPtr = funcPtr; return; }
+}
 void LeaveOnlineGameplay()
 {
   LeaveCurrentSession();
   OpenMainMenu();
 }
 
-void Player2MoveUp(uint64_t currentEntity, float timeStep)
+void Player2MoveUp(float timeStep)
 {
+  uint64_t currentEntity = FindEntityHandleByName("Player2");
   Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
   bool upperLimit = translation.y >= 11.15f;
   bool lowerLimit = translation.y <= -11.15f;
-  float speed = IsKeyPressed(Key::RightShift) ? *(float*)GetEntityFieldByName(currentEntity, "Speed") * *(float*)GetEntityFieldByName(currentEntity, "SpeedUpFactor") : *(float*)GetEntityFieldByName(currentEntity, "Speed");
+  float speed = IsKeyPressed(Key::RightShift) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
   Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
   if (!upperLimit)
   {
@@ -313,21 +320,13 @@ void UpdateSessionUserSlot(uint16_t userSlot)
   SetWidgetText("online_lobby", selectedWidget, "Connected!");
 }
 
-void UpdateOnlineCount(uint32_t count)
+void Player2MoveDown(float timeStep)
 {
-  std::string onlineCount = "Online: " + std::to_string(count);
-  SetWidgetText("main_window", "online_count", onlineCount);
-  SetWidgetSelectable("main_window", "online_multiplayer", true);
-  SetWidgetTextColor("main_window", "online_multiplayer", {1.0f, 1.0f, 1.0f, 1.0f});
-  SetWidgetBackgroundColor("main_window", "online_multiplayer", {103.0f / 255.0f, 17.0f / 255.0f, 175.0f / 255.0f, 54.0f / 255.0f});
-}
-
-void Player2MoveDown(uint64_t currentEntity, float timeStep)
-{
+  uint64_t currentEntity = FindEntityHandleByName("Player2");
   Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
   bool upperLimit = translation.y >= 11.15;
   bool lowerLimit = translation.y <= -11.15;
-  float speed = IsKeyPressed(Key::RightShift) ? *(float*)GetEntityFieldByName(currentEntity, "Speed") * *(float*)GetEntityFieldByName(currentEntity, "SpeedUpFactor") : *(float*)GetEntityFieldByName(currentEntity, "Speed");
+  float speed = IsKeyPressed(Key::RightShift) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
   Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
   if (!lowerLimit)
   {
@@ -335,6 +334,15 @@ void Player2MoveDown(uint64_t currentEntity, float timeStep)
   }
   velocity = velocity * speed * timeStep;
   TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
+}
+
+void UpdateOnlineCount(uint32_t count)
+{
+  std::string onlineCount = "Online: " + std::to_string(count);
+  SetWidgetText("main_window", "online_count", onlineCount);
+  SetWidgetSelectable("main_window", "online_multiplayer", true);
+  SetWidgetTextColor("main_window", "online_multiplayer", {1.0f, 1.0f, 1.0f, 1.0f});
+  SetWidgetBackgroundColor("main_window", "online_multiplayer", {103.0f / 255.0f, 17.0f / 255.0f, 175.0f / 255.0f, 54.0f / 255.0f});
 }
 
 void UserLeftSession(uint16_t userSlot)
@@ -384,21 +392,6 @@ void OnStartSession()
   EnableReadyCheck();
 }
 
-void Player1MoveUp(uint64_t currentEntity, float timeStep)
-{
-  Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
-  bool upperLimit = translation.y >= 11.15f;
-  bool lowerLimit = translation.y <= -11.15f;
-  float speed = IsKeyPressed(Key::LeftShift) ? *(float*)GetEntityFieldByName(currentEntity, "Speed") * *(float*)GetEntityFieldByName(currentEntity, "SpeedUpFactor") : *(float*)GetEntityFieldByName(currentEntity, "Speed");
-  Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
-  if (!upperLimit)
-  {
-    velocity.y = 1.0f;
-  }
-  velocity = velocity * speed * timeStep;
-  TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
-}
-
 void OpenMainMenu()
 {
   LoadUserInterfaceFromName("UserInterface/Main Menu.kgui");
@@ -408,15 +401,20 @@ void OpenMainMenu()
   RequestUserCount();
 }
 
-void OpenPongGameplay()
+void Player1MoveUp(float timeStep)
 {
-  LoadUserInterfaceFromName("UserInterface/RuntimeUI.kgui");
-  SetDisplayWindow("pre_game_warning", true);
-  SetDisplayWindow("base_window", false);
-  TransitionSceneFromName("Scenes/main_gameplay.kgscene");
-  LoadInputModeByName("Input/Pre_Start.kginput");
-  PlaySoundFromName("Audio/menu_confirm.wav");
-  PlayStereoSoundFromName("Audio/greenA.wav");
+  uint64_t currentEntity = FindEntityHandleByName("Player1");
+  Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
+  bool upperLimit = translation.y >= 11.15f;
+  bool lowerLimit = translation.y <= -11.15f;
+  float speed = IsKeyPressed(Key::LeftShift) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+  Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
+  if (!upperLimit)
+  {
+    velocity.y = 1.0f;
+  }
+  velocity = velocity * speed * timeStep;
+  TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
 }
 
 void OnConnectionTerminated()
@@ -434,19 +432,30 @@ void OnConnectionTerminated()
   }
 }
 
+void OpenPongGameplay()
+{
+  LoadUserInterfaceFromName("UserInterface/RuntimeUI.kgui");
+  SetDisplayWindow("pre_game_warning", true);
+  SetDisplayWindow("base_window", false);
+  TransitionSceneFromName("Scenes/main_gameplay.kgscene");
+  LoadInputModeByName("Input/Pre_Start.kginput");
+  PlaySoundFromName("Audio/menu_confirm.wav");
+  PlayStereoSoundFromName("Audio/greenA.wav");
+}
+
 void Player1OnCreate(uint64_t currentEntity)
 {
   CheckHasComponent(currentEntity, "TransformComponent");
   CheckHasComponent(currentEntity, "Rigidbody2DComponent");
-  SetEntityFieldByName(currentEntity, "InitialPosition", (void*)&RValueToLValue(TransformComponent_GetTranslation(currentEntity)));
 }
 
-void Player1MoveDown(uint64_t currentEntity, float timeStep)
+void Player1MoveDown(float timeStep)
 {
+  uint64_t currentEntity = FindEntityHandleByName("Player1");
   Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
   bool upperLimit = translation.y >= 11.15;
   bool lowerLimit = translation.y <= -11.15;
-  float speed = IsKeyPressed(Key::LeftShift) ? *(float*)GetEntityFieldByName(currentEntity, "Speed") * *(float*)GetEntityFieldByName(currentEntity, "SpeedUpFactor") : *(float*)GetEntityFieldByName(currentEntity, "Speed");
+  float speed = IsKeyPressed(Key::LeftShift) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
   Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
   if (!lowerLimit)
   {
@@ -454,13 +463,6 @@ void Player1MoveDown(uint64_t currentEntity, float timeStep)
   }
   velocity = velocity * speed * timeStep;
   TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
-}
-
-void Player2OnCreate(uint64_t currentEntity)
-{
-  CheckHasComponent(currentEntity, "TransformComponent");
-  CheckHasComponent(currentEntity, "Rigidbody2DComponent");
-  SetEntityFieldByName(currentEntity, "InitialPosition", (void*)&RValueToLValue(TransformComponent_GetTranslation(currentEntity)));
 }
 
 void Player1OnUpdate(uint64_t currentEntity, float deltaTime)
@@ -472,6 +474,13 @@ void Player1OnUpdate(uint64_t currentEntity, float deltaTime)
   }
 }
 
+void Player2OnCreate(uint64_t currentEntity)
+{
+  CheckHasComponent(currentEntity, "TransformComponent");
+  CheckHasComponent(currentEntity, "Rigidbody2DComponent");
+  Log("Player2 OnCreate Called");
+}
+
 void Player2OnUpdate(uint64_t currentEntity, float deltaTime)
 {
   uint16_t userSlot = GetActiveSessionSlot();
@@ -479,13 +488,13 @@ void Player2OnUpdate(uint64_t currentEntity, float deltaTime)
   {
     SendAllEntityLocation(currentEntity, TransformComponent_GetTranslation(currentEntity));
   }
+  Log("Player2 OnUpdate Called");
 }
 
 void BallOnCreate(uint64_t currentEntity)
 {
   CheckHasComponent(currentEntity, "TransformComponent");
   CheckHasComponent(currentEntity, "Rigidbody2DComponent");
-  SetEntityFieldByName(currentEntity, "InitialPosition", (void*)&RValueToLValue(TransformComponent_GetTranslation(currentEntity)));
 }
 
 bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
@@ -524,7 +533,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
     {
       horizontalDirection = {-1.0f, 0.0f};
     }
-    currentVelocity = glm::normalize(glm::normalize(currentVelocity) + horizontalDirection * 0.1f) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+    currentVelocity = glm::normalize(glm::normalize(currentVelocity) + horizontalDirection * 0.1f) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
     Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
     PlaySoundFromName("Audio/pop-sound.wav");
     collisionHandled = true;
@@ -536,7 +545,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
       float deflectionFactor = IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
       Math::vec2 up = {0.0f, 1.0f};
       Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-      currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+      currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
     }
     if (IsKeyPressed(Key::A))
@@ -544,7 +553,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
       float deflectionFactor = IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
       Math::vec2 up = {0.0f, -1.0f};
       Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-      currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+      currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
     }
     PlaySoundFromName("Audio/pop-sound.wav");
@@ -557,7 +566,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
       float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
       Math::vec2 up = {0.0f, 1.0f};
       Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-      currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+      currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
     }
     if (IsKeyPressed(Key::Semicolon))
@@ -565,72 +574,13 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
       float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
       Math::vec2 up = {0.0f, -1.0f};
       Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-      currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+      currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
     }
     PlaySoundFromName("Audio/pop-sound.wav");
     collisionHandled = true;
   }
   return collisionHandled;
-}
-
-void OnReceiveSignal(uint16_t signalNum)
-{
-  uint16_t userSlot = GetActiveSessionSlot();
-  if (signalNum == 1)
-  {
-    uint64_t ball = FindEntityHandleByName("Ball");
-    if (userSlot == 0)
-    {
-      SetGameStateField("PlayerOneScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerOneScore") + 1));
-      SetWidgetText("base_window", "score_player_1", std::to_string(*(uint16_t*)GetGameStateField("PlayerOneScore")));
-    }
-    else if (userSlot == 1)
-    {
-      SetGameStateField("PlayerTwoScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerTwoScore") + 1));
-      SetWidgetText("base_window", "score_player_2", std::to_string(*(uint16_t*)GetGameStateField("PlayerTwoScore")));
-    }
-    Rigidbody2DComponent_SetLinearVelocity(ball, {0.0f, 0.0f});
-    PlaySoundFromName("Audio/lose_sound.wav");
-    SetDisplayWindow("pre_game_warning", true);
-    LoadInputModeByName("Input/Online_Pre_Start.kginput");
-    EnableReadyCheck();
-  }
-}
-
-void StartOnlineGame()
-{
-  uint16_t userSlot = GetActiveSessionSlot();
-  if (userSlot == 0)
-  {
-    LoadInputModeByName("Input/Online_Player1_Runtime.kginput");
-  }
-  else if (userSlot == 1)
-  {
-    LoadInputModeByName("Input/Online_Player2_Runtime.kginput");
-  }
-  SetDisplayWindow("pre_game_warning", false);
-  SetDisplayWindow("online_lobby", false);
-  SetDisplayWindow("base_window", true);
-  uint64_t player1 = FindEntityHandleByName("Player1");
-  TransformComponent_SetTranslation(player1, *(Math::vec3*)GetEntityFieldByName(player1, "InitialPosition"));
-  uint64_t player2 = FindEntityHandleByName("Player2");
-  TransformComponent_SetTranslation(player2, *(Math::vec3*)GetEntityFieldByName(player2, "InitialPosition"));
-  uint64_t ball = FindEntityHandleByName("Ball");
-  TransformComponent_SetTranslation(ball, *(Math::vec3*)GetEntityFieldByName(ball, "InitialPosition"));
-  uint16_t ballDirection = *(uint16_t*)GetGameStateField("BallDirection");
-  Math::vec2 velocity = {0.0f, 0.0f};
-  if (ballDirection == 0)
-  {
-    velocity.x = -1.0f;
-    SetGameStateField("BallDirection", (void*)&RValueToLValue(1));
-  }
-  else
-  {
-    velocity.x = 1.0f;
-    SetGameStateField("BallDirection", (void*)&RValueToLValue(0));
-  }
-  Rigidbody2DComponent_SetLinearVelocity(ball, velocity * *(float*)GetEntityFieldByName(ball, "Speed"));
 }
 
 bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t otherEntity)
@@ -687,7 +637,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
     {
       horizontalDirection = {-1.0f, 0.0f};
     }
-    currentVelocity = glm::normalize(glm::normalize(currentVelocity) + horizontalDirection * 0.1f) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+    currentVelocity = glm::normalize(glm::normalize(currentVelocity) + horizontalDirection * 0.1f) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
     Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
     PlaySoundFromName("Audio/pop-sound.wav");
     collisionHandled = true;
@@ -701,7 +651,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
         float deflectionFactor = IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, 1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
       if (IsKeyPressed(Key::A))
@@ -709,7 +659,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
         float deflectionFactor = IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, -1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
     }
@@ -725,7 +675,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
         float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, 1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
       if (IsKeyPressed(Key::Semicolon))
@@ -733,7 +683,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
         float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, -1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)GetEntityFieldByName(currentEntity, "Speed");
+        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
     }
@@ -741,6 +691,65 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
     collisionHandled = true;
   }
   return collisionHandled;
+}
+
+void StartOnlineGame()
+{
+  uint16_t userSlot = GetActiveSessionSlot();
+  if (userSlot == 0)
+  {
+    LoadInputModeByName("Input/Online_Player1_Runtime.kginput");
+  }
+  else if (userSlot == 1)
+  {
+    LoadInputModeByName("Input/Online_Player2_Runtime.kginput");
+  }
+  SetDisplayWindow("pre_game_warning", false);
+  SetDisplayWindow("online_lobby", false);
+  SetDisplayWindow("base_window", true);
+  uint64_t player1 = FindEntityHandleByName("Player1");
+  TransformComponent_SetTranslation(player1, *(Math::vec3*)Scenes_GetProjectComponentField(player1, 2736904612472256316, 0));
+  uint64_t player2 = FindEntityHandleByName("Player2");
+  TransformComponent_SetTranslation(player2, *(Math::vec3*)Scenes_GetProjectComponentField(player2, 2736904612472256316, 0));
+  uint64_t ball = FindEntityHandleByName("Ball");
+  TransformComponent_SetTranslation(ball, *(Math::vec3*)Scenes_GetProjectComponentField(ball, 2736904612472256316, 0));
+  uint16_t ballDirection = *(uint16_t*)GetGameStateField("BallDirection");
+  Math::vec2 velocity = {0.0f, 0.0f};
+  if (ballDirection == 0)
+  {
+    velocity.x = -1.0f;
+    SetGameStateField("BallDirection", (void*)&RValueToLValue(1));
+  }
+  else
+  {
+    velocity.x = 1.0f;
+    SetGameStateField("BallDirection", (void*)&RValueToLValue(0));
+  }
+  Rigidbody2DComponent_SetLinearVelocity(ball, velocity * *(float*)Scenes_GetProjectComponentField(ball, 8506492999786783749, 0));
+}
+
+void OnReceiveSignal(uint16_t signalNum)
+{
+  uint16_t userSlot = GetActiveSessionSlot();
+  if (signalNum == 1)
+  {
+    uint64_t ball = FindEntityHandleByName("Ball");
+    if (userSlot == 0)
+    {
+      SetGameStateField("PlayerOneScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerOneScore") + 1));
+      SetWidgetText("base_window", "score_player_1", std::to_string(*(uint16_t*)GetGameStateField("PlayerOneScore")));
+    }
+    else if (userSlot == 1)
+    {
+      SetGameStateField("PlayerTwoScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerTwoScore") + 1));
+      SetWidgetText("base_window", "score_player_2", std::to_string(*(uint16_t*)GetGameStateField("PlayerTwoScore")));
+    }
+    Rigidbody2DComponent_SetLinearVelocity(ball, {0.0f, 0.0f});
+    PlaySoundFromName("Audio/lose_sound.wav");
+    SetDisplayWindow("pre_game_warning", true);
+    LoadInputModeByName("Input/Online_Pre_Start.kginput");
+    EnableReadyCheck();
+  }
 }
 
 bool BallOnPhysicsCollision(uint64_t currentEntity, uint64_t otherEntity)
@@ -754,11 +763,6 @@ bool BallOnPhysicsCollision(uint64_t currentEntity, uint64_t otherEntity)
   {
     return BallOnlineCollision(currentEntity, userSlot, otherEntity);
   }
-}
-
-void PlayMenuSelect()
-{
-  PlaySoundFromName("Audio/menu_select.wav");
 }
 
 bool BallOnPhysicsCollisionEnd(uint64_t currentEntity, uint64_t otherEntity)
@@ -793,6 +797,11 @@ bool BallOnPhysicsCollisionEnd(uint64_t currentEntity, uint64_t otherEntity)
   return collisionHandled;
 }
 
+void PlayMenuSelect()
+{
+  PlaySoundFromName("Audio/menu_select.wav");
+}
+
 void StartGame()
 {
   LoadInputModeByName("Input/Runtime.kginput");
@@ -800,11 +809,11 @@ void StartGame()
   SetDisplayWindow("online_lobby", false);
   SetDisplayWindow("base_window", true);
   uint64_t player1 = FindEntityHandleByName("Player1");
-  TransformComponent_SetTranslation(player1, *(Math::vec3*)GetEntityFieldByName(player1, "InitialPosition"));
+  TransformComponent_SetTranslation(player1, *(Math::vec3*)Scenes_GetProjectComponentField(player1, 2736904612472256316, 0));
   uint64_t player2 = FindEntityHandleByName("Player2");
-  TransformComponent_SetTranslation(player2, *(Math::vec3*)GetEntityFieldByName(player2, "InitialPosition"));
+  TransformComponent_SetTranslation(player2, *(Math::vec3*)Scenes_GetProjectComponentField(player2, 2736904612472256316, 0));
   uint64_t ball = FindEntityHandleByName("Ball");
-  TransformComponent_SetTranslation(ball, *(Math::vec3*)GetEntityFieldByName(ball, "InitialPosition"));
+  TransformComponent_SetTranslation(ball, *(Math::vec3*)Scenes_GetProjectComponentField(ball, 2736904612472256316, 0));
   int32_t directionChoice = GenerateRandomNumber(0, 1);
   Math::vec2 velocity = {0.0f, 0.0f};
   if (directionChoice == 0)
@@ -815,7 +824,7 @@ void StartGame()
   {
     velocity.x = 1.0f;
   }
-  Rigidbody2DComponent_SetLinearVelocity(ball, velocity * *(float*)GetEntityFieldByName(ball, "Speed"));
+  Rigidbody2DComponent_SetLinearVelocity(ball, velocity * *(float*)Scenes_GetProjectComponentField(ball, 8506492999786783749, 0));
 }
 
 }

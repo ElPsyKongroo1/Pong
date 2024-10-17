@@ -1,0 +1,20 @@
+Registry: Project Component
+Assets:
+  - AssetHandle: 8506492999786783749
+    MetaData:
+      CheckSum: c372fee9b4566b85a592ae6e98e571f3929c8e262cf2feff7acba63a65a50f14
+      FileLocation: Speed.kgcomponent
+      AssetType: ProjectComponent
+      Name: Speed
+  - AssetHandle: 2736904612472256316
+    MetaData:
+      CheckSum: 8bc3f0d969e7105322c21edd2eae352ccca5efcb3349bb140a334b23529d1db2
+      FileLocation: InitialState.kgcomponent
+      AssetType: ProjectComponent
+      Name: InitialState
+  - AssetHandle: 1783536221633832415
+    MetaData:
+      CheckSum: 0740c3df83d207bf6a98e9845ae38183d3f897b137634e9da1354fa0d1f9f8c4
+      FileLocation: BallState.kgcomponent
+      AssetType: ProjectComponent
+      Name: BallState

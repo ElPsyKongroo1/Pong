@@ -1,0 +1,10 @@
+Name: BallState
+ComponentSize: 1
+BufferSize: 4
+BufferSlot: 2
+DataTypes:
+  - Bool
+DataLocations:
+  - 0
+DataNames:
+  - ChangeVelocity

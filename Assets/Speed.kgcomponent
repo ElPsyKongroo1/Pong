@@ -1,0 +1,13 @@
+Name: Speed
+ComponentSize: 8
+BufferSize: 8
+BufferSlot: 0
+DataTypes:
+  - Float
+  - Float
+DataLocations:
+  - 0
+  - 4
+DataNames:
+  - CurrentSpeed
+  - SpeedUpMultiplier

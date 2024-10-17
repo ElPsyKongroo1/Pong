@@ -4,6 +4,7 @@ Entities:
   - Entity: 14487046616883294273
     TagComponent:
       Tag: Camera
+      Group: ""
     TransformComponent:
       Translation: [25, 0, 40.7027779]
       Rotation: [0, 0, 0]
@@ -34,6 +35,7 @@ Entities:
   - Entity: 5735195652379188677
     TagComponent:
       Tag: Left Wall
+      Group: ""
     TransformComponent:
       Translation: [0, 0, 0]
       Rotation: [0, 0, 0]
@@ -54,6 +56,8 @@ Entities:
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
     BoxCollider2DComponent:
       Offset: [0, 0]
       Size: [0.5, 0.5]
@@ -64,6 +68,7 @@ Entities:
   - Entity: 18014537996866740620
     TagComponent:
       Tag: Right Wall
+      Group: ""
     TransformComponent:
       Translation: [50, -0.00216794014, 0]
       Rotation: [0, 0, 0]
@@ -84,6 +89,8 @@ Entities:
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
     BoxCollider2DComponent:
       Offset: [0, 0]
       Size: [0.5, 0.5]
@@ -94,6 +101,7 @@ Entities:
   - Entity: 13674711861826053845
     TagComponent:
       Tag: Top Wall
+      Group: ""
     TransformComponent:
       Translation: [25, 16, 0.00999999978]
       Rotation: [0, 0, 1.57079637]
@@ -114,6 +122,8 @@ Entities:
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
     BoxCollider2DComponent:
       Offset: [0, 0]
       Size: [0.5, 0.5]
@@ -124,6 +134,7 @@ Entities:
   - Entity: 3462038330476861318
     TagComponent:
       Tag: Bottom Wall
+      Group: ""
     TransformComponent:
       Translation: [25, -16, 0.00999999978]
       Rotation: [0, 0, 1.57079637]
@@ -144,6 +155,8 @@ Entities:
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
     BoxCollider2DComponent:
       Offset: [0, 0]
       Size: [0.5, 0.5]
@@ -154,18 +167,11 @@ Entities:
   - Entity: 15707814698740903328
     TagComponent:
       Tag: Player1
-    ClassInstanceComponent:
-      ClassHandle: 17325370763714437193
-      InstanceFields:
-        - Name: Speed
-          Type: Float
-          Value: 20
-        - Name: SpeedUpFactor
-          Type: Float
-          Value: 2
-        - Name: InitialPosition
-          Type: Vector3
-          Value: [4, -0.00246500969, 3.7252903e-09]
+      Group: Player1Group
+    OnUpdateComponent:
+      OnUpdateHandle: 8188330720880382876
+    OnCreateComponent:
+      OnCreateHandle: 4805234009752154696
     TransformComponent:
       Translation: [4, -0.00246500969, 3.7252903e-09]
       Rotation: [0, 0, 1.57079637]
@@ -186,6 +192,8 @@ Entities:
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: true
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
     BoxCollider2DComponent:
       Offset: [0, 0]
       Size: [0.5, 0.479999989]
@@ -193,21 +201,19 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
+    SpeedComponent:
+      CurrentSpeed: 20
+      SpeedUpMultiplier: 2
+    InitialStateComponent:
+      InitialPosition: [4, 0, 0]
   - Entity: 1623836227372765255
     TagComponent:
       Tag: Player2
-    ClassInstanceComponent:
-      ClassHandle: 15563366892427587638
-      InstanceFields:
-        - Name: Speed
-          Type: Float
-          Value: 20
-        - Name: SpeedUpFactor
-          Type: Float
-          Value: 2
-        - Name: InitialPosition
-          Type: Vector3
-          Value: [45.920536, -0.00214099884, 9.3131991e-09]
+      Group: ""
+    OnUpdateComponent:
+      OnUpdateHandle: 16135958558406264166
+    OnCreateComponent:
+      OnCreateHandle: 13218836288168913308
     TransformComponent:
       Translation: [45.920536, -0.00214099884, 9.3131991e-09]
       Rotation: [0, 0, 1.57079637]
@@ -228,6 +234,8 @@ Entities:
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: true
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
     BoxCollider2DComponent:
       Offset: [0, 0]
       Size: [0.5, 0.479999989]
@@ -235,21 +243,17 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
+    SpeedComponent:
+      CurrentSpeed: 20
+      SpeedUpMultiplier: 2
+    InitialStateComponent:
+      InitialPosition: [45, 0, 0]
   - Entity: 1620162373067812695
     TagComponent:
       Tag: Ball
-    ClassInstanceComponent:
-      ClassHandle: 3507788204292547978
-      InstanceFields:
-        - Name: Speed
-          Type: Float
-          Value: 60
-        - Name: ChangeVelocity
-          Type: Bool
-          Value: false
-        - Name: InitialPosition
-          Type: Vector3
-          Value: [25.9217854, -0.00246608257, 3.7252903e-09]
+      Group: ""
+    OnCreateComponent:
+      OnCreateHandle: 209298783402426078
     TransformComponent:
       Translation: [25.9217854, -0.00246608257, 3.7252903e-09]
       Rotation: [0, 0, 1.57079637]
@@ -275,6 +279,8 @@ Entities:
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: true
+      OnCollisionStartHandle: 12876544886975453239
+      OnCollisionEndHandle: 7325163182931923051
     CircleCollider2DComponent:
       Offset: [0, 0]
       Radius: 0.5
@@ -282,3 +288,10 @@ Entities:
       Friction: 0
       Restitution: 1
       RestitutionThreshold: 0.00999999978
+    SpeedComponent:
+      CurrentSpeed: 60
+      SpeedUpMultiplier: 1
+    InitialStateComponent:
+      InitialPosition: [26, 0, 0]
+    BallStateComponent:
+      ChangeVelocity: false

@@ -1,10 +1,11 @@
-void Player1MoveUp(entity currentEntity,float timeStep)
+void Player1MoveUp(float timeStep)
 {
+	entity currentEntity = Scenes::GetEntity("Player1");
 	vector3 translation = currentEntity.Transform.GetTranslation();
 	bool upperLimit = translation.y >= 11.15f;
 	bool lowerLimit = translation.y <= -11.15f;
-
-	float speed = Input::IsKeyPressed(Key::LeftShift) ? currentEntity.GetFieldFloat("Speed") * currentEntity.GetFieldFloat("SpeedUpFactor") : currentEntity.GetFieldFloat("Speed");
+	
+	float speed = Input::IsKeyPressed(Key::LeftShift) ? currentEntity.Speed.CurrentSpeed * currentEntity.Speed.SpeedUpMultiplier : currentEntity.Speed.CurrentSpeed;
 	vector3 velocity = {0.0f, 0.0f, 0.0f};
 
 	if (!upperLimit) 

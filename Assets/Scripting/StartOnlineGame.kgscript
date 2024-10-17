@@ -13,13 +13,14 @@ void StartOnlineGame()
 	UI::DisplayWindow("online_lobby", false);
 	UI::DisplayWindow("base_window", true);
 	entity player1 = Scenes::GetEntity("Player1");
-	player1.Transform.SetTranslation(player1.GetFieldVector3("InitialPosition"));
+	
+	player1.Transform.SetTranslation(player1.InitialState.InitialPosition);
 	
 	entity player2 = Scenes::GetEntity("Player2");
-	player2.Transform.SetTranslation(player2.GetFieldVector3("InitialPosition"));
+	player2.Transform.SetTranslation(player2.InitialState.InitialPosition);
 	
 	entity ball = Scenes::GetEntity("Ball");
-	ball.Transform.SetTranslation(ball.GetFieldVector3("InitialPosition"));
+	ball.Transform.SetTranslation(ball.InitialState.InitialPosition);
 	
 	uint16 ballDirection = GameState::GetFieldUInt16("BallDirection");
 	vector2 velocity = {0.0f, 0.0f};
@@ -33,5 +34,6 @@ void StartOnlineGame()
 		velocity.x = 1.0f;
 		GameState::SetField("BallDirection", 0);
 	}
-	ball.RigidBody.SetLinearVelocity(velocity * ball.GetFieldFloat("Speed"));
+	
+	ball.RigidBody.SetLinearVelocity(velocity * ball.Speed.CurrentSpeed);
 }

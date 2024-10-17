@@ -35,7 +35,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 		{
 			horizontalDirection =  {-1.0f, 0.0f};
 		}
-		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + horizontalDirection * 0.1f) * currentEntity.GetFieldFloat("Speed");
+		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + horizontalDirection * 0.1f) * currentEntity.Speed.CurrentSpeed;
 		currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 		Audio::PlaySound("Audio/pop-sound.wav");
 		collisionHandled = true;
@@ -48,7 +48,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			float deflectionFactor = Input::IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
 			vector2 up = {0.0f, 1.0f};
 			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.GetFieldFloat("Speed");
+			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
 			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 		}
 		if (Input::IsKeyPressed(Key::A))
@@ -56,7 +56,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			float deflectionFactor = Input::IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
 			vector2 up = {0.0f, -1.0f};
 			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.GetFieldFloat("Speed");
+			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
 			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 		}
 		Audio::PlaySound("Audio/pop-sound.wav");
@@ -69,7 +69,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			float deflectionFactor = Input::IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
 			vector2 up = {0.0f, 1.0f};
 			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.GetFieldFloat("Speed");
+			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
 			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 		}
 		if (Input::IsKeyPressed(Key::Semicolon))
@@ -77,7 +77,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			float deflectionFactor = Input::IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
 			vector2 up = {0.0f, -1.0f};
 			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.GetFieldFloat("Speed");
+			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
 			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 		}
 		Audio::PlaySound("Audio/pop-sound.wav");

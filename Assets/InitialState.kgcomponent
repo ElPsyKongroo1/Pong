@@ -1,0 +1,10 @@
+Name: InitialState
+ComponentSize: 12
+BufferSize: 12
+BufferSlot: 1
+DataTypes:
+  - Vector3
+DataLocations:
+  - 0
+DataNames:
+  - InitialPosition
