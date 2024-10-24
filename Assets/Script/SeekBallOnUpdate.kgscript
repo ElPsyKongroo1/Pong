@@ -1,0 +1,30 @@
+void SeekBallOnUpdate(entity aiEntity, float deltaTime)
+{
+	entity ballEntity = Scenes::GetEntity("Ball");
+	
+	// Get locations of ballEntity and aiEntity
+	vector3 ballLocation = ballEntity.Transform.GetTranslation();
+	vector3 aiLocation = aiEntity.Transform.GetTranslation();
+	
+	// Compare locations and decide direction to move
+	float distance = ballLocation.y - aiLocation.y;
+	distance = distance < 0.0f ? distance * -1.0f : distance;
+	
+	if (distance < 0.1f)
+	{
+		log("We earlied out mangggggg");
+		return;
+	}
+	if (ballLocation.y > aiLocation.y)
+	{
+		// Move Up
+		log("We moving up mangggggg");
+		Scripts::Player2MoveUp(deltaTime);
+	}
+	else
+	{
+		// Move Down
+		log("We moving down mangggggg");
+		Scripts::Player2MoveDown(deltaTime);
+	}
+}

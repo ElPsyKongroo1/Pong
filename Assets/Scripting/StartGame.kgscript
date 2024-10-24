@@ -1,13 +1,24 @@
 void StartGame()
 {
-	Input::LoadInputMode("Input/Runtime.kginput");
-	UI::DisplayWindow("pre_game_warning", false);
+	entity player1 = Scenes::GetEntity("Player1");
+	entity player2 = Scenes::GetEntity("Player2");
+	
+	if (Scenes::IsSceneActive("Scenes/main_gameplay.kgscene"))
+	{
+		UI::DisplayWindow("pre_game_warning", false);
+		Input::LoadInputMode("Input/Runtime.kginput");
+	}
+	else
+	{
+		UI::DisplayWindow("pre_game_level_warning", false);
+		Input::LoadInputMode("RuntimeSinglePlayer.kginput");
+		player2.AIState.ChangeCurrentState("SeekBall.kgaistate");
+	}
+	
 	UI::DisplayWindow("online_lobby", false);
 	UI::DisplayWindow("base_window", true);
-	entity player1 = Scenes::GetEntity("Player1");
 	
 	player1.Transform.SetTranslation(player1.InitialState.InitialPosition);
-	entity player2 = Scenes::GetEntity("Player2");
 	player2.Transform.SetTranslation(player2.InitialState.InitialPosition);
 	
 	entity ball = Scenes::GetEntity("Ball");

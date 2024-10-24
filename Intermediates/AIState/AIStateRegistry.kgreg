@@ -1,0 +1,7 @@
+Registry: AI State
+Assets:
+  - AssetHandle: 13505644385975373738
+    MetaData:
+      CheckSum: cecf18c088ace633fd6e82ba19990a5fc1c6143518ea7213906457d23be64fe3
+      FileLocation: SeekBall.kgaistate
+      AssetType: AIState

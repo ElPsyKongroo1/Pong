@@ -218,6 +218,10 @@ Entities:
       Translation: [45.920536, -0.00214099884, 9.3131991e-09]
       Rotation: [0, 0, 1.57079637]
       Scale: [8.5, 1.09998739, 1]
+    AIStateComponent:
+      CurrentState: 0
+      PreviousState: 0
+      GlobalState: 0
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 1008307395632263226

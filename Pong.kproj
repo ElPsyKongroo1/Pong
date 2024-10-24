@@ -19,3 +19,6 @@ Project:
   OnSessionReadyCheckConfirm: 6410065240318073462
   OnReceiveSignal: 11068697129652250038
   AppIsNetworked: true
+  AllMessageTypes:
+    - SendLettuce
+    - SendBacon

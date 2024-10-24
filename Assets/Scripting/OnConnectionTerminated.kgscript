@@ -4,7 +4,7 @@ void OnConnectionTerminated()
 	{
 		if (UI::IsWidgetSelected("main_window", "online_multiplayer"))
 		{
-			UI::SetSelectedWidget("main_window", "local_multiplayer");
+			UI::SetSelectedWidget("main_window", "single_player");
 		}
 		UI::SetWidgetText("main_window", "online_count", "Offline");
 		UI::WidgetSelectable("main_window", "online_multiplayer", false);

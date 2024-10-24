@@ -9,10 +9,10 @@ Windows:
     ParentIndex: -1
     ChildBufferIndex: -1
     ChildBufferSize: 0
-    DefaultActiveWidget: 0
+    DefaultActiveWidget: 6
     Widgets:
       - Tag: local_multiplayer
-        WindowPosition: [0.0500000007, 0.529999971]
+        WindowPosition: [0.0500000007, 0.400000006]
         Size: [0.280000001, 0.119999997]
         DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
         WidgetType: TextWidget
@@ -29,7 +29,7 @@ Windows:
           TextAbsoluteDimensions: [7.04638672, 0.833333313]
           TextCentered: true
       - Tag: exit_app
-        WindowPosition: [0.129999995, 0.109999999]
+        WindowPosition: [0.129999995, 0.0500000007]
         Size: [0.100000001, 0.100000001]
         DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
         WidgetType: TextWidget
@@ -80,7 +80,7 @@ Windows:
           TextAbsoluteDimensions: [7.68896484, 0.857142866]
           TextCentered: true
       - Tag: online_multiplayer
-        WindowPosition: [0.0399999991, 0.319999993]
+        WindowPosition: [0.0399999991, 0.230000004]
         Size: [0.300000012, 0.109999999]
         DefaultBackgroundColor: [0.117647059, 0.117647059, 0.117647059, 0.145098045]
         WidgetType: TextWidget
@@ -112,4 +112,21 @@ Windows:
           TextSize: 0.469999999
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [2.70654297, 0.857142866]
+          TextCentered: true
+      - Tag: single_player
+        WindowPosition: [0.0700000003, 0.569999993]
+        Size: [0.239999995, 0.119999997]
+        DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]
+        WidgetType: TextWidget
+        Selectable: true
+        DirectionPointerUp: -1
+        DirectionPointerDown: -1
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 9499119451679759743
+        TextWidget:
+          Text: Single Player
+          TextSize: 0.430000007
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [5.39111328, 0.857142866]
           TextCentered: true

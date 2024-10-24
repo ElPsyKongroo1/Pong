@@ -5,5 +5,4 @@ void Player2OnUpdate(entity currentEntity, float deltaTime)
 	{
 		Network::PushAllEntityLocation(currentEntity, currentEntity.Transform.GetTranslation());
 	}
-	log("Player2 OnUpdate Called");
 }

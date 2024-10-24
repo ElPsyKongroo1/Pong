@@ -1,7 +1,4 @@
-void NewFunc(entity currentEntity)
+void SeekBallOnUpdate(entity aiEntity, float deltaTime)
 {
-	currentEntity.Health.TotalHealth;
-	currentEntity.Health.TotalHealth + 2.0f;
-	currentEntity.Health.RegenerationRate;
-	currentEntity.Health.TotalHealth = 23.0f;
+	return;
 }
