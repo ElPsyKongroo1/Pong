@@ -25,11 +25,13 @@
 *.la
 *.a
 *.lib
+*.pdb
 
 # Executables
 *.exe
 *.out
 *.app
+
 
 # Private Files
 *.env
