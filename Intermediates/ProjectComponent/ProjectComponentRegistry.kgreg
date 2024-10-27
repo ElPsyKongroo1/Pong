@@ -18,3 +18,9 @@ Assets:
       FileLocation: BallState.kgcomponent
       AssetType: ProjectComponent
       Name: BallState
+  - AssetHandle: 15329151067419175107
+    MetaData:
+      CheckSum: 0036164a9fe77ee2a3b265552a5cbf7e1f03c19c4c05b0b25870994a58e53b86
+      FileLocation: SeekLocationData.kgcomponent
+      AssetType: ProjectComponent
+      Name: SeekLocationData

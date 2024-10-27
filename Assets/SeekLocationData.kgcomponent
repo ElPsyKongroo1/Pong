@@ -1,0 +1,10 @@
+Name: SeekLocationData
+ComponentSize: 4
+BufferSize: 4
+BufferSlot: 3
+DataTypes:
+  - Float
+DataLocations:
+  - 0
+DataNames:
+  - Location

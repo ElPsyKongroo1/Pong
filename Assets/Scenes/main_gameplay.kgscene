@@ -65,6 +65,7 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
+      IsSensor: false
   - Entity: 18014537996866740620
     TagComponent:
       Tag: Right Wall
@@ -98,6 +99,7 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
+      IsSensor: false
   - Entity: 13674711861826053845
     TagComponent:
       Tag: Top Wall
@@ -131,6 +133,7 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
+      IsSensor: false
   - Entity: 3462038330476861318
     TagComponent:
       Tag: Bottom Wall
@@ -164,6 +167,7 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
+      IsSensor: false
   - Entity: 15707814698740903328
     TagComponent:
       Tag: Player1
@@ -201,9 +205,11 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
+      IsSensor: false
     SpeedComponent:
       CurrentSpeed: 20
       SpeedUpMultiplier: 2
+      IsDashing: false
     InitialStateComponent:
       InitialPosition: [4, 0, 0]
   - Entity: 1623836227372765255
@@ -247,9 +253,11 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
+      IsSensor: false
     SpeedComponent:
       CurrentSpeed: 20
       SpeedUpMultiplier: 2
+      IsDashing: false
     InitialStateComponent:
       InitialPosition: [45, 0, 0]
   - Entity: 1620162373067812695
@@ -292,9 +300,11 @@ Entities:
       Friction: 0
       Restitution: 1
       RestitutionThreshold: 0.00999999978
+      IsSensor: false
     SpeedComponent:
       CurrentSpeed: 60
       SpeedUpMultiplier: 1
+      IsDashing: false
     InitialStateComponent:
       InitialPosition: [26, 0, 0]
     BallStateComponent:

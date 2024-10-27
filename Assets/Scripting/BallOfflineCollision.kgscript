@@ -22,6 +22,11 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 		Input::LoadInputMode("Input/Pre_Start.kginput");
 		collisionHandled = true;
 	}
+	else if (otherEntityTag == "Player2ProximitySensor")
+	{
+		entity player2 = Scenes::GetEntity("Player2");
+		player2.AIState.ChangeCurrentState("SeekBall.kgaistate");
+	}
 	else if (otherEntityTag == "Right Wall")
 	{
 		GameState::SetField("PlayerOneScore", GameState::GetFieldUInt16("PlayerOneScore") + 1);

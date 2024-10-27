@@ -1,4 +1,9 @@
-void SeekBallOnUpdate(entity aiEntity, float deltaTime)
+void TestScript(entity aiEntity, float deltaTime)
 {
-	return;
+	vector2 startPoint = {0.0f, 2.0f};
+	raycast_result result = Physics::Raycast(startPoint, startPoint);
+	result.collisionSuccess;
+	result.collisionEntity;
+	result.collisionNormal;
+	result.collisionPoint;
 }

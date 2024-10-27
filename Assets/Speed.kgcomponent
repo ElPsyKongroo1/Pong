@@ -1,13 +1,16 @@
 Name: Speed
-ComponentSize: 8
-BufferSize: 8
+ComponentSize: 9
+BufferSize: 12
 BufferSlot: 0
 DataTypes:
   - Float
   - Float
+  - Bool
 DataLocations:
   - 0
   - 4
+  - 8
 DataNames:
   - CurrentSpeed
   - SpeedUpMultiplier
+  - IsDashing

@@ -36,3 +36,5 @@
 
 # Specific Folders
 /Assets/Scripting/Binary/**
+/Intermediates/Script/ExportHeader.h
+/Intermediates/Script/ExportHeader.cpp

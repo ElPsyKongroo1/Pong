@@ -5,3 +5,8 @@ Assets:
       CheckSum: cecf18c088ace633fd6e82ba19990a5fc1c6143518ea7213906457d23be64fe3
       FileLocation: SeekBall.kgaistate
       AssetType: AIState
+  - AssetHandle: 9099345613034300062
+    MetaData:
+      CheckSum: 21dffda424289e1681ea2ce417ae05f7934820c13d98a074a9bbb3c76b90f92a
+      FileLocation: SeekLocation.kgaistate
+      AssetType: AIState
