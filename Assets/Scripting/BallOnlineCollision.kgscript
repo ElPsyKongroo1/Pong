@@ -11,7 +11,7 @@ bool BallOnlineCollision(entity currentEntity,uint16 userSlot, entity otherEntit
 			currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
 			Audio::PlaySound("Audio/lose_sound.wav");
 			UI::DisplayWindow("pre_game_warning", true);
-			Input::LoadInputMode("Input/Online_Pre_Start.kginput");
+			Input::LoadInputMap("Input/Online_Pre_Start.kginput");
 			Network::SignalAll(1);
 			Network::EnableReadyCheck();
 			collisionHandled = true;
@@ -31,7 +31,7 @@ bool BallOnlineCollision(entity currentEntity,uint16 userSlot, entity otherEntit
 			currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
 			Audio::PlaySound("Audio/lose_sound.wav");
 			UI::DisplayWindow("pre_game_warning", true);
-			Input::LoadInputMode("Input/Online_Pre_Start.kginput");
+			Input::LoadInputMap("Input/Online_Pre_Start.kginput");
 			Network::SignalAll(1);
 			Network::EnableReadyCheck();
 			collisionHandled = true;

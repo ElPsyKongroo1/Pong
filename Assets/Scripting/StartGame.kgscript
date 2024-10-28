@@ -6,12 +6,12 @@ void StartGame()
 	if (Scenes::IsSceneActive("Scenes/main_gameplay.kgscene"))
 	{
 		UI::DisplayWindow("pre_game_warning", false);
-		Input::LoadInputMode("Input/Runtime.kginput");
+		Input::LoadInputMap("Input/Runtime.kginput");
 	}
 	else
 	{
 		UI::DisplayWindow("pre_game_level_warning", false);
-		Input::LoadInputMode("RuntimeSinglePlayer.kginput");
+		Input::LoadInputMap("RuntimeSinglePlayer.kginput");
 		player2.AIState.ChangeCurrentState("SeekBall.kgaistate");
 	}
 	

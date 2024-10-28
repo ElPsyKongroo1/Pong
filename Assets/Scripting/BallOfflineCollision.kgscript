@@ -19,7 +19,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			entity player2 = Scenes::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 		}
-		Input::LoadInputMode("Input/Pre_Start.kginput");
+		Input::LoadInputMap("Input/Pre_Start.kginput");
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Player2ProximitySensor")
@@ -57,7 +57,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			entity player2 = Scenes::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 		}
-		Input::LoadInputMode("Input/Pre_Start.kginput");
+		Input::LoadInputMap("Input/Pre_Start.kginput");
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Top Wall" || otherEntityTag == "Bottom Wall")
