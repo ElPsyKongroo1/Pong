@@ -8,7 +8,6 @@ void DeflectBallOnUpdate(entity aiEntity,float deltaTime)
 	log(str(Math::DistanceVector3(aiEntityLocation, ballLocation)));
 	if (Math::DistanceVector3(aiEntityLocation, ballLocation) > threshold)
 	{
-		log("Seeking Ball");
 		Scripts::SeekBallOnUpdate(aiEntity, deltaTime);
 	}
 	else
@@ -16,12 +15,10 @@ void DeflectBallOnUpdate(entity aiEntity,float deltaTime)
 		// Deflect the ball
 		if (aiEntity.SeekLocationData.IsDeflectingUp)
 		{
-			log("Calling Move up");
 			Scripts::Player2MoveUp(deltaTime);
 		}
 		else
 		{
-			log ("Calling move down");
 			Scripts::Player2MoveDown(deltaTime);
 		}
 		

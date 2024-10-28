@@ -1,4 +1,4 @@
 void TestScript(entity aiEntity, float deltaTime)
 {
-
+	Input::IsPollingSlotPressed(2);
 }

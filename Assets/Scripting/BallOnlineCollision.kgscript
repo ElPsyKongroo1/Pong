@@ -64,17 +64,17 @@ bool BallOnlineCollision(entity currentEntity,uint16 userSlot, entity otherEntit
 	{
 		if (userSlot == 0)
 		{
-			if (Input::IsKeyPressed(Key::W))
+			if (Input::IsPollingSlotPressed(0))
 			{
-				float deflectionFactor = Input::IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
+				float deflectionFactor = Input::IsPollingSlotPressed(4) ? 0.55f : 0.33f;
 				vector2 up = {0.0f, 1.0f};
 				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
 				currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
 				currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 			}
-			if (Input::IsKeyPressed(Key::A))
+			if (Input::IsPollingSlotPressed(1))
 			{
-				float deflectionFactor = Input::IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
+				float deflectionFactor = Input::IsPollingSlotPressed(4) ? 0.55f : 0.33f;
 				vector2 up = {0.0f, -1.0f};
 				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
 				currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
@@ -89,17 +89,17 @@ bool BallOnlineCollision(entity currentEntity,uint16 userSlot, entity otherEntit
 	{
 		if (userSlot == 1)
 		{
-			if (Input::IsKeyPressed(Key::O))
+			if (Input::IsPollingSlotPressed(3))
 			{
-				float deflectionFactor = Input::IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
+				float deflectionFactor = Input::IsPollingSlotPressed(5) ? 0.55f : 0.33f;
 				vector2 up = {0.0f, 1.0f};
 				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
 				currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
 				currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 			}
-			if (Input::IsKeyPressed(Key::Semicolon))
+			if (Input::IsPollingSlotPressed(4))
 			{
-				float deflectionFactor = Input::IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
+				float deflectionFactor = Input::IsPollingSlotPressed(5) ? 0.55f : 0.33f;
 				vector2 up = {0.0f, -1.0f};
 				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
 				currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;

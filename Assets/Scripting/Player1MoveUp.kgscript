@@ -5,7 +5,7 @@ void Player1MoveUp(float timeStep)
 	bool upperLimit = translation.y >= 11.15f;
 	bool lowerLimit = translation.y <= -11.15f;
 	
-	float speed = Input::IsKeyPressed(Key::LeftShift) ? currentEntity.Speed.CurrentSpeed * currentEntity.Speed.SpeedUpMultiplier : currentEntity.Speed.CurrentSpeed;
+	float speed = Input::IsPollingSlotPressed(4) ? currentEntity.Speed.CurrentSpeed * currentEntity.Speed.SpeedUpMultiplier : currentEntity.Speed.CurrentSpeed;
 	vector3 velocity = {0.0f, 0.0f, 0.0f};
 
 	if (!upperLimit) 

@@ -51,10 +51,10 @@ void PlaySoundFromName(const std::string& a)
 {
 	PlaySoundFromNamePtr(a);
 }
-static std::function<bool(uint16_t a)> IsKeyPressedPtr {};
-bool IsKeyPressed(uint16_t a)
+static std::function<bool(uint16_t a)> Input_IsKeyPressedPtr {};
+bool Input_IsKeyPressed(uint16_t a)
 {
-	return IsKeyPressedPtr(a);
+	return Input_IsKeyPressedPtr(a);
 }
 static std::function<bool(const std::string& a)> Scenes_IsSceneActivePtr {};
 bool Scenes_IsSceneActive(const std::string& a)
@@ -101,10 +101,15 @@ void PlayStereoSoundFromName(const std::string& a)
 {
 	PlayStereoSoundFromNamePtr(a);
 }
-static std::function<void(const std::string& a)> LoadInputModeByNamePtr {};
-void LoadInputModeByName(const std::string& a)
+static std::function<void(const std::string& a)> InputMode_LoadInputModeByNamePtr {};
+void InputMode_LoadInputModeByName(const std::string& a)
 {
-	LoadInputModeByNamePtr(a);
+	InputMode_LoadInputModeByNamePtr(a);
+}
+static std::function<bool(uint16_t a)> InputMode_IsPollingSlotPressedPtr {};
+bool InputMode_IsPollingSlotPressed(uint16_t a)
+{
+	return InputMode_IsPollingSlotPressedPtr(a);
 }
 static std::function<void(const std::string& a)> LoadUserInterfaceFromNamePtr {};
 void LoadUserInterfaceFromName(const std::string& a)
@@ -282,7 +287,7 @@ void AddVoidString(const std::string& funcName, std::function<void(const std::st
 if (funcName == "Log") { LogPtr = funcPtr; return; }
 if (funcName == "PlaySoundFromName") { PlaySoundFromNamePtr = funcPtr; return; }
 if (funcName == "PlayStereoSoundFromName") { PlayStereoSoundFromNamePtr = funcPtr; return; }
-if (funcName == "LoadInputModeByName") { LoadInputModeByNamePtr = funcPtr; return; }
+if (funcName == "InputMode_LoadInputModeByName") { InputMode_LoadInputModeByNamePtr = funcPtr; return; }
 if (funcName == "TransitionSceneFromName") { TransitionSceneFromNamePtr = funcPtr; return; }
 if (funcName == "LoadUserInterfaceFromName") { LoadUserInterfaceFromNamePtr = funcPtr; return; }
 }
@@ -383,7 +388,8 @@ if (funcName == "GenerateRandomNumber") { GenerateRandomNumberPtr = funcPtr; ret
 }
 void AddBoolUInt16(const std::string& funcName, std::function<bool(uint16_t)> funcPtr)
 {
-if (funcName == "IsKeyPressed") { IsKeyPressedPtr = funcPtr; return; }
+if (funcName == "Input_IsKeyPressed") { Input_IsKeyPressedPtr = funcPtr; return; }
+if (funcName == "InputMode_IsPollingSlotPressed") { InputMode_IsPollingSlotPressedPtr = funcPtr; return; }
 }
 void AddBoolString(const std::string& funcName, std::function<bool(const std::string&)> funcPtr)
 {
@@ -409,6 +415,28 @@ void AddRaycastResultVec2Vec2(const std::string& funcName, std::function<Physics
 {
 if (funcName == "Physics_Raycast") { Physics_RaycastPtr = funcPtr; return; }
 }
+void Player2MoveUp(float timeStep)
+{
+  uint64_t currentEntity = FindEntityHandleByName("Player2");
+  Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
+  bool upperLimit = translation.y >= 11.15f;
+  bool lowerLimit = translation.y <= -11.15f;
+  float speed = InputMode_IsPollingSlotPressed(5) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+  Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
+  if (!upperLimit)
+  {
+    velocity.y = 1.0f;
+  }
+  velocity = velocity * speed * timeStep;
+  TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
+}
+
+void LeaveOnlineGameplay()
+{
+  LeaveCurrentSession();
+  OpenMainMenu();
+}
+
 void SeekLocationOnUpdate(uint64_t aiEntity, float deltaTime)
 {
   Math::vec3 aiLocation = TransformComponent_GetTranslation(aiEntity);
@@ -426,28 +454,6 @@ void SeekLocationOnUpdate(uint64_t aiEntity, float deltaTime)
   {
     Player2MoveDown(deltaTime);
   }
-}
-
-void LeaveOnlineGameplay()
-{
-  LeaveCurrentSession();
-  OpenMainMenu();
-}
-
-void Player2MoveUp(float timeStep)
-{
-  uint64_t currentEntity = FindEntityHandleByName("Player2");
-  Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
-  bool upperLimit = translation.y >= 11.15f;
-  bool lowerLimit = translation.y <= -11.15f;
-  float speed = IsKeyPressed(Key::RightShift) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
-  Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
-  if (!upperLimit)
-  {
-    velocity.y = 1.0f;
-  }
-  velocity = velocity * speed * timeStep;
-  TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
 }
 
 void UpdateSessionUserSlot(uint16_t userSlot)
@@ -471,7 +477,7 @@ void Player2MoveDown(float timeStep)
   Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
   bool upperLimit = translation.y >= 11.15;
   bool lowerLimit = translation.y <= -11.15;
-  float speed = IsKeyPressed(Key::RightShift) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+  float speed = InputMode_IsPollingSlotPressed(5) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
   Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
   if (!lowerLimit)
   {
@@ -502,7 +508,7 @@ void ApproveJoinSession(uint16_t userSlot)
   SetDisplayWindow("online_lobby", true);
   SetDisplayWindow("base_window", false);
   TransitionSceneFromName("Scenes/main_gameplay.kgscene");
-  LoadInputModeByName("Input/Online_Lobby_Input.kginput");
+  InputMode_LoadInputModeByName("Input/Online_Lobby_Input.kginput");
   PlaySoundFromName("Audio/menu_confirm.wav");
   PlayStereoSoundFromName("Audio/greenA.wav");
   std::string selectedWidget = "player_slot_" + std::to_string(userSlot);
@@ -515,7 +521,7 @@ void OnStartSession()
   SetDisplayWindow("pre_game_warning", true);
   SetDisplayWindow("base_window", false);
   SetDisplayWindow("online_lobby", false);
-  LoadInputModeByName("Input/Online_Pre_Start.kginput");
+  InputMode_LoadInputModeByName("Input/Online_Pre_Start.kginput");
   PlaySoundFromName("Audio/menu_confirm.wav");
   if (userSlot == 0)
   {
@@ -534,7 +540,7 @@ void Player1MoveUp(float timeStep)
   Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
   bool upperLimit = translation.y >= 11.15f;
   bool lowerLimit = translation.y <= -11.15f;
-  float speed = IsKeyPressed(Key::LeftShift) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+  float speed = InputMode_IsPollingSlotPressed(4) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
   Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
   if (!upperLimit)
   {
@@ -548,7 +554,7 @@ void OpenMainMenu()
 {
   LoadUserInterfaceFromName("UserInterface/Main Menu.kgui");
   TransitionSceneFromName("Scenes/main_menu.kgscene");
-  LoadInputModeByName("Input/MainMenu.kginput");
+  InputMode_LoadInputModeByName("Input/MainMenu.kginput");
   PlayStereoSoundFromName("Audio/blueA.wav");
   RequestUserCount();
 }
@@ -559,7 +565,7 @@ void OpenPongGameplay()
   SetDisplayWindow("pre_game_warning", true);
   SetDisplayWindow("base_window", false);
   TransitionSceneFromName("Scenes/main_gameplay.kgscene");
-  LoadInputModeByName("Input/Pre_Start.kginput");
+  InputMode_LoadInputModeByName("Input/Pre_Start.kginput");
   PlaySoundFromName("Audio/menu_confirm.wav");
   PlayStereoSoundFromName("Audio/greenA.wav");
 }
@@ -591,7 +597,7 @@ void Player1MoveDown(float timeStep)
   Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
   bool upperLimit = translation.y >= 11.15;
   bool lowerLimit = translation.y <= -11.15;
-  float speed = IsKeyPressed(Key::LeftShift) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+  float speed = InputMode_IsPollingSlotPressed(4) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
   Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
   if (!lowerLimit)
   {
@@ -651,7 +657,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
       uint64_t player2 = FindEntityHandleByName("Player2");
       AI_ClearAllStates(player2);
     }
-    LoadInputModeByName("Input/Pre_Start.kginput");
+    InputMode_LoadInputModeByName("Input/Pre_Start.kginput");
     collisionHandled = true;
   }
   else if (otherEntityTag == "Player2ProximitySensor")
@@ -689,7 +695,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
       uint64_t player2 = FindEntityHandleByName("Player2");
       AI_ClearAllStates(player2);
     }
-    LoadInputModeByName("Input/Pre_Start.kginput");
+    InputMode_LoadInputModeByName("Input/Pre_Start.kginput");
     collisionHandled = true;
   }
   else if (otherEntityTag == "Top Wall" || otherEntityTag == "Bottom Wall")
@@ -711,17 +717,17 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
   }
   else if (otherEntityTag == "Player1")
   {
-    if (IsKeyPressed(Key::W))
+    if (InputMode_IsPollingSlotPressed(0))
     {
-      float deflectionFactor = IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
+      float deflectionFactor = InputMode_IsPollingSlotPressed(4) ? 0.55f : 0.33f;
       Math::vec2 up = {0.0f, 1.0f};
       Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
       currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
     }
-    if (IsKeyPressed(Key::A))
+    if (InputMode_IsPollingSlotPressed(1))
     {
-      float deflectionFactor = IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
+      float deflectionFactor = InputMode_IsPollingSlotPressed(4) ? 0.55f : 0.33f;
       Math::vec2 up = {0.0f, -1.0f};
       Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
       currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
@@ -734,17 +740,17 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
   {
     if (Scenes_IsSceneActive("Scenes/main_gameplay.kgscene"))
     {
-      if (IsKeyPressed(Key::O))
+      if (InputMode_IsPollingSlotPressed(2))
       {
-        float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
+        float deflectionFactor = InputMode_IsPollingSlotPressed(5) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, 1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
         currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
-      if (IsKeyPressed(Key::Semicolon))
+      if (InputMode_IsPollingSlotPressed(3))
       {
-        float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
+        float deflectionFactor = InputMode_IsPollingSlotPressed(5) ? 0.55f : 0.33f;
         Math::vec2 down = {0.0f, -1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
         currentVelocity = glm::normalize(glm::normalize(currentVelocity) + down * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
@@ -802,7 +808,7 @@ void OnReceiveSignal(uint16_t signalNum)
     Rigidbody2DComponent_SetLinearVelocity(ball, {0.0f, 0.0f});
     PlaySoundFromName("Audio/lose_sound.wav");
     SetDisplayWindow("pre_game_warning", true);
-    LoadInputModeByName("Input/Online_Pre_Start.kginput");
+    InputMode_LoadInputModeByName("Input/Online_Pre_Start.kginput");
     EnableReadyCheck();
   }
 }
@@ -812,11 +818,11 @@ void StartOnlineGame()
   uint16_t userSlot = GetActiveSessionSlot();
   if (userSlot == 0)
   {
-    LoadInputModeByName("Input/Online_Player1_Runtime.kginput");
+    InputMode_LoadInputModeByName("Input/Online_Player1_Runtime.kginput");
   }
   else if (userSlot == 1)
   {
-    LoadInputModeByName("Input/Online_Player2_Runtime.kginput");
+    InputMode_LoadInputModeByName("Input/Online_Player2_Runtime.kginput");
   }
   SetDisplayWindow("pre_game_warning", false);
   SetDisplayWindow("online_lobby", false);
@@ -855,7 +861,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, {0.0f, 0.0f});
       PlaySoundFromName("Audio/lose_sound.wav");
       SetDisplayWindow("pre_game_warning", true);
-      LoadInputModeByName("Input/Online_Pre_Start.kginput");
+      InputMode_LoadInputModeByName("Input/Online_Pre_Start.kginput");
       SignalAll(1);
       EnableReadyCheck();
       collisionHandled = true;
@@ -874,7 +880,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, {0.0f, 0.0f});
       PlaySoundFromName("Audio/lose_sound.wav");
       SetDisplayWindow("pre_game_warning", true);
-      LoadInputModeByName("Input/Online_Pre_Start.kginput");
+      InputMode_LoadInputModeByName("Input/Online_Pre_Start.kginput");
       SignalAll(1);
       EnableReadyCheck();
       collisionHandled = true;
@@ -905,17 +911,17 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
   {
     if (userSlot == 0)
     {
-      if (IsKeyPressed(Key::W))
+      if (InputMode_IsPollingSlotPressed(0))
       {
-        float deflectionFactor = IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
+        float deflectionFactor = InputMode_IsPollingSlotPressed(4) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, 1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
         currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
-      if (IsKeyPressed(Key::A))
+      if (InputMode_IsPollingSlotPressed(1))
       {
-        float deflectionFactor = IsKeyPressed(Key::LeftShift) ? 0.55f : 0.33f;
+        float deflectionFactor = InputMode_IsPollingSlotPressed(4) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, -1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
         currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
@@ -929,17 +935,17 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
   {
     if (userSlot == 1)
     {
-      if (IsKeyPressed(Key::O))
+      if (InputMode_IsPollingSlotPressed(3))
       {
-        float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
+        float deflectionFactor = InputMode_IsPollingSlotPressed(5) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, 1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
         currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
-      if (IsKeyPressed(Key::Semicolon))
+      if (InputMode_IsPollingSlotPressed(4))
       {
-        float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
+        float deflectionFactor = InputMode_IsPollingSlotPressed(5) ? 0.55f : 0.33f;
         Math::vec2 up = {0.0f, -1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
         currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
@@ -1089,12 +1095,12 @@ void StartGame()
   if (Scenes_IsSceneActive("Scenes/main_gameplay.kgscene"))
   {
     SetDisplayWindow("pre_game_warning", false);
-    LoadInputModeByName("Input/Runtime.kginput");
+    InputMode_LoadInputModeByName("Input/Runtime.kginput");
   }
   else
   {
     SetDisplayWindow("pre_game_level_warning", false);
-    LoadInputModeByName("RuntimeSinglePlayer.kginput");
+    InputMode_LoadInputModeByName("RuntimeSinglePlayer.kginput");
     AI_ChangeCurrentState(player2, 13505644385975373738);
   }
   SetDisplayWindow("online_lobby", false);
@@ -1122,7 +1128,7 @@ void OpenLevel1()
   SetDisplayWindow("pre_game_level_warning", true);
   SetDisplayWindow("base_window", false);
   TransitionSceneFromName("Scenes/level_1.kgscene");
-  LoadInputModeByName("Input/Pre_Start.kginput");
+  InputMode_LoadInputModeByName("Input/Pre_Start.kginput");
   PlaySoundFromName("Audio/menu_confirm.wav");
   PlayStereoSoundFromName("Audio/greenA.wav");
 }
@@ -1157,19 +1163,16 @@ void DeflectBallOnUpdate(uint64_t aiEntity, float deltaTime)
   Log(std::to_string(glm::distance(aiEntityLocation, ballLocation)));
   if (glm::distance(aiEntityLocation, ballLocation) > threshold)
   {
-    Log("Seeking Ball");
     SeekBallOnUpdate(aiEntity, deltaTime);
   }
   else
   {
     if (*(bool*)Scenes_GetProjectComponentField(aiEntity, 15329151067419175107, 1))
     {
-      Log("Calling Move up");
       Player2MoveUp(deltaTime);
     }
     else
     {
-      Log("Calling move down");
       Player2MoveDown(deltaTime);
     }
   }
