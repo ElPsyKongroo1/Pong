@@ -45,6 +45,7 @@ KARGONO_API void AddVoidUInt64Vec2(const std::string& funcName, std::function<vo
 KARGONO_API void AddVoidUInt64Vec3Vec2(const std::string& funcName, std::function<void(uint64_t, Math::vec3, Math::vec2)> funcPtr);
 KARGONO_API void AddBoolStringString(const std::string& funcName, std::function<bool(const std::string&, const std::string&)> funcPtr);
 KARGONO_API void AddBoolUInt64String(const std::string& funcName, std::function<bool(uint64_t, const std::string&)> funcPtr);
+KARGONO_API void AddBoolUInt64UInt64(const std::string& funcName, std::function<bool(uint64_t, uint64_t)> funcPtr);
 KARGONO_API void AddBoolUInt16(const std::string& funcName, std::function<bool(uint16_t)> funcPtr);
 KARGONO_API void AddBoolString(const std::string& funcName, std::function<bool(const std::string&)> funcPtr);
 KARGONO_API void AddUInt16None(const std::string& funcName, std::function<uint16_t()> funcPtr);
@@ -67,31 +68,32 @@ KARGONO_API void AddRaycastResultVec2Vec2(const std::string& funcName, std::func
 		KARGONO_API void RequestJoinSession();
 		KARGONO_API void MoveUp();
 		KARGONO_API void UpdateSessionUserSlot(uint16_t a);
-		KARGONO_API void Player2MoveDown(float a);
 		KARGONO_API void UpdateOnlineCount(uint32_t a);
+		KARGONO_API void Player2MoveDown(float a);
 		KARGONO_API void UserLeftSession(uint16_t a);
 		KARGONO_API void OnCurrentSessionInit();
 		KARGONO_API void ApproveJoinSession(uint16_t a);
 		KARGONO_API void OnStartSession();
-		KARGONO_API void OpenMainMenu();
 		KARGONO_API void Player1MoveUp(float a);
-		KARGONO_API void OnConnectionTerminated();
+		KARGONO_API void OpenMainMenu();
 		KARGONO_API void OpenPongGameplay();
+		KARGONO_API void OnConnectionTerminated();
 		KARGONO_API void Player1OnCreate(uint64_t a);
 		KARGONO_API void Player1MoveDown(float a);
-		KARGONO_API void Player1OnUpdate(uint64_t a,float b);
 		KARGONO_API void Player2OnCreate(uint64_t a);
+		KARGONO_API void Player1OnUpdate(uint64_t a,float b);
 		KARGONO_API void Player2OnUpdate(uint64_t a,float b);
 		KARGONO_API void BallOnCreate(uint64_t a);
 		KARGONO_API bool BallOfflineCollision(uint64_t a,uint64_t b);
-		KARGONO_API bool BallOnlineCollision(uint64_t a,uint16_t b,uint64_t c);
-		KARGONO_API void StartOnlineGame();
 		KARGONO_API void OnReceiveSignal(uint16_t a);
+		KARGONO_API void StartOnlineGame();
+		KARGONO_API bool BallOnlineCollision(uint64_t a,uint16_t b,uint64_t c);
 		KARGONO_API bool BallOnPhysicsCollision(uint64_t a,uint64_t b);
-		KARGONO_API bool BallOnPhysicsCollisionEnd(uint64_t a,uint64_t b);
 		KARGONO_API void PlayMenuSelect();
+		KARGONO_API bool BallOnPhysicsCollisionEnd(uint64_t a,uint64_t b);
 		KARGONO_API void StartGame();
 		KARGONO_API void OpenLevel1();
 		KARGONO_API void SeekBallOnUpdate(uint64_t a,float b);
+		KARGONO_API void DeflectBallOnUpdate(uint64_t a,float b);
 	}
 }

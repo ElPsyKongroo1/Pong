@@ -10,3 +10,8 @@ Assets:
       CheckSum: 21dffda424289e1681ea2ce417ae05f7934820c13d98a074a9bbb3c76b90f92a
       FileLocation: SeekLocation.kgaistate
       AssetType: AIState
+  - AssetHandle: 10559578475286957955
+    MetaData:
+      CheckSum: 9ae600626ab96286ea2eb5941d489402f9889c152bfd64c0af10c1d9a5513243
+      FileLocation: DeflectBall.kgaistate
+      AssetType: AIState

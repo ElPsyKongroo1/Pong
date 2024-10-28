@@ -1,10 +1,13 @@
 Name: SeekLocationData
-ComponentSize: 4
-BufferSize: 4
+ComponentSize: 5
+BufferSize: 8
 BufferSlot: 3
 DataTypes:
   - Float
+  - Bool
 DataLocations:
   - 0
+  - 4
 DataNames:
   - Location
+  - IsDeflectingUp

@@ -186,6 +186,21 @@ void AI_ChangeCurrentState(uint64_t a, uint64_t b)
 {
 	AI_ChangeCurrentStatePtr(a, b);
 }
+static std::function<bool(uint64_t a, uint64_t b)> AI_IsGlobalStatePtr {};
+bool AI_IsGlobalState(uint64_t a, uint64_t b)
+{
+	return AI_IsGlobalStatePtr(a, b);
+}
+static std::function<bool(uint64_t a, uint64_t b)> AI_IsCurrentStatePtr {};
+bool AI_IsCurrentState(uint64_t a, uint64_t b)
+{
+	return AI_IsCurrentStatePtr(a, b);
+}
+static std::function<bool(uint64_t a, uint64_t b)> AI_IsPreviousStatePtr {};
+bool AI_IsPreviousState(uint64_t a, uint64_t b)
+{
+	return AI_IsPreviousStatePtr(a, b);
+}
 static std::function<void(uint64_t a, Math::vec2 b)> Rigidbody2DComponent_SetLinearVelocityPtr {};
 void Rigidbody2DComponent_SetLinearVelocity(uint64_t a, Math::vec2 b)
 {
@@ -356,6 +371,12 @@ void AddVoidPtrString(const std::string& funcName, std::function<void*(const std
 {
 if (funcName == "GetGameStateField") { GetGameStateFieldPtr = funcPtr; return; }
 }
+void AddBoolUInt64UInt64(const std::string& funcName, std::function<bool(uint64_t, uint64_t)> funcPtr)
+{
+if (funcName == "AI_IsGlobalState") { AI_IsGlobalStatePtr = funcPtr; return; }
+if (funcName == "AI_IsCurrentState") { AI_IsCurrentStatePtr = funcPtr; return; }
+if (funcName == "AI_IsPreviousState") { AI_IsPreviousStatePtr = funcPtr; return; }
+}
 void AddInt32Int32Int32(const std::string& funcName, std::function<int32_t(int32_t, int32_t)> funcPtr)
 {
 if (funcName == "GenerateRandomNumber") { GenerateRandomNumberPtr = funcPtr; return; }
@@ -435,6 +456,15 @@ void UpdateSessionUserSlot(uint16_t userSlot)
   SetWidgetText("online_lobby", selectedWidget, "Connected!");
 }
 
+void UpdateOnlineCount(uint32_t count)
+{
+  std::string onlineCount = "Online: " + std::to_string(count);
+  SetWidgetText("main_window", "online_count", onlineCount);
+  SetWidgetSelectable("main_window", "online_multiplayer", true);
+  SetWidgetTextColor("main_window", "online_multiplayer", {1.0f, 1.0f, 1.0f, 1.0f});
+  SetWidgetBackgroundColor("main_window", "online_multiplayer", {103.0f / 255.0f, 17.0f / 255.0f, 175.0f / 255.0f, 54.0f / 255.0f});
+}
+
 void Player2MoveDown(float timeStep)
 {
   uint64_t currentEntity = FindEntityHandleByName("Player2");
@@ -449,15 +479,6 @@ void Player2MoveDown(float timeStep)
   }
   velocity = velocity * speed * timeStep;
   TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
-}
-
-void UpdateOnlineCount(uint32_t count)
-{
-  std::string onlineCount = "Online: " + std::to_string(count);
-  SetWidgetText("main_window", "online_count", onlineCount);
-  SetWidgetSelectable("main_window", "online_multiplayer", true);
-  SetWidgetTextColor("main_window", "online_multiplayer", {1.0f, 1.0f, 1.0f, 1.0f});
-  SetWidgetBackgroundColor("main_window", "online_multiplayer", {103.0f / 255.0f, 17.0f / 255.0f, 175.0f / 255.0f, 54.0f / 255.0f});
 }
 
 void UserLeftSession(uint16_t userSlot)
@@ -507,15 +528,6 @@ void OnStartSession()
   EnableReadyCheck();
 }
 
-void OpenMainMenu()
-{
-  LoadUserInterfaceFromName("UserInterface/Main Menu.kgui");
-  TransitionSceneFromName("Scenes/main_menu.kgscene");
-  LoadInputModeByName("Input/MainMenu.kginput");
-  PlayStereoSoundFromName("Audio/blueA.wav");
-  RequestUserCount();
-}
-
 void Player1MoveUp(float timeStep)
 {
   uint64_t currentEntity = FindEntityHandleByName("Player1");
@@ -532,6 +544,26 @@ void Player1MoveUp(float timeStep)
   TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
 }
 
+void OpenMainMenu()
+{
+  LoadUserInterfaceFromName("UserInterface/Main Menu.kgui");
+  TransitionSceneFromName("Scenes/main_menu.kgscene");
+  LoadInputModeByName("Input/MainMenu.kginput");
+  PlayStereoSoundFromName("Audio/blueA.wav");
+  RequestUserCount();
+}
+
+void OpenPongGameplay()
+{
+  LoadUserInterfaceFromName("UserInterface/RuntimeUI.kgui");
+  SetDisplayWindow("pre_game_warning", true);
+  SetDisplayWindow("base_window", false);
+  TransitionSceneFromName("Scenes/main_gameplay.kgscene");
+  LoadInputModeByName("Input/Pre_Start.kginput");
+  PlaySoundFromName("Audio/menu_confirm.wav");
+  PlayStereoSoundFromName("Audio/greenA.wav");
+}
+
 void OnConnectionTerminated()
 {
   if (Scenes_IsSceneActive("Scenes/main_menu.kgscene"))
@@ -545,17 +577,6 @@ void OnConnectionTerminated()
     SetWidgetTextColor("main_window", "online_multiplayer", {1.0f, 1.0f, 1.0f, 222.0f / 255.0f});
     SetWidgetBackgroundColor("main_window", "online_multiplayer", {30.0f / 255.0f, 30.0f / 255.0f, 30.0f / 255.0f, 37.0f / 255.0f});
   }
-}
-
-void OpenPongGameplay()
-{
-  LoadUserInterfaceFromName("UserInterface/RuntimeUI.kgui");
-  SetDisplayWindow("pre_game_warning", true);
-  SetDisplayWindow("base_window", false);
-  TransitionSceneFromName("Scenes/main_gameplay.kgscene");
-  LoadInputModeByName("Input/Pre_Start.kginput");
-  PlaySoundFromName("Audio/menu_confirm.wav");
-  PlayStereoSoundFromName("Audio/greenA.wav");
 }
 
 void Player1OnCreate(uint64_t currentEntity)
@@ -580,6 +601,12 @@ void Player1MoveDown(float timeStep)
   TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
 }
 
+void Player2OnCreate(uint64_t currentEntity)
+{
+  CheckHasComponent(currentEntity, "TransformComponent");
+  CheckHasComponent(currentEntity, "Rigidbody2DComponent");
+}
+
 void Player1OnUpdate(uint64_t currentEntity, float deltaTime)
 {
   uint16_t userSlot = GetActiveSessionSlot();
@@ -587,12 +614,6 @@ void Player1OnUpdate(uint64_t currentEntity, float deltaTime)
   {
     SendAllEntityLocation(currentEntity, TransformComponent_GetTranslation(currentEntity));
   }
-}
-
-void Player2OnCreate(uint64_t currentEntity)
-{
-  CheckHasComponent(currentEntity, "TransformComponent");
-  CheckHasComponent(currentEntity, "Rigidbody2DComponent");
 }
 
 void Player2OnUpdate(uint64_t currentEntity, float deltaTime)
@@ -636,7 +657,21 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
   else if (otherEntityTag == "Player2ProximitySensor")
   {
     uint64_t player2 = FindEntityHandleByName("Player2");
-    AI_ChangeCurrentState(player2, 13505644385975373738);
+    int32_t randomValue = GenerateRandomNumber(0, 10);
+    if (randomValue < 4)
+    {
+      AI_ChangeCurrentState(player2, 13505644385975373738);
+    }
+    else if (randomValue < 7)
+    {
+      Scenes_SetProjectComponentField(player2, 15329151067419175107, 1, (void*)&RValueToLValue(true));
+      AI_ChangeCurrentState(player2, 10559578475286957955);
+    }
+    else if (randomValue <= 10)
+    {
+      Scenes_SetProjectComponentField(player2, 15329151067419175107, 1, (void*)&RValueToLValue(false));
+      AI_ChangeCurrentState(player2, 10559578475286957955);
+    }
   }
   else if (otherEntityTag == "Right Wall")
   {
@@ -710,23 +745,101 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
       if (IsKeyPressed(Key::Semicolon))
       {
         float deflectionFactor = IsKeyPressed(Key::RightShift) ? 0.55f : 0.33f;
-        Math::vec2 up = {0.0f, -1.0f};
+        Math::vec2 down = {0.0f, -1.0f};
         Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + down * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
     }
     else
     {
-      float deflectionFactor = 0.33f;
-      Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
-      currentVelocity = glm::normalize(glm::normalize(currentVelocity) * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
-      Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
+      if (AI_IsCurrentState(otherEntity, 10559578475286957955))
+      {
+        float deflectionFactor = 0.33f;
+        Math::vec2 direction;
+        if (*(bool*)Scenes_GetProjectComponentField(otherEntity, 15329151067419175107, 1))
+        {
+          direction = {0.0f, 1.0f};
+        }
+        else
+        {
+          direction = {0.0f, -1.0f};
+        }
+        Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
+        currentVelocity = glm::normalize(glm::normalize(currentVelocity) + direction * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+        Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
+      }
+      else
+      {
+        float deflectionFactor = 0.33f;
+        Math::vec2 currentVelocity = Rigidbody2DComponent_GetLinearVelocity(currentEntity);
+        currentVelocity = glm::normalize(glm::normalize(currentVelocity) * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+        Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
+      }
     }
     PlaySoundFromName("Audio/pop-sound.wav");
     collisionHandled = true;
   }
   return collisionHandled;
+}
+
+void OnReceiveSignal(uint16_t signalNum)
+{
+  uint16_t userSlot = GetActiveSessionSlot();
+  if (signalNum == 1)
+  {
+    uint64_t ball = FindEntityHandleByName("Ball");
+    if (userSlot == 0)
+    {
+      SetGameStateField("PlayerOneScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerOneScore") + 1));
+      SetWidgetText("base_window", "score_player_1", std::to_string(*(uint16_t*)GetGameStateField("PlayerOneScore")));
+    }
+    else if (userSlot == 1)
+    {
+      SetGameStateField("PlayerTwoScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerTwoScore") + 1));
+      SetWidgetText("base_window", "score_player_2", std::to_string(*(uint16_t*)GetGameStateField("PlayerTwoScore")));
+    }
+    Rigidbody2DComponent_SetLinearVelocity(ball, {0.0f, 0.0f});
+    PlaySoundFromName("Audio/lose_sound.wav");
+    SetDisplayWindow("pre_game_warning", true);
+    LoadInputModeByName("Input/Online_Pre_Start.kginput");
+    EnableReadyCheck();
+  }
+}
+
+void StartOnlineGame()
+{
+  uint16_t userSlot = GetActiveSessionSlot();
+  if (userSlot == 0)
+  {
+    LoadInputModeByName("Input/Online_Player1_Runtime.kginput");
+  }
+  else if (userSlot == 1)
+  {
+    LoadInputModeByName("Input/Online_Player2_Runtime.kginput");
+  }
+  SetDisplayWindow("pre_game_warning", false);
+  SetDisplayWindow("online_lobby", false);
+  SetDisplayWindow("base_window", true);
+  uint64_t player1 = FindEntityHandleByName("Player1");
+  TransformComponent_SetTranslation(player1, *(Math::vec3*)Scenes_GetProjectComponentField(player1, 2736904612472256316, 0));
+  uint64_t player2 = FindEntityHandleByName("Player2");
+  TransformComponent_SetTranslation(player2, *(Math::vec3*)Scenes_GetProjectComponentField(player2, 2736904612472256316, 0));
+  uint64_t ball = FindEntityHandleByName("Ball");
+  TransformComponent_SetTranslation(ball, *(Math::vec3*)Scenes_GetProjectComponentField(ball, 2736904612472256316, 0));
+  uint16_t ballDirection = *(uint16_t*)GetGameStateField("BallDirection");
+  Math::vec2 velocity = {0.0f, 0.0f};
+  if (ballDirection == 0)
+  {
+    velocity.x = -1.0f;
+    SetGameStateField("BallDirection", (void*)&RValueToLValue(1));
+  }
+  else
+  {
+    velocity.x = 1.0f;
+    SetGameStateField("BallDirection", (void*)&RValueToLValue(0));
+  }
+  Rigidbody2DComponent_SetLinearVelocity(ball, velocity * *(float*)Scenes_GetProjectComponentField(ball, 8506492999786783749, 0));
 }
 
 bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t otherEntity)
@@ -839,65 +952,6 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
   return collisionHandled;
 }
 
-void StartOnlineGame()
-{
-  uint16_t userSlot = GetActiveSessionSlot();
-  if (userSlot == 0)
-  {
-    LoadInputModeByName("Input/Online_Player1_Runtime.kginput");
-  }
-  else if (userSlot == 1)
-  {
-    LoadInputModeByName("Input/Online_Player2_Runtime.kginput");
-  }
-  SetDisplayWindow("pre_game_warning", false);
-  SetDisplayWindow("online_lobby", false);
-  SetDisplayWindow("base_window", true);
-  uint64_t player1 = FindEntityHandleByName("Player1");
-  TransformComponent_SetTranslation(player1, *(Math::vec3*)Scenes_GetProjectComponentField(player1, 2736904612472256316, 0));
-  uint64_t player2 = FindEntityHandleByName("Player2");
-  TransformComponent_SetTranslation(player2, *(Math::vec3*)Scenes_GetProjectComponentField(player2, 2736904612472256316, 0));
-  uint64_t ball = FindEntityHandleByName("Ball");
-  TransformComponent_SetTranslation(ball, *(Math::vec3*)Scenes_GetProjectComponentField(ball, 2736904612472256316, 0));
-  uint16_t ballDirection = *(uint16_t*)GetGameStateField("BallDirection");
-  Math::vec2 velocity = {0.0f, 0.0f};
-  if (ballDirection == 0)
-  {
-    velocity.x = -1.0f;
-    SetGameStateField("BallDirection", (void*)&RValueToLValue(1));
-  }
-  else
-  {
-    velocity.x = 1.0f;
-    SetGameStateField("BallDirection", (void*)&RValueToLValue(0));
-  }
-  Rigidbody2DComponent_SetLinearVelocity(ball, velocity * *(float*)Scenes_GetProjectComponentField(ball, 8506492999786783749, 0));
-}
-
-void OnReceiveSignal(uint16_t signalNum)
-{
-  uint16_t userSlot = GetActiveSessionSlot();
-  if (signalNum == 1)
-  {
-    uint64_t ball = FindEntityHandleByName("Ball");
-    if (userSlot == 0)
-    {
-      SetGameStateField("PlayerOneScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerOneScore") + 1));
-      SetWidgetText("base_window", "score_player_1", std::to_string(*(uint16_t*)GetGameStateField("PlayerOneScore")));
-    }
-    else if (userSlot == 1)
-    {
-      SetGameStateField("PlayerTwoScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerTwoScore") + 1));
-      SetWidgetText("base_window", "score_player_2", std::to_string(*(uint16_t*)GetGameStateField("PlayerTwoScore")));
-    }
-    Rigidbody2DComponent_SetLinearVelocity(ball, {0.0f, 0.0f});
-    PlaySoundFromName("Audio/lose_sound.wav");
-    SetDisplayWindow("pre_game_warning", true);
-    LoadInputModeByName("Input/Online_Pre_Start.kginput");
-    EnableReadyCheck();
-  }
-}
-
 bool BallOnPhysicsCollision(uint64_t currentEntity, uint64_t otherEntity)
 {
   uint16_t userSlot = GetActiveSessionSlot();
@@ -909,6 +963,11 @@ bool BallOnPhysicsCollision(uint64_t currentEntity, uint64_t otherEntity)
   {
     return BallOnlineCollision(currentEntity, userSlot, otherEntity);
   }
+}
+
+void PlayMenuSelect()
+{
+  PlaySoundFromName("Audio/menu_select.wav");
 }
 
 bool BallOnPhysicsCollisionEnd(uint64_t currentEntity, uint64_t otherEntity)
@@ -1023,11 +1082,6 @@ bool BallOnPhysicsCollisionEnd(uint64_t currentEntity, uint64_t otherEntity)
   return collisionHandled;
 }
 
-void PlayMenuSelect()
-{
-  PlaySoundFromName("Audio/menu_select.wav");
-}
-
 void StartGame()
 {
   uint64_t player1 = FindEntityHandleByName("Player1");
@@ -1091,6 +1145,33 @@ void SeekBallOnUpdate(uint64_t aiEntity, float deltaTime)
   else
   {
     Player2MoveDown(deltaTime);
+  }
+}
+
+void DeflectBallOnUpdate(uint64_t aiEntity, float deltaTime)
+{
+  uint64_t ballEntity = FindEntityHandleByName("Ball");
+  Math::vec3 aiEntityLocation = TransformComponent_GetTranslation(aiEntity);
+  Math::vec3 ballLocation = TransformComponent_GetTranslation(ballEntity);
+  float threshold = 3.0f;
+  Log(std::to_string(glm::distance(aiEntityLocation, ballLocation)));
+  if (glm::distance(aiEntityLocation, ballLocation) > threshold)
+  {
+    Log("Seeking Ball");
+    SeekBallOnUpdate(aiEntity, deltaTime);
+  }
+  else
+  {
+    if (*(bool*)Scenes_GetProjectComponentField(aiEntity, 15329151067419175107, 1))
+    {
+      Log("Calling Move up");
+      Player2MoveUp(deltaTime);
+    }
+    else
+    {
+      Log("Calling move down");
+      Player2MoveDown(deltaTime);
+    }
   }
 }
 

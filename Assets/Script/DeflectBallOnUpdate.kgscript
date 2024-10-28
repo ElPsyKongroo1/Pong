@@ -1,0 +1,29 @@
+void DeflectBallOnUpdate(entity aiEntity,float deltaTime)
+{
+	entity ballEntity = Scenes::GetEntity("Ball");
+	vector3 aiEntityLocation = aiEntity.Transform.GetTranslation();
+	vector3 ballLocation = ballEntity.Transform.GetTranslation();
+	
+	float threshold = 3.0f;
+	log(str(Math::DistanceVector3(aiEntityLocation, ballLocation)));
+	if (Math::DistanceVector3(aiEntityLocation, ballLocation) > threshold)
+	{
+		log("Seeking Ball");
+		Scripts::SeekBallOnUpdate(aiEntity, deltaTime);
+	}
+	else
+	{
+		// Deflect the ball
+		if (aiEntity.SeekLocationData.IsDeflectingUp)
+		{
+			log("Calling Move up");
+			Scripts::Player2MoveUp(deltaTime);
+		}
+		else
+		{
+			log ("Calling move down");
+			Scripts::Player2MoveDown(deltaTime);
+		}
+		
+	}
+}

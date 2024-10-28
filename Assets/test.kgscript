@@ -1,9 +1,4 @@
 void TestScript(entity aiEntity, float deltaTime)
 {
-	vector2 startPoint = {0.0f, 2.0f};
-	raycast_result result = Physics::Raycast(startPoint, startPoint);
-	result.collisionSuccess;
-	result.collisionEntity;
-	result.collisionNormal;
-	result.collisionPoint;
+
 }
