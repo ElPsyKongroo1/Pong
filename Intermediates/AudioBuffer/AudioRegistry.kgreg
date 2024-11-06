@@ -4,7 +4,7 @@ Assets:
     MetaData:
       CheckSum: f533eade437d80d58145bacddddd588cec46d78abf8bec6879d1f81d1fb3fb61
       FileLocation: Audio\menu_select.wav
-      IntermediateLocation: AudioBuffer/4772404760776306022.kgaudio
+      IntermediateLocation: AudioBuffer/4772404760776306022.kgbinary
       AssetType: Audio
       Channels: 2
       SampleRate: 44100
@@ -14,7 +14,7 @@ Assets:
     MetaData:
       CheckSum: 91a01fea6cda6d3adbd52ce135789f23af66e3d50fd0b685b6fd68eb389b96e3
       FileLocation: Audio\Manoria-Cathedral.wav
-      IntermediateLocation: AudioBuffer/8971184297765158014.kgaudio
+      IntermediateLocation: AudioBuffer/8971184297765158014.kgbinary
       AssetType: Audio
       Channels: 2
       SampleRate: 48000
@@ -24,7 +24,7 @@ Assets:
     MetaData:
       CheckSum: 7afd0510ddd03da8545f86776a81c8288d508ca9b38679b3058036440e5ff77b
       FileLocation: Audio\mechanist-theme.wav
-      IntermediateLocation: AudioBuffer/12873632591324649681.kgaudio
+      IntermediateLocation: AudioBuffer/12873632591324649681.kgbinary
       AssetType: Audio
       Channels: 2
       SampleRate: 48000
@@ -34,7 +34,7 @@ Assets:
     MetaData:
       CheckSum: 05b3a183410b7cde9ec5f2406248caee88c51180267400e8b42d1b0eb381957a
       FileLocation: Audio\menu_confirm.wav
-      IntermediateLocation: AudioBuffer/8671885103280513201.kgaudio
+      IntermediateLocation: AudioBuffer/8671885103280513201.kgbinary
       AssetType: Audio
       Channels: 2
       SampleRate: 44100
@@ -44,7 +44,7 @@ Assets:
     MetaData:
       CheckSum: 486b4fafa2f7576055c030104cc6555a6fdb2d1991a0f3845b15e6955f0b1fbd
       FileLocation: Audio\blueA.wav
-      IntermediateLocation: AudioBuffer/18286149760878530696.kgaudio
+      IntermediateLocation: AudioBuffer/18286149760878530696.kgbinary
       AssetType: Audio
       Channels: 2
       SampleRate: 44100
@@ -54,7 +54,7 @@ Assets:
     MetaData:
       CheckSum: 54d0fe26bcdf59665cf53869d85788e2b8b92bed17fa605ea3dbaa5a49ad4076
       FileLocation: Audio\pop-sound.wav
-      IntermediateLocation: AudioBuffer/6515589321809716456.kgaudio
+      IntermediateLocation: AudioBuffer/6515589321809716456.kgbinary
       AssetType: Audio
       Channels: 1
       SampleRate: 44100
@@ -64,7 +64,7 @@ Assets:
     MetaData:
       CheckSum: d45e3b73c8d76c3e3f722b2798762b79150b968c16d1c44dc6d68338075b4198
       FileLocation: Audio\test-song.wav
-      IntermediateLocation: AudioBuffer/3608787027047319333.kgaudio
+      IntermediateLocation: AudioBuffer/3608787027047319333.kgbinary
       AssetType: Audio
       Channels: 2
       SampleRate: 44100
@@ -74,7 +74,7 @@ Assets:
     MetaData:
       CheckSum: ddf01cf657fbac7c16227de0cb038243df7b8343d634c46b42cdb2d3c70b9ffc
       FileLocation: Audio\lose_sound.wav
-      IntermediateLocation: AudioBuffer/2121478283880279507.kgaudio
+      IntermediateLocation: AudioBuffer/2121478283880279507.kgbinary
       AssetType: Audio
       Channels: 2
       SampleRate: 44100
@@ -84,7 +84,7 @@ Assets:
     MetaData:
       CheckSum: 4c6f057c1d030f5024b5e8b120fedc7af78bd93c2e8202b10f83f264d4037225
       FileLocation: Audio\greenA.wav
-      IntermediateLocation: AudioBuffer/12818418233085346858.kgaudio
+      IntermediateLocation: AudioBuffer/12818418233085346858.kgbinary
       AssetType: Audio
       Channels: 2
       SampleRate: 44100

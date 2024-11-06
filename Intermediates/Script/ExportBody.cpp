@@ -36,11 +36,6 @@ void ClearDebugPoints()
 {
 	ClearDebugPointsPtr();
 }
-static std::function<void(const std::string& a)> LogPtr {};
-void Log(const std::string& a)
-{
-	LogPtr(a);
-}
 static std::function<const std::string&(uint64_t a)> TagComponent_GetTagPtr {};
 const std::string& TagComponent_GetTag(uint64_t a)
 {
@@ -221,6 +216,11 @@ Physics::RaycastResult Physics_Raycast(Math::vec2 a, Math::vec2 b)
 {
 	return Physics_RaycastPtr(a, b);
 }
+static std::function<void(const std::string& a, const std::string& b, const std::string& c)> LogPtr {};
+void Log(const std::string& a, const std::string& b, const std::string& c)
+{
+	LogPtr(a, b, c);
+}
 static std::function<void(const std::string& a, const std::string& b, bool c)> SetWidgetSelectablePtr {};
 void SetWidgetSelectable(const std::string& a, const std::string& b, bool c)
 {
@@ -284,7 +284,6 @@ if (funcName == "AddDebugLine") { AddDebugLinePtr = funcPtr; return; }
 }
 void AddVoidString(const std::string& funcName, std::function<void(const std::string&)> funcPtr)
 {
-if (funcName == "Log") { LogPtr = funcPtr; return; }
 if (funcName == "PlaySoundFromName") { PlaySoundFromNamePtr = funcPtr; return; }
 if (funcName == "PlayStereoSoundFromName") { PlayStereoSoundFromNamePtr = funcPtr; return; }
 if (funcName == "InputMap_LoadInputMapByName") { InputMap_LoadInputMapByNamePtr = funcPtr; return; }
@@ -323,6 +322,7 @@ if (funcName == "SetWidgetSelectable") { SetWidgetSelectablePtr = funcPtr; retur
 void AddVoidStringStringString(const std::string& funcName, std::function<void(const std::string&, const std::string&, const std::string&)> funcPtr)
 {
 if (funcName == "SetWidgetText") { SetWidgetTextPtr = funcPtr; return; }
+if (funcName == "Log") { LogPtr = funcPtr; return; }
 }
 void AddVoidStringStringVec4(const std::string& funcName, std::function<void(const std::string&, const std::string&, Math::vec4)> funcPtr)
 {
@@ -415,6 +415,28 @@ void AddRaycastResultVec2Vec2(const std::string& funcName, std::function<Physics
 {
 if (funcName == "Physics_Raycast") { Physics_RaycastPtr = funcPtr; return; }
 }
+void Player2MoveUp(float timeStep)
+{
+  uint64_t currentEntity = FindEntityHandleByName("Player2");
+  Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
+  bool upperLimit = translation.y >= 11.15f;
+  bool lowerLimit = translation.y <= -11.15f;
+  float speed = InputMap_IsPollingSlotPressed(5) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
+  Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
+  if (!upperLimit)
+  {
+    velocity.y = 1.0f;
+  }
+  velocity = velocity * speed * timeStep;
+  TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
+}
+
+void LeaveOnlineGameplay()
+{
+  LeaveCurrentSession();
+  OpenMainMenu();
+}
+
 void SeekLocationOnUpdate(uint64_t aiEntity, float deltaTime)
 {
   Math::vec3 aiLocation = TransformComponent_GetTranslation(aiEntity);
@@ -432,28 +454,6 @@ void SeekLocationOnUpdate(uint64_t aiEntity, float deltaTime)
   {
     Player2MoveDown(deltaTime);
   }
-}
-
-void LeaveOnlineGameplay()
-{
-  LeaveCurrentSession();
-  OpenMainMenu();
-}
-
-void Player2MoveUp(float timeStep)
-{
-  uint64_t currentEntity = FindEntityHandleByName("Player2");
-  Math::vec3 translation = TransformComponent_GetTranslation(currentEntity);
-  bool upperLimit = translation.y >= 11.15f;
-  bool lowerLimit = translation.y <= -11.15f;
-  float speed = InputMap_IsPollingSlotPressed(5) ? *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 1) : *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
-  Math::vec3 velocity = {0.0f, 0.0f, 0.0f};
-  if (!upperLimit)
-  {
-    velocity.y = 1.0f;
-  }
-  velocity = velocity * speed * timeStep;
-  TransformComponent_SetTranslation(currentEntity, TransformComponent_GetTranslation(currentEntity) + velocity);
 }
 
 void UpdateSessionUserSlot(uint16_t userSlot)
@@ -1049,7 +1049,7 @@ bool BallOnPhysicsCollisionEnd(uint64_t currentEntity, uint64_t otherEntity)
       }
       else
       {
-        Log("Failed to calculate AI terminal location");
+        Log("BallOnPhysicsCollisionEnd.kgscript", "107", "Failed to calculate AI terminal location");
         break;      }
       currentIteration = currentIteration + 1;
     }
@@ -1160,7 +1160,6 @@ void DeflectBallOnUpdate(uint64_t aiEntity, float deltaTime)
   Math::vec3 aiEntityLocation = TransformComponent_GetTranslation(aiEntity);
   Math::vec3 ballLocation = TransformComponent_GetTranslation(ballEntity);
   float threshold = 3.0f;
-  Log(std::to_string(glm::distance(aiEntityLocation, ballLocation)));
   if (glm::distance(aiEntityLocation, ballLocation) > threshold)
   {
     SeekBallOnUpdate(aiEntity, deltaTime);

@@ -3,7 +3,7 @@ Assets:
   - AssetHandle: 7507720298335089313
     MetaData:
       CheckSum: 34ac0488d3305e3a381d1f1bbe5504fd69861d26a54bd68c2a1e1d2b21a188c1
-      IntermediateLocation: Font/7507720298335089313.kgfont
+      IntermediateLocation: Font/7507720298335089313.kgbinary
       AssetType: Font
       FileLocation: Fonts\impact.ttf
       AtlasWidth: 512
@@ -1350,7 +1350,7 @@ Assets:
   - AssetHandle: 14825664752610736975
     MetaData:
       CheckSum: a9c67d890aa5e65fef01b68165ac955053ea4aa5516c3915ee69ad45ed84e832
-      IntermediateLocation: Font/14825664752610736975.kgfont
+      IntermediateLocation: Font/14825664752610736975.kgbinary
       AssetType: Font
       FileLocation: Fonts\arial.ttf
       AtlasWidth: 512
