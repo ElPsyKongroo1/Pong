@@ -5,7 +5,7 @@ void OnStartSession()
 		UI::DisplayWindow("base_window", false);
 		UI::DisplayWindow("online_lobby", false);
 		Input::LoadInputMap("Input/Online_Pre_Start.kginput");
-		Audio::PlaySound("Audio/menu_confirm.wav");
+		Audio::PlaySound("Audio/menu_confirm.kgaudio");
 		if (userSlot == 0)
 		{
 			UI::SetWidgetText("pre_game_warning", "controls_2", "");

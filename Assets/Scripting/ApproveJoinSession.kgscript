@@ -7,8 +7,8 @@ void ApproveJoinSession(uint16 userSlot)
 	UI::DisplayWindow("base_window", false);
 	Scenes::LoadScene("Scenes/main_gameplay.kgscene");
 	Input::LoadInputMap("Input/Online_Lobby_Input.kginput");
-	Audio::PlaySound("Audio/menu_confirm.wav");
-	Audio::PlayMusic("Audio/greenA.wav");
+	Audio::PlaySound("Audio/menu_confirm.kgaudio");
+	Audio::PlayMusic("Audio/green_a.kgaudio");
 	string selectedWidget = "player_slot_" + str(userSlot);
 	UI::SetWidgetText("online_lobby", selectedWidget, "Connected!");
 }

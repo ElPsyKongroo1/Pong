@@ -17,7 +17,7 @@ Assets:
       TextureHeight: 150
       TextureWidth: 800
       TextureChannels: 4
-      FileLocation: Textures\BasePaddle.png
+      FileLocation: Textures\base_paddle.kgtexture
   - AssetHandle: 8051163355459938058
     MetaData:
       CheckSum: f39dff176a7dd17d7d697fe04ed6f2fe580313593978de3b02a68e6fd8f0e521
@@ -26,7 +26,7 @@ Assets:
       TextureHeight: 512
       TextureWidth: 512
       TextureChannels: 4
-      FileLocation: Textures\camera.png
+      FileLocation: Textures\camera.kgtexture
   - AssetHandle: 7411058966582404143
     MetaData:
       CheckSum: f2989b42549f3eb01eeb1f8ccddaaaf02a73b98df04b95c35ee420b9a3d26fce
@@ -35,7 +35,7 @@ Assets:
       TextureHeight: 600
       TextureWidth: 600
       TextureChannels: 4
-      FileLocation: Textures\BlueBlock.png
+      FileLocation: Textures\blue_block.kgtexture
   - AssetHandle: 17523732859264026445
     MetaData:
       CheckSum: 4c95d5974ecccc1aa13df26f04f9c5afd91eef73be08b63e9baf97c4372e27fe
@@ -44,7 +44,7 @@ Assets:
       TextureHeight: 600
       TextureWidth: 600
       TextureChannels: 4
-      FileLocation: Textures\BaseBall.png
+      FileLocation: Textures\baseball.kgtexture
   - AssetHandle: 1143395742954915528
     MetaData:
       CheckSum: fc8f6da59c4f7f5a2fca0b1331e583f403ff9588e65b88c1a2ecf282521c04a5
@@ -53,4 +53,4 @@ Assets:
       TextureHeight: 600
       TextureWidth: 600
       TextureChannels: 4
-      FileLocation: Textures\PurpleBlock.png
+      FileLocation: Textures\purple_block.kgtexture

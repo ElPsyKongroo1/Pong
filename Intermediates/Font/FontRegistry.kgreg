@@ -5,7 +5,7 @@ Assets:
       CheckSum: 34ac0488d3305e3a381d1f1bbe5504fd69861d26a54bd68c2a1e1d2b21a188c1
       IntermediateLocation: Font/7507720298335089313.kgbinary
       AssetType: Font
-      FileLocation: Fonts\impact.ttf
+      FileLocation: Fonts\impact.kgfont
       AtlasWidth: 512
       AtlasHeight: 512
       LineHeight: 1.21972656
@@ -1352,7 +1352,7 @@ Assets:
       CheckSum: a9c67d890aa5e65fef01b68165ac955053ea4aa5516c3915ee69ad45ed84e832
       IntermediateLocation: Font/14825664752610736975.kgbinary
       AssetType: Font
-      FileLocation: Fonts\arial.ttf
+      FileLocation: Fonts\arial.kgfont
       AtlasWidth: 512
       AtlasHeight: 512
       LineHeight: 1.14990234

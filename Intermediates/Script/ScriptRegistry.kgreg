@@ -4,87 +4,6 @@ SectionLabels:
   - Player1
   - Player2
 Assets:
-  - AssetHandle: 52700902773466490
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: RequestUserCount
-      SectionLabel: Network
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 2064842461036640418
-    MetaData:
-      CheckSum: ""
-      FileLocation: Script/SeekLocationOnUpdate.kgscript
-      AssetType: Script
-      Name: SeekLocationOnUpdate
-      SectionLabel: None
-      ScriptType: Project
-      FunctionType: Void_UInt64Float
-  - AssetHandle: 6361819727416047522
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: SessionReadyCheck
-      SectionLabel: Network
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 10882227211325647722
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: CloseApplication
-      SectionLabel: Engine
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 888106727043414162
-    MetaData:
-      CheckSum: ""
-      FileLocation: Scripting/LeaveOnlineGameplay.kgscript
-      AssetType: Script
-      Name: LeaveOnlineGameplay
-      SectionLabel: None
-      ScriptType: Project
-      FunctionType: Void_None
-  - AssetHandle: 11837168018541382482
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: OnPress
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 1108782715341511642
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: MoveRight
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 8019676634851705730
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: MoveLeft
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 17959627880001999562
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: MoveDown
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
   - AssetHandle: 1558445037133759794
     MetaData:
       CheckSum: ""
@@ -110,6 +29,87 @@ Assets:
       AssetType: Script
       Name: MoveUp
       SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 17959627880001999562
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: MoveDown
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 8019676634851705730
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: MoveLeft
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 1108782715341511642
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: MoveRight
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 888106727043414162
+    MetaData:
+      CheckSum: ""
+      FileLocation: Scripting/LeaveOnlineGameplay.kgscript
+      AssetType: Script
+      Name: LeaveOnlineGameplay
+      SectionLabel: None
+      ScriptType: Project
+      FunctionType: Void_None
+  - AssetHandle: 11837168018541382482
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: OnPress
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 10882227211325647722
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: CloseApplication
+      SectionLabel: Engine
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 2064842461036640418
+    MetaData:
+      CheckSum: ""
+      FileLocation: Script/SeekLocationOnUpdate.kgscript
+      AssetType: Script
+      Name: SeekLocationOnUpdate
+      SectionLabel: None
+      ScriptType: Project
+      FunctionType: Void_UInt64Float
+  - AssetHandle: 6361819727416047522
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: SessionReadyCheck
+      SectionLabel: Network
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 52700902773466490
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: RequestUserCount
+      SectionLabel: Network
       ScriptType: Engine
       FunctionType: Void_None
   - AssetHandle: 3176244785148247992

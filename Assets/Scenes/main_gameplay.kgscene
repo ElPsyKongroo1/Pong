@@ -31,7 +31,7 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAgD8AAIA/"
+      Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwcAAAAAAAAAAACAPwAAAAAAAIA/"
   - Entity: 5735195652379188677
     TagComponent:
       Tag: Left Wall
@@ -52,7 +52,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "AAAAvwAAhEEAAAAAAAAAAAAAgD8AAIA/AACAPwEAAAA="
+      Buffer: !!binary "AAAAvwAAhEEAAAAAAAAAAAAAgD8AAIA/AACAPwYAAAA="
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -86,7 +86,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "AABGQo/7g0EAAAAAAAAAAAAAgD8AAIA/AACAPwIAAAA="
+      Buffer: !!binary "AABGQo/7g0EAAAAAAAAAAAAAgD8AAIA/AACAPwUAAAA="
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -120,7 +120,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "ANr/vgYAeEEK1yM8AAAAAAAAgD8AAIA/AACAPwMAAAA="
+      Buffer: !!binary "ANr/vgYAeEEK1yM8AAAAAAAAgD8AAIA/AACAPwQAAAA="
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -154,7 +154,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "QLP/vvr/g8EK1yM8AAAAAAAAgD8AAIA/AACAPwQAAAA="
+      Buffer: !!binary "QLP/vvr/g8EK1yM8AAAAAAAAgD8AAIA/AACAPwMAAAA="
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -192,7 +192,7 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "4sxcQDAUiMAAAIAxAACAPwAAgD8AAIA/AACAPwUAAAAAAAAAAACAPwAAAAAAAIA/"
+      Buffer: !!binary "4sxcQDAUiMAAAIAxAACAPwAAgD8AAIA/AACAPwIAAAAAAAAAAACAPwAAgD8AAIA/"
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: true
@@ -236,7 +236,7 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "b3s1QokRiMDi/x8yAACAPwAAgD8AAIA/AACAPwYAAAAAAAAAAACAPwAAAAAAAIA/"
+      Buffer: !!binary "b3s1QokRiMDi/x8yAACAPwAAgD8AAIA/AACAPwEAAAAAAAAAAACAPwAAgD8AAIA/"
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: true
@@ -283,7 +283,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "oCzKQcgHJ78AAIAxAACAvwAAgD8AAAAAAACAP/ypcT0AAIA/AACAPwAAAAAAAIA/BwAAAA=="
+      Buffer: !!binary "oCzKQcgHJ78AAIAxAACAvwAAgD8AAAAAAACAP/ypcT0AAIA/AACAPwAAAAAAAIA/AAAAAA=="
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: true

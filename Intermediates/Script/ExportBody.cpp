@@ -509,8 +509,8 @@ void ApproveJoinSession(uint16_t userSlot)
   SetDisplayWindow("base_window", false);
   TransitionSceneFromName("Scenes/main_gameplay.kgscene");
   InputMap_LoadInputMapByName("Input/Online_Lobby_Input.kginput");
-  PlaySoundFromName("Audio/menu_confirm.wav");
-  PlayStereoSoundFromName("Audio/greenA.wav");
+  PlaySoundFromName("Audio/menu_confirm.kgaudio");
+  PlayStereoSoundFromName("Audio/green_a.kgaudio");
   std::string selectedWidget = "player_slot_" + std::to_string(userSlot);
   SetWidgetText("online_lobby", selectedWidget, "Connected!");
 }
@@ -522,7 +522,7 @@ void OnStartSession()
   SetDisplayWindow("base_window", false);
   SetDisplayWindow("online_lobby", false);
   InputMap_LoadInputMapByName("Input/Online_Pre_Start.kginput");
-  PlaySoundFromName("Audio/menu_confirm.wav");
+  PlaySoundFromName("Audio/menu_confirm.kgaudio");
   if (userSlot == 0)
   {
     SetWidgetText("pre_game_warning", "controls_2", "");
@@ -555,7 +555,7 @@ void OpenMainMenu()
   LoadUserInterfaceFromName("UserInterface/Main Menu.kgui");
   TransitionSceneFromName("Scenes/main_menu.kgscene");
   InputMap_LoadInputMapByName("Input/MainMenu.kginput");
-  PlayStereoSoundFromName("Audio/blueA.wav");
+  PlayStereoSoundFromName("Audio/blue_a.kgaudio");
   RequestUserCount();
 }
 
@@ -566,8 +566,8 @@ void OpenPongGameplay()
   SetDisplayWindow("base_window", false);
   TransitionSceneFromName("Scenes/main_gameplay.kgscene");
   InputMap_LoadInputMapByName("Input/Pre_Start.kginput");
-  PlaySoundFromName("Audio/menu_confirm.wav");
-  PlayStereoSoundFromName("Audio/greenA.wav");
+  PlaySoundFromName("Audio/menu_confirm.kgaudio");
+  PlayStereoSoundFromName("Audio/green_a.kgaudio");
 }
 
 void OnConnectionTerminated()
@@ -646,7 +646,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
     SetGameStateField("PlayerTwoScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerTwoScore") + 1));
     SetWidgetText("base_window", "score_player_2", std::to_string(*(uint16_t*)GetGameStateField("PlayerTwoScore")));
     Rigidbody2DComponent_SetLinearVelocity(currentEntity, {0.0f, 0.0f});
-    PlaySoundFromName("Audio/lose_sound.wav");
+    PlaySoundFromName("Audio/lose_sound.kgaudio");
     if (Scenes_IsSceneActive("Scenes/main_gameplay.kgscene"))
     {
       SetDisplayWindow("pre_game_warning", true);
@@ -684,7 +684,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
     SetGameStateField("PlayerOneScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerOneScore") + 1));
     SetWidgetText("base_window", "score_player_1", std::to_string(*(uint16_t*)GetGameStateField("PlayerOneScore")));
     Rigidbody2DComponent_SetLinearVelocity(currentEntity, {0.0f, 0.0f});
-    PlaySoundFromName("Audio/lose_sound.wav");
+    PlaySoundFromName("Audio/lose_sound.kgaudio");
     if (Scenes_IsSceneActive("Scenes/main_gameplay.kgscene"))
     {
       SetDisplayWindow("pre_game_warning", true);
@@ -712,7 +712,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
     }
     currentVelocity = glm::normalize(glm::normalize(currentVelocity) + horizontalDirection * 0.1f) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
     Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
-    PlaySoundFromName("Audio/pop-sound.wav");
+    PlaySoundFromName("Audio/pop_sound.kgaudio");
     collisionHandled = true;
   }
   else if (otherEntityTag == "Player1")
@@ -733,7 +733,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
       currentVelocity = glm::normalize(glm::normalize(currentVelocity) + up * deflectionFactor) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
     }
-    PlaySoundFromName("Audio/pop-sound.wav");
+    PlaySoundFromName("Audio/pop_sound.kgaudio");
     collisionHandled = true;
   }
   else if (otherEntityTag == "Player2")
@@ -783,7 +783,7 @@ bool BallOfflineCollision(uint64_t currentEntity, uint64_t otherEntity)
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
     }
-    PlaySoundFromName("Audio/pop-sound.wav");
+    PlaySoundFromName("Audio/pop_sound.kgaudio");
     collisionHandled = true;
   }
   return collisionHandled;
@@ -806,7 +806,7 @@ void OnReceiveSignal(uint16_t signalNum)
       SetWidgetText("base_window", "score_player_2", std::to_string(*(uint16_t*)GetGameStateField("PlayerTwoScore")));
     }
     Rigidbody2DComponent_SetLinearVelocity(ball, {0.0f, 0.0f});
-    PlaySoundFromName("Audio/lose_sound.wav");
+    PlaySoundFromName("Audio/lose_sound.kgaudio");
     SetDisplayWindow("pre_game_warning", true);
     InputMap_LoadInputMapByName("Input/Online_Pre_Start.kginput");
     EnableReadyCheck();
@@ -859,7 +859,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
       SetGameStateField("PlayerTwoScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerTwoScore") + 1));
       SetWidgetText("base_window", "score_player_2", std::to_string(*(uint16_t*)GetGameStateField("PlayerTwoScore")));
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, {0.0f, 0.0f});
-      PlaySoundFromName("Audio/lose_sound.wav");
+      PlaySoundFromName("Audio/lose_sound.kgaudio");
       SetDisplayWindow("pre_game_warning", true);
       InputMap_LoadInputMapByName("Input/Online_Pre_Start.kginput");
       SignalAll(1);
@@ -878,7 +878,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
       SetGameStateField("PlayerOneScore", (void*)&RValueToLValue(*(uint16_t*)GetGameStateField("PlayerOneScore") + 1));
       SetWidgetText("base_window", "score_player_1", std::to_string(*(uint16_t*)GetGameStateField("PlayerOneScore")));
       Rigidbody2DComponent_SetLinearVelocity(currentEntity, {0.0f, 0.0f});
-      PlaySoundFromName("Audio/lose_sound.wav");
+      PlaySoundFromName("Audio/lose_sound.kgaudio");
       SetDisplayWindow("pre_game_warning", true);
       InputMap_LoadInputMapByName("Input/Online_Pre_Start.kginput");
       SignalAll(1);
@@ -904,7 +904,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
     }
     currentVelocity = glm::normalize(glm::normalize(currentVelocity) + horizontalDirection * 0.1f) * *(float*)Scenes_GetProjectComponentField(currentEntity, 8506492999786783749, 0);
     Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
-    PlaySoundFromName("Audio/pop-sound.wav");
+    PlaySoundFromName("Audio/pop_sound.kgaudio");
     collisionHandled = true;
   }
   else if (otherEntityTag == "Player1")
@@ -928,7 +928,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
     }
-    PlaySoundFromName("Audio/pop-sound.wav");
+    PlaySoundFromName("Audio/pop_sound.kgaudio");
     collisionHandled = true;
   }
   else if (otherEntityTag == "Player2")
@@ -952,7 +952,7 @@ bool BallOnlineCollision(uint64_t currentEntity, uint16_t userSlot, uint64_t oth
         Rigidbody2DComponent_SetLinearVelocity(currentEntity, currentVelocity);
       }
     }
-    PlaySoundFromName("Audio/pop-sound.wav");
+    PlaySoundFromName("Audio/pop_sound.kgaudio");
     collisionHandled = true;
   }
   return collisionHandled;
@@ -973,7 +973,7 @@ bool BallOnPhysicsCollision(uint64_t currentEntity, uint64_t otherEntity)
 
 void PlayMenuSelect()
 {
-  PlaySoundFromName("Audio/menu_select.wav");
+  PlaySoundFromName("Audio/menu_select.kgaudio");
 }
 
 bool BallOnPhysicsCollisionEnd(uint64_t currentEntity, uint64_t otherEntity)
@@ -1129,8 +1129,8 @@ void OpenLevel1()
   SetDisplayWindow("base_window", false);
   TransitionSceneFromName("Scenes/level_1.kgscene");
   InputMap_LoadInputMapByName("Input/Pre_Start.kginput");
-  PlaySoundFromName("Audio/menu_confirm.wav");
-  PlayStereoSoundFromName("Audio/greenA.wav");
+  PlaySoundFromName("Audio/menu_confirm.kgaudio");
+  PlayStereoSoundFromName("Audio/green_a.kgaudio");
 }
 
 void SeekBallOnUpdate(uint64_t aiEntity, float deltaTime)
