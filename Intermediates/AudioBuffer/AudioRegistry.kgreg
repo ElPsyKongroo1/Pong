@@ -3,7 +3,7 @@ Assets:
   - AssetHandle: 4772404760776306022
     MetaData:
       CheckSum: f533eade437d80d58145bacddddd588cec46d78abf8bec6879d1f81d1fb3fb61
-      FileLocation: Audio\menu_select.kgaudio
+      FileLocation: Common/Audio/menu_select.kgaudio
       IntermediateLocation: AudioBuffer/4772404760776306022.kgbinary
       AssetType: Audio
       Channels: 2
@@ -13,7 +13,7 @@ Assets:
   - AssetHandle: 8671885103280513201
     MetaData:
       CheckSum: 05b3a183410b7cde9ec5f2406248caee88c51180267400e8b42d1b0eb381957a
-      FileLocation: Audio\menu_confirm.kgaudio
+      FileLocation: Common/Audio/menu_confirm.kgaudio
       IntermediateLocation: AudioBuffer/8671885103280513201.kgbinary
       AssetType: Audio
       Channels: 2
@@ -23,7 +23,7 @@ Assets:
   - AssetHandle: 18286149760878530696
     MetaData:
       CheckSum: 486b4fafa2f7576055c030104cc6555a6fdb2d1991a0f3845b15e6955f0b1fbd
-      FileLocation: Audio\blue_a.kgaudio
+      FileLocation: Common/Audio/blue_a.kgaudio
       IntermediateLocation: AudioBuffer/18286149760878530696.kgbinary
       AssetType: Audio
       Channels: 2
@@ -33,7 +33,7 @@ Assets:
   - AssetHandle: 6515589321809716456
     MetaData:
       CheckSum: 54d0fe26bcdf59665cf53869d85788e2b8b92bed17fa605ea3dbaa5a49ad4076
-      FileLocation: Audio\pop_sound.kgaudio
+      FileLocation: Common/Audio/pop_sound.kgaudio
       IntermediateLocation: AudioBuffer/6515589321809716456.kgbinary
       AssetType: Audio
       Channels: 1
@@ -43,7 +43,7 @@ Assets:
   - AssetHandle: 2121478283880279507
     MetaData:
       CheckSum: ddf01cf657fbac7c16227de0cb038243df7b8343d634c46b42cdb2d3c70b9ffc
-      FileLocation: Audio\lose_sound.kgaudio
+      FileLocation: Common/Audio/lose_sound.kgaudio
       IntermediateLocation: AudioBuffer/2121478283880279507.kgbinary
       AssetType: Audio
       Channels: 2
@@ -53,7 +53,7 @@ Assets:
   - AssetHandle: 12818418233085346858
     MetaData:
       CheckSum: 4c6f057c1d030f5024b5e8b120fedc7af78bd93c2e8202b10f83f264d4037225
-      FileLocation: Audio\green_a.kgaudio
+      FileLocation: Common/Audio/green_a.kgaudio
       IntermediateLocation: AudioBuffer/12818418233085346858.kgbinary
       AssetType: Audio
       Channels: 2

@@ -63,7 +63,7 @@ bool BallOnPhysicsCollisionEnd(entity currentEntity,entity otherEntity)
 					// Store seek location
 					entity player2 = Scenes::GetEntity("Player2");
 					player2.SeekLocationData.Location = endPoint3D.y;
-					player2.AIState.ChangeCurrentState("SeekLocation.kgaistate");
+					player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekLocation.kgaistate");
 					// Close while loop
 					break;
 				}
@@ -77,7 +77,7 @@ bool BallOnPhysicsCollisionEnd(entity currentEntity,entity otherEntity)
 					player2.SeekLocationData.Location = slope * player2Location.x - currentStartLocation2D.x * slope + currentStartLocation2D.y;
 					
 					// Change AI State
-					player2.AIState.ChangeCurrentState("SeekLocation.kgaistate");
+					player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekLocation.kgaistate");
 					// Close while loop
 					break;
 				}
@@ -86,7 +86,7 @@ bool BallOnPhysicsCollisionEnd(entity currentEntity,entity otherEntity)
 				{
 					// Follow ball location
 					entity player2 = Scenes::GetEntity("Player2");
-					player2.AIState.ChangeCurrentState("SeekBall.kgaistate");
+					player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
 					
 					// Close while loop
 					break;
@@ -96,7 +96,7 @@ bool BallOnPhysicsCollisionEnd(entity currentEntity,entity otherEntity)
 				{
 					// Follow ball location
 					entity player2 = Scenes::GetEntity("Player2");
-					player2.AIState.ChangeCurrentState("SeekBall.kgaistate");
+					player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
 					
 					// Close while loop
 					break;
@@ -115,7 +115,7 @@ bool BallOnPhysicsCollisionEnd(entity currentEntity,entity otherEntity)
 		if (Scenes::IsSceneActive("Scenes/level_1.kgscene") && otherEntityTag == "Player2")
 		{
 			entity player2 = Scenes::GetEntity("Player2");
-			player2.AIState.ChangeCurrentState("SeekBall.kgaistate");
+			player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
 		}
 	}
 

@@ -3,15 +3,15 @@ Assets:
   - AssetHandle: 13505644385975373738
     MetaData:
       CheckSum: cecf18c088ace633fd6e82ba19990a5fc1c6143518ea7213906457d23be64fe3
-      FileLocation: SeekBall.kgaistate
+      FileLocation: Entities/AIPlayer/SeekBall.kgaistate
       AssetType: AIState
   - AssetHandle: 9099345613034300062
     MetaData:
       CheckSum: 21dffda424289e1681ea2ce417ae05f7934820c13d98a074a9bbb3c76b90f92a
-      FileLocation: SeekLocation.kgaistate
+      FileLocation: Entities/AIPlayer/SeekLocation.kgaistate
       AssetType: AIState
   - AssetHandle: 10559578475286957955
     MetaData:
       CheckSum: 9ae600626ab96286ea2eb5941d489402f9889c152bfd64c0af10c1d9a5513243
-      FileLocation: DeflectBall.kgaistate
+      FileLocation: Entities/AIPlayer/DeflectBall.kgaistate
       AssetType: AIState

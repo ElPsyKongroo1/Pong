@@ -8,7 +8,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 		GameState::SetField("PlayerTwoScore", GameState::GetFieldUInt16("PlayerTwoScore") + 1);
 		UI::SetWidgetText("base_window", "score_player_2", str(GameState::GetFieldUInt16("PlayerTwoScore")));
 		currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
-		Audio::PlaySound("Audio/lose_sound.kgaudio");
+		Audio::PlaySound("Common/Audio/lose_sound.kgaudio");
 		if (Scenes::IsSceneActive("Scenes/main_gameplay.kgscene"))
 		{
 			UI::DisplayWindow("pre_game_warning", true);
@@ -19,7 +19,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			entity player2 = Scenes::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 		}
-		Input::LoadInputMap("Input/Pre_Start.kginput");
+		Input::LoadInputMap("Common/Input/Pre_Start.kginput");
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Player2ProximitySensor")
@@ -28,17 +28,17 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 		int32 randomValue = Random::GetInteger(0, 10);
 		if (randomValue < 4)
 		{
-			player2.AIState.ChangeCurrentState("SeekBall.kgaistate");
+			player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
 		}
 		else if (randomValue < 7)
 		{
 			player2.SeekLocationData.IsDeflectingUp = true;
-			player2.AIState.ChangeCurrentState("DeflectBall.kgaistate");
+			player2.AIState.ChangeCurrentState("Entities/AIPlayer/DeflectBall.kgaistate");
 		}
 		else if (randomValue <= 10)
 		{
 			player2.SeekLocationData.IsDeflectingUp = false;
-			player2.AIState.ChangeCurrentState("DeflectBall.kgaistate");
+			player2.AIState.ChangeCurrentState("Entities/AIPlayer/DeflectBall.kgaistate");
 		}
 	}
 	else if (otherEntityTag == "Right Wall")
@@ -46,7 +46,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 		GameState::SetField("PlayerOneScore", GameState::GetFieldUInt16("PlayerOneScore") + 1);
 		UI::SetWidgetText("base_window", "score_player_1", str(GameState::GetFieldUInt16("PlayerOneScore")));
 		currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
-		Audio::PlaySound("Audio/lose_sound.kgaudio");
+		Audio::PlaySound("Common/Audio/lose_sound.kgaudio");
 		if (Scenes::IsSceneActive("Scenes/main_gameplay.kgscene"))
 		{
 			UI::DisplayWindow("pre_game_warning", true);
@@ -57,7 +57,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			entity player2 = Scenes::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 		}
-		Input::LoadInputMap("Input/Pre_Start.kginput");
+		Input::LoadInputMap("Common/Input/Pre_Start.kginput");
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Top Wall" || otherEntityTag == "Bottom Wall")
@@ -74,7 +74,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 		}
 		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + horizontalDirection * 0.1f) * currentEntity.Speed.CurrentSpeed;
 		currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-		Audio::PlaySound("Audio/pop_sound.kgaudio");
+		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
 		collisionHandled = true;
 	}
 	
@@ -97,7 +97,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
 			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 		}
-		Audio::PlaySound("Audio/pop_sound.kgaudio");
+		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Player2")
@@ -123,7 +123,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 		}
 		else
 		{
-			if (otherEntity.AIState.IsCurrentState("DeflectBall.kgaistate"))
+			if (otherEntity.AIState.IsCurrentState("Entities/AIPlayer/DeflectBall.kgaistate"))
 			{
 				float deflectionFactor = 0.33f;
 				vector2 direction;
@@ -147,7 +147,7 @@ bool BallOfflineCollision(entity currentEntity, entity otherEntity)
 				currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 			}
 		}
-		Audio::PlaySound("Audio/pop_sound.kgaudio");
+		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
 		collisionHandled = true;
 	}
 	
