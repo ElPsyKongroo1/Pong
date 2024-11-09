@@ -20,16 +20,6 @@ Assets:
       SampleRate: 44100
       TotalPcmFrameCount: 34816
       TotalSize: 139264
-  - AssetHandle: 6515589321809716456
-    MetaData:
-      CheckSum: 54d0fe26bcdf59665cf53869d85788e2b8b92bed17fa605ea3dbaa5a49ad4076
-      FileLocation: Audio\pop_sound.kgaudio
-      IntermediateLocation: AudioBuffer/6515589321809716456.kgbinary
-      AssetType: Audio
-      Channels: 1
-      SampleRate: 44100
-      TotalPcmFrameCount: 4891
-      TotalSize: 9782
   - AssetHandle: 18286149760878530696
     MetaData:
       CheckSum: 486b4fafa2f7576055c030104cc6555a6fdb2d1991a0f3845b15e6955f0b1fbd
@@ -40,6 +30,16 @@ Assets:
       SampleRate: 44100
       TotalPcmFrameCount: 3631104
       TotalSize: 14524416
+  - AssetHandle: 6515589321809716456
+    MetaData:
+      CheckSum: 54d0fe26bcdf59665cf53869d85788e2b8b92bed17fa605ea3dbaa5a49ad4076
+      FileLocation: Audio\pop_sound.kgaudio
+      IntermediateLocation: AudioBuffer/6515589321809716456.kgbinary
+      AssetType: Audio
+      Channels: 1
+      SampleRate: 44100
+      TotalPcmFrameCount: 4891
+      TotalSize: 9782
   - AssetHandle: 2121478283880279507
     MetaData:
       CheckSum: ddf01cf657fbac7c16227de0cb038243df7b8343d634c46b42cdb2d3c70b9ffc
