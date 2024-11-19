@@ -273,7 +273,7 @@ Assets:
       Name: BallOfflineCollision
       SectionLabel: Ball
       ScriptType: Project
-      FunctionType: Bool_UInt64UInt64
+      FunctionType: Bool_EntityEntity
   - AssetHandle: 11068697129652250038
     MetaData:
       CheckSum: ""
@@ -309,7 +309,7 @@ Assets:
       Name: BallOnPhysicsCollision
       SectionLabel: Ball
       ScriptType: Project
-      FunctionType: Bool_UInt64UInt64
+      FunctionType: Bool_EntityEntity
   - AssetHandle: 16979334666329041451
     MetaData:
       CheckSum: ""
@@ -327,7 +327,7 @@ Assets:
       Name: BallOnPhysicsCollisionEnd
       SectionLabel: Ball
       ScriptType: Project
-      FunctionType: Bool_UInt64UInt64
+      FunctionType: Bool_EntityEntity
   - AssetHandle: 4174533717311968573
     MetaData:
       CheckSum: ""
