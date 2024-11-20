@@ -32,6 +32,10 @@
 *.out
 *.app
 
+# Intermediates
+*.ilk
+*.exp
+
 
 # Private Files
 *.env
@@ -39,4 +43,4 @@
 # Specific Folders
 /Assets/Scripting/Binary/**
 /Intermediates/Script/ExportHeader.h
-/Intermediates/Script/ExportHeader.cpp
+/Intermediates/Script/ExportBody.cpp
