@@ -1,5 +1,12 @@
-void TestScript(entity aiEntity, float deltaTime)
+bool BallOnPhysicsCollision(entity currentEntity, entity otherEntity)
 {
-	Input::IsPollingSlotPressed(2);
-	log("Hello");
+	uint16 userSlot = Network::GetActiveSessionSlot();
+	if (userSlot == Math::MaxUInt16())
+	{
+		return Scripts::BallOfflineCollision(currentEntity, otherEntity);
+	}
+	else
+	{
+		return Scripts::BallOnlineCollision(currentEntity, userSlot, otherEntity);
+	}
 }
