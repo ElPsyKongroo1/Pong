@@ -8,9 +8,9 @@ KeyboardPolling:
   - Slot: 3
     KeyCode: 264
   - Slot: 4
-    KeyCode: 340
+    KeyCode: 341
   - Slot: 5
-    KeyCode: 344
+    KeyCode: 345
 OnUpdate:
   - BindingType: KeyboardAction
     ScriptHandle: 11507116285654136237

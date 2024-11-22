@@ -83,7 +83,7 @@ Windows:
         DirectionPointerRight: 2
         FunctionPointerOnPress: 0
         TextWidget:
-          Text: "Player 1: W=Up, S=Down, Left-Shift=Speed-Up"
+          Text: "Player 1: W=Up, S=Down, Left-Control=Speed-Up"
           TextSize: 0.230000004
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [18.1015625, 0.857142866]
@@ -100,7 +100,7 @@ Windows:
         DirectionPointerRight: -1
         FunctionPointerOnPress: 0
         TextWidget:
-          Text: "Player 2: Up-Arrow=Up, Down-Arrow=Down, Right-Shift=Speed-Up"
+          Text: "Player 2: Up-Arrow=Up, Down-Arrow=Down, Right-Control=Speed-Up"
           TextSize: 0.230000004
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [26.2851562, 0.857142866]
@@ -203,7 +203,7 @@ Windows:
         DirectionPointerRight: -1
         FunctionPointerOnPress: 0
         TextWidget:
-          Text: "Controls: W=Up, S=Down, Left-Shift=SpeedUp"
+          Text: "Controls: W=Up, S=Down, Left-Control=SpeedUp"
           TextSize: 0.300000012
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [18.1591797, 0.857142866]
