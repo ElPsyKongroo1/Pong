@@ -174,8 +174,6 @@ Entities:
       Group: Player1Group
     OnUpdateComponent:
       OnUpdateHandle: 8188330720880382876
-    OnCreateComponent:
-      OnCreateHandle: 4805234009752154696
     TransformComponent:
       Translation: [4, -0.00246500969, 3.7252903e-09]
       Rotation: [0, 0, 1.57079637]
@@ -218,8 +216,6 @@ Entities:
       Group: ""
     OnUpdateComponent:
       OnUpdateHandle: 16135958558406264166
-    OnCreateComponent:
-      OnCreateHandle: 13218836288168913308
     TransformComponent:
       Translation: [45.920536, -0.00214099884, 7.4505806e-09]
       Rotation: [0, 0, 1.57079625]
@@ -267,8 +263,6 @@ Entities:
     TagComponent:
       Tag: Ball
       Group: ""
-    OnCreateComponent:
-      OnCreateHandle: 209298783402426078
     TransformComponent:
       Translation: [25.9217854, -0.00246608257, 3.7252903e-09]
       Rotation: [0, 0, 1.57079637]

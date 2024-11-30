@@ -4,6 +4,87 @@ SectionLabels:
   - Player1
   - Player2
 Assets:
+  - AssetHandle: 52700902773466490
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: RequestUserCount
+      SectionLabel: Network
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 2064842461036640418
+    MetaData:
+      CheckSum: ""
+      FileLocation: Entities/AIPlayer/SeekLocationOnUpdate.kgscript
+      AssetType: Script
+      Name: SeekLocationOnUpdate
+      SectionLabel: None
+      ScriptType: Project
+      FunctionType: Void_EntityFloat
+  - AssetHandle: 6361819727416047522
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: SessionReadyCheck
+      SectionLabel: Network
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 10882227211325647722
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: CloseApplication
+      SectionLabel: Engine
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 888106727043414162
+    MetaData:
+      CheckSum: ""
+      FileLocation: Common/Scripts/LeaveOnlineGameplay.kgscript
+      AssetType: Script
+      Name: LeaveOnlineGameplay
+      SectionLabel: None
+      ScriptType: Project
+      FunctionType: Void_None
+  - AssetHandle: 11837168018541382482
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: OnPress
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 1108782715341511642
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: MoveRight
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 8019676634851705730
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: MoveLeft
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 17959627880001999562
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: MoveDown
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
   - AssetHandle: 1558445037133759794
     MetaData:
       CheckSum: ""
@@ -29,87 +110,6 @@ Assets:
       AssetType: Script
       Name: MoveUp
       SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 17959627880001999562
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: MoveDown
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 8019676634851705730
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: MoveLeft
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 1108782715341511642
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: MoveRight
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 888106727043414162
-    MetaData:
-      CheckSum: ""
-      FileLocation: Common/Scripts/LeaveOnlineGameplay.kgscript
-      AssetType: Script
-      Name: LeaveOnlineGameplay
-      SectionLabel: None
-      ScriptType: Project
-      FunctionType: Void_None
-  - AssetHandle: 11837168018541382482
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: OnPress
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 10882227211325647722
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: CloseApplication
-      SectionLabel: Engine
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 2064842461036640418
-    MetaData:
-      CheckSum: ""
-      FileLocation: Entities/AIPlayer/SeekLocationOnUpdate.kgscript
-      AssetType: Script
-      Name: SeekLocationOnUpdate
-      SectionLabel: None
-      ScriptType: Project
-      FunctionType: Void_EntityFloat
-  - AssetHandle: 6361819727416047522
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: SessionReadyCheck
-      SectionLabel: Network
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 52700902773466490
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: RequestUserCount
-      SectionLabel: Network
       ScriptType: Engine
       FunctionType: Void_None
   - AssetHandle: 3176244785148247992
@@ -211,15 +211,6 @@ Assets:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - AssetHandle: 4805234009752154696
-    MetaData:
-      CheckSum: ""
-      FileLocation: Entities/Player1/Player1OnCreate.kgscript
-      AssetType: Script
-      Name: Player1OnCreate
-      SectionLabel: Player1
-      ScriptType: Project
-      FunctionType: Void_Entity
   - AssetHandle: 2120369914074997380
     MetaData:
       CheckSum: ""
@@ -238,15 +229,6 @@ Assets:
       SectionLabel: Player1
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - AssetHandle: 13218836288168913308
-    MetaData:
-      CheckSum: ""
-      FileLocation: Entities/Player2/Player2OnCreate.kgscript
-      AssetType: Script
-      Name: Player2OnCreate
-      SectionLabel: Player2
-      ScriptType: Project
-      FunctionType: Void_Entity
   - AssetHandle: 16135958558406264166
     MetaData:
       CheckSum: ""
@@ -256,15 +238,6 @@ Assets:
       SectionLabel: Player2
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - AssetHandle: 209298783402426078
-    MetaData:
-      CheckSum: ""
-      FileLocation: Entities/Ball/BallOnCreate.kgscript
-      AssetType: Script
-      Name: BallOnCreate
-      SectionLabel: Ball
-      ScriptType: Project
-      FunctionType: Void_Entity
   - AssetHandle: 2672551592897380542
     MetaData:
       CheckSum: ""

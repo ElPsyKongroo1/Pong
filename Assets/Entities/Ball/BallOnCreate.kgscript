@@ -1,5 +1,0 @@
-void BallOnCreate(entity currentEntity)
-{
-	currentEntity.HasComponent("TransformComponent");
-	currentEntity.HasComponent("Rigidbody2DComponent");
-}

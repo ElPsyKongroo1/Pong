@@ -1,5 +1,0 @@
-void Player2OnCreate(entity currentEntity)
-{
-	currentEntity.HasComponent("TransformComponent");
-	currentEntity.HasComponent("Rigidbody2DComponent");
-}

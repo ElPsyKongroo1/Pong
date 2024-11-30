@@ -1,5 +1,6 @@
 void Player2OnUpdate(entity currentEntity, float deltaTime)
 {
+	// Handle sending position/direction information to other client
 	uint16 userSlot = Network::GetActiveSessionSlot();
 	if (userSlot == 1)
 	{

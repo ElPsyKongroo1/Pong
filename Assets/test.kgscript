@@ -1,12 +1,6 @@
 bool BallOnPhysicsCollision(entity currentEntity, entity otherEntity)
 {
-	uint16 userSlot = Network::GetActiveSessionSlot();
-	if (userSlot == Math::MaxUInt16())
-	{
-		return Scripts::BallOfflineCollision(currentEntity, otherEntity);
-	}
-	else
-	{
-		return Scripts::BallOnlineCollision(currentEntity, userSlot, otherEntity);
-	}
+	UI::DisplayWindow("base_window", false);
+	Audio::PlayMusic("Common/Audio/green_a.kgaudio");
+	UI::SetWidgetText("online_lobby", "selectedWidget", "Connected!");
 }
