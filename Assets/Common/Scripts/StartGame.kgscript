@@ -3,16 +3,16 @@ void StartGame()
 	entity player1 = Scenes::GetEntity("Player1");
 	entity player2 = Scenes::GetEntity("Player2");
 	
-	if (Scenes::IsSceneActive("Scenes/main_gameplay.kgscene"))
-	{
-		UI::DisplayWindow("pre_game_warning", false);
-		Input::LoadInputMap("Common/Input/Runtime.kginput");
-	}
-	else
+	if (GameState::GetFieldUInt16("GameMode") == 1)
 	{
 		UI::DisplayWindow("pre_game_level_warning", false);
 		Input::LoadInputMap("Common/Input/RuntimeSinglePlayer.kginput");
 		player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+	}
+	else
+	{
+		UI::DisplayWindow("pre_game_warning", false);
+		Input::LoadInputMap("Common/Input/Runtime.kginput");
 	}
 	
 	UI::DisplayWindow("online_lobby", false);

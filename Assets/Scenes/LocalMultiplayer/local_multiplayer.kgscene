@@ -30,8 +30,8 @@ Entities:
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: true
-      OnCollisionStartHandle: 12876544886975453239
-      OnCollisionEndHandle: 7325163182931923051
+      OnCollisionStartHandle: 17320919192941041126
+      OnCollisionEndHandle: 0
     CircleCollider2DComponent:
       Offset: [0, 0]
       Radius: 0.5
@@ -52,8 +52,6 @@ Entities:
     TagComponent:
       Tag: Player2
       Group: ""
-    OnUpdateComponent:
-      OnUpdateHandle: 16135958558406264166
     TransformComponent:
       Translation: [45.920536, -0.00214099884, 9.3131991e-09]
       Rotation: [0, 0, 1.57079637]
@@ -94,8 +92,6 @@ Entities:
     TagComponent:
       Tag: Player1
       Group: Player1Group
-    OnUpdateComponent:
-      OnUpdateHandle: 8188330720880382876
     TransformComponent:
       Translation: [4, -0.00246500969, 3.7252903e-09]
       Rotation: [0, 0, 1.57079637]

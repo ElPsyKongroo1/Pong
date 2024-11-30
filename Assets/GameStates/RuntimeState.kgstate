@@ -6,6 +6,9 @@ Fields:
   - Name: PlayerOneScore
     Type: UInteger16
     Value: 0
+  - Name: GameMode
+    Type: UInteger16
+    Value: 0
   - Name: PlayerTwoScore
     Type: UInteger16
     Value: 0

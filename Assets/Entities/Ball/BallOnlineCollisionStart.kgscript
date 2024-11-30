@@ -1,15 +1,13 @@
-bool BallOnlineCollision(entity currentEntity,uint16 userSlot, entity otherEntity)
+bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 {
+	uint16 userSlot = Network::GetActiveSessionSlot();
 	bool collisionHandled = false;
 	string otherEntityTag = otherEntity.Tag.GetTag();
 	if (otherEntityTag == "Left Wall")
 	{
 		if (userSlot == 0)
 		{
-			GameState::SetField("PlayerTwoScore", GameState::GetFieldUInt16("PlayerTwoScore") + 1);
-			UI::SetWidgetText("base_window", "score_player_2", str(GameState::GetFieldUInt16("PlayerTwoScore")));
-			currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
-			Audio::PlaySound("Common/Audio/lose_sound.kgaudio");
+			Scripts::CollideLeftWall(currentEntity);
 			UI::DisplayWindow("pre_game_warning", true);
 			Input::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
 			Network::SignalAll(1);

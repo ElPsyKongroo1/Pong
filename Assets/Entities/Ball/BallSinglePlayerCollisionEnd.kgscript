@@ -1,0 +1,121 @@
+bool BallSinglePlayerCollisionEnd(entity currentEntity,entity otherEntity)
+{
+	string otherEntityTag = otherEntity.Tag.GetTag();
+
+	// Calculate AI's seek location
+	ClearDebugLines();
+	ClearDebugPoints();
+	
+	// Get ball's current vector and location
+	vector2 raycastVector = Math::NormalizeVector2(currentEntity.RigidBody.GetLinearVelocity()) * 50.0f;
+	vector3 currentStartLocation3D = currentEntity.Transform.GetTranslation();
+	vector2 currentStartLocation2D = {currentStartLocation3D.x, currentStartLocation3D.y};
+	vector2 currentEndLocation2D = currentStartLocation2D + raycastVector;
+	
+	// While loop calculating terminal location of ball
+	uint32 maxIterations = 5;
+	uint32 currentIteration = 0;
+	while (currentIteration < maxIterations)
+	{
+		// Send raycast along that vector
+		raycast_result results = Physics::Raycast(currentStartLocation2D, currentEndLocation2D);
+		if (results.collisionSuccess)
+		{
+			// Store collision location
+			vector2 collisionPoint2D = results.collisionPoint;
+			vector3 startPoint3D = {currentStartLocation2D.x, currentStartLocation2D.y, 0.0f};
+			vector3 endPoint3D = { collisionPoint2D.x, collisionPoint2D.y, 0.0f };
+			AddDebugLine(startPoint3D, endPoint3D);
+			AddDebugPoint(startPoint3D);
+			AddDebugPoint(endPoint3D);
+			
+			// Handle the collision based on resultant type
+			entity collidedEntity = results.collisionEntity;
+			string collidedEntityTag = collidedEntity.Tag.GetTag();
+			
+			if (collidedEntityTag == "Top Wall" || collidedEntityTag == "Bottom Wall")
+			{
+				// Draw collision debug line and points
+				vector2 horizontalDirection;
+				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
+				if (currentVelocity.x > 0.0f)
+				{
+					horizontalDirection = {1.0f, 0.0f};
+				}
+				else
+				{
+					horizontalDirection =  {-1.0f, 0.0f};
+				}
+				
+				// Recalculate start and end points
+				currentStartLocation2D = collisionPoint2D;
+				raycastVector = {raycastVector.x, -1.0f * raycastVector.y};
+				currentEndLocation2D = currentStartLocation2D + raycastVector + horizontalDirection * 0.1f;
+			}
+			else if (collidedEntityTag == "Player2ProximitySensor")
+			{
+				currentStartLocation2D = collisionPoint2D;
+			}
+			else if (collidedEntityTag == "Player2")
+			{
+				// Store seek location
+				entity player2 = Scenes::GetEntity("Player2");
+				player2.SeekLocationData.Location = endPoint3D.y;
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekLocation.kgaistate");
+				// Close while loop
+				break;
+			}
+			else if (collidedEntityTag == "Right Wall")
+			{
+				// Walk back the provided vector and store seek location
+				entity player2 = Scenes::GetEntity("Player2");
+				vector3 player2Location = player2.Transform.GetTranslation();
+				
+				float slope = raycastVector.y / raycastVector.x;
+				player2.SeekLocationData.Location = slope * player2Location.x - currentStartLocation2D.x * slope + currentStartLocation2D.y;
+				
+				// Change AI State
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekLocation.kgaistate");
+				// Close while loop
+				break;
+			}
+			
+			else if (collidedEntityTag == "Left Wall")
+			{
+				// Follow ball location
+				entity player2 = Scenes::GetEntity("Player2");
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+				
+				// Close while loop
+				break;
+			}
+			
+			else if (collidedEntityTag == "Player1")
+			{
+				// Follow ball location
+				entity player2 = Scenes::GetEntity("Player2");
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+				
+				// Close while loop
+				break;
+			}
+		}
+		else
+		{
+			log("Failed to calculate AI terminal location");
+			break;
+		}
+		
+		currentIteration = currentIteration + 1;
+	}
+	
+	// Transition to seek state if player2 paddle is hit
+	if (GameState::GetFieldUInt16("GameMode") == 1 && otherEntityTag == "Player2")
+	{
+		entity player2 = Scenes::GetEntity("Player2");
+		player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+	}
+	
+	
+	return true;
+}
