@@ -1,0 +1,27 @@
+void OpenCurrentLevel()
+{
+	// Open another level depending on updated level value
+	uint16 currentLevel = GameState::GetFieldUInt16("CurrentLevel");
+	
+	// Null state and level 1 both route to level 1
+	if (currentLevel == 0 || currentLevel == 1)
+	{
+		Scripts::OpenLevel1();
+	}
+	else if (currentLevel == 2)
+	{
+		Scripts::OpenLevel2();
+	}
+	else if (currentLevel == 3)
+	{
+		Scripts::OpenLevel3();
+	}
+	else if (currentLevel == 4)
+	{
+		Scripts::OpenMainMenu();
+	}
+	else
+	{
+		log("Invalid level provided to AdvanceLevel() function");
+	}
+}

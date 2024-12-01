@@ -86,7 +86,7 @@ Windows:
           Text: "Player 1: W=Up, S=Down, Left-Control=Speed-Up"
           TextSize: 0.230000004
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [18.1015625, 0.857142866]
+          TextAbsoluteDimensions: [19.2285156, 0.857142866]
           TextCentered: true
       - Tag: controls_2
         WindowPosition: [0.589999974, -0.00999999978]
@@ -103,7 +103,7 @@ Windows:
           Text: "Player 2: Up-Arrow=Up, Down-Arrow=Down, Right-Control=Speed-Up"
           TextSize: 0.230000004
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [26.2851562, 0.857142866]
+          TextAbsoluteDimensions: [27.4121094, 0.857142866]
           TextCentered: true
   - Tag: online_lobby
     ScreenPosition: [0, 0, 0]
@@ -206,5 +206,91 @@ Windows:
           Text: "Controls: W=Up, S=Down, Left-Control=SpeedUp"
           TextSize: 0.300000012
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [18.1591797, 0.857142866]
+          TextAbsoluteDimensions: [19.2861328, 0.857142866]
+          TextCentered: true
+  - Tag: win_window
+    ScreenPosition: [0, 0, 0]
+    Size: [1, 1]
+    BackgroundColor: [1, 1, 1, 1]
+    ParentIndex: -1
+    ChildBufferIndex: -1
+    ChildBufferSize: 0
+    DefaultActiveWidget: -1
+    Widgets:
+      - Tag: Title
+        WindowPosition: [0.349999994, 0.850000024]
+        Size: [0.300000012, 0.100000001]
+        DefaultBackgroundColor: [1, 1, 1, 0]
+        WidgetType: TextWidget
+        Selectable: true
+        DirectionPointerUp: -1
+        DirectionPointerDown: 1
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 0
+        TextWidget:
+          Text: You Win!
+          TextSize: 0.889999986
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [3.56445312, 0.833333313]
+          TextCentered: true
+      - Tag: NextAction
+        WindowPosition: [0.349999994, 0.00999999978]
+        Size: [0.300000012, 0.100000001]
+        DefaultBackgroundColor: [1, 1, 1, 0]
+        WidgetType: TextWidget
+        Selectable: true
+        DirectionPointerUp: 0
+        DirectionPointerDown: -1
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 0
+        TextWidget:
+          Text: Press Space To Enter Next Level!
+          TextSize: 0.449999988
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [12.9990234, 0.857142866]
+          TextCentered: true
+  - Tag: lose_window
+    ScreenPosition: [0, 0, 0]
+    Size: [1, 1]
+    BackgroundColor: [1, 1, 1, 1]
+    ParentIndex: -1
+    ChildBufferIndex: -1
+    ChildBufferSize: 0
+    DefaultActiveWidget: -1
+    Widgets:
+      - Tag: Title
+        WindowPosition: [0.360000014, 0.850000024]
+        Size: [0.300000012, 0.100000001]
+        DefaultBackgroundColor: [1, 1, 1, 0]
+        WidgetType: TextWidget
+        Selectable: true
+        DirectionPointerUp: -1
+        DirectionPointerDown: 1
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 0
+        TextWidget:
+          Text: You Lose!
+          TextSize: 0.889999986
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [3.82666016, 0.833333313]
+          TextCentered: true
+      - Tag: RestartAction
+        WindowPosition: [0.349999994, 0.00999999978]
+        Size: [0.300000012, 0.100000001]
+        DefaultBackgroundColor: [1, 1, 1, 0]
+        WidgetType: TextWidget
+        Selectable: true
+        DirectionPointerUp: 0
+        DirectionPointerDown: -1
+        DirectionPointerLeft: -1
+        DirectionPointerRight: -1
+        FunctionPointerOnPress: 0
+        TextWidget:
+          Text: Press Space to Restart Level!
+          TextSize: 0.479999989
+          TextColor: [1, 1, 1, 1]
+          TextAbsoluteDimensions: [11.7548828, 0.857142866]
           TextCentered: true

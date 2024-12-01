@@ -110,7 +110,7 @@ bool BallSinglePlayerCollisionEnd(entity currentEntity,entity otherEntity)
 	}
 	
 	// Transition to seek state if player2 paddle is hit
-	if (GameState::GetFieldUInt16("GameMode") == 1 && otherEntityTag == "Player2")
+	if (otherEntityTag == "Player2")
 	{
 		entity player2 = Scenes::GetEntity("Player2");
 		player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");

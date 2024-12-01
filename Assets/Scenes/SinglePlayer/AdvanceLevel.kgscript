@@ -1,0 +1,8 @@
+void AdvanceLevel()
+{
+	// Increment current level
+	GameState::SetField("CurrentLevel", GameState::GetFieldUInt16("CurrentLevel") + 1);
+	
+	// Open another level depending on updated level value
+	Scripts::OpenCurrentLevel();
+}

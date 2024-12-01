@@ -24,10 +24,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 	{
 		if (userSlot == 1)
 		{
-			GameState::SetField("PlayerOneScore", GameState::GetFieldUInt16("PlayerOneScore") + 1);
-			UI::SetWidgetText("base_window", "score_player_1", str(GameState::GetFieldUInt16("PlayerOneScore")));
-			currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
-			Audio::PlaySound("Common/Audio/lose_sound.kgaudio");
+			Scripts::CollideRightWall(currentEntity);
 			UI::DisplayWindow("pre_game_warning", true);
 			Input::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
 			Network::SignalAll(1);
@@ -42,19 +39,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 	}
 	else if (otherEntityTag == "Top Wall" || otherEntityTag == "Bottom Wall")
 	{
-		vector2 horizontalDirection;
-		vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-		if (currentVelocity.x > 0.0f)
-		{
-			horizontalDirection = {1.0f, 0.0f};
-		}
-		else
-		{
-			horizontalDirection =  {-1.0f, 0.0f};
-		}
-		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + horizontalDirection * 0.1f) * currentEntity.Speed.CurrentSpeed;
-		currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+		Scripts::TopAndBottomWallCollision(currentEntity);
 		collisionHandled = true;
 	}
 	
@@ -62,50 +47,25 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 	{
 		if (userSlot == 0)
 		{
-			if (Input::IsPollingSlotPressed(0))
-			{
-				float deflectionFactor = Input::IsPollingSlotPressed(4) ? 0.55f : 0.33f;
-				vector2 up = {0.0f, 1.0f};
-				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-				currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
-				currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-			}
-			if (Input::IsPollingSlotPressed(1))
-			{
-				float deflectionFactor = Input::IsPollingSlotPressed(4) ? 0.55f : 0.33f;
-				vector2 up = {0.0f, -1.0f};
-				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-				currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
-				currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-			}
+			Scripts::CollidePlayer1(currentEntity);
 		}
-		
-		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+		else
+		{
+			Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+		}
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Player2")
 	{
 		if (userSlot == 1)
 		{
-			if (Input::IsPollingSlotPressed(3))
-			{
-				float deflectionFactor = Input::IsPollingSlotPressed(5) ? 0.55f : 0.33f;
-				vector2 up = {0.0f, 1.0f};
-				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-				currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
-				currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-			}
-			if (Input::IsPollingSlotPressed(4))
-			{
-				float deflectionFactor = Input::IsPollingSlotPressed(5) ? 0.55f : 0.33f;
-				vector2 up = {0.0f, -1.0f};
-				vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-				currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
-				currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-			}
+			Scripts::CollidePlayer2(currentEntity);
+		}
+		else
+		{
+			Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
 		}
 		
-		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
 		collisionHandled = true;
 	}
 	

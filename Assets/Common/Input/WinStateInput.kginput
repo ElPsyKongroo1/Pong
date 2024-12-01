@@ -1,0 +1,11 @@
+KeyboardPolling:
+  []
+OnUpdate:
+  []
+OnKeyPressed:
+  - BindingType: KeyboardAction
+    ScriptHandle: 8789585231544477845
+    KeyBinding: 32
+  - BindingType: KeyboardAction
+    ScriptHandle: 14683932765512752045
+    KeyBinding: 256

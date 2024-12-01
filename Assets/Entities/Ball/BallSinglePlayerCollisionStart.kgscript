@@ -6,10 +6,23 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 	if (otherEntityTag == "Left Wall")
 	{
 		Scripts::CollideLeftWall(currentEntity);
-		UI::DisplayWindow("pre_game_level_warning", true);
-		entity player2 = Scenes::GetEntity("Player2");
-		player2.AIState.ClearAllStates();
-		Input::LoadInputMap("Common/Input/Pre_Start.kginput");
+		if (GameState::GetFieldUInt16("PlayerTwoScore") >= GameState::GetFieldUInt16("WinConditionValue"))
+		{
+			// Lose Game
+			UI::DisplayWindow("lose_window", true);
+			entity player2 = Scenes::GetEntity("Player2");
+			player2.AIState.ClearAllStates();
+			Input::LoadInputMap("Common/Input/LoseStateInput.kginput");
+		}
+		else
+		{
+			// Continue Game
+			UI::DisplayWindow("pre_game_level_warning", true);
+			entity player2 = Scenes::GetEntity("Player2");
+			player2.AIState.ClearAllStates();
+			Input::LoadInputMap("Common/Input/Pre_Start.kginput");
+		}
+		
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Player2ProximitySensor")
@@ -33,54 +46,38 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 	}
 	else if (otherEntityTag == "Right Wall")
 	{
-		GameState::SetField("PlayerOneScore", GameState::GetFieldUInt16("PlayerOneScore") + 1);
-		UI::SetWidgetText("base_window", "score_player_1", str(GameState::GetFieldUInt16("PlayerOneScore")));
-		currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
-		Audio::PlaySound("Common/Audio/lose_sound.kgaudio");
-		UI::DisplayWindow("pre_game_level_warning", true);
-		entity player2 = Scenes::GetEntity("Player2");
-		player2.AIState.ClearAllStates();
-		Input::LoadInputMap("Common/Input/Pre_Start.kginput");
+		Scripts::CollideRightWall(currentEntity);
+		
+		
+		if (GameState::GetFieldUInt16("PlayerOneScore") >= GameState::GetFieldUInt16("WinConditionValue"))
+		{
+			// End Game
+			UI::DisplayWindow("win_window", true);
+			entity player2 = Scenes::GetEntity("Player2");
+			player2.AIState.ClearAllStates();
+			Input::LoadInputMap("Common/Input/WinStateInput.kginput");
+		}
+		else
+		{
+			// Continue Game
+			UI::DisplayWindow("pre_game_level_warning", true);
+			entity player2 = Scenes::GetEntity("Player2");
+			player2.AIState.ClearAllStates();
+			Input::LoadInputMap("Common/Input/Pre_Start.kginput");
+		}
+		
+		
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Top Wall" || otherEntityTag == "Bottom Wall")
 	{
-		vector2 horizontalDirection;
-		vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-		if (currentVelocity.x > 0.0f)
-		{
-			horizontalDirection = {1.0f, 0.0f};
-		}
-		else
-		{
-			horizontalDirection =  {-1.0f, 0.0f};
-		}
-		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + horizontalDirection * 0.1f) * currentEntity.Speed.CurrentSpeed;
-		currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+		Scripts::TopAndBottomWallCollision(currentEntity);
 		collisionHandled = true;
 	}
 	
 	else if (otherEntityTag == "Player1")
 	{
-		
-		if (Input::IsPollingSlotPressed(0))
-		{
-			float deflectionFactor = Input::IsPollingSlotPressed(4) ? 0.55f : 0.33f;
-			vector2 up = {0.0f, 1.0f};
-			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
-			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-		}
-		if (Input::IsPollingSlotPressed(1))
-		{
-			float deflectionFactor = Input::IsPollingSlotPressed(4) ? 0.55f : 0.33f;
-			vector2 up = {0.0f, -1.0f};
-			vector2 currentVelocity = currentEntity.RigidBody.GetLinearVelocity();
-			currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * currentEntity.Speed.CurrentSpeed;
-			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
-		}
-		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+		Scripts::CollidePlayer1(currentEntity);
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Player2")

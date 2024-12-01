@@ -1,0 +1,8 @@
+void OpenNewSinglePlayer()
+{
+	// Increment current level
+	GameState::SetField("CurrentLevel", 1);
+	
+	// Open another level depending on updated level value
+	Scripts::OpenCurrentLevel();
+}

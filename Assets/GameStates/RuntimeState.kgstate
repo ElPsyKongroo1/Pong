@@ -12,3 +12,9 @@ Fields:
   - Name: PlayerTwoScore
     Type: UInteger16
     Value: 0
+  - Name: CurrentLevel
+    Type: UInteger16
+    Value: 0
+  - Name: WinConditionValue
+    Type: UInteger16
+    Value: 0

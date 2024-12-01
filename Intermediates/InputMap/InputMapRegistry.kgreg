@@ -40,3 +40,13 @@ Assets:
       CheckSum: e9547ae32d715fb76f84b3a549f291c005ef5423455b98b01596a00dd6542f16
       FileLocation: Common/Input/Online_Pre_Start.kginput
       AssetType: InputMap
+  - AssetHandle: 4877393880283468248
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Common/Input/WinStateInput.kginput
+      AssetType: InputMap
+  - AssetHandle: 18297564631219812115
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Common/Input/LoseStateInput.kginput
+      AssetType: InputMap
