@@ -1,6 +1,27 @@
 Physics:
   Gravity: [0, 0]
 Entities:
+  - Entity: 15983808182817450596
+    TagComponent:
+      Tag: Empty Entity
+      Group: ""
+    TransformComponent:
+      Translation: [13.0184412, 0, 0.392199755]
+      Rotation: [0, 0, 0]
+      Scale: [16.8367996, 16.8367996, 16.8367996]
+    ShapeComponent:
+      CurrentShape: Cube
+      TextureHandle: 17057334801167380747
+      ShaderHandle: 5871177019587903897
+      ShaderSpecification:
+        ColorInputType: None
+        AddProjectionMatrix: true
+        AddEntityID: true
+        AddCircleShape: false
+        TextureInput: None
+        DrawOutline: false
+        RenderType: DrawIndex
+      Buffer: !!binary "ijOTQMSxBkFRawDBAAAAAA=="
   - Entity: 5666222007467647973
     TagComponent:
       Tag: Empty Entity
@@ -32,24 +53,3 @@ Entities:
         DrawOutline: false
         RenderType: DrawIndex
       Buffer: !!binary "h6zZwAAAAD/eWZnBAQAAAA=="
-  - Entity: 15983808182817450596
-    TagComponent:
-      Tag: Empty Entity
-      Group: ""
-    TransformComponent:
-      Translation: [13.0184412, 0, 0.392199755]
-      Rotation: [0, 0, 0]
-      Scale: [16.8367996, 16.8367996, 16.8367996]
-    ShapeComponent:
-      CurrentShape: Cube
-      TextureHandle: 17057334801167380747
-      ShaderHandle: 5871177019587903897
-      ShaderSpecification:
-        ColorInputType: None
-        AddProjectionMatrix: true
-        AddEntityID: true
-        AddCircleShape: false
-        TextureInput: None
-        DrawOutline: false
-        RenderType: DrawIndex
-      Buffer: !!binary "ijOTQMSxBkFRawDBAAAAAA=="

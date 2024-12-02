@@ -116,6 +116,8 @@ Entities:
     SeekLocationDataComponent:
       Location: 0
       IsDeflectingUp: true
+    AIBehaviorProfileComponent:
+      DeflectRatio: 0
   - Entity: 15707814698740903328
     TagComponent:
       Tag: Player1

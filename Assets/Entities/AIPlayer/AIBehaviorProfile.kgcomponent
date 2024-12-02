@@ -1,0 +1,10 @@
+Name: AIBehaviorProfile
+ComponentSize: 2
+BufferSize: 4
+BufferSlot: 4
+DataTypes:
+  - UInteger16
+DataLocations:
+  - 0
+DataNames:
+  - DeflectRatio

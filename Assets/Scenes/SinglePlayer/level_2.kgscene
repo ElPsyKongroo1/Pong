@@ -255,6 +255,8 @@ Entities:
     SeekLocationDataComponent:
       Location: 0
       IsDeflectingUp: true
+    AIBehaviorProfileComponent:
+      DeflectRatio: 100
   - Entity: 1620162373067812695
     TagComponent:
       Tag: Ball

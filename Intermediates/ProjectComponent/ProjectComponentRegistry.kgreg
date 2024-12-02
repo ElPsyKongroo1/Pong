@@ -24,3 +24,9 @@ Assets:
       FileLocation: Entities/AIPlayer/SeekLocationData.kgcomponent
       AssetType: ProjectComponent
       Name: SeekLocationData
+  - AssetHandle: 6324027423643995032
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Entities/AIPlayer/AIBehaviorProfile.kgcomponent
+      AssetType: ProjectComponent
+      Name: AIBehaviorProfile
