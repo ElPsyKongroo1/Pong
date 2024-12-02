@@ -1,14 +1,19 @@
 Registry: Scene
 Assets:
-  - AssetHandle: 12088062788627164698
+  - AssetHandle: 8509813310073523602
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Scenes/SinglePlayer/level_3.kgscene
+      FileLocation: testScene.kgscene
       AssetType: Scene
   - AssetHandle: 4149337072942010858
     MetaData:
       CheckSum: 171ed5c8163272eec943a747ce8e55cfe39463613e608cbc3b20d90f1ceddb62
       FileLocation: Scenes/MainMenu/main_menu.kgscene
+      AssetType: Scene
+  - AssetHandle: 12088062788627164698
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Scenes/SinglePlayer/level_3.kgscene
       AssetType: Scene
   - AssetHandle: 9638216380065234896
     MetaData:

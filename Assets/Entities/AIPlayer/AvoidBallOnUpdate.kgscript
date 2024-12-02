@@ -1,4 +1,4 @@
-void SeekBallOnUpdate(entity aiEntity, float deltaTime)
+void AvoidBallOnUpdate(entity aiEntity,float deltaTime)
 {
 	entity ballEntity = Scenes::GetEntity("Ball");
 	
@@ -14,7 +14,7 @@ void SeekBallOnUpdate(entity aiEntity, float deltaTime)
 	{
 		return;
 	}
-	if (ballLocation.y > aiLocation.y)
+	if (ballLocation.y < aiLocation.y)
 	{
 		// Move Up
 		Scripts::Player2MoveUp(deltaTime, aiEntity.Speed.IsDashing);

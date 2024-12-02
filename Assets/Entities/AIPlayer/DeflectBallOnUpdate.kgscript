@@ -14,11 +14,11 @@ void DeflectBallOnUpdate(entity aiEntity,float deltaTime)
 		// Deflect the ball
 		if (aiEntity.SeekLocationData.IsDeflectingUp)
 		{
-			Scripts::Player2MoveUp(deltaTime);
+			Scripts::Player2MoveUp(deltaTime, aiEntity.Speed.IsDashing);
 		}
 		else
 		{
-			Scripts::Player2MoveDown(deltaTime);
+			Scripts::Player2MoveDown(deltaTime, aiEntity.Speed.IsDashing);
 		}
 		
 	}

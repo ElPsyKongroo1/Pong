@@ -9,16 +9,17 @@ void SeekLocationOnUpdate(entity aiEntity,float deltaTime)
 	
 	if (distance < 0.5f)
 	{
+		aiEntity.AIState.ChangeCurrentState("Entities/AIPlayer/NoMove.kgaistate");
 		return;
 	}
 	if (aiEntity.SeekLocationData.Location > aiLocation.y)
 	{
 		// Move Up
-		Scripts::Player2MoveUp(deltaTime);
+		Scripts::Player2MoveUp(deltaTime, aiEntity.Speed.IsDashing);
 	}
 	else
 	{
 		// Move Down
-		Scripts::Player2MoveDown(deltaTime);
+		Scripts::Player2MoveDown(deltaTime, aiEntity.Speed.IsDashing);
 	}
 }

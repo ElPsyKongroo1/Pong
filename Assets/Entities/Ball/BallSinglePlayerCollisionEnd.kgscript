@@ -82,20 +82,12 @@ bool BallSinglePlayerCollisionEnd(entity currentEntity,entity otherEntity)
 			
 			else if (collidedEntityTag == "Left Wall")
 			{
-				// Follow ball location
-				entity player2 = Scenes::GetEntity("Player2");
-				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
-				
 				// Close while loop
 				break;
 			}
 			
 			else if (collidedEntityTag == "Player1")
 			{
-				// Follow ball location
-				entity player2 = Scenes::GetEntity("Player2");
-				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
-				
 				// Close while loop
 				break;
 			}
@@ -113,7 +105,7 @@ bool BallSinglePlayerCollisionEnd(entity currentEntity,entity otherEntity)
 	if (otherEntityTag == "Player2")
 	{
 		entity player2 = Scenes::GetEntity("Player2");
-		player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+		player2.AIState.ChangeCurrentState("Entities/AIPlayer/AvoidBall.kgaistate");
 	}
 	
 	

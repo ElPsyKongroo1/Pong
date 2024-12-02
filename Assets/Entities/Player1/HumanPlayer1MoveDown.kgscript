@@ -1,0 +1,4 @@
+void HumanPlayer1MoveDown(float deltaTime)
+{
+	Scripts::Player1MoveDown(deltaTime, Input::IsPollingSlotPressed(4));
+}

@@ -1,11 +1,11 @@
-void Player1MoveDown(float timeStep)
+void Player1MoveDown(float deltaTime,bool isDashing)
 {
 	entity currentEntity = Scenes::GetEntity("Player1");
 	vector3 translation = currentEntity.Transform.GetTranslation();
 	bool upperLimit = translation.y >= 11.15;
 	bool lowerLimit = translation.y <= -11.15;
 	
-	float speed = Input::IsPollingSlotPressed(4) ? currentEntity.Speed.CurrentSpeed * currentEntity.Speed.SpeedUpMultiplier : currentEntity.Speed.CurrentSpeed;
+	float speed = isDashing ? currentEntity.Speed.CurrentSpeed * currentEntity.Speed.SpeedUpMultiplier : currentEntity.Speed.CurrentSpeed;
 	vector3 velocity = {0.0f, 0.0f, 0.0f};
 
 	if (!lowerLimit) 
@@ -13,6 +13,6 @@ void Player1MoveDown(float timeStep)
 		velocity.y = -1.0f; 
 	}
 
-	velocity = velocity * speed * timeStep;
+	velocity = velocity * speed * deltaTime;
 	currentEntity.Transform.SetTranslation(currentEntity.Transform.GetTranslation() + velocity);
 }

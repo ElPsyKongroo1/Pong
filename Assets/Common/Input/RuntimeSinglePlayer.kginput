@@ -13,10 +13,10 @@ KeyboardPolling:
     KeyCode: 0
 OnUpdate:
   - BindingType: KeyboardAction
-    ScriptHandle: 11507116285654136237
+    ScriptHandle: 13868106195775915601
     KeyBinding: 87
   - BindingType: KeyboardAction
-    ScriptHandle: 2120369914074997380
+    ScriptHandle: 17663267411682966021
     KeyBinding: 83
 OnKeyPressed:
   - BindingType: KeyboardAction

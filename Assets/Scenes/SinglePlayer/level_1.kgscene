@@ -110,7 +110,7 @@ Entities:
     SpeedComponent:
       CurrentSpeed: 20
       SpeedUpMultiplier: 2
-      IsDashing: false
+      IsDashing: true
     InitialStateComponent:
       InitialPosition: [45, 0, 0]
     SeekLocationDataComponent:
