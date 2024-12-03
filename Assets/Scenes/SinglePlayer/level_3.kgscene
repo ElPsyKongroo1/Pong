@@ -247,16 +247,20 @@ Entities:
       RestitutionThreshold: 0.5
       IsSensor: false
     SpeedComponent:
-      CurrentSpeed: 20
+      CurrentSpeed: 25
       SpeedUpMultiplier: 2
       IsDashing: false
     InitialStateComponent:
       InitialPosition: [45, 0, 0]
+    BallStateComponent:
+      ChangeVelocity: true
     SeekLocationDataComponent:
       Location: 0
       IsDeflectingUp: true
     AIBehaviorProfileComponent:
-      DeflectRatio: 0
+      DeflectRatio: 60
+      DashingRatio: 65
+      OnTargetRatio: 70
   - Entity: 1620162373067812695
     TagComponent:
       Tag: Ball
@@ -297,13 +301,11 @@ Entities:
       RestitutionThreshold: 0.00999999978
       IsSensor: false
     SpeedComponent:
-      CurrentSpeed: 60
+      CurrentSpeed: 72
       SpeedUpMultiplier: 1
       IsDashing: false
     InitialStateComponent:
       InitialPosition: [26, 0, 0]
-    BallStateComponent:
-      ChangeVelocity: false
   - Entity: 1070563188911329511
     TagComponent:
       Tag: Player2ProximitySensor

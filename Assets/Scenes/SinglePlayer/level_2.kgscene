@@ -1,27 +1,87 @@
 Physics:
   Gravity: [0, 0]
 Entities:
-  - Entity: 14487046616883294273
+  - Entity: 1070563188911329511
     TagComponent:
-      Tag: Camera
+      Tag: Player2ProximitySensor
       Group: ""
     TransformComponent:
-      Translation: [25, 0, 40.7027779]
+      Translation: [41.9158936, 0, 0]
       Rotation: [0, 0, 0]
-      Scale: [1, 1, 1]
-    CameraComponent:
-      Camera:
-        ProjectionType: 1
-        PerspectiveFOV: 0.959931076
-        PerspectiveNear: 22.0100002
-        PerspectiveFar: 49
-        OrthographicSize: 53
-        OrthographicNear: 37
-        OrthographicFar: 44
-      Primary: true
+      Scale: [15, 31, 1]
+    Rigidbody2DComponent:
+      BodyType: Static
+      FixedRotation: true
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
+    BoxCollider2DComponent:
+      Offset: [0, 0]
+      Size: [0.5, 0.5]
+      Density: 1
+      Friction: 0.5
+      Restitution: 0
+      RestitutionThreshold: 0.5
+      IsSensor: true
+  - Entity: 1620162373067812695
+    TagComponent:
+      Tag: Ball
+      Group: ""
+    TransformComponent:
+      Translation: [25.9217854, -0.00246608257, 3.7252903e-09]
+      Rotation: [0, 0, 1.57079637]
+      Scale: [1.29999304, 1.29999304, 1]
     ShapeComponent:
       CurrentShape: Quad
-      TextureHandle: 8051163355459938058
+      VertexColors:
+        - Color: [1, 0, 1, 1]
+        - Color: [1, 1, 1, 1]
+        - Color: [1, 0.909803927, 1, 1]
+        - Color: [1, 1, 0, 1]
+      TextureHandle: 7411058966582404143
+      ShaderHandle: 9995091926620131545
+      ShaderSpecification:
+        ColorInputType: FlatColor
+        AddProjectionMatrix: true
+        AddEntityID: true
+        AddCircleShape: true
+        TextureInput: None
+        DrawOutline: false
+        RenderType: DrawIndex
+      Buffer: !!binary "oCzKQcgHJ78AAIAxAACAvwAAgD8AAAAAAACAP/ypcT0AAIA/AACAP2Zm5j4AAIA/BwAAAA=="
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: true
+      OnCollisionStartHandle: 5863822563239777620
+      OnCollisionEndHandle: 17122519835301787425
+    CircleCollider2DComponent:
+      Offset: [0, 0]
+      Radius: 0.5
+      Density: 1
+      Friction: 0
+      Restitution: 1
+      RestitutionThreshold: 0.00999999978
+      IsSensor: false
+    SpeedComponent:
+      CurrentSpeed: 63
+      SpeedUpMultiplier: 1
+      IsDashing: false
+    InitialStateComponent:
+      InitialPosition: [26, 0, 0]
+  - Entity: 1623836227372765255
+    TagComponent:
+      Tag: Player2
+      Group: ""
+    TransformComponent:
+      Translation: [45.920536, -0.00214099884, 7.4505806e-09]
+      Rotation: [0, 0, 1.57079625]
+      Scale: [8.49999905, 1.09998727, 1]
+    AIStateComponent:
+      CurrentState: 0
+      PreviousState: 0
+      GlobalState: 0
+    ShapeComponent:
+      CurrentShape: Quad
+      TextureHandle: 1008307395632263226
       ShaderHandle: 16075931647133155393
       ShaderSpecification:
         ColorInputType: FlatColor
@@ -31,109 +91,75 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwgAAAAAAAAAAACAPwAAAAAAAIA/"
-  - Entity: 5735195652379188677
-    TagComponent:
-      Tag: Left Wall
-      Group: ""
-    TransformComponent:
-      Translation: [0, 0, 0]
-      Rotation: [0, 0, 0]
-      Scale: [1, 33, 1]
-    ShapeComponent:
-      CurrentShape: Quad
-      TextureHandle: 17057334801167380747
-      ShaderHandle: 12997310174580324402
-      ShaderSpecification:
-        ColorInputType: FlatColor
-        AddProjectionMatrix: true
-        AddEntityID: true
-        AddCircleShape: false
-        TextureInput: None
-        DrawOutline: false
-        RenderType: DrawIndex
-      Buffer: !!binary "AAAAvwAAhEEAAAAAAACAPwAAgD9mZuY+AACAPwcAAAA="
+      Buffer: !!binary "b3s1QokRiMAAAAAyAACAPwAAgD8AAIA/AACAPwYAAAAAAAAAAACAPwAAAAAAAIA/"
     Rigidbody2DComponent:
       BodyType: Static
-      FixedRotation: false
+      FixedRotation: true
       OnCollisionStartHandle: 0
       OnCollisionEndHandle: 0
     BoxCollider2DComponent:
       Offset: [0, 0]
-      Size: [0.5, 0.5]
+      Size: [0.5, 0.479999989]
       Density: 1
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
       IsSensor: false
-  - Entity: 18014537996866740620
+    SpeedComponent:
+      CurrentSpeed: 20
+      SpeedUpMultiplier: 2
+      IsDashing: false
+    InitialStateComponent:
+      InitialPosition: [45, 0, 0]
+    BallStateComponent:
+      ChangeVelocity: true
+    SeekLocationDataComponent:
+      Location: 0
+      IsDeflectingUp: true
+    AIBehaviorProfileComponent:
+      DeflectRatio: 35
+      DashingRatio: 45
+      OnTargetRatio: 65
+  - Entity: 15707814698740903328
     TagComponent:
-      Tag: Right Wall
-      Group: ""
+      Tag: Player1
+      Group: Player1Group
     TransformComponent:
-      Translation: [50, -0.00216770172, 0]
-      Rotation: [0, 0, 0]
-      Scale: [1, 33, 1]
-    ShapeComponent:
-      CurrentShape: Quad
-      TextureHandle: 17057334801167380747
-      ShaderHandle: 12997310174580324402
-      ShaderSpecification:
-        ColorInputType: FlatColor
-        AddProjectionMatrix: true
-        AddEntityID: true
-        AddCircleShape: false
-        TextureInput: None
-        DrawOutline: false
-        RenderType: DrawIndex
-      Buffer: !!binary "AABGQpD7g0EAAAAAAACAPwAAgD9mZuY+AACAPwYAAAA="
-    Rigidbody2DComponent:
-      BodyType: Static
-      FixedRotation: false
-      OnCollisionStartHandle: 0
-      OnCollisionEndHandle: 0
-    BoxCollider2DComponent:
-      Offset: [0, 0]
-      Size: [0.5, 0.5]
-      Density: 1
-      Friction: 0.5
-      Restitution: 0
-      RestitutionThreshold: 0.5
-      IsSensor: false
-  - Entity: 13674711861826053845
-    TagComponent:
-      Tag: Top Wall
-      Group: ""
-    TransformComponent:
-      Translation: [25, 16, 0.00999999978]
+      Translation: [4, -0.00246500969, 3.7252903e-09]
       Rotation: [0, 0, 1.57079637]
-      Scale: [0.999990821, 50.999424, 1]
+      Scale: [8.5, 1.09998977, 1]
     ShapeComponent:
       CurrentShape: Quad
-      TextureHandle: 17057334801167380747
-      ShaderHandle: 12997310174580324402
+      TextureHandle: 1008307395632263226
+      ShaderHandle: 16075931647133155393
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
         AddEntityID: true
         AddCircleShape: false
-        TextureInput: None
+        TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "ANr/vgYAeEEK1yM8AACAPwAAgD9mZuY+AACAPwUAAAA="
+      Buffer: !!binary "4sxcQDAUiMAAAIAxAACAPwAAgD8AAIA/AACAPwUAAAAAAAAAAACAPwAAAAAAAIA/"
     Rigidbody2DComponent:
       BodyType: Static
-      FixedRotation: false
+      FixedRotation: true
       OnCollisionStartHandle: 0
       OnCollisionEndHandle: 0
     BoxCollider2DComponent:
       Offset: [0, 0]
-      Size: [0.5, 0.5]
+      Size: [0.5, 0.479999989]
       Density: 1
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
       IsSensor: false
+    SpeedComponent:
+      CurrentSpeed: 20
+      SpeedUpMultiplier: 2
+      IsDashing: false
+    InitialStateComponent:
+      InitialPosition: [4, 0, 0]
   - Entity: 3462038330476861318
     TagComponent:
       Tag: Bottom Wall
@@ -168,153 +194,30 @@ Entities:
       Restitution: 0
       RestitutionThreshold: 0.5
       IsSensor: false
-  - Entity: 15707814698740903328
+  - Entity: 13674711861826053845
     TagComponent:
-      Tag: Player1
-      Group: Player1Group
+      Tag: Top Wall
+      Group: ""
     TransformComponent:
-      Translation: [4, -0.00246500969, 3.7252903e-09]
+      Translation: [25, 16, 0.00999999978]
       Rotation: [0, 0, 1.57079637]
-      Scale: [8.5, 1.09998977, 1]
+      Scale: [0.999990821, 50.999424, 1]
     ShapeComponent:
       CurrentShape: Quad
-      TextureHandle: 1008307395632263226
-      ShaderHandle: 16075931647133155393
+      TextureHandle: 17057334801167380747
+      ShaderHandle: 12997310174580324402
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
         AddEntityID: true
         AddCircleShape: false
-        TextureInput: ColorTexture
-        DrawOutline: false
-        RenderType: DrawIndex
-      Buffer: !!binary "4sxcQDAUiMAAAIAxAACAPwAAgD8AAIA/AACAPwMAAAAAAAAAAACAPwAAgD8AAIA/"
-    Rigidbody2DComponent:
-      BodyType: Static
-      FixedRotation: true
-      OnCollisionStartHandle: 0
-      OnCollisionEndHandle: 0
-    BoxCollider2DComponent:
-      Offset: [0, 0]
-      Size: [0.5, 0.479999989]
-      Density: 1
-      Friction: 0.5
-      Restitution: 0
-      RestitutionThreshold: 0.5
-      IsSensor: false
-    SpeedComponent:
-      CurrentSpeed: 20
-      SpeedUpMultiplier: 2
-      IsDashing: false
-    InitialStateComponent:
-      InitialPosition: [4, 0, 0]
-  - Entity: 1623836227372765255
-    TagComponent:
-      Tag: Player2
-      Group: ""
-    TransformComponent:
-      Translation: [45.920536, -0.00214099884, 7.4505806e-09]
-      Rotation: [0, 0, 1.57079625]
-      Scale: [8.49999905, 1.09998727, 1]
-    AIStateComponent:
-      CurrentState: 0
-      PreviousState: 0
-      GlobalState: 0
-    ShapeComponent:
-      CurrentShape: Quad
-      TextureHandle: 1008307395632263226
-      ShaderHandle: 16075931647133155393
-      ShaderSpecification:
-        ColorInputType: FlatColor
-        AddProjectionMatrix: true
-        AddEntityID: true
-        AddCircleShape: false
-        TextureInput: ColorTexture
-        DrawOutline: false
-        RenderType: DrawIndex
-      Buffer: !!binary "b3s1QokRiMAAAAAyAACAPwAAgD8AAIA/AACAPwIAAAAAAAAAAACAPwAAgD8AAIA/"
-    Rigidbody2DComponent:
-      BodyType: Static
-      FixedRotation: true
-      OnCollisionStartHandle: 0
-      OnCollisionEndHandle: 0
-    BoxCollider2DComponent:
-      Offset: [0, 0]
-      Size: [0.5, 0.479999989]
-      Density: 1
-      Friction: 0.5
-      Restitution: 0
-      RestitutionThreshold: 0.5
-      IsSensor: false
-    SpeedComponent:
-      CurrentSpeed: 20
-      SpeedUpMultiplier: 2
-      IsDashing: false
-    InitialStateComponent:
-      InitialPosition: [45, 0, 0]
-    SeekLocationDataComponent:
-      Location: 0
-      IsDeflectingUp: true
-    AIBehaviorProfileComponent:
-      DeflectRatio: 100
-  - Entity: 1620162373067812695
-    TagComponent:
-      Tag: Ball
-      Group: ""
-    TransformComponent:
-      Translation: [25.9217854, -0.00246608257, 3.7252903e-09]
-      Rotation: [0, 0, 1.57079637]
-      Scale: [1.29999304, 1.29999304, 1]
-    ShapeComponent:
-      CurrentShape: Quad
-      VertexColors:
-        - Color: [1, 0, 1, 1]
-        - Color: [1, 1, 1, 1]
-        - Color: [1, 0.909803927, 1, 1]
-        - Color: [1, 1, 0, 1]
-      TextureHandle: 7411058966582404143
-      ShaderHandle: 9995091926620131545
-      ShaderSpecification:
-        ColorInputType: FlatColor
-        AddProjectionMatrix: true
-        AddEntityID: true
-        AddCircleShape: true
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "oCzKQcgHJ78AAIAxAACAvwAAgD8AAAAAAACAP/ypcT0AAIA/AACAP2Zm5j4AAIA/AQAAAA=="
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: true
-      OnCollisionStartHandle: 5863822563239777620
-      OnCollisionEndHandle: 17122519835301787425
-    CircleCollider2DComponent:
-      Offset: [0, 0]
-      Radius: 0.5
-      Density: 1
-      Friction: 0
-      Restitution: 1
-      RestitutionThreshold: 0.00999999978
-      IsSensor: false
-    SpeedComponent:
-      CurrentSpeed: 60
-      SpeedUpMultiplier: 1
-      IsDashing: false
-    InitialStateComponent:
-      InitialPosition: [26, 0, 0]
-    BallStateComponent:
-      ChangeVelocity: false
-  - Entity: 1070563188911329511
-    TagComponent:
-      Tag: Player2ProximitySensor
-      Group: ""
-    TransformComponent:
-      Translation: [41.9158936, 0, 0]
-      Rotation: [0, 0, 0]
-      Scale: [15, 31, 1]
+      Buffer: !!binary "ANr/vgYAeEEK1yM8AACAPwAAgD9mZuY+AACAPwMAAAA="
     Rigidbody2DComponent:
       BodyType: Static
-      FixedRotation: true
+      FixedRotation: false
       OnCollisionStartHandle: 0
       OnCollisionEndHandle: 0
     BoxCollider2DComponent:
@@ -324,4 +227,103 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
-      IsSensor: true
+      IsSensor: false
+  - Entity: 18014537996866740620
+    TagComponent:
+      Tag: Right Wall
+      Group: ""
+    TransformComponent:
+      Translation: [50, -0.00216770172, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 33, 1]
+    ShapeComponent:
+      CurrentShape: Quad
+      TextureHandle: 17057334801167380747
+      ShaderHandle: 12997310174580324402
+      ShaderSpecification:
+        ColorInputType: FlatColor
+        AddProjectionMatrix: true
+        AddEntityID: true
+        AddCircleShape: false
+        TextureInput: None
+        DrawOutline: false
+        RenderType: DrawIndex
+      Buffer: !!binary "AABGQpD7g0EAAAAAAACAPwAAgD9mZuY+AACAPwIAAAA="
+    Rigidbody2DComponent:
+      BodyType: Static
+      FixedRotation: false
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
+    BoxCollider2DComponent:
+      Offset: [0, 0]
+      Size: [0.5, 0.5]
+      Density: 1
+      Friction: 0.5
+      Restitution: 0
+      RestitutionThreshold: 0.5
+      IsSensor: false
+  - Entity: 5735195652379188677
+    TagComponent:
+      Tag: Left Wall
+      Group: ""
+    TransformComponent:
+      Translation: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 33, 1]
+    ShapeComponent:
+      CurrentShape: Quad
+      TextureHandle: 17057334801167380747
+      ShaderHandle: 12997310174580324402
+      ShaderSpecification:
+        ColorInputType: FlatColor
+        AddProjectionMatrix: true
+        AddEntityID: true
+        AddCircleShape: false
+        TextureInput: None
+        DrawOutline: false
+        RenderType: DrawIndex
+      Buffer: !!binary "AAAAvwAAhEEAAAAAAACAPwAAgD9mZuY+AACAPwEAAAA="
+    Rigidbody2DComponent:
+      BodyType: Static
+      FixedRotation: false
+      OnCollisionStartHandle: 0
+      OnCollisionEndHandle: 0
+    BoxCollider2DComponent:
+      Offset: [0, 0]
+      Size: [0.5, 0.5]
+      Density: 1
+      Friction: 0.5
+      Restitution: 0
+      RestitutionThreshold: 0.5
+      IsSensor: false
+  - Entity: 14487046616883294273
+    TagComponent:
+      Tag: Camera
+      Group: ""
+    TransformComponent:
+      Translation: [25, 0, 40.7027779]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    CameraComponent:
+      Camera:
+        ProjectionType: 1
+        PerspectiveFOV: 0.959931076
+        PerspectiveNear: 22.0100002
+        PerspectiveFar: 49
+        OrthographicSize: 53
+        OrthographicNear: 37
+        OrthographicFar: 44
+      Primary: true
+    ShapeComponent:
+      CurrentShape: Quad
+      TextureHandle: 8051163355459938058
+      ShaderHandle: 16075931647133155393
+      ShaderSpecification:
+        ColorInputType: FlatColor
+        AddProjectionMatrix: true
+        AddEntityID: true
+        AddCircleShape: false
+        TextureInput: ColorTexture
+        DrawOutline: false
+        RenderType: DrawIndex
+      Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAgD8AAIA/"

@@ -35,15 +35,18 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		{
 			player2.SeekLocationData.IsDeflectingUp = false;
 			player2.AIState.ChangeCurrentState("Entities/AIPlayer/DeflectBall.kgaistate");
+			Scripts::DetermineDash(player2);
 		}
 		else if (randomValue <= deflectDown)
 		{
 			player2.SeekLocationData.IsDeflectingUp = true;
 			player2.AIState.ChangeCurrentState("Entities/AIPlayer/DeflectBall.kgaistate");
+			Scripts::DetermineDash(player2);
 		}
 		else
 		{
 			player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+			Scripts::DetermineDash(player2);
 		}
 	}
 	else if (otherEntityTag == "Right Wall")

@@ -1,10 +1,16 @@
 Name: AIBehaviorProfile
-ComponentSize: 2
-BufferSize: 4
+ComponentSize: 6
+BufferSize: 8
 BufferSlot: 4
 DataTypes:
   - UInteger16
+  - UInteger16
+  - UInteger16
 DataLocations:
   - 0
+  - 2
+  - 4
 DataNames:
   - DeflectRatio
+  - DashingRatio
+  - OnTargetRatio

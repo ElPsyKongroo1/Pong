@@ -61,7 +61,33 @@ bool BallSinglePlayerCollisionEnd(entity currentEntity,entity otherEntity)
 				// Store seek location
 				entity player2 = Scenes::GetEntity("Player2");
 				player2.SeekLocationData.Location = endPoint3D.y;
-				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekLocation.kgaistate");
+				
+				int32 randomValue = Random::GetInteger(0, 100);
+				uint16 targetRatio = player2.AIBehaviorProfile.OnTargetRatio + 15;
+				if (randomValue <= targetRatio)
+				{
+					player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekLocation.kgaistate");
+				}
+				else
+				{
+					if (randomValue <= 25)
+					{
+						player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekTop.kgaistate");
+					}
+					else if (randomValue <= 50)
+					{
+						player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBottom.kgaistate");
+					}
+					else if (randomValue <= 75)
+					{
+						player2.AIState.ChangeCurrentState("Entities/AIPlayer/AvoidBall.kgaistate");
+					}
+					else
+					{
+						player2.AIState.ChangeCurrentState("Entities/AIPlayer/NoMove.kgaistate");
+					}
+				}
+				Scripts::DetermineDash(player2);
 				// Close while loop
 				break;
 			}
@@ -75,7 +101,33 @@ bool BallSinglePlayerCollisionEnd(entity currentEntity,entity otherEntity)
 				player2.SeekLocationData.Location = slope * player2Location.x - currentStartLocation2D.x * slope + currentStartLocation2D.y;
 				
 				// Change AI State
-				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekLocation.kgaistate");
+				int32 randomValue = Random::GetInteger(0, 100);
+				uint16 targetRatio = player2.AIBehaviorProfile.OnTargetRatio + 15;
+				if (randomValue <= targetRatio)
+				{
+					player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekLocation.kgaistate");
+				}
+				else
+				{
+					if (randomValue <= 25)
+					{
+						player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekTop.kgaistate");
+					}
+					else if (randomValue <= 50)
+					{
+						player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBottom.kgaistate");
+					}
+					else if (randomValue <= 75)
+					{
+						player2.AIState.ChangeCurrentState("Entities/AIPlayer/AvoidBall.kgaistate");
+					}
+					else
+					{
+						player2.AIState.ChangeCurrentState("Entities/AIPlayer/NoMove.kgaistate");
+					}
+				}
+				
+				Scripts::DetermineDash(player2);
 				// Close while loop
 				break;
 			}
@@ -105,7 +157,39 @@ bool BallSinglePlayerCollisionEnd(entity currentEntity,entity otherEntity)
 	if (otherEntityTag == "Player2")
 	{
 		entity player2 = Scenes::GetEntity("Player2");
-		player2.AIState.ChangeCurrentState("Entities/AIPlayer/AvoidBall.kgaistate");
+		Scripts::DetermineDash(player2);
+		int32 randomValue = Random::GetInteger(0, 100);
+		if (randomValue <= player2.AIBehaviorProfile.OnTargetRatio)
+		{
+			if (randomValue <= 50)
+			{
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+			}
+			else
+			{
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekMiddle.kgaistate");
+			}
+			
+		}
+		else
+		{
+			if (randomValue <= 25)
+			{
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekTop.kgaistate");
+			}
+			else if (randomValue <= 50)
+			{
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBottom.kgaistate");
+			}
+			else if (randomValue <= 75)
+			{
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/AvoidBall.kgaistate");
+			}
+			else
+			{
+				player2.AIState.ChangeCurrentState("Entities/AIPlayer/NoMove.kgaistate");
+			}
+		}
 	}
 	
 	

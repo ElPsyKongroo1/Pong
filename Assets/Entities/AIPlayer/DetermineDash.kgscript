@@ -1,0 +1,12 @@
+void DetermineDash(entity aiEntity)
+{
+	int32 randomValue = Random::GetInteger(0, 100);
+	if (randomValue <= aiEntity.AIBehaviorProfile.DashingRatio)
+	{
+		aiEntity.Speed.IsDashing = true;
+	}
+	else
+	{
+		aiEntity.Speed.IsDashing = false;
+	}
+}

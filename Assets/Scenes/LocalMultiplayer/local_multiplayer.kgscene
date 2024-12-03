@@ -295,3 +295,7 @@ Entities:
       InitialPosition: [26, 0, 0]
     BallStateComponent:
       ChangeVelocity: false
+    AIBehaviorProfileComponent:
+      DeflectRatio: 0
+      DashingRatio: 0
+      OnTargetRatio: 0

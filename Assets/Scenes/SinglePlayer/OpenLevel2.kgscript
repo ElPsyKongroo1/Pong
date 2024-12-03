@@ -11,5 +11,5 @@ void OpenLevel2()
 	GameState::SetField("PlayerOneScore", 0);
 	GameState::SetField("PlayerTwoScore", 0);
 	GameState::SetField("CurrentLevel", 2);
-	GameState::SetField("WinConditionValue", 1);
+	GameState::SetField("WinConditionValue", 10);
 }

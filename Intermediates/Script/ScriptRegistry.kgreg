@@ -346,6 +346,15 @@ Assets:
       SectionLabel: Player1
       ScriptType: Project
       FunctionType: Void_Float
+  - AssetHandle: 2498594022309521241
+    MetaData:
+      CheckSum: ""
+      FileLocation: Entities/Player2/OnlinePlayer2MoveDown.kgscript
+      AssetType: Script
+      Name: OnlinePlayer2MoveDown
+      SectionLabel: None
+      ScriptType: Project
+      FunctionType: Void_Float
   - AssetHandle: 4215689466214846297
     MetaData:
       CheckSum: ""
@@ -488,6 +497,15 @@ Assets:
         ParameterNames:
           - deltaTime
           - isDashing
+  - AssetHandle: 1635208331362123774
+    MetaData:
+      CheckSum: ""
+      FileLocation: Entities/AIPlayer/DetermineDash.kgscript
+      AssetType: Script
+      Name: DetermineDash
+      SectionLabel: None
+      ScriptType: Project
+      FunctionType: Void_Entity
   - AssetHandle: 12717461188924100105
     MetaData:
       CheckSum: ""
@@ -540,3 +558,12 @@ Assets:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Void_EntityFloat
+  - AssetHandle: 4166844194915686743
+    MetaData:
+      CheckSum: ""
+      FileLocation: Entities/Player2/OnlinePlayer2MoveUp.kgscript
+      AssetType: Script
+      Name: OnlinePlayer2MoveUp
+      SectionLabel: Player2
+      ScriptType: Project
+      FunctionType: Void_Float

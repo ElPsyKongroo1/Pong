@@ -1,22 +1,22 @@
 KeyboardPolling:
   - Slot: 0
-    KeyCode: 87
+    KeyCode: 0
   - Slot: 1
-    KeyCode: 83
+    KeyCode: 0
   - Slot: 2
-    KeyCode: 0
+    KeyCode: 87
   - Slot: 3
-    KeyCode: 0
+    KeyCode: 83
   - Slot: 4
-    KeyCode: 341
-  - Slot: 5
     KeyCode: 0
+  - Slot: 5
+    KeyCode: 341
 OnUpdate:
   - BindingType: KeyboardAction
-    ScriptHandle: 12868852232695454226
+    ScriptHandle: 4166844194915686743
     KeyBinding: 87
   - BindingType: KeyboardAction
-    ScriptHandle: 1999882109195364397
+    ScriptHandle: 2498594022309521241
     KeyBinding: 83
 OnKeyPressed:
   - BindingType: KeyboardAction
