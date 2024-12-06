@@ -299,7 +299,7 @@ Entities:
       RestitutionThreshold: 0.00999999978
       IsSensor: false
     SpeedComponent:
-      CurrentSpeed: 55
+      CurrentSpeed: 60
       SpeedUpMultiplier: 1
       IsDashing: false
     InitialStateComponent:

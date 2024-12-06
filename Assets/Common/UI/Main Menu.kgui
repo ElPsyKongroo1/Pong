@@ -6,8 +6,8 @@ Windows:
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 0.176470593, 1, 0.141176477]
-    ParentIndex: -1
-    ChildBufferIndex: -1
+    ParentIndex: 18446744073709551615
+    ChildBufferIndex: 18446744073709551615
     ChildBufferSize: 0
     DefaultActiveWidget: 6
     Widgets:
@@ -19,8 +19,8 @@ Windows:
         Selectable: true
         DirectionPointerUp: 6
         DirectionPointerDown: 1
-        DirectionPointerLeft: -1
-        DirectionPointerRight: -1
+        DirectionPointerLeft: 18446744073709551615
+        DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 9792081380113944440
         TextWidget:
           Text: Local Multiplayer
@@ -35,9 +35,9 @@ Windows:
         WidgetType: TextWidget
         Selectable: true
         DirectionPointerUp: 0
-        DirectionPointerDown: -1
-        DirectionPointerLeft: -1
-        DirectionPointerRight: -1
+        DirectionPointerDown: 18446744073709551615
+        DirectionPointerLeft: 18446744073709551615
+        DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 10882227211325647722
         TextWidget:
           Text: Exit
@@ -51,10 +51,10 @@ Windows:
         DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
         WidgetType: TextWidget
         Selectable: false
-        DirectionPointerUp: -1
+        DirectionPointerUp: 18446744073709551615
         DirectionPointerDown: 6
-        DirectionPointerLeft: -1
-        DirectionPointerRight: -1
+        DirectionPointerLeft: 18446744073709551615
+        DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 0
         TextWidget:
           Text: Pong
@@ -69,9 +69,9 @@ Windows:
         WidgetType: TextWidget
         Selectable: false
         DirectionPointerUp: 0
-        DirectionPointerDown: -1
+        DirectionPointerDown: 18446744073709551615
         DirectionPointerLeft: 1
-        DirectionPointerRight: -1
+        DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 0
         TextWidget:
           Text: ElPsy Incorporated
@@ -87,8 +87,8 @@ Windows:
         Selectable: false
         DirectionPointerUp: 0
         DirectionPointerDown: 1
-        DirectionPointerLeft: -1
-        DirectionPointerRight: -1
+        DirectionPointerLeft: 18446744073709551615
+        DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 4669916971671854194
         TextWidget:
           Text: Online Multiplayer
@@ -102,10 +102,10 @@ Windows:
         DefaultBackgroundColor: [0.549019635, 0.172549024, 0.172549024, 0]
         WidgetType: TextWidget
         Selectable: false
-        DirectionPointerUp: -1
+        DirectionPointerUp: 18446744073709551615
         DirectionPointerDown: 6
         DirectionPointerLeft: 6
-        DirectionPointerRight: -1
+        DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 0
         TextWidget:
           Text: Offline
@@ -119,10 +119,10 @@ Windows:
         DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]
         WidgetType: TextWidget
         Selectable: true
-        DirectionPointerUp: -1
+        DirectionPointerUp: 18446744073709551615
         DirectionPointerDown: 0
-        DirectionPointerLeft: -1
-        DirectionPointerRight: -1
+        DirectionPointerLeft: 18446744073709551615
+        DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 5289311489000530938
         TextWidget:
           Text: Single Player
@@ -134,10 +134,10 @@ Windows:
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 1]
-    ParentIndex: -1
-    ChildBufferIndex: -1
+    ParentIndex: 18446744073709551615
+    ChildBufferIndex: 18446744073709551615
     ChildBufferSize: 0
-    DefaultActiveWidget: -1
+    DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: New Game
         WindowPosition: [0.25999999, 0.600000024]
@@ -145,10 +145,10 @@ Windows:
         DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]
         WidgetType: TextWidget
         Selectable: true
-        DirectionPointerUp: -1
-        DirectionPointerDown: -1
-        DirectionPointerLeft: -1
-        DirectionPointerRight: -1
+        DirectionPointerUp: 18446744073709551615
+        DirectionPointerDown: 18446744073709551615
+        DirectionPointerLeft: 18446744073709551615
+        DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 0
         TextWidget:
           Text: New Game
