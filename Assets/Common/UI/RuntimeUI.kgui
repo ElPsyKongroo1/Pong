@@ -12,8 +12,15 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: score_player_1
-        WindowPosition: [0, 0.860000014]
-        Size: [0.119999997, 0.100000001]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Left
+        YConstraint: None
+        PercentPosition: [0.0199999996, 0.860000014]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
+        Size: [0.100000001, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
         Selectable: false
@@ -29,8 +36,15 @@ Windows:
           TextAbsoluteDimensions: [0.536132812, 0.857142866]
           TextCentered: true
       - Tag: score_player_2
-        WindowPosition: [0.790000021, 0.860000014]
-        Size: [0.300000012, 0.100000001]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Right
+        YConstraint: None
+        PercentPosition: [-0.0199999996, 0.860000014]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
+        Size: [0.100000001, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
         Selectable: false
@@ -55,7 +69,14 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: Start Warning
-        WindowPosition: [0.349999994, 0.860000014]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [0, 0.860000014]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [1, 0.400000006, 0.933333337, 0]
         WidgetType: TextWidget
@@ -72,7 +93,14 @@ Windows:
           TextAbsoluteDimensions: [8.35742188, 0.857142866]
           TextCentered: true
       - Tag: controls_1
-        WindowPosition: [0.0799999982, -0.00999999978]
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.0799999982, -0.00999999978]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.239999995, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -89,7 +117,14 @@ Windows:
           TextAbsoluteDimensions: [19.2285156, 0.857142866]
           TextCentered: true
       - Tag: controls_2
-        WindowPosition: [0.589999974, -0.00999999978]
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.589999974, -0.00999999978]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.239999995, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -115,7 +150,14 @@ Windows:
     DefaultActiveWidget: 0
     Widgets:
       - Tag: main_text
-        WindowPosition: [0.360000014, 0.829999983]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [0, 0.829999983]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -132,8 +174,15 @@ Windows:
           TextAbsoluteDimensions: [8.34472656, 0.833333313]
           TextCentered: true
       - Tag: player_slot_0
-        WindowPosition: [0.0299999993, 0.810000002]
-        Size: [0.170000002, 0.189999998]
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.0299999993, 0.850000024]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
+        Size: [0.200000003, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
         Selectable: true
@@ -149,8 +198,15 @@ Windows:
           TextAbsoluteDimensions: [4.38330078, 0.833333313]
           TextCentered: true
       - Tag: player_slot_1
-        WindowPosition: [0.720000029, 0.850000024]
-        Size: [0.300000012, 0.100000001]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Right
+        YConstraint: None
+        PercentPosition: [-0.0299999993, 0.850000024]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
+        Size: [0.200000003, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
         Selectable: true
@@ -175,7 +231,14 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: start_warning
-        WindowPosition: [0.330000013, 0.860000014]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [0, 0.860000014]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.340000004, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -192,7 +255,14 @@ Windows:
           TextAbsoluteDimensions: [8.35742188, 0.857142866]
           TextCentered: true
       - Tag: controls
-        WindowPosition: [0.349999994, 0.0299999993]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [0, 0.0299999993]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -204,7 +274,7 @@ Windows:
         FunctionPointerOnPress: 0
         TextWidget:
           Text: "Controls: W=Up, S=Down, Left-Control=SpeedUp"
-          TextSize: 0.300000012
+          TextSize: 0.430000007
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [19.2861328, 0.857142866]
           TextCentered: true
@@ -218,7 +288,14 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: Title
-        WindowPosition: [0.349999994, 0.850000024]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [0, 0.850000024]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -235,7 +312,14 @@ Windows:
           TextAbsoluteDimensions: [3.56445312, 0.833333313]
           TextCentered: true
       - Tag: NextAction
-        WindowPosition: [0.349999994, 0.00999999978]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [0, 0.00999999978]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -261,7 +345,14 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: Title
-        WindowPosition: [0.360000014, 0.850000024]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [0, 0.850000024]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -278,7 +369,14 @@ Windows:
           TextAbsoluteDimensions: [3.82666016, 0.833333313]
           TextCentered: true
       - Tag: RestartAction
-        WindowPosition: [0.349999994, 0.00999999978]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [0, 0.00999999978]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget

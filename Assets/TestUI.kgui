@@ -2,27 +2,34 @@ SelectColor: [1, 1, 1, 1]
 FunctionPointerOnMove: 0
 Font: 0
 Windows:
-  - Tag: Window1
+  - Tag: None
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
-    BackgroundColor: [1, 1, 1, 0.5]
+    BackgroundColor: [0.300000012, 0.300000012, 0.300000012, 0.300000012]
     ParentIndex: 18446744073709551615
     ChildBufferIndex: 18446744073709551615
     ChildBufferSize: 0
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       []
-  - Tag: Window2
+  - Tag: None
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
-    BackgroundColor: [1, 1, 1, 1]
+    BackgroundColor: [0.300000012, 0.300000012, 0.300000012, 0.300000012]
     ParentIndex: 18446744073709551615
     ChildBufferIndex: 18446744073709551615
     ChildBufferSize: 0
     DefaultActiveWidget: 18446744073709551615
     Widgets:
-      - Tag: NewText
-        WindowPosition: [0.400000006, 0.400000006]
+      - Tag: NewTag
+        PercentPosition: [0.400000006, 0.400000006]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
         WidgetType: TextWidget
@@ -34,7 +41,7 @@ Windows:
         FunctionPointerOnPress: 0
         TextWidget:
           Text: New Text Widget
-          TextSize: 0.400000006
+          TextSize: 0.300000012
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [7.61328125, 0.785714269]
           TextCentered: true

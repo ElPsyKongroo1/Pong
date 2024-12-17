@@ -12,7 +12,14 @@ Windows:
     DefaultActiveWidget: 6
     Widgets:
       - Tag: local_multiplayer
-        WindowPosition: [0.0500000007, 0.400000006]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [-0.310000002, 0.400000006]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.280000001, 0.119999997]
         DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
         WidgetType: TextWidget
@@ -29,7 +36,14 @@ Windows:
           TextAbsoluteDimensions: [7.04638672, 0.833333313]
           TextCentered: true
       - Tag: exit_app
-        WindowPosition: [0.129999995, 0.0500000007]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [-0.310000002, 0.0500000007]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.100000001, 0.100000001]
         DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
         WidgetType: TextWidget
@@ -46,7 +60,14 @@ Windows:
           TextAbsoluteDimensions: [1.42773438, 0.833333313]
           TextCentered: true
       - Tag: title
-        WindowPosition: [0.100000001, 0.74000001]
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.100000001, 0.74000001]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.170000002, 0.140000001]
         DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
         WidgetType: TextWidget
@@ -63,7 +84,14 @@ Windows:
           TextAbsoluteDimensions: [2.0546875, 0.833333313]
           TextCentered: true
       - Tag: logo
-        WindowPosition: [0.699999988, 0]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Right
+        YConstraint: None
+        PercentPosition: [0, 0]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.100000001]
         DefaultBackgroundColor: [1, 1, 1, 0]
         WidgetType: TextWidget
@@ -80,7 +108,14 @@ Windows:
           TextAbsoluteDimensions: [7.68896484, 0.857142866]
           TextCentered: true
       - Tag: online_multiplayer
-        WindowPosition: [0.0399999991, 0.230000004]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [-0.310000002, 0.230000004]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.300000012, 0.109999999]
         DefaultBackgroundColor: [0.117647059, 0.117647059, 0.117647059, 0.145098045]
         WidgetType: TextWidget
@@ -97,7 +132,14 @@ Windows:
           TextAbsoluteDimensions: [7.53369141, 0.857142866]
           TextCentered: true
       - Tag: online_count
-        WindowPosition: [0.769999981, 0.870000005]
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.769999981, 0.870000005]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.140000001, 0.100000001]
         DefaultBackgroundColor: [0.549019635, 0.172549024, 0.172549024, 0]
         WidgetType: TextWidget
@@ -114,7 +156,14 @@ Windows:
           TextAbsoluteDimensions: [2.70654297, 0.857142866]
           TextCentered: true
       - Tag: single_player
-        WindowPosition: [0.0700000003, 0.569999993]
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Center
+        YConstraint: None
+        PercentPosition: [-0.310000002, 0.569999993]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.239999995, 0.119999997]
         DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]
         WidgetType: TextWidget
@@ -140,7 +189,14 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: New Game
-        WindowPosition: [0.25999999, 0.600000024]
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.25999999, 0.600000024]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
         Size: [0.439999998, 0.180000007]
         DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]
         WidgetType: TextWidget
