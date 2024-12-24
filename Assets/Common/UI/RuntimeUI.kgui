@@ -35,6 +35,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [0.536132812, 0.857142866]
           TextCentered: true
+          TextWrapped: true
       - Tag: score_player_2
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -59,6 +60,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [0.536132812, 0.857142866]
           TextCentered: true
+          TextWrapped: true
   - Tag: pre_game_warning
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -92,6 +94,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [8.35742188, 0.857142866]
           TextCentered: true
+          TextWrapped: true
       - Tag: controls_1
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
@@ -116,6 +119,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [19.2285156, 0.857142866]
           TextCentered: true
+          TextWrapped: true
       - Tag: controls_2
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
@@ -140,6 +144,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [27.4121094, 0.857142866]
           TextCentered: true
+          TextWrapped: true
   - Tag: online_lobby
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -173,6 +178,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [8.34472656, 0.833333313]
           TextCentered: true
+          TextWrapped: true
       - Tag: player_slot_0
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
@@ -197,6 +203,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [4.38330078, 0.833333313]
           TextCentered: true
+          TextWrapped: true
       - Tag: player_slot_1
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -221,6 +228,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [4.50439453, 0.857142866]
           TextCentered: true
+          TextWrapped: true
   - Tag: pre_game_level_warning
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -254,6 +262,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [8.35742188, 0.857142866]
           TextCentered: true
+          TextWrapped: true
       - Tag: controls
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -278,6 +287,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [19.2861328, 0.857142866]
           TextCentered: true
+          TextWrapped: true
   - Tag: win_window
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -311,6 +321,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [3.56445312, 0.833333313]
           TextCentered: true
+          TextWrapped: true
       - Tag: NextAction
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -335,6 +346,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [12.9990234, 0.857142866]
           TextCentered: true
+          TextWrapped: true
   - Tag: lose_window
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -368,6 +380,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [3.82666016, 0.833333313]
           TextCentered: true
+          TextWrapped: true
       - Tag: RestartAction
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -392,3 +405,4 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [11.7548828, 0.857142866]
           TextCentered: true
+          TextWrapped: true

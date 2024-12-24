@@ -35,6 +35,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [7.04638672, 0.833333313]
           TextCentered: true
+          TextWrapped: true
       - Tag: exit_app
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -59,12 +60,13 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [1.42773438, 0.833333313]
           TextCentered: true
+          TextWrapped: true
       - Tag: title
-        XRelativeOrAbsolute: Absolute
+        XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
-        XConstraint: None
+        XConstraint: Center
         YConstraint: None
-        PercentPosition: [0.100000001, 0.74000001]
+        PercentPosition: [-0.310000002, 0.74000001]
         PixelPosition: [0, 0]
         XPositionType: Percent
         YPositionType: Percent
@@ -83,6 +85,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [2.0546875, 0.833333313]
           TextCentered: true
+          TextWrapped: true
       - Tag: logo
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -107,6 +110,7 @@ Windows:
           TextColor: [1, 1, 0.827450991, 1]
           TextAbsoluteDimensions: [7.68896484, 0.857142866]
           TextCentered: true
+          TextWrapped: true
       - Tag: online_multiplayer
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -131,6 +135,7 @@ Windows:
           TextColor: [1, 1, 1, 0.870588243]
           TextAbsoluteDimensions: [7.53369141, 0.857142866]
           TextCentered: true
+          TextWrapped: true
       - Tag: online_count
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
@@ -155,6 +160,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [2.70654297, 0.857142866]
           TextCentered: true
+          TextWrapped: true
       - Tag: single_player
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -179,6 +185,7 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [5.39111328, 0.857142866]
           TextCentered: true
+          TextWrapped: true
   - Tag: singleplayer_options
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -212,3 +219,4 @@ Windows:
           TextColor: [1, 1, 1, 1]
           TextAbsoluteDimensions: [4.23583984, 0.857142866]
           TextCentered: true
+          TextWrapped: true
