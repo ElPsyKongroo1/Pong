@@ -1,26 +1,26 @@
 SelectColor: [1, 1, 1, 1]
 FunctionPointerOnMove: 0
-Font: 0
+Font: 7507720298335089313
 Windows:
   - Tag: None
-    ScreenPosition: [0.119999997, 0.319999993, 0]
-    Size: [0.699999988, 0.50999999]
+    ScreenPosition: [0, 0, 0]
+    Size: [1, 1]
     BackgroundColor: [0.300000012, 0.300000012, 0.300000012, 0.300000012]
     ParentIndex: 18446744073709551615
     ChildBufferIndex: 18446744073709551615
     ChildBufferSize: 0
     DefaultActiveWidget: 18446744073709551615
     Widgets:
-      - Tag: NewTag
-        XRelativeOrAbsolute: Relative
-        YRelativeOrAbsolute: Relative
-        XConstraint: Right
-        YConstraint: Center
-        PercentPosition: [-0.289999992, 0]
+      - Tag: None
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.161707982, 0.483950585]
         PixelPosition: [0, 0]
         XPositionType: Percent
         YPositionType: Percent
-        Size: [0.300000012, 0.100000001]
+        Size: [0.230000004, 0.100000001]
         DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
         WidgetType: TextWidget
         Selectable: true
@@ -30,9 +30,9 @@ Windows:
         DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 0
         TextWidget:
-          Text: New Text Widget
-          TextSize: 0.219999999
+          Text: New Text haha
+          TextSize: 0.779999971
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [7.61328125, 0.785714269]
+          TextAbsoluteDimensions: [5.84082031, 0.850000024]
           TextCentered: true
-          TextWrapped: false
+          TextWrapped: true
