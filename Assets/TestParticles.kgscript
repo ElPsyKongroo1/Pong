@@ -1,7 +1,0 @@
-void TestParticles(entity activeEntity,float deltaTime)
-{
-	float xLocation = Random::GetFloat(1.0f, 49.0f);
-	float yLocation = Random::GetFloat(-15.0f, 15.0f);
-	vector3 particleLocation = {xLocation, yLocation, 0.1f };
-	Particles::AddParticle(particleLocation, 1.0f);
-}
