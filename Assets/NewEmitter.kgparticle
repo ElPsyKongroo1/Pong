@@ -1,7 +1,0 @@
-BufferSize: 1000
-SpawnRatePerSec: 15
-ParticleLifetime: 5
-ColorBegin: [1, 1, 1, 1]
-ColorEnd: [1, 1, 1, 1]
-SizeBegin: [2, 0.200000003, 1]
-SizeEnd: [1, 1, 1]

@@ -1,7 +1,7 @@
 Registry: Particle Emitter Config
 Assets:
-  - AssetHandle: 7872138897312272350
+  - AssetHandle: 16731698762486059056
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: NewEmitter.kgparticle
+      FileLocation: BasicEmitter.kgparticle
       AssetType: EmitterConfig
