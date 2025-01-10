@@ -3,4 +3,5 @@ bool BallOnPhysicsCollision(entity currentEntity, entity otherEntity)
 	UI::DisplayWindow("base_window", false);
 	Audio::PlayMusic("Common/Audio/green_a.kgaudio");
 	UI::SetWidgetText("online_lobby", "selectedWidget", "Connected!");
+	otherEntity.AIBehaviorProfile.DeflectRatio = 2;
 }

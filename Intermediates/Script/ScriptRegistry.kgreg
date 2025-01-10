@@ -4,49 +4,49 @@ SectionLabels:
   - Player1
   - Player2
 Assets:
-  - AssetHandle: 5289311489000530938
-    MetaData:
-      CheckSum: ""
-      FileLocation: Scenes/SinglePlayer/OpenNewSinglePlayer.kgscript
-      AssetType: Script
-      Name: OpenNewSinglePlayer
-      SectionLabel: None
-      ScriptType: Project
-      FunctionType: Void_None
-  - AssetHandle: 52700902773466490
+  - AssetHandle: 4669916971671854194
     MetaData:
       CheckSum: ""
       FileLocation: ""
       AssetType: Script
-      Name: RequestUserCount
+      Name: RequestJoinSession
       SectionLabel: Network
       ScriptType: Engine
       FunctionType: Void_None
-  - AssetHandle: 2064842461036640418
-    MetaData:
-      CheckSum: ""
-      FileLocation: Entities/AIPlayer/SeekLocationOnUpdate.kgscript
-      AssetType: Script
-      Name: SeekLocationOnUpdate
-      SectionLabel: None
-      ScriptType: Project
-      FunctionType: Void_EntityFloat
-  - AssetHandle: 6361819727416047522
+  - AssetHandle: 16544293128422698034
     MetaData:
       CheckSum: ""
       FileLocation: ""
       AssetType: Script
-      Name: SessionReadyCheck
-      SectionLabel: Network
+      Name: MoveUp
+      SectionLabel: UserInterface
       ScriptType: Engine
       FunctionType: Void_None
-  - AssetHandle: 10882227211325647722
+  - AssetHandle: 17959627880001999562
     MetaData:
       CheckSum: ""
       FileLocation: ""
       AssetType: Script
-      Name: CloseApplication
-      SectionLabel: Engine
+      Name: MoveDown
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 8019676634851705730
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: MoveLeft
+      SectionLabel: UserInterface
+      ScriptType: Engine
+      FunctionType: Void_None
+  - AssetHandle: 1108782715341511642
+    MetaData:
+      CheckSum: ""
+      FileLocation: ""
+      AssetType: Script
+      Name: MoveRight
+      SectionLabel: UserInterface
       ScriptType: Engine
       FunctionType: Void_None
   - AssetHandle: 12868852232695454226
@@ -76,49 +76,49 @@ Assets:
       SectionLabel: UserInterface
       ScriptType: Engine
       FunctionType: Void_None
-  - AssetHandle: 1108782715341511642
+  - AssetHandle: 10882227211325647722
     MetaData:
       CheckSum: ""
       FileLocation: ""
       AssetType: Script
-      Name: MoveRight
-      SectionLabel: UserInterface
+      Name: CloseApplication
+      SectionLabel: Engine
       ScriptType: Engine
       FunctionType: Void_None
-  - AssetHandle: 8019676634851705730
+  - AssetHandle: 2064842461036640418
+    MetaData:
+      CheckSum: ""
+      FileLocation: Entities/AIPlayer/SeekLocationOnUpdate.kgscript
+      AssetType: Script
+      Name: SeekLocationOnUpdate
+      SectionLabel: None
+      ScriptType: Project
+      FunctionType: Void_EntityFloat
+  - AssetHandle: 6361819727416047522
     MetaData:
       CheckSum: ""
       FileLocation: ""
       AssetType: Script
-      Name: MoveLeft
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 17959627880001999562
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: MoveDown
-      SectionLabel: UserInterface
-      ScriptType: Engine
-      FunctionType: Void_None
-  - AssetHandle: 4669916971671854194
-    MetaData:
-      CheckSum: ""
-      FileLocation: ""
-      AssetType: Script
-      Name: RequestJoinSession
+      Name: SessionReadyCheck
       SectionLabel: Network
       ScriptType: Engine
       FunctionType: Void_None
-  - AssetHandle: 16544293128422698034
+  - AssetHandle: 5289311489000530938
+    MetaData:
+      CheckSum: ""
+      FileLocation: Scenes/SinglePlayer/OpenNewSinglePlayer.kgscript
+      AssetType: Script
+      Name: OpenNewSinglePlayer
+      SectionLabel: None
+      ScriptType: Project
+      FunctionType: Void_None
+  - AssetHandle: 52700902773466490
     MetaData:
       CheckSum: ""
       FileLocation: ""
       AssetType: Script
-      Name: MoveUp
-      SectionLabel: UserInterface
+      Name: RequestUserCount
+      SectionLabel: Network
       ScriptType: Engine
       FunctionType: Void_None
   - AssetHandle: 9792081380113944440
