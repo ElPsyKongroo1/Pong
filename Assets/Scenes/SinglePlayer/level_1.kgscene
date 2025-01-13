@@ -1,5 +1,6 @@
 Physics:
   Gravity: [0, 0]
+BackgroundColor: [0, 0.100000001, 0, 1]
 Entities:
   - Entity: 1070563188911329511
     TagComponent:
@@ -33,7 +34,7 @@ Entities:
       Rotation: [0, 0, 1.57079625]
       Scale: [1.29999292, 1.29999292, 1]
     ParticleEmitterComponent:
-      EmitterHandle: 16731698762486059056
+      EmitterHandle: 14941054500510671261
     ShapeComponent:
       CurrentShape: Quad
       VertexColors:
@@ -51,7 +52,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "oCzKQcgHJ78AAEAxAACAvwAAgD8AAAAAAACAP/ypcT3NzEw+AACAP83MzD4AAIA/AQAAAA=="
+      Buffer: !!binary "oCzKQcgHJ78AAEAxAACAvwAAgD8AAAAAAACAP/ypcT3NzEw+AACAP83MzD4AAIA/BwAAAA=="
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: true
@@ -85,9 +86,11 @@ Entities:
       CurrentState: 0
       PreviousState: 0
       GlobalState: 0
+    ParticleEmitterComponent:
+      EmitterHandle: 5035817497470606234
     ShapeComponent:
       CurrentShape: Quad
-      TextureHandle: 1008307395632263226
+      TextureHandle: 11467886090052234263
       ShaderHandle: 16075931647133155393
       ShaderSpecification:
         ColorInputType: FlatColor
@@ -97,7 +100,7 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "b3s1QokRiMAAAAAAAACAPwAAgD8AAIA/AACAPwIAAAAAAAAAAACAPwAAgD8AAIA/"
+      Buffer: !!binary "b3s1QokRiMAAAAAAAACAPwAAgD8AAIA/AACAPwYAAAAAAAAAAACAPwAAAAAAAIA/"
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: true
@@ -144,7 +147,7 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "4sxcQDAUiMAAAIAxAACAPwAAgD8AAIA/AACAPwMAAAAAAAAAAACAPwAAgD8AAIA/"
+      Buffer: !!binary "4sxcQDAUiMAAAIAxAACAPwAAgD8AAIA/AACAPwUAAAAAAAAAAACAPwAAgD8AAIA/"
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: true
@@ -169,9 +172,11 @@ Entities:
       Tag: Bottom Wall
       Group: ""
     TransformComponent:
-      Translation: [25, -16, 0.00999999978]
-      Rotation: [0, 0, 1.57079637]
-      Scale: [0.999981582, 50.9988327, 1]
+      Translation: [25, -16, -0.106217146]
+      Rotation: [0, 0, 1.57079625]
+      Scale: [0.999981523, 50.9988289, 1]
+    ParticleEmitterComponent:
+      EmitterHandle: 0
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 17057334801167380747
@@ -184,7 +189,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "QLP/vvr/g8EK1yM8zcxMPgAAgD/NzMw+AACAPwQAAAA="
+      Buffer: !!binary "QLP/vvr/g8FgiNm9zcxMPgAAgD/NzMw+AACAPwQAAAA="
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -218,7 +223,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "ANr/vgYAeEEK1yM8zcxMPgAAgD/NzMw+AACAPwUAAAA="
+      Buffer: !!binary "ANr/vgYAeEEK1yM8zcxMPgAAgD/NzMw+AACAPwMAAAA="
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -252,7 +257,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "AABGQpD7g0EAAAAAzcxMPgAAgD/NzMw+AACAPwYAAAA="
+      Buffer: !!binary "AABGQpD7g0EAAAAAzcxMPgAAgD/NzMw+AACAPwIAAAA="
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -286,7 +291,7 @@ Entities:
         TextureInput: None
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "AAAAvwAAhEEAAAAAzcxMPgAAgD/NzMw+AACAPwcAAAA="
+      Buffer: !!binary "AAAAvwAAhEEAAAAAzcxMPgAAgD/NzMw+AACAPwEAAAA="
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -330,4 +335,4 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwgAAAAAAAAAAACAPwAAAAAAAIA/"
+      Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAEAAAIA/"

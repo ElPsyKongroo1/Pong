@@ -1,5 +1,6 @@
 Physics:
   Gravity: [0, 0]
+BackgroundColor: [0.0500000007, 0.150000006, 0, 1]
 Entities:
   - Entity: 1070563188911329511
     TagComponent:
@@ -30,6 +31,8 @@ Entities:
       Translation: [25.9217854, -0.00246608257, 3.7252903e-09]
       Rotation: [0, 0, 1.57079637]
       Scale: [1.29999304, 1.29999304, 1]
+    ParticleEmitterComponent:
+      EmitterHandle: 12821986707897963756
     ShapeComponent:
       CurrentShape: Quad
       VertexColors:
@@ -79,9 +82,11 @@ Entities:
       CurrentState: 0
       PreviousState: 0
       GlobalState: 0
+    ParticleEmitterComponent:
+      EmitterHandle: 10710135964017032765
     ShapeComponent:
       CurrentShape: Quad
-      TextureHandle: 1008307395632263226
+      TextureHandle: 13680989623708598949
       ShaderHandle: 16075931647133155393
       ShaderSpecification:
         ColorInputType: FlatColor
@@ -140,7 +145,7 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "4sxcQDAUiMAAAIAxAACAPwAAgD8AAIA/AACAPwUAAAAAAAAAAACAPwAAAAAAAIA/"
+      Buffer: !!binary "4sxcQDAUiMAAAIAxAACAPwAAgD8AAIA/AACAPwUAAAAAAAAAAACAPwAAgD8AAIA/"
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: true
@@ -326,4 +331,4 @@ Entities:
         TextureInput: ColorTexture
         DrawOutline: false
         RenderType: DrawIndex
-      Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAgD8AAIA/"
+      Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAEAAAIA/"
