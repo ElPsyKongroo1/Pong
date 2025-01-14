@@ -1,0 +1,6 @@
+void TestingScript(entity activeEntity)
+{
+	log ("We are in the testing script");
+	emitter_config newConfig = EmitterConfigs::Player2Emitter2;
+	//Particles::AddEmitter(newConfig, {27.0f, 3.0f, 0.0f});
+}

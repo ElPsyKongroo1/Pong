@@ -1,5 +1,10 @@
 Registry: Particle Emitter Config
 Assets:
+  - AssetHandle: 15165415099816405768
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Entities/Player1/Player1CollisionEmitter.kgparticle
+      AssetType: EmitterConfig
   - AssetHandle: 15685594349907782904
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
