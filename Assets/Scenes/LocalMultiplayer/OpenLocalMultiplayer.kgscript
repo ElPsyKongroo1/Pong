@@ -1,13 +1,13 @@
 void OpenLocalMultiplayer()
 {
-	UI::LoadUI("Common/UI/RuntimeUI.kgui");
-	UI::DisplayWindow("pre_game_warning", true);
-	UI::DisplayWindow("base_window", false);
+	UIService::LoadUI("Common/UI/RuntimeUI.kgui");
+	UIService::DisplayWindow("pre_game_warning", true);
+	UIService::DisplayWindow("base_window", false);
 	SceneService::LoadScene("Scenes/LocalMultiplayer/local_multiplayer.kgscene");
-	Input::LoadInputMap("Common/Input/Pre_Start.kginput");
-	Audio::PlaySound("Common/Audio/menu_confirm.kgaudio");
-	Audio::PlayMusic("Common/Audio/green_a.kgaudio");
-	GameState::SetField("GameMode", 2);
-	GameState::SetField("PlayerOneScore", 0);
-	GameState::SetField("PlayerTwoScore", 0);
+	InputService::LoadInputMap("Common/Input/Pre_Start.kginput");
+	AudioService::PlaySound("Common/Audio/menu_confirm.kgaudio");
+	AudioService::PlayMusic("Common/Audio/green_a.kgaudio");
+	GameStateService::SetField("GameMode", 2);
+	GameStateService::SetField("PlayerOneScore", 0);
+	GameStateService::SetField("PlayerTwoScore", 0);
 }

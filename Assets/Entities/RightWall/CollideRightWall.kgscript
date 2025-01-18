@@ -1,7 +1,7 @@
 void CollideRightWall(entity ballEntity)
 {
-	GameState::SetField("PlayerOneScore", GameState::GetFieldUInt16("PlayerOneScore") + 1);
-	UI::SetWidgetText("base_window", "score_player_1", str(GameState::GetFieldUInt16("PlayerOneScore")));
+	GameStateService::SetField("PlayerOneScore", GameStateService::GetFieldUInt16("PlayerOneScore") + 1);
+	UIService::SetWidgetText("base_window", "score_player_1", str(GameStateService::GetFieldUInt16("PlayerOneScore")));
 	ballEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
-	Audio::PlaySound("Common/Audio/lose_sound.kgaudio");
+	AudioService::PlaySound("Common/Audio/lose_sound.kgaudio");
 }

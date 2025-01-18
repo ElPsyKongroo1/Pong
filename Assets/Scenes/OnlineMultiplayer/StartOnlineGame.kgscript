@@ -1,17 +1,17 @@
 void StartOnlineGame()
 {
-	uint16 userSlot = Network::GetActiveSessionSlot();
+	uint16 userSlot = NetworkService::GetActiveSessionSlot();
 	if (userSlot == 0)
 	{
-		Input::LoadInputMap("Common/Input/Online_Player1_Runtime.kginput");
+		InputService::LoadInputMap("Common/Input/Online_Player1_Runtime.kginput");
 	}
 	else if (userSlot == 1)
 	{
-		Input::LoadInputMap("Common/Input/Online_Player2_Runtime.kginput");
+		InputService::LoadInputMap("Common/Input/Online_Player2_Runtime.kginput");
 	}
-	UI::DisplayWindow("pre_game_warning", false);
-	UI::DisplayWindow("online_lobby", false);
-	UI::DisplayWindow("base_window", true);
+	UIService::DisplayWindow("pre_game_warning", false);
+	UIService::DisplayWindow("online_lobby", false);
+	UIService::DisplayWindow("base_window", true);
 	entity player1 = SceneService::GetEntity("Player1");
 	
 	player1.Transform.SetTranslation(player1.InitialState.InitialPosition);
@@ -22,17 +22,17 @@ void StartOnlineGame()
 	entity ball = SceneService::GetEntity("Ball");
 	ball.Transform.SetTranslation(ball.InitialState.InitialPosition);
 	
-	uint16 ballDirection = GameState::GetFieldUInt16("BallDirection");
+	uint16 ballDirection = GameStateService::GetFieldUInt16("BallDirection");
 	vector2 velocity = {0.0f, 0.0f};
 	if (ballDirection == 0)
 	{
 		velocity.x = -1.0f;
-		GameState::SetField("BallDirection", 1);
+		GameStateService::SetField("BallDirection", 1);
 	}
 	else
 	{
 		velocity.x = 1.0f;
-		GameState::SetField("BallDirection", 0);
+		GameStateService::SetField("BallDirection", 0);
 	}
 	
 	ball.RigidBody.SetLinearVelocity(velocity * ball.Speed.CurrentSpeed);

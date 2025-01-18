@@ -18,7 +18,7 @@ bool BallSinglePlayerCollisionEnd(entity currentEntity,entity otherEntity)
 	while (currentIteration < maxIterations)
 	{
 		// Send raycast along that vector
-		raycast_result results = Physics::Raycast(currentStartLocation2D, currentEndLocation2D);
+		raycast_result results = PhysicsService::Raycast(currentStartLocation2D, currentEndLocation2D);
 		if (results.collisionSuccess)
 		{
 			// Store collision location

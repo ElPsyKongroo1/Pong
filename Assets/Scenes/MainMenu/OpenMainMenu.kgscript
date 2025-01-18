@@ -1,9 +1,9 @@
 void OpenMainMenu()
 {
-	UI::LoadUI("Common/UI/Main Menu.kgui");
+	UIService::LoadUI("Common/UI/Main Menu.kgui");
 	SceneService::LoadScene("Scenes/MainMenu/main_menu.kgscene");
-	Input::LoadInputMap("Common/Input/MainMenu.kginput");
-	Audio::PlayMusic("Common/Audio/blue_a.kgaudio");
-	GameState::SetField("GameMode", 0);
-	Network::RequestUserCount();
+	InputService::LoadInputMap("Common/Input/MainMenu.kginput");
+	AudioService::PlayMusic("Common/Audio/blue_a.kgaudio");
+	GameStateService::SetField("GameMode", 0);
+	NetworkService::RequestUserCount();
 }

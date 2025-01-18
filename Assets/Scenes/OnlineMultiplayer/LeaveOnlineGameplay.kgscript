@@ -1,5 +1,5 @@
 void LeaveOnlineGameplay()
 {
-	Network::LeaveCurrentSession();
+	NetworkService::LeaveCurrentSession();
 	Scripts::OpenMainMenu();
 }

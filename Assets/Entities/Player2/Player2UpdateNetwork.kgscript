@@ -1,9 +1,9 @@
 void Player2UpdateNetwork(entity activeEntity,float deltaTime)
 {
 	// Handle sending position/direction information to other client
-	uint16 userSlot = Network::GetActiveSessionSlot();
+	uint16 userSlot = NetworkService::GetActiveSessionSlot();
 	if (userSlot == 1)
 	{
-		Network::PushAllEntityLocation(activeEntity, activeEntity.Transform.GetTranslation());
+		NetworkService::PushAllEntityLocation(activeEntity, activeEntity.Transform.GetTranslation());
 	}
 }

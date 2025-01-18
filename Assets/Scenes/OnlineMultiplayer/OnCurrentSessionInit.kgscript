@@ -1,4 +1,4 @@
 void OnCurrentSessionInit()
 {
-	UI::SetWidgetText("online_lobby", "main_text", "Starting Session...");
+	UIService::SetWidgetText("online_lobby", "main_text", "Starting Session...");
 }

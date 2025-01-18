@@ -1,7 +1,7 @@
 void OpenCurrentLevel()
 {
 	// Open another level depending on updated level value
-	uint16 currentLevel = GameState::GetFieldUInt16("CurrentLevel");
+	uint16 currentLevel = GameStateService::GetFieldUInt16("CurrentLevel");
 	
 	// Null state and level 1 both route to level 1
 	if (currentLevel == 0 || currentLevel == 1)

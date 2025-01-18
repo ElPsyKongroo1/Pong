@@ -2,13 +2,13 @@ void OnConnectionTerminated()
 {
 	if (SceneService::IsSceneActive("Scenes/MainMenu/main_menu.kgscene"))
 	{
-		if (UI::IsWidgetSelected("main_window", "online_multiplayer"))
+		if (UIService::IsWidgetSelected("main_window", "online_multiplayer"))
 		{
-			UI::SetSelectedWidget("main_window", "single_player");
+			UIService::SetSelectedWidget("main_window", "single_player");
 		}
-		UI::SetWidgetText("main_window", "online_count", "Offline");
-		UI::WidgetSelectable("main_window", "online_multiplayer", false);
-		UI::WidgetTextColor("main_window", "online_multiplayer", {1.0f, 1.0f, 1.0f, 222.0f / 255.0f});
-		UI::WidgetBackgroundColor("main_window", "online_multiplayer", {30.0f / 255.0f, 30.0f / 255.0f, 30.0f / 255.0f, 37.0f / 255.0f});
+		UIService::SetWidgetText("main_window", "online_count", "Offline");
+		UIService::WidgetSelectable("main_window", "online_multiplayer", false);
+		UIService::WidgetTextColor("main_window", "online_multiplayer", {1.0f, 1.0f, 1.0f, 222.0f / 255.0f});
+		UIService::WidgetBackgroundColor("main_window", "online_multiplayer", {30.0f / 255.0f, 30.0f / 255.0f, 30.0f / 255.0f, 37.0f / 255.0f});
 	}
 }

@@ -1,7 +1,7 @@
 bool BallOnlineCollisionEnd(entity currentEntity,entity otherEntity)
 {
 	string otherEntityTag = otherEntity.Tag.GetTag();
-	uint16 userSlot = Network::GetActiveSessionSlot();
+	uint16 userSlot = NetworkService::GetActiveSessionSlot();
 	if (userSlot == Math::MaxUInt16())
 	{
 		return false;
@@ -17,7 +17,7 @@ bool BallOnlineCollisionEnd(entity currentEntity,entity otherEntity)
 		{
 			vector3 updateVector = currentEntity.Transform.GetTranslation();
 			updateVector.x = updateVector.x + 0.2f;
-			Network::SendAllEntityPhysics(currentEntity, updateVector, currentEntity.RigidBody.GetLinearVelocity());
+			NetworkService::SendAllEntityPhysics(currentEntity, updateVector, currentEntity.RigidBody.GetLinearVelocity());
 		}
 		collisionHandled = true;
 	}
@@ -27,7 +27,7 @@ bool BallOnlineCollisionEnd(entity currentEntity,entity otherEntity)
 		{
 			vector3 updateVector = currentEntity.Transform.GetTranslation();
 			updateVector.x = updateVector.x - 0.2f;
-			Network::SendAllEntityPhysics(currentEntity, updateVector, currentEntity.RigidBody.GetLinearVelocity());
+			NetworkService::SendAllEntityPhysics(currentEntity, updateVector, currentEntity.RigidBody.GetLinearVelocity());
 		}
 		collisionHandled = true;
 	}

@@ -3,20 +3,20 @@ void StartGame()
 	entity player1 = SceneService::GetEntity("Player1");
 	entity player2 = SceneService::GetEntity("Player2");
 	
-	if (GameState::GetFieldUInt16("GameMode") == 1)
+	if (GameStateService::GetFieldUInt16("GameMode") == 1)
 	{
-		UI::DisplayWindow("pre_game_level_warning", false);
-		Input::LoadInputMap("Common/Input/RuntimeSinglePlayer.kginput");
+		UIService::DisplayWindow("pre_game_level_warning", false);
+		InputService::LoadInputMap("Common/Input/RuntimeSinglePlayer.kginput");
 		player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
 	}
 	else
 	{
-		UI::DisplayWindow("pre_game_warning", false);
-		Input::LoadInputMap("Common/Input/Runtime.kginput");
+		UIService::DisplayWindow("pre_game_warning", false);
+		InputService::LoadInputMap("Common/Input/Runtime.kginput");
 	}
 	
-	UI::DisplayWindow("online_lobby", false);
-	UI::DisplayWindow("base_window", true);
+	UIService::DisplayWindow("online_lobby", false);
+	UIService::DisplayWindow("base_window", true);
 	
 	player1.Transform.SetTranslation(player1.InitialState.InitialPosition);
 	player2.Transform.SetTranslation(player2.InitialState.InitialPosition);

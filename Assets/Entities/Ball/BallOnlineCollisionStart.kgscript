@@ -1,6 +1,6 @@
 bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 {
-	uint16 userSlot = Network::GetActiveSessionSlot();
+	uint16 userSlot = NetworkService::GetActiveSessionSlot();
 	bool collisionHandled = false;
 	string otherEntityTag = otherEntity.Tag.GetTag();
 	if (otherEntityTag == "Left Wall")
@@ -8,10 +8,10 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		if (userSlot == 0)
 		{
 			Scripts::CollideLeftWall(currentEntity);
-			UI::DisplayWindow("pre_game_warning", true);
-			Input::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
-			Network::SignalAll(1);
-			Network::EnableReadyCheck();
+			UIService::DisplayWindow("pre_game_warning", true);
+			InputService::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
+			NetworkService::SignalAll(1);
+			NetworkService::EnableReadyCheck();
 			collisionHandled = true;
 		}
 		else if (userSlot == 1)
@@ -25,10 +25,10 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		if (userSlot == 1)
 		{
 			Scripts::CollideRightWall(currentEntity);
-			UI::DisplayWindow("pre_game_warning", true);
-			Input::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
-			Network::SignalAll(1);
-			Network::EnableReadyCheck();
+			UIService::DisplayWindow("pre_game_warning", true);
+			InputService::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
+			NetworkService::SignalAll(1);
+			NetworkService::EnableReadyCheck();
 			collisionHandled = true;
 		}
 		else if (userSlot == 0)
@@ -51,7 +51,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		}
 		else
 		{
-			Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+			AudioService::PlaySound("Common/Audio/pop_sound.kgaudio");
 		}
 		collisionHandled = true;
 	}
@@ -63,7 +63,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		}
 		else
 		{
-			Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+			AudioService::PlaySound("Common/Audio/pop_sound.kgaudio");
 		}
 		
 		collisionHandled = true;

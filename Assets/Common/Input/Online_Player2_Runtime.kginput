@@ -10,7 +10,7 @@ KeyboardPolling:
   - Slot: 4
     KeyCode: 0
   - Slot: 5
-    KeyCode: 341
+    KeyCode: 340
 OnUpdate:
   - BindingType: KeyboardAction
     ScriptHandle: 4166844194915686743

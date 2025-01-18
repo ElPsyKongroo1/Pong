@@ -1,8 +1,8 @@
 void OpenLevel1()
 {
 	emitter_config newConfig = EmitterConfigs::FloorEmitter;
-	Audio::PlayMusic("Common/Music/audio.kgaudio");
-	Particles::AddEmitter(newConfig, {2.0f ,3.0f, 2.0f});
+	AudioService::PlayMusic("Common/Music/audio.kgaudio");
+	ParticleService::AddEmitter(newConfig, {2.0f ,3.0f, 2.0f});
 	InputMaps::RuntimeSinglePlayer;
 	
 }

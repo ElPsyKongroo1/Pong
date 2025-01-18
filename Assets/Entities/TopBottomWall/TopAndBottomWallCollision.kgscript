@@ -12,5 +12,5 @@ void TopAndBottomWallCollision(entity ballEntity)
 	}
 	currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + horizontalDirection * 0.1f) * ballEntity.Speed.CurrentSpeed;
 	ballEntity.RigidBody.SetLinearVelocity(currentVelocity);
-	Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+	AudioService::PlaySound("Common/Audio/pop_sound.kgaudio");
 }

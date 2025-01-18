@@ -6,21 +6,21 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 	if (otherEntityTag == "Left Wall")
 	{
 		Scripts::CollideLeftWall(currentEntity);
-		if (GameState::GetFieldUInt16("PlayerTwoScore") >= GameState::GetFieldUInt16("WinConditionValue"))
+		if (GameStateService::GetFieldUInt16("PlayerTwoScore") >= GameStateService::GetFieldUInt16("WinConditionValue"))
 		{
 			// Lose Game
-			UI::DisplayWindow("lose_window", true);
+			UIService::DisplayWindow("lose_window", true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
-			Input::LoadInputMap("Common/Input/LoseStateInput.kginput");
+			InputService::LoadInputMap("Common/Input/LoseStateInput.kginput");
 		}
 		else
 		{
 			// Continue Game
-			UI::DisplayWindow("pre_game_level_warning", true);
+			UIService::DisplayWindow("pre_game_level_warning", true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
-			Input::LoadInputMap("Common/Input/Pre_Start.kginput");
+			InputService::LoadInputMap("Common/Input/Pre_Start.kginput");
 		}
 		
 		collisionHandled = true;
@@ -54,21 +54,21 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		Scripts::CollideRightWall(currentEntity);
 		
 		
-		if (GameState::GetFieldUInt16("PlayerOneScore") >= GameState::GetFieldUInt16("WinConditionValue"))
+		if (GameStateService::GetFieldUInt16("PlayerOneScore") >= GameStateService::GetFieldUInt16("WinConditionValue"))
 		{
 			// End Game
-			UI::DisplayWindow("win_window", true);
+			UIService::DisplayWindow("win_window", true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
-			Input::LoadInputMap("Common/Input/WinStateInput.kginput");
+			InputService::LoadInputMap("Common/Input/WinStateInput.kginput");
 		}
 		else
 		{
 			// Continue Game
-			UI::DisplayWindow("pre_game_level_warning", true);
+			UIService::DisplayWindow("pre_game_level_warning", true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
-			Input::LoadInputMap("Common/Input/Pre_Start.kginput");
+			InputService::LoadInputMap("Common/Input/Pre_Start.kginput");
 		}
 		
 		
@@ -111,7 +111,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 		}
 	
-		Audio::PlaySound("Common/Audio/pop_sound.kgaudio");
+		AudioService::PlaySound("Common/Audio/pop_sound.kgaudio");
 		collisionHandled = true;
 	}
 	
