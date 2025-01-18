@@ -3,7 +3,7 @@ void OpenLevel1()
 	UI::LoadUI("Common/UI/RuntimeUI.kgui");
 	UI::DisplayWindow("pre_game_level_warning", true);
 	UI::DisplayWindow("base_window", false);
-	Scenes::LoadScene("Scenes/SinglePlayer/level_1.kgscene");
+	SceneService::LoadScene("Scenes/SinglePlayer/level_1.kgscene");
 	Input::LoadInputMap("Common/Input/Pre_Start.kginput");
 	Audio::PlaySound("Common/Audio/menu_confirm.kgaudio");
 	Audio::PlayMusic("Common/Audio/green_a.kgaudio");

@@ -1,7 +1,7 @@
 void StartGame()
 {
-	entity player1 = Scenes::GetEntity("Player1");
-	entity player2 = Scenes::GetEntity("Player2");
+	entity player1 = SceneService::GetEntity("Player1");
+	entity player2 = SceneService::GetEntity("Player2");
 	
 	if (GameState::GetFieldUInt16("GameMode") == 1)
 	{
@@ -21,7 +21,7 @@ void StartGame()
 	player1.Transform.SetTranslation(player1.InitialState.InitialPosition);
 	player2.Transform.SetTranslation(player2.InitialState.InitialPosition);
 	
-	entity ball = Scenes::GetEntity("Ball");
+	entity ball = SceneService::GetEntity("Ball");
 	ball.Transform.SetTranslation(ball.InitialState.InitialPosition);
 	
 	int32 directionChoice = Random::GetInteger(0, 1);

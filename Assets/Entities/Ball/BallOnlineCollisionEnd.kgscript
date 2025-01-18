@@ -8,6 +8,8 @@ bool BallOnlineCollisionEnd(entity currentEntity,entity otherEntity)
 	}
 	bool collisionHandled = false;
 	
+	
+	
 	// Forward new physics location to other players
 	if (otherEntityTag == "Player1")
 	{

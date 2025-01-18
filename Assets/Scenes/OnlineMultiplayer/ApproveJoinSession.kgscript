@@ -5,7 +5,7 @@ void ApproveJoinSession(uint16 userSlot)
 	UI::LoadUI("Common/UI/RuntimeUI.kgui");
 	UI::DisplayWindow("online_lobby", true);
 	UI::DisplayWindow("base_window", false);
-	Scenes::LoadScene("Scenes/OnlineMultiplayer/online_multiplayer.kgscene");
+	SceneService::LoadScene("Scenes/OnlineMultiplayer/online_multiplayer.kgscene");
 	Input::LoadInputMap("Common/Input/Online_Lobby_Input.kginput");
 	Audio::PlaySound("Common/Audio/menu_confirm.kgaudio");
 	Audio::PlayMusic("Common/Audio/green_a.kgaudio");

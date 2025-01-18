@@ -1,5 +1,0 @@
-Physics:
-  Gravity: [0, 0]
-BackgroundColor: [0.100000001, 0.100000001, 0.100000001, 1]
-Entities:
-  []

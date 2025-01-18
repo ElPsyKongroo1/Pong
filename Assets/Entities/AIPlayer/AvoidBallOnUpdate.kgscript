@@ -1,6 +1,6 @@
 void AvoidBallOnUpdate(entity aiEntity,float deltaTime)
 {
-	entity ballEntity = Scenes::GetEntity("Ball");
+	entity ballEntity = SceneService::GetEntity("Ball");
 	
 	// Get locations of ballEntity and aiEntity
 	vector3 ballLocation = ballEntity.Transform.GetTranslation();

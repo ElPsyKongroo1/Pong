@@ -176,7 +176,7 @@ Entities:
       Tag: Player1
       Group: Player1Group
     OnCreateComponent:
-      OnCreateHandle: 10104752261152119805
+      OnCreateHandle: 0
     TransformComponent:
       Translation: [4, -0.00246500969, 3.7252903e-09]
       Rotation: [0, 0, 1.57079637]

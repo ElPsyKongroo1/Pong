@@ -35,3 +35,8 @@ Assets:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Entities/Player2/Player2Emitter1.kgparticle
       AssetType: EmitterConfig
+  - AssetHandle: 18081188654780814771
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: FloorEmitter.kgparticle
+      AssetType: EmitterConfig

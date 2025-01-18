@@ -4,7 +4,7 @@ void OnReceiveSignal(uint16 signalNum)
 	
 	if (signalNum == 1)
 	{
-		entity ball = Scenes::GetEntity("Ball");
+		entity ball = SceneService::GetEntity("Ball");
 		if (userSlot == 0)
 		{
 			GameState::SetField("PlayerOneScore", GameState::GetFieldUInt16("PlayerOneScore") + 1);

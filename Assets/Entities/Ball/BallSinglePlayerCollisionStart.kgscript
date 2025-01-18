@@ -10,7 +10,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		{
 			// Lose Game
 			UI::DisplayWindow("lose_window", true);
-			entity player2 = Scenes::GetEntity("Player2");
+			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 			Input::LoadInputMap("Common/Input/LoseStateInput.kginput");
 		}
@@ -18,7 +18,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		{
 			// Continue Game
 			UI::DisplayWindow("pre_game_level_warning", true);
-			entity player2 = Scenes::GetEntity("Player2");
+			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 			Input::LoadInputMap("Common/Input/Pre_Start.kginput");
 		}
@@ -27,7 +27,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 	}
 	else if (otherEntityTag == "Player2ProximitySensor")
 	{
-		entity player2 = Scenes::GetEntity("Player2");
+		entity player2 = SceneService::GetEntity("Player2");
 		int32 randomValue = Random::GetInteger(0, 100);
 		uint16 deflectUp = player2.AIBehaviorProfile.DeflectRatio / 2;
 		uint16 deflectDown = player2.AIBehaviorProfile.DeflectRatio;
@@ -58,7 +58,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		{
 			// End Game
 			UI::DisplayWindow("win_window", true);
-			entity player2 = Scenes::GetEntity("Player2");
+			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 			Input::LoadInputMap("Common/Input/WinStateInput.kginput");
 		}
@@ -66,7 +66,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		{
 			// Continue Game
 			UI::DisplayWindow("pre_game_level_warning", true);
-			entity player2 = Scenes::GetEntity("Player2");
+			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 			Input::LoadInputMap("Common/Input/Pre_Start.kginput");
 		}

@@ -1,6 +1,6 @@
 void DeflectBallOnUpdate(entity aiEntity,float deltaTime)
 {
-	entity ballEntity = Scenes::GetEntity("Ball");
+	entity ballEntity = SceneService::GetEntity("Ball");
 	vector3 aiEntityLocation = aiEntity.Transform.GetTranslation();
 	vector3 ballLocation = ballEntity.Transform.GetTranslation();
 	

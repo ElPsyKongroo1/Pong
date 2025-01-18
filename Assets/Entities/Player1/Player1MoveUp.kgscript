@@ -1,6 +1,6 @@
 void Player1MoveUp(float deltaTime,bool isDashing)
 {
-	entity currentEntity = Scenes::GetEntity("Player1");
+	entity currentEntity = SceneService::GetEntity("Player1");
 	vector3 translation = currentEntity.Transform.GetTranslation();
 	bool upperLimit = translation.y >= 11.15f;
 	bool lowerLimit = translation.y <= -11.15f;

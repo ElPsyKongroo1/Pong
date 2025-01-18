@@ -1,15 +1,8 @@
 void OpenLevel1()
 {
-	UI::LoadUI("Common/UI/RuntimeUI.kgui");
-	UI::DisplayWindow("pre_game_level_warning", true);
-	UI::DisplayWindow("base_window", false);
-	Scenes::LoadScene("Scenes/SinglePlayer/level_1.kgscene");
-	Input::LoadInputMap("Common/Input/Pre_Start.kginput");
-	Audio::PlaySound("Common/Audio/menu_confirm.kgaudio");
-	Audio::PlayMusic("Common/Audio/green_a.kgaudio");
-	GameState::SetField("GameMode", 1);
-	GameState::SetField("PlayerOneScore", 0);
-	GameState::SetField("PlayerTwoScore", 0);
-	GameState::SetField("CurrentLevel", 1);
-	GameState::SetField("WinConditionValue", 10);
+	emitter_config newConfig = EmitterConfigs::FloorEmitter;
+	Audio::PlayMusic("Common/Music/audio.kgaudio");
+	Particles::AddEmitter(newConfig, {2.0f ,3.0f, 2.0f});
+	InputMaps::RuntimeSinglePlayer;
+	
 }

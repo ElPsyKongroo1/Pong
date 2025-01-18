@@ -12,14 +12,14 @@ void StartOnlineGame()
 	UI::DisplayWindow("pre_game_warning", false);
 	UI::DisplayWindow("online_lobby", false);
 	UI::DisplayWindow("base_window", true);
-	entity player1 = Scenes::GetEntity("Player1");
+	entity player1 = SceneService::GetEntity("Player1");
 	
 	player1.Transform.SetTranslation(player1.InitialState.InitialPosition);
 	
-	entity player2 = Scenes::GetEntity("Player2");
+	entity player2 = SceneService::GetEntity("Player2");
 	player2.Transform.SetTranslation(player2.InitialState.InitialPosition);
 	
-	entity ball = Scenes::GetEntity("Ball");
+	entity ball = SceneService::GetEntity("Ball");
 	ball.Transform.SetTranslation(ball.InitialState.InitialPosition);
 	
 	uint16 ballDirection = GameState::GetFieldUInt16("BallDirection");
