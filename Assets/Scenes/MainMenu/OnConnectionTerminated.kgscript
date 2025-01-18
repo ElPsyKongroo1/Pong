@@ -1,6 +1,6 @@
 void OnConnectionTerminated()
 {
-	if (SceneService::IsSceneActive("Scenes/MainMenu/main_menu.kgscene"))
+	if (SceneService::IsSceneActive(Scenes::main_menu))
 	{
 		if (UIService::IsWidgetSelected("main_window", "online_multiplayer"))
 		{

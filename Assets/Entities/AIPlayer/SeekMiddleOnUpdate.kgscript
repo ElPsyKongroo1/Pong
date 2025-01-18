@@ -9,7 +9,7 @@ void SeekMiddleOnUpdate(entity aiEntity,float deltaTime)
 	
 	if (distance < 0.2f)
 	{
-		aiEntity.AIState.ChangeCurrentState("Entities/AIPlayer/NoMove.kgaistate");
+		aiEntity.AIState.ChangeCurrentState(AIStates::NoMove);
 		return;
 	}
 	if (0.0f > aiLocation.y)

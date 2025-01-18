@@ -9,7 +9,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		{
 			Scripts::CollideLeftWall(currentEntity);
 			UIService::DisplayWindow("pre_game_warning", true);
-			InputService::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
+			InputService::LoadInputMap(InputMaps::Online_Pre_Start);
 			NetworkService::SignalAll(1);
 			NetworkService::EnableReadyCheck();
 			collisionHandled = true;
@@ -26,7 +26,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		{
 			Scripts::CollideRightWall(currentEntity);
 			UIService::DisplayWindow("pre_game_warning", true);
-			InputService::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
+			InputService::LoadInputMap(InputMaps::Online_Pre_Start);
 			NetworkService::SignalAll(1);
 			NetworkService::EnableReadyCheck();
 			collisionHandled = true;
@@ -51,7 +51,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		}
 		else
 		{
-			AudioService::PlaySound("Common/Audio/pop_sound.kgaudio");
+			AudioService::PlaySound(AudioBuffers::pop_sound);
 		}
 		collisionHandled = true;
 	}
@@ -63,7 +63,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		}
 		else
 		{
-			AudioService::PlaySound("Common/Audio/pop_sound.kgaudio");
+			AudioService::PlaySound(AudioBuffers::pop_sound);
 		}
 		
 		collisionHandled = true;

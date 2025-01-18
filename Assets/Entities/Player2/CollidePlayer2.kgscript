@@ -16,5 +16,5 @@ void CollidePlayer2(entity ballEntity)
 		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + down * deflectionFactor) * ballEntity.Speed.CurrentSpeed;
 		ballEntity.RigidBody.SetLinearVelocity(currentVelocity);
 	}
-	AudioService::PlaySound("Common/Audio/pop_sound.kgaudio");
+	AudioService::PlaySound(AudioBuffers::pop_sound);
 }

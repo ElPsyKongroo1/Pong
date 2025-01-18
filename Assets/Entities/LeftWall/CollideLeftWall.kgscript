@@ -3,5 +3,5 @@ void CollideLeftWall(entity ballEntity)
 	GameStateService::SetField("PlayerTwoScore", GameStateService::GetFieldUInt16("PlayerTwoScore") + 1);
 	UIService::SetWidgetText("base_window", "score_player_2", str(GameStateService::GetFieldUInt16("PlayerTwoScore")));
 	ballEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
-	AudioService::PlaySound("Common/Audio/lose_sound.kgaudio");
+	AudioService::PlaySound(AudioBuffers::lose_sound);
 }

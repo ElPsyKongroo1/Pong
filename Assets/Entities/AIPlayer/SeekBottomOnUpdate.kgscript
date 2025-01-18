@@ -9,7 +9,8 @@ void SeekBottomOnUpdate(entity aiEntity, float deltaTime)
 	
 	if (distance < 0.2f)
 	{
-		aiEntity.AIState.ChangeCurrentState("Entities/AIPlayer/NoMove.kgaistate");
+		
+		aiEntity.AIState.ChangeCurrentState(AIStates::NoMove);
 		return;
 	}
 	if (-11.15f > aiLocation.y)

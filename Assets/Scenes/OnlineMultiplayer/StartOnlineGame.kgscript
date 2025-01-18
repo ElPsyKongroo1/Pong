@@ -3,11 +3,11 @@ void StartOnlineGame()
 	uint16 userSlot = NetworkService::GetActiveSessionSlot();
 	if (userSlot == 0)
 	{
-		InputService::LoadInputMap("Common/Input/Online_Player1_Runtime.kginput");
+		InputService::LoadInputMap(InputMaps::Online_Player1_Runtime);
 	}
 	else if (userSlot == 1)
 	{
-		InputService::LoadInputMap("Common/Input/Online_Player2_Runtime.kginput");
+		InputService::LoadInputMap(InputMaps::Online_Player2_Runtime);
 	}
 	UIService::DisplayWindow("pre_game_warning", false);
 	UIService::DisplayWindow("online_lobby", false);

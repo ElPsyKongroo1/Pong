@@ -9,7 +9,7 @@ void SeekLocationOnUpdate(entity aiEntity,float deltaTime)
 	
 	if (distance < 0.5f)
 	{
-		aiEntity.AIState.ChangeCurrentState("Entities/AIPlayer/NoMove.kgaistate");
+		aiEntity.AIState.ChangeCurrentState(AIStates::NoMove);
 		return;
 	}
 	if (aiEntity.SeekLocationData.Location > aiLocation.y)

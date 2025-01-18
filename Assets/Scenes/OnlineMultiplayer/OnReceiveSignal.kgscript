@@ -16,9 +16,9 @@ void OnReceiveSignal(uint16 signalNum)
 			UIService::SetWidgetText("base_window", "score_player_2", str(GameStateService::GetFieldUInt16("PlayerTwoScore")));
 		}
 		ball.RigidBody.SetLinearVelocity({0.0f, 0.0f});
-		AudioService::PlaySound("Common/Audio/lose_sound.kgaudio");
+		AudioService::PlaySound(AudioBuffers::lose_sound);
 		UIService::DisplayWindow("pre_game_warning", true);
-		InputService::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
+		InputService::LoadInputMap(InputMaps::Pre_Start);
 		NetworkService::EnableReadyCheck();
 	}
 }

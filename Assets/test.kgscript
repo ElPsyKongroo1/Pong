@@ -1,8 +1,4 @@
-void OpenLevel1()
+void OpenMainMenu()
 {
-	emitter_config newConfig = EmitterConfigs::FloorEmitter;
-	AudioService::PlayMusic("Common/Music/audio.kgaudio");
-	ParticleService::AddEmitter(newConfig, {2.0f ,3.0f, 2.0f});
-	InputMaps::RuntimeSinglePlayer;
-	
+	AudioService::PlayMusic(AudioBuffers::blue_a);
 }

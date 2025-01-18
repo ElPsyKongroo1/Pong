@@ -6,13 +6,14 @@ void StartGame()
 	if (GameStateService::GetFieldUInt16("GameMode") == 1)
 	{
 		UIService::DisplayWindow("pre_game_level_warning", false);
-		InputService::LoadInputMap("Common/Input/RuntimeSinglePlayer.kginput");
-		player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+		InputService::LoadInputMap(InputMaps::RuntimeSinglePlayer);
+		
+		player2.AIState.ChangeCurrentState(AIStates::SeekBall);
 	}
 	else
 	{
 		UIService::DisplayWindow("pre_game_warning", false);
-		InputService::LoadInputMap("Common/Input/Runtime.kginput");
+		InputService::LoadInputMap(InputMaps::Runtime);
 	}
 	
 	UIService::DisplayWindow("online_lobby", false);

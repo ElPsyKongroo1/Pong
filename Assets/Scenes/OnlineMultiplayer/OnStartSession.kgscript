@@ -4,8 +4,8 @@ void OnStartSession()
 		UIService::DisplayWindow("pre_game_warning", true);
 		UIService::DisplayWindow("base_window", false);
 		UIService::DisplayWindow("online_lobby", false);
-		InputService::LoadInputMap("Common/Input/Online_Pre_Start.kginput");
-		AudioService::PlaySound("Common/Audio/menu_confirm.kgaudio");
+		InputService::LoadInputMap(InputMaps::Online_Pre_Start);
+		AudioService::PlaySound(AudioBuffers::menu_confirm);
 		if (userSlot == 0)
 		{
 			UIService::SetWidgetText("pre_game_warning", "controls_2", "");

@@ -12,7 +12,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 			UIService::DisplayWindow("lose_window", true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
-			InputService::LoadInputMap("Common/Input/LoseStateInput.kginput");
+			InputService::LoadInputMap(InputMaps::LoseStateInput);
 		}
 		else
 		{
@@ -20,7 +20,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 			UIService::DisplayWindow("pre_game_level_warning", true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
-			InputService::LoadInputMap("Common/Input/Pre_Start.kginput");
+			InputService::LoadInputMap(InputMaps::Pre_Start);
 		}
 		
 		collisionHandled = true;
@@ -34,18 +34,18 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		if (randomValue <= deflectUp)
 		{
 			player2.SeekLocationData.IsDeflectingUp = false;
-			player2.AIState.ChangeCurrentState("Entities/AIPlayer/DeflectBall.kgaistate");
+			player2.AIState.ChangeCurrentState(AIStates::DeflectBall);
 			Scripts::DetermineDash(player2);
 		}
 		else if (randomValue <= deflectDown)
 		{
 			player2.SeekLocationData.IsDeflectingUp = true;
-			player2.AIState.ChangeCurrentState("Entities/AIPlayer/DeflectBall.kgaistate");
+			player2.AIState.ChangeCurrentState(AIStates::DeflectBall);
 			Scripts::DetermineDash(player2);
 		}
 		else
 		{
-			player2.AIState.ChangeCurrentState("Entities/AIPlayer/SeekBall.kgaistate");
+			player2.AIState.ChangeCurrentState(AIStates::SeekBall);
 			Scripts::DetermineDash(player2);
 		}
 	}
@@ -60,7 +60,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 			UIService::DisplayWindow("win_window", true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
-			InputService::LoadInputMap("Common/Input/WinStateInput.kginput");
+			InputService::LoadInputMap(InputMaps::WinStateInput);
 		}
 		else
 		{
@@ -68,7 +68,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 			UIService::DisplayWindow("pre_game_level_warning", true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
-			InputService::LoadInputMap("Common/Input/Pre_Start.kginput");
+			InputService::LoadInputMap(InputMaps::Pre_Start);
 		}
 		
 		
@@ -87,7 +87,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 	}
 	else if (otherEntityTag == "Player2")
 	{
-		if (otherEntity.AIState.IsCurrentState("Entities/AIPlayer/DeflectBall.kgaistate"))
+		if (otherEntity.AIState.IsCurrentState(AIStates::DeflectBall))
 		{
 			float deflectionFactor = 0.33f;
 			vector2 direction;
@@ -111,7 +111,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 			currentEntity.RigidBody.SetLinearVelocity(currentVelocity);
 		}
 	
-		AudioService::PlaySound("Common/Audio/pop_sound.kgaudio");
+		AudioService::PlaySound(AudioBuffers::pop_sound);
 		collisionHandled = true;
 	}
 	

@@ -1,4 +1,4 @@
 void PlayMenuSelect()
 {
-	AudioService::PlaySound("Common/Audio/menu_select.kgaudio");
+	AudioService::PlaySound(AudioBuffers::menu_select);
 }
