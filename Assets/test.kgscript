@@ -1,4 +1,5 @@
-void OpenMainMenu()
+void OpenLevel1()
 {
-	AudioService::PlayMusic(AudioBuffers::blue_a);
+	AudioService::PlayMusic(AudioBuffers::menu_select);
+	screen_resolution newRes = ScreenResolution::1920x1080;
 }

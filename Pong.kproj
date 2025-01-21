@@ -7,7 +7,7 @@ Project:
   ScriptModulePath: Scripts/Binaries/Pong.dll
   ScriptDLLPath: Scripting/bin/Pong.dll
   DefaultFullscreen: false
-  TargetResolution: 854x480
+  TargetResolution: 1600x900
   OnRuntimeStart: 14683932765512752045
   OnUpdateUserCount: 18163504705534252383
   OnApproveJoinSession: 14942570159458352892

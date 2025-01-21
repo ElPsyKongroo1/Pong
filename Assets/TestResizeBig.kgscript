@@ -1,0 +1,5 @@
+void TestResizeBig()
+{
+	AppService::ResizeApp(1280, 360);
+	AudioService::PlayMusic(AudioBuffers::menu_select);
+}

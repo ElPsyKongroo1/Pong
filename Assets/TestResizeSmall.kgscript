@@ -1,0 +1,4 @@
+void TestResizeSmall()
+{
+	AppService::ResizeApp(512, 512);
+}
