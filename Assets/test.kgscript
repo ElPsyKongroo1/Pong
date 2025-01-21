@@ -1,5 +1,4 @@
 void OpenLevel1()
 {
-	AudioService::PlayMusic(AudioBuffers::menu_select);
-	screen_resolution newRes = ScreenResolution::1920x1080;
+	keycode newKey = Key::LeftShift;
 }
