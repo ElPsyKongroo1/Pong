@@ -2,7 +2,7 @@ SelectColor: [1, 1, 1, 1]
 FunctionPointerOnMove: 0
 Font: 7507720298335089313
 Windows:
-  - Tag: None
+  - Tag: Window1
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [0.300000012, 0.300000012, 0.300000012, 0.300000012]
@@ -11,7 +11,7 @@ Windows:
     ChildBufferSize: 0
     DefaultActiveWidget: 18446744073709551615
     Widgets:
-      - Tag: None
+      - Tag: This is text
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
         XConstraint: None
@@ -30,9 +30,9 @@ Windows:
         DirectionPointerRight: 18446744073709551615
         FunctionPointerOnPress: 0
         TextWidget:
-          Text: New Text haha
+          Text: "This is the first line\nasdf\nbf"
           TextSize: 0.779999971
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [5.84082031, 0.850000024]
-          TextCentered: true
+          TextAbsoluteDimensions: [10.3891602, 0.875]
+          TextAlignment: Center
           TextWrapped: true
