@@ -33,9 +33,8 @@ Windows:
           Text: Local Multiplayer
           TextSize: 0.430000007
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [7.04638672, 0.850000024]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: exit_app
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -58,9 +57,8 @@ Windows:
           Text: Exit
           TextSize: 0.550000012
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [1.42773438, 0.850000024]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: title
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -83,9 +81,8 @@ Windows:
           Text: Pong
           TextSize: 0.850000024
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [2.0546875, 0.850000024]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: logo
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -108,9 +105,8 @@ Windows:
           Text: ElPsy Incorporated
           TextSize: 0.300000012
           TextColor: [1, 1, 0.827450991, 1]
-          TextAbsoluteDimensions: [7.68896484, 0.875]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: online_multiplayer
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -133,9 +129,8 @@ Windows:
           Text: Online Multiplayer
           TextSize: 0.430000007
           TextColor: [1, 1, 1, 0.870588243]
-          TextAbsoluteDimensions: [7.53369141, 0.875]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: online_count
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
@@ -158,9 +153,8 @@ Windows:
           Text: Offline
           TextSize: 0.469999999
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [2.70654297, 0.875]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: single_player
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -183,9 +177,8 @@ Windows:
           Text: Single Player
           TextSize: 0.430000007
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [5.39111328, 0.875]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
   - Tag: singleplayer_options
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -217,6 +210,5 @@ Windows:
           Text: New Game
           TextSize: 1.04999995
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [4.23583984, 0.875]
           TextAlignment: Center
           TextWrapped: true

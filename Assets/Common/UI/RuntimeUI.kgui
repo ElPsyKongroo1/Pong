@@ -33,9 +33,8 @@ Windows:
           Text: 0
           TextSize: 1
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [0.536132812, 0.875]
-          TextAlignment: Center
-          TextWrapped: true
+          TextAlignment: Left
+          TextWrapped: false
       - Tag: score_player_2
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -58,9 +57,8 @@ Windows:
           Text: 0
           TextSize: 1
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [0.536132812, 0.875]
-          TextAlignment: Center
-          TextWrapped: true
+          TextAlignment: Right
+          TextWrapped: false
   - Tag: pre_game_warning
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -92,7 +90,6 @@ Windows:
           Text: Press Space To Play!
           TextSize: 0.600000024
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [8.35742188, 0.875]
           TextAlignment: Center
           TextWrapped: false
       - Tag: controls_1
@@ -100,7 +97,7 @@ Windows:
         YRelativeOrAbsolute: Absolute
         XConstraint: None
         YConstraint: None
-        PercentPosition: [0.0799999982, -0.00999999978]
+        PercentPosition: [0.0199999996, -0.00999999885]
         PixelPosition: [0, 0]
         XPositionType: Percent
         YPositionType: Percent
@@ -117,15 +114,14 @@ Windows:
           Text: "Player 1: W=Up, S=Down, Left-Shift=Speed-Up"
           TextSize: 0.230000004
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [18.1015625, 0.875]
-          TextAlignment: Center
+          TextAlignment: Left
           TextWrapped: false
       - Tag: controls_2
-        XRelativeOrAbsolute: Absolute
+        XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
-        XConstraint: None
+        XConstraint: Right
         YConstraint: None
-        PercentPosition: [0.589999974, -0.00999999978]
+        PercentPosition: [-0.0199999996, -0.00999999885]
         PixelPosition: [0, 0]
         XPositionType: Percent
         YPositionType: Percent
@@ -142,8 +138,7 @@ Windows:
           Text: "Player 2: Up-Arrow=Up, Down-Arrow=Down, Right-Control=Speed-Up"
           TextSize: 0.230000004
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [27.4121094, 0.875]
-          TextAlignment: Center
+          TextAlignment: Right
           TextWrapped: false
   - Tag: online_lobby
     ScreenPosition: [0, 0, 0]
@@ -176,15 +171,14 @@ Windows:
           Text: Waiting for Players...
           TextSize: 0.5
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [8.34472656, 0.850000024]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: player_slot_0
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
         XConstraint: None
         YConstraint: None
-        PercentPosition: [0.0299999993, 0.850000024]
+        PercentPosition: [0.0199999996, 0.850000024]
         PixelPosition: [0, 0]
         XPositionType: Percent
         YPositionType: Percent
@@ -201,15 +195,14 @@ Windows:
           Text: No Player 1
           TextSize: 0.400000006
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [4.38330078, 0.850000024]
-          TextAlignment: Center
-          TextWrapped: true
+          TextAlignment: Left
+          TextWrapped: false
       - Tag: player_slot_1
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Right
         YConstraint: None
-        PercentPosition: [-0.0299999993, 0.850000024]
+        PercentPosition: [-0.0199999996, 0.850000024]
         PixelPosition: [0, 0]
         XPositionType: Percent
         YPositionType: Percent
@@ -226,9 +219,8 @@ Windows:
           Text: No Player 2
           TextSize: 0.400000006
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [4.50439453, 0.875]
-          TextAlignment: Center
-          TextWrapped: true
+          TextAlignment: Right
+          TextWrapped: false
   - Tag: pre_game_level_warning
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
@@ -260,9 +252,8 @@ Windows:
           Text: Press Space To Play!
           TextSize: 0.600000024
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [8.35742188, 0.875]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: controls
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -285,13 +276,12 @@ Windows:
           Text: "Controls: W=Up, S=Down, Left-Shift=SpeedUp"
           TextSize: 0.430000007
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [18.1591797, 0.875]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
   - Tag: win_window
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
-    BackgroundColor: [1, 1, 1, 1]
+    BackgroundColor: [1, 1, 1, 0]
     ParentIndex: 18446744073709551615
     ChildBufferIndex: 18446744073709551615
     ChildBufferSize: 0
@@ -319,9 +309,8 @@ Windows:
           Text: You Win!
           TextSize: 0.889999986
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [3.56445312, 0.850000024]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: NextAction
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -344,13 +333,12 @@ Windows:
           Text: Press Space To Enter Next Level!
           TextSize: 0.449999988
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [12.9990234, 0.875]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
   - Tag: lose_window
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
-    BackgroundColor: [1, 1, 1, 1]
+    BackgroundColor: [1, 1, 1, 0]
     ParentIndex: 18446744073709551615
     ChildBufferIndex: 18446744073709551615
     ChildBufferSize: 0
@@ -378,9 +366,8 @@ Windows:
           Text: You Lose!
           TextSize: 0.889999986
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [3.82666016, 0.850000024]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false
       - Tag: RestartAction
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -403,6 +390,5 @@ Windows:
           Text: Press Space to Restart Level!
           TextSize: 0.479999989
           TextColor: [1, 1, 1, 1]
-          TextAbsoluteDimensions: [11.7548828, 0.875]
           TextAlignment: Center
-          TextWrapped: true
+          TextWrapped: false

@@ -1,4 +1,41 @@
 void OpenLevel1()
 {
-	keycode newKey = Key::LeftShift;
+	entity player1 = SceneService::GetEntity("Player1");
+	entity player2 = SceneService::GetEntity("Player2");
+	
+	if (GameStateService::GetFieldUInt16("GameMode") == 1)
+	{
+		UIService::DisplayWindow("pre_game_level_warning", false);
+		InputService::LoadInputMap(InputMaps::RuntimeSinglePlayer);
+		
+		player2.AIState.ChangeCurrentState(AIStates::SeekBall);
+	}
+	else
+	{
+		UIService::DisplayWindow("pre_game_warning", false);
+		InputService::LoadInputMap(InputMaps::Runtime);
+	}
+	
+	UIService::DisplayWindow("online_lobby", false);
+	UIService::DisplayWindow("base_window", true);
+	
+	player1.Transform.SetTranslation(player1.InitialState.InitialPosition);
+	player2.Transform.SetTranslation(player2.InitialState.InitialPosition);
+	
+	entity ball = SceneService::GetEntity("Ball");
+	ball.Transform.SetTranslation(ball.InitialState.InitialPosition);
+	
+	int32 directionChoice = Random::GetInteger(0, 1);
+	vector2 velocity = {0.0f, 0.0f};
+	
+	if (directionChoice == 0)
+	{
+		velocity.x = -1.0f;
+	}
+	else
+	{
+		velocity.x = 1.0f;
+	}
+	
+	ball.RigidBody.SetLinearVelocity(velocity * ball.Speed.CurrentSpeed);
 }
