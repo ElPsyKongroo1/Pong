@@ -6,14 +6,14 @@ bool BallLocalMultiCollisionStart(entity currentEntity,entity otherEntity)
 	if (otherEntityTag == "Left Wall")
 	{
 		Scripts::CollideLeftWall(currentEntity);
-		UIService::DisplayWindow("pre_game_warning", true);
+		UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
 		InputService::LoadInputMap(InputMaps::Pre_Start);
 		collisionHandled = true;
 	}
 	else if (otherEntityTag == "Right Wall")
 	{
 		Scripts::CollideRightWall(currentEntity);
-		UIService::DisplayWindow("pre_game_warning", true);
+		UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
 		InputService::LoadInputMap(InputMaps::Pre_Start);
 		collisionHandled = true;
 	}

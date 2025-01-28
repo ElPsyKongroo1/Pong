@@ -3,14 +3,18 @@ void ApproveJoinSession(uint16 userSlot)
 	uint16 direction = 0; 
 	GameStateService::SetField("BallDirection", direction);
 	UIService::LoadUI(UserInterfaces::RuntimeUI);
-	UIService::DisplayWindow("online_lobby", true);
-	UIService::DisplayWindow("base_window", false);
+	UIService::DisplayWindow(UserInterfaces::RuntimeUI.online_lobby, true);
+	UIService::DisplayWindow(UserInterfaces::RuntimeUI.base_window, false);
 	SceneService::LoadScene(Scenes::online_multiplayer);
 	InputService::LoadInputMap(InputMaps::Online_Lobby_Input);
 	AudioService::PlaySound(AudioBuffers::menu_confirm);
 	AudioService::PlayMusic(AudioBuffers::green_a);
-	string selectedWidget = "player_slot_" + str(userSlot);
-	UIService::SetWidgetText("online_lobby", selectedWidget, "Connected!");
+	
+	user_interface_text_widget widgetToUpdate = userSlot == 0 ? 
+		UserInterfaces::RuntimeUI.online_lobby.player_slot_0 : 
+		UserInterfaces::RuntimeUI.online_lobby.player_slot_1;
+		
+	UIService::SetWidgetText(widgetToUpdate, "Connected!");
 	GameStateService::SetField("GameMode", 3);
 	GameStateService::SetField("PlayerOneScore", 0);
 	GameStateService::SetField("PlayerTwoScore", 0);

@@ -1,8 +1,8 @@
 void OpenLevel1()
 {
 	UIService::LoadUI(UserInterfaces::RuntimeUI);
-	UIService::DisplayWindow("pre_game_level_warning", true);
-	UIService::DisplayWindow("base_window", false);
+	UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_level_warning, true);
+	UIService::DisplayWindow(UserInterfaces::RuntimeUI.base_window, false);
 	SceneService::LoadScene(Scenes::level_1);
 	InputService::LoadInputMap(InputMaps::Pre_Start);
 	AudioService::PlaySound(AudioBuffers::menu_confirm);

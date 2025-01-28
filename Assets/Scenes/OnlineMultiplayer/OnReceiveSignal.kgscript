@@ -8,16 +8,16 @@ void OnReceiveSignal(uint16 signalNum)
 		if (userSlot == 0)
 		{
 			GameStateService::SetField("PlayerOneScore", GameStateService::GetFieldUInt16("PlayerOneScore") + 1);
-			UIService::SetWidgetText("base_window", "score_player_1", str(GameStateService::GetFieldUInt16("PlayerOneScore")));
+			UIService::SetWidgetText(UserInterfaces::RuntimeUI.base_window.score_player_1, str(GameStateService::GetFieldUInt16("PlayerOneScore")));
 		}
 		else if (userSlot == 1)
 		{
 			GameStateService::SetField("PlayerTwoScore", GameStateService::GetFieldUInt16("PlayerTwoScore") + 1);
-			UIService::SetWidgetText("base_window", "score_player_2", str(GameStateService::GetFieldUInt16("PlayerTwoScore")));
+			UIService::SetWidgetText(UserInterfaces::RuntimeUI.base_window.score_player_2, str(GameStateService::GetFieldUInt16("PlayerTwoScore")));
 		}
 		ball.RigidBody.SetLinearVelocity({0.0f, 0.0f});
 		AudioService::PlaySound(AudioBuffers::lose_sound);
-		UIService::DisplayWindow("pre_game_warning", true);
+		UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
 		InputService::LoadInputMap(InputMaps::Pre_Start);
 		NetworkService::EnableReadyCheck();
 	}

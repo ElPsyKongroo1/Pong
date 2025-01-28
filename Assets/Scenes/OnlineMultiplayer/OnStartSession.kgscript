@@ -1,18 +1,18 @@
 void OnStartSession()
 {	
 		uint16 userSlot = NetworkService::GetActiveSessionSlot();
-		UIService::DisplayWindow("pre_game_warning", true);
-		UIService::DisplayWindow("base_window", false);
-		UIService::DisplayWindow("online_lobby", false);
+		UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
+		UIService::DisplayWindow(UserInterfaces::RuntimeUI.base_window, false);
+		UIService::DisplayWindow(UserInterfaces::RuntimeUI.online_lobby, false);
 		InputService::LoadInputMap(InputMaps::Online_Pre_Start);
 		AudioService::PlaySound(AudioBuffers::menu_confirm);
 		if (userSlot == 0)
 		{
-			UIService::SetWidgetText("pre_game_warning", "controls_2", "");
+			UIService::SetWidgetText(UserInterfaces::RuntimeUI.pre_game_warning.controls_2, "");
 		}
 		else if (userSlot == 1)
 		{
-			UIService::SetWidgetText("pre_game_warning", "controls_1", "");
+			UIService::SetWidgetText(UserInterfaces::RuntimeUI.pre_game_warning.controls_1 , "");
 		}
 		NetworkService::EnableReadyCheck();
 }

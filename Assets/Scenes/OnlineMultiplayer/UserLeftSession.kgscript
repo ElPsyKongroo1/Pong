@@ -1,7 +1,9 @@
 void UserLeftSession(uint16 userSlot)
 {
-	string selectedWidget = "player_slot_" + str(userSlot);
 	string newText = "No Player " + str(userSlot + 1);
-	UIService::SetWidgetText("online_lobby", selectedWidget, newText);
-	UIService::SetWidgetText("online_lobby", "main_text", "Waiting for Players...");
+	user_interface_text_widget selectedWidget = userSlot == 0 ? 
+		UserInterfaces::RuntimeUI.online_lobby.player_slot_0 : 
+		UserInterfaces::RuntimeUI.online_lobby.player_slot_1;
+	UIService::SetWidgetText(selectedWidget, newText);
+	UIService::SetWidgetText(UserInterfaces::RuntimeUI.online_lobby.main_text, "online_lobby");
 }

@@ -9,9 +9,9 @@ void StartOnlineGame()
 	{
 		InputService::LoadInputMap(InputMaps::Online_Player2_Runtime);
 	}
-	UIService::DisplayWindow("pre_game_warning", false);
-	UIService::DisplayWindow("online_lobby", false);
-	UIService::DisplayWindow("base_window", true);
+	UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, false);
+	UIService::DisplayWindow(UserInterfaces::RuntimeUI.online_lobby, false);
+	UIService::DisplayWindow(UserInterfaces::RuntimeUI.base_window, true);
 	entity player1 = SceneService::GetEntity("Player1");
 	
 	player1.Transform.SetTranslation(player1.InitialState.InitialPosition);

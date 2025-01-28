@@ -9,7 +9,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		if (GameStateService::GetFieldUInt16("PlayerTwoScore") >= GameStateService::GetFieldUInt16("WinConditionValue"))
 		{
 			// Lose Game
-			UIService::DisplayWindow("lose_window", true);
+			UIService::DisplayWindow(UserInterfaces::RuntimeUI.lose_window, true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 			InputService::LoadInputMap(InputMaps::LoseStateInput);
@@ -17,7 +17,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		else
 		{
 			// Continue Game
-			UIService::DisplayWindow("pre_game_level_warning", true);
+			UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_level_warning, true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 			InputService::LoadInputMap(InputMaps::Pre_Start);
@@ -57,7 +57,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		if (GameStateService::GetFieldUInt16("PlayerOneScore") >= GameStateService::GetFieldUInt16("WinConditionValue"))
 		{
 			// End Game
-			UIService::DisplayWindow("win_window", true);
+			UIService::DisplayWindow(UserInterfaces::RuntimeUI.win_window, true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 			InputService::LoadInputMap(InputMaps::WinStateInput);
@@ -65,7 +65,7 @@ bool BallSinglePlayerCollisionStart(entity currentEntity,entity otherEntity)
 		else
 		{
 			// Continue Game
-			UIService::DisplayWindow("pre_game_level_warning", true);
+			UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_level_warning, true);
 			entity player2 = SceneService::GetEntity("Player2");
 			player2.AIState.ClearAllStates();
 			InputService::LoadInputMap(InputMaps::Pre_Start);

@@ -8,7 +8,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		if (userSlot == 0)
 		{
 			Scripts::CollideLeftWall(currentEntity);
-			UIService::DisplayWindow("pre_game_warning", true);
+			UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
 			InputService::LoadInputMap(InputMaps::Online_Pre_Start);
 			NetworkService::SignalAll(1);
 			NetworkService::EnableReadyCheck();
@@ -25,7 +25,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 		if (userSlot == 1)
 		{
 			Scripts::CollideRightWall(currentEntity);
-			UIService::DisplayWindow("pre_game_warning", true);
+			UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
 			InputService::LoadInputMap(InputMaps::Online_Pre_Start);
 			NetworkService::SignalAll(1);
 			NetworkService::EnableReadyCheck();
