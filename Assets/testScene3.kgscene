@@ -1,0 +1,25 @@
+Physics:
+  Gravity: [0, 0]
+BackgroundColor: [0.100000001, 0.100000001, 0.100000001, 1]
+Entities:
+  - Entity: 16300123730343193109
+    TagComponent:
+      Tag: PyramidShape
+      Group: ""
+    TransformComponent:
+      Translation: [0, 1.560112, 2.71757245]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    ShapeComponent:
+      CurrentShape: Pyramid
+      TextureHandle: 17057334801167380747
+      ShaderHandle: 5871177019587903897
+      ShaderSpecification:
+        ColorInputType: None
+        AddProjectionMatrix: true
+        AddEntityID: true
+        AddCircleShape: false
+        TextureInput: None
+        DrawOutline: false
+        RenderType: DrawIndex
+      Buffer: !!binary "AAAAAODYA0C17C1AAAAAAA=="

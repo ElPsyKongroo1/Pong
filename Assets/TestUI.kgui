@@ -51,3 +51,16 @@ Windows:
           DirectionPointerLeft: 18446744073709551615
           DirectionPointerRight: 18446744073709551615
           FunctionPointerOnPress: 0
+      - Tag: None
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.775771677, 0.668284297]
+        PixelPosition: [0, 0]
+        XPositionType: Percent
+        YPositionType: Percent
+        Size: [0.200000003, 0.300000012]
+        WidgetType: ImageWidget
+        ImageWidget:
+          Image: 7411058966582404143

@@ -27,13 +27,13 @@ Windows:
           TextSize: 0.430000007
           TextColor: [1, 1, 1, 1]
           TextAlignment: Center
+          DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
           Selectable: true
           DirectionPointerUp: 6
           DirectionPointerDown: 1
           DirectionPointerLeft: 18446744073709551615
           DirectionPointerRight: 18446744073709551615
           FunctionPointerOnPress: 9792081380113944440
-          DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
       - Tag: exit_app
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -50,13 +50,13 @@ Windows:
           TextSize: 0.550000012
           TextColor: [1, 1, 1, 1]
           TextAlignment: Center
+          DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
           Selectable: true
           DirectionPointerUp: 0
           DirectionPointerDown: 18446744073709551615
           DirectionPointerLeft: 18446744073709551615
           DirectionPointerRight: 18446744073709551615
           FunctionPointerOnPress: 10882227211325647722
-          DefaultBackgroundColor: [0.403921574, 0.0666666701, 0.686274529, 0.211764708]
       - Tag: title
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
@@ -107,13 +107,13 @@ Windows:
           TextSize: 0.430000007
           TextColor: [1, 1, 1, 0.870588243]
           TextAlignment: Center
+          DefaultBackgroundColor: [0.117647059, 0.117647059, 0.117647059, 0.145098045]
           Selectable: false
           DirectionPointerUp: 0
           DirectionPointerDown: 1
           DirectionPointerLeft: 18446744073709551615
           DirectionPointerRight: 18446744073709551615
           FunctionPointerOnPress: 4669916971671854194
-          DefaultBackgroundColor: [0.117647059, 0.117647059, 0.117647059, 0.145098045]
       - Tag: online_count
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
@@ -147,10 +147,10 @@ Windows:
           TextSize: 0.430000007
           TextColor: [1, 1, 1, 1]
           TextAlignment: Center
+          DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]
           Selectable: true
           DirectionPointerUp: 18446744073709551615
           DirectionPointerDown: 0
           DirectionPointerLeft: 18446744073709551615
           DirectionPointerRight: 18446744073709551615
           FunctionPointerOnPress: 5289311489000530938
-          DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]

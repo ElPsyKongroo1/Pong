@@ -12,7 +12,7 @@ void OpenLevel1()
 	GameStateService::SetField("PlayerTwoScore", 0);
 	GameStateService::SetField("CurrentLevel", 1);
 	GameStateService::SetField("WinConditionValue", 10);
-	user_interface_button_widget buttonWidget = UserInterfaces::TestUI.Window1.ButtonWidget1;
-	user_interface_text_widget textWidget = UserInterfaces::TestUI.Window1.Thisistext;
-	UIService::WidgetSelectable(buttonWidget, false);
+	Scenes::testScene3.PyramidShape;
+	UIService::SetWidgetText(UserInterfaces::MainMenu.main_window.title, "This is the new text");
+	UIService::SetWidgetImage(UserInterfaces::TestUI.Window1.None, Textures::blue_block);
 }
