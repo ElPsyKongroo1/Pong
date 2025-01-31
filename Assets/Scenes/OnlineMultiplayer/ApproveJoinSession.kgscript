@@ -10,7 +10,7 @@ void ApproveJoinSession(uint16 userSlot)
 	AudioService::PlaySound(AudioBuffers::menu_confirm);
 	AudioService::PlayMusic(AudioBuffers::green_a);
 	
-	user_interface_text_widget widgetToUpdate = userSlot == 0 ? 
+	text_widget widgetToUpdate = userSlot == 0 ? 
 		UserInterfaces::RuntimeUI.online_lobby.player_slot_0 : 
 		UserInterfaces::RuntimeUI.online_lobby.player_slot_1;
 		

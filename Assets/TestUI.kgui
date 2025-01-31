@@ -18,9 +18,11 @@ Windows:
         YConstraint: None
         PercentPosition: [0.161707982, 0.483950585]
         PixelPosition: [0, 0]
+        SizeType: Percent
         XPositionType: Percent
         YPositionType: Percent
-        Size: [0.230000004, 0.100000001]
+        PercentSize: [0.200000003, 0.579999983]
+        PixelSize: [50, 50]
         WidgetType: TextWidget
         TextWidget:
           Text: "This is the first line\nasdf\nbf"
@@ -35,9 +37,11 @@ Windows:
         YConstraint: None
         PercentPosition: [0.576308548, 0.424691319]
         PixelPosition: [0, 0]
+        SizeType: Percent
         XPositionType: Percent
         YPositionType: Percent
-        Size: [0.300000012, 0.100000001]
+        PercentSize: [0.300000012, 0.100000001]
+        PixelSize: [50, 50]
         WidgetType: ButtonWidget
         ButtonWidget:
           Text: New Button Widget
@@ -46,7 +50,7 @@ Windows:
           TextAlignment: Center
           DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
           Selectable: true
-          DirectionPointerUp: 18446744073709551615
+          DirectionPointerUp: 3
           DirectionPointerDown: 18446744073709551615
           DirectionPointerLeft: 18446744073709551615
           DirectionPointerRight: 18446744073709551615
@@ -58,9 +62,35 @@ Windows:
         YConstraint: None
         PercentPosition: [0.775771677, 0.668284297]
         PixelPosition: [0, 0]
+        SizeType: Percent
         XPositionType: Percent
         YPositionType: Percent
-        Size: [0.200000003, 0.300000012]
+        PercentSize: [0.200000003, 0.300000012]
+        PixelSize: [50, 50]
         WidgetType: ImageWidget
         ImageWidget:
           Image: 7411058966582404143
+          FixedAspectRatio: false
+      - Tag: asdf
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.57314074, 0.839506805]
+        PixelPosition: [0, 0]
+        SizeType: Percent
+        XPositionType: Percent
+        YPositionType: Percent
+        PercentSize: [0.0599999987, 0.100000001]
+        PixelSize: [50, 50]
+        WidgetType: ImageButtonWidget
+        ImageButtonWidget:
+          Image: 8051163355459938058
+          FixedAspectRatio: false
+          DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.0542986393]
+          Selectable: true
+          DirectionPointerUp: 18446744073709551615
+          DirectionPointerDown: 1
+          DirectionPointerLeft: 18446744073709551615
+          DirectionPointerRight: 18446744073709551615
+          FunctionPointerOnPress: 0

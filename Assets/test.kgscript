@@ -1,18 +1,4 @@
 void OpenLevel1()
 {
-	UIService::LoadUI(UserInterfaces::RuntimeUI);
-	UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_level_warning, true);
-	UIService::DisplayWindow(UserInterfaces::RuntimeUI.base_window, false);
-	SceneService::LoadScene(Scenes::level_1);
-	InputService::LoadInputMap(InputMaps::Pre_Start);
-	AudioService::PlaySound(AudioBuffers::menu_confirm);
-	AudioService::PlayMusic(AudioBuffers::green_a);
-	GameStateService::SetField("GameMode", 1);
-	GameStateService::SetField("PlayerOneScore", 0);
-	GameStateService::SetField("PlayerTwoScore", 0);
-	GameStateService::SetField("CurrentLevel", 1);
-	GameStateService::SetField("WinConditionValue", 10);
-	Scenes::testScene3.PyramidShape;
-	UIService::SetWidgetText(UserInterfaces::MainMenu.main_window.title, "This is the new text");
-	UIService::SetWidgetImage(UserInterfaces::TestUI.Window1.None, Textures::blue_block);
+	UIService::SetWidgetImage(Math::MaxUInt16(), "hello");
 }

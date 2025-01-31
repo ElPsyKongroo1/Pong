@@ -9,15 +9,6 @@ Assets:
       TextureHeight: 1
       TextureWidth: 1
       TextureChannels: 4
-  - AssetHandle: 1008307395632263226
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Textures/base_paddle.kgtexture
-      IntermediateLocation: Texture2D/1008307395632263226.kgbinary
-      AssetType: Texture
-      TextureHeight: 150
-      TextureWidth: 800
-      TextureChannels: 4
   - AssetHandle: 8051163355459938058
     MetaData:
       CheckSum: f39dff176a7dd17d7d697fe04ed6f2fe580313593978de3b02a68e6fd8f0e521
@@ -27,11 +18,11 @@ Assets:
       TextureHeight: 512
       TextureWidth: 512
       TextureChannels: 4
-  - AssetHandle: 11467886090052234263
+  - AssetHandle: 1008307395632263226
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player2/Level1PaddleTex.kgtexture
-      IntermediateLocation: Texture2D/11467886090052234263.kgbinary
+      FileLocation: Common/Textures/base_paddle.kgtexture
+      IntermediateLocation: Texture2D/1008307395632263226.kgbinary
       AssetType: Texture
       TextureHeight: 150
       TextureWidth: 800
@@ -54,11 +45,11 @@ Assets:
       TextureHeight: 600
       TextureWidth: 600
       TextureChannels: 4
-  - AssetHandle: 13680989623708598949
+  - AssetHandle: 11467886090052234263
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player2/Level2PaddleTex.kgtexture
-      IntermediateLocation: Texture2D/13680989623708598949.kgbinary
+      FileLocation: Entities/Player2/Level1PaddleTex.kgtexture
+      IntermediateLocation: Texture2D/11467886090052234263.kgbinary
       AssetType: Texture
       TextureHeight: 150
       TextureWidth: 800
@@ -72,6 +63,15 @@ Assets:
       TextureHeight: 600
       TextureWidth: 600
       TextureChannels: 4
+  - AssetHandle: 13680989623708598949
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Entities/Player2/Level2PaddleTex.kgtexture
+      IntermediateLocation: Texture2D/13680989623708598949.kgbinary
+      AssetType: Texture
+      TextureHeight: 150
+      TextureWidth: 800
+      TextureChannels: 4
   - AssetHandle: 1143395742954915528
     MetaData:
       CheckSum: fc8f6da59c4f7f5a2fca0b1331e583f403ff9588e65b88c1a2ecf282521c04a5
@@ -80,4 +80,13 @@ Assets:
       AssetType: Texture
       TextureHeight: 600
       TextureWidth: 600
+      TextureChannels: 4
+  - AssetHandle: 12822293038068013926
+    MetaData:
+      CheckSum: 016687d78cce782db03d439c67e8bb223ec7fcfe58881b419ca9f1d3782c9280
+      FileLocation: Common/Textures/GitLogo.kgtexture
+      IntermediateLocation: Texture2D/12822293038068013926.kgbinary
+      AssetType: Texture
+      TextureHeight: 956
+      TextureWidth: 980
       TextureChannels: 4

@@ -1,0 +1,4 @@
+void OpenGit()
+{
+	log("We are opening sometjhing");
+}
