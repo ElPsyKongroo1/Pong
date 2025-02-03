@@ -1,0 +1,4 @@
+void OnHover()
+{
+	AudioService::PlaySound(AudioBuffers::click_sound);
+}

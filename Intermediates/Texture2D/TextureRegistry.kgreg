@@ -90,3 +90,21 @@ Assets:
       TextureHeight: 956
       TextureWidth: 980
       TextureChannels: 4
+  - AssetHandle: 5664130732050414626
+    MetaData:
+      CheckSum: 26f681d9bb3056869e318ece5413e91ac375ff21d29f961b369bdc716fb192be
+      FileLocation: Common/Textures/UnCheckedTexture.kgtexture
+      IntermediateLocation: Texture2D/5664130732050414626.kgbinary
+      AssetType: Texture
+      TextureHeight: 512
+      TextureWidth: 512
+      TextureChannels: 4
+  - AssetHandle: 9836920366757835393
+    MetaData:
+      CheckSum: 4cea8086d60ee7bf3055ea9f7b42ccd57f8a5370e9e4cce944ff7661d4b55c3f
+      FileLocation: Common/Textures/CheckedTexture.kgtexture
+      IntermediateLocation: Texture2D/9836920366757835393.kgbinary
+      AssetType: Texture
+      TextureHeight: 512
+      TextureWidth: 512
+      TextureChannels: 4

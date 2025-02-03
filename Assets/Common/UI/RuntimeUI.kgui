@@ -1,5 +1,7 @@
 SelectColor: [1, 0.647058845, 1, 1]
+HoveredColor: [0.5, 0.5, 0.5, 0.5]
 FunctionPointerOnMove: 0
+FunctionPointerOnHover: 0
 Font: 7507720298335089313
 Windows:
   - Tag: base_window

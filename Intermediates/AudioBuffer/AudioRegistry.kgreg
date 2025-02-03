@@ -10,6 +10,16 @@ Assets:
       SampleRate: 44100
       TotalPcmFrameCount: 10475
       TotalSize: 41900
+  - AssetHandle: 8598410770696152985
+    MetaData:
+      CheckSum: 838a243eb53de832f583da002f0b0e6f743d80b479a92964aadea4c44591bd1e
+      FileLocation: Common/Audio/click_sound.kgaudio
+      IntermediateLocation: AudioBuffer/8598410770696152985.kgbinary
+      AssetType: Audio
+      Channels: 2
+      SampleRate: 44100
+      TotalPcmFrameCount: 9216
+      TotalSize: 36864
   - AssetHandle: 8671885103280513201
     MetaData:
       CheckSum: 05b3a183410b7cde9ec5f2406248caee88c51180267400e8b42d1b0eb381957a
