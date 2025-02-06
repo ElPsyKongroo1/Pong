@@ -1,8 +1,9 @@
 SelectColor: [1, 0.647058845, 1, 1]
 HoveredColor: [0.5, 0.5, 0.5, 0.5]
+EditingColor: [0.150000006, 0.150000006, 0.150000006, 1]
 FunctionPointerOnMove: 0
 FunctionPointerOnHover: 0
-Font: 7507720298335089313
+Font: 4654860245843890780
 Windows:
   - Tag: base_window
     ScreenPosition: [0, 0, 0]

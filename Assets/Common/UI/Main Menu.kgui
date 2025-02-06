@@ -1,8 +1,9 @@
 SelectColor: [0.403921574, 0.0666666701, 0.686274529, 0.745098054]
 HoveredColor: [0.605439186, 0.449949771, 0.742081404, 0.75]
+EditingColor: [0.254421592, 0.177719519, 0.316742063, 0.74660635]
 FunctionPointerOnMove: 16979334666329041451
 FunctionPointerOnHover: 8614612450660904495
-Font: 7507720298335089313
+Font: 4654860245843890780
 Windows:
   - Tag: main_window
     ScreenPosition: [0, 0, 0]
@@ -140,19 +141,20 @@ Windows:
         YRelativeOrAbsolute: Absolute
         XConstraint: None
         YConstraint: None
-        PercentPosition: [0.430303067, 0.188888863]
+        PercentPosition: [0.455647737, 0.297283441]
         PixelPosition: [0, 0]
         SizeType: Percent
         XPositionType: Percent
         YPositionType: Percent
-        PercentSize: [0.300000012, 0.100000001]
+        PercentSize: [0.49000001, 0.180000007]
         PixelSize: [50, 50]
         WidgetType: InputTextWidget
         InputTextWidget:
           Text: New Widget
-          TextSize: 0.280000001
+          TextSize: 0.519999981
           TextColor: [1, 1, 1, 1]
           TextAlignment: Left
           DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
           Selectable: true
           FunctionPointerOnPress: 0
+          OnMoveCursor: 7368807452301553305

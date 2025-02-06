@@ -5,4 +5,5 @@ void OpenLevel1()
 	int32 newVariable = 2;
 	NetworkService::SignalAll(newVariable);
 	Scripts::TopAndBottomWallCollision(Scenes::level_1.Player2);
+	UIService::IsWidgetSelected(UserInterfaces::TestUI.Window1.slider1);
 }

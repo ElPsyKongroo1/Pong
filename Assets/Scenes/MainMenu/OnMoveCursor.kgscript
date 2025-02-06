@@ -1,0 +1,4 @@
+void OnMoveCursor()
+{
+	AudioService::PlaySound(AudioBuffers::click_sound);
+}

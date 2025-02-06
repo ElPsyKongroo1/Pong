@@ -1,14 +1,14 @@
 Registry: Particle Emitter Config
 Assets:
-  - AssetHandle: 15165415099816405768
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player1/Player1CollisionEmitter.kgparticle
-      AssetType: EmitterConfig
   - AssetHandle: 15685594349907782904
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Entities/Player2/Player2Emitter3.kgparticle
+      AssetType: EmitterConfig
+  - AssetHandle: 15165415099816405768
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Entities/Player1/Player1CollisionEmitter.kgparticle
       AssetType: EmitterConfig
   - AssetHandle: 2588874753976669831
     MetaData:
@@ -20,23 +20,18 @@ Assets:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Entities/Ball/Level2BallEmitter.kgparticle
       AssetType: EmitterConfig
-  - AssetHandle: 14941054500510671261
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Ball/Level1BallEmitter.kgparticle
-      AssetType: EmitterConfig
   - AssetHandle: 10710135964017032765
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Entities/Player2/Player2Emitter2.kgparticle
       AssetType: EmitterConfig
+  - AssetHandle: 14941054500510671261
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Entities/Ball/Level1BallEmitter.kgparticle
+      AssetType: EmitterConfig
   - AssetHandle: 5035817497470606234
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Entities/Player2/Player2Emitter1.kgparticle
-      AssetType: EmitterConfig
-  - AssetHandle: 18081188654780814771
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: FloorEmitter.kgparticle
       AssetType: EmitterConfig
