@@ -7,7 +7,7 @@ void OpenLocalMultiplayer()
 	InputService::LoadInputMap(InputMaps::Pre_Start);
 	AudioService::PlaySound(AudioBuffers::menu_confirm);
 	AudioService::PlayMusic(AudioBuffers::green_a);
-	GameStateService::SetField("GameMode", 2);
+	GameStateService::SetField("GameMode", Enums::GameMode.LocalMultiplayer);
 	GameStateService::SetField("PlayerOneScore", 0);
 	GameStateService::SetField("PlayerTwoScore", 0);
 }

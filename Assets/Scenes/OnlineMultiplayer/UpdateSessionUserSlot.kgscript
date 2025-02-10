@@ -1,6 +1,6 @@
-void UpdateSessionUserSlot(uint16 userSlot)
+void UpdateSessionUserSlot(PlayerSlot userSlot)
 {
-	text_widget selectedWidget = userSlot == 0 ? 
+	text_widget selectedWidget = userSlot == Enums::PlayerSlot.LeftPlayer ? 
 		UserInterfaces::RuntimeUI.online_lobby.player_slot_0 : 
 		UserInterfaces::RuntimeUI.online_lobby.player_slot_1;
 	UIService::SetWidgetText(selectedWidget, "Connected!");

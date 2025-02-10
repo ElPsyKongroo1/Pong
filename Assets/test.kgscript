@@ -1,7 +1,7 @@
 void OpenLevel1()
 {
 	image_widget newImage = UserInterfaces::TestUI.Window1.RandomImage;
-	NetworkService::SignalAll(2);
+	NetworkService::SignalAll(Enums::NetworkSignal.RoundOver);
 	int32 newVariable = 2;
 	NetworkService::SignalAll(newVariable);
 	Scripts::TopAndBottomWallCollision(Scenes::level_1.Player2);

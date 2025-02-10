@@ -1,0 +1,32 @@
+Registry: Project Enum
+Assets:
+  - AssetHandle: 8953653908488313191
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Common/Enums/GameMode.kgenum
+      AssetType: ProjectEnum
+      Name: GameMode
+  - AssetHandle: 16693158564943227734
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Common/Enums/PlayerSlot.kgenum
+      AssetType: ProjectEnum
+      Name: PlayerSlot
+  - AssetHandle: 12845260243455846877
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Common/Enums/BallDirection.kgenum
+      AssetType: ProjectEnum
+      Name: BallDirection
+  - AssetHandle: 6196901651030817723
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Common/Enums/NetworkSignal.kgenum
+      AssetType: ProjectEnum
+      Name: NetworkSignal
+  - AssetHandle: 5139994374830772049
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Common/Enums/Polling.kgenum
+      AssetType: ProjectEnum
+      Name: Polling

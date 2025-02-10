@@ -7,7 +7,7 @@ void OpenLevel2()
 	InputService::LoadInputMap(InputMaps::Pre_Start);
 	AudioService::PlaySound(AudioBuffers::menu_confirm);
 	AudioService::PlayMusic(AudioBuffers::green_a);
-	GameStateService::SetField("GameMode", 1);
+	GameStateService::SetField("GameMode", Enums::GameMode.SinglePlayer);
 	GameStateService::SetField("PlayerOneScore", 0);
 	GameStateService::SetField("PlayerTwoScore", 0);
 	GameStateService::SetField("CurrentLevel", 2);

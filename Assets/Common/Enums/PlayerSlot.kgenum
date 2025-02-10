@@ -1,0 +1,4 @@
+Name: PlayerSlot
+Identifiers:
+  - LeftPlayer
+  - RightPlayer

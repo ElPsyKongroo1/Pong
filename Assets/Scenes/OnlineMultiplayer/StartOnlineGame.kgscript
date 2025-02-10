@@ -1,11 +1,11 @@
 void StartOnlineGame()
 {
-	uint16 userSlot = NetworkService::GetActiveSessionSlot();
-	if (userSlot == 0)
+	PlayerSlot userSlot = NetworkService::GetActiveSessionSlot();
+	if (userSlot == Enums::PlayerSlot.LeftPlayer)
 	{
 		InputService::LoadInputMap(InputMaps::Online_Player1_Runtime);
 	}
-	else if (userSlot == 1)
+	else if (userSlot == Enums::PlayerSlot.RightPlayer)
 	{
 		InputService::LoadInputMap(InputMaps::Online_Player2_Runtime);
 	}
@@ -22,17 +22,17 @@ void StartOnlineGame()
 	entity ball = SceneService::GetEntity("Ball");
 	ball.Transform.SetTranslation(ball.InitialState.InitialPosition);
 	
-	uint16 ballDirection = GameStateService::GetFieldUInt16("BallDirection");
+	BallDirection ballDirection = GameStateService::GetFieldUInt16("BallDirection");
 	vector2 velocity = {0.0f, 0.0f};
-	if (ballDirection == 0)
+	if (ballDirection == Enums::BallDirection.Right)
 	{
 		velocity.x = -1.0f;
-		GameStateService::SetField("BallDirection", 1);
+		GameStateService::SetField("BallDirection", Enums::BallDirection.Left);
 	}
 	else
 	{
 		velocity.x = 1.0f;
-		GameStateService::SetField("BallDirection", 0);
+		GameStateService::SetField("BallDirection", Enums::BallDirection.Right);
 	}
 	
 	ball.RigidBody.SetLinearVelocity(velocity * ball.Speed.CurrentSpeed);

@@ -1,7 +1,6 @@
-void ApproveJoinSession(uint16 userSlot)
+void ApproveJoinSession(PlayerSlot userSlot)
 {
-	uint16 direction = 0; 
-	GameStateService::SetField("BallDirection", direction);
+	GameStateService::SetField("BallDirection", Enums::BallDirection.Right);
 	UIService::LoadUI(UserInterfaces::RuntimeUI);
 	UIService::DisplayWindow(UserInterfaces::RuntimeUI.online_lobby, true);
 	UIService::DisplayWindow(UserInterfaces::RuntimeUI.base_window, false);
@@ -10,12 +9,12 @@ void ApproveJoinSession(uint16 userSlot)
 	AudioService::PlaySound(AudioBuffers::menu_confirm);
 	AudioService::PlayMusic(AudioBuffers::green_a);
 	
-	text_widget widgetToUpdate = userSlot == 0 ? 
+	text_widget widgetToUpdate = userSlot == Enums::PlayerSlot.LeftPlayer ? 
 		UserInterfaces::RuntimeUI.online_lobby.player_slot_0 : 
 		UserInterfaces::RuntimeUI.online_lobby.player_slot_1;
 		
 	UIService::SetWidgetText(widgetToUpdate, "Connected!");
-	GameStateService::SetField("GameMode", 3);
+	GameStateService::SetField("GameMode", Enums::GameMode.OnlineMultiplayer);
 	GameStateService::SetField("PlayerOneScore", 0);
 	GameStateService::SetField("PlayerTwoScore", 0);
 }

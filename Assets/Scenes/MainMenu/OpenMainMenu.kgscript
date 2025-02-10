@@ -4,6 +4,6 @@ void OpenMainMenu()
 	SceneService::LoadScene(Scenes::main_menu);
 	InputService::LoadInputMap(InputMaps::MainMenu);
 	AudioService::PlayMusic(AudioBuffers::blue_a);
-	GameStateService::SetField("GameMode", 0);
+	GameStateService::SetField("GameMode", Enums::GameMode.None);
 	NetworkService::RequestUserCount();
 }

@@ -1,16 +1,16 @@
 void OnStartSession()
 {	
-		uint16 userSlot = NetworkService::GetActiveSessionSlot();
+		PlayerSlot userSlot = NetworkService::GetActiveSessionSlot();
 		UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
 		UIService::DisplayWindow(UserInterfaces::RuntimeUI.base_window, false);
 		UIService::DisplayWindow(UserInterfaces::RuntimeUI.online_lobby, false);
 		InputService::LoadInputMap(InputMaps::Online_Pre_Start);
 		AudioService::PlaySound(AudioBuffers::menu_confirm);
-		if (userSlot == 0)
+		if (userSlot == Enums::PlayerSlot.LeftPlayer)
 		{
 			UIService::SetWidgetText(UserInterfaces::RuntimeUI.pre_game_warning.controls_2, "");
 		}
-		else if (userSlot == 1)
+		else if (userSlot == Enums::PlayerSlot.RightPlayer)
 		{
 			UIService::SetWidgetText(UserInterfaces::RuntimeUI.pre_game_warning.controls_1 , "");
 		}

@@ -1,19 +1,17 @@
 bool BallOnlineCollisionEnd(entity currentEntity,entity otherEntity)
 {
 	string otherEntityTag = otherEntity.Tag.GetTag();
-	uint16 userSlot = NetworkService::GetActiveSessionSlot();
+	PlayerSlot userSlot = NetworkService::GetActiveSessionSlot();
 	if (userSlot == Math::MaxUInt16())
 	{
 		return false;
 	}
 	bool collisionHandled = false;
 	
-	
-	
 	// Forward new physics location to other players
 	if (otherEntityTag == "Player1")
 	{
-		if (userSlot == 0)
+		if (userSlot == Enums::PlayerSlot.LeftPlayer)
 		{
 			vector3 updateVector = currentEntity.Transform.GetTranslation();
 			updateVector.x = updateVector.x + 0.2f;
@@ -23,7 +21,7 @@ bool BallOnlineCollisionEnd(entity currentEntity,entity otherEntity)
 	}
 	else if (otherEntityTag == "Player2")
 	{
-		if (userSlot == 1)
+		if (userSlot == Enums::PlayerSlot.RightPlayer)
 		{
 			vector3 updateVector = currentEntity.Transform.GetTranslation();
 			updateVector.x = updateVector.x - 0.2f;

@@ -1,16 +1,16 @@
-void OnReceiveSignal(uint16 signalNum)
+void OnReceiveSignal(NetworkSignal signalNum)
 {
-	uint16 userSlot = NetworkService::GetActiveSessionSlot();
+	PlayerSlot userSlot = NetworkService::GetActiveSessionSlot();
 	
-	if (signalNum == 1)
+	if (signalNum == Enums::NetworkSignal.RoundOver)
 	{
 		entity ball = SceneService::GetEntity("Ball");
-		if (userSlot == 0)
+		if (userSlot == Enums::PlayerSlot.LeftPlayer)
 		{
 			GameStateService::SetField("PlayerOneScore", GameStateService::GetFieldUInt16("PlayerOneScore") + 1);
 			UIService::SetWidgetText(UserInterfaces::RuntimeUI.base_window.score_player_1, str(GameStateService::GetFieldUInt16("PlayerOneScore")));
 		}
-		else if (userSlot == 1)
+		else if (userSlot == Enums::PlayerSlot.RightPlayer)
 		{
 			GameStateService::SetField("PlayerTwoScore", GameStateService::GetFieldUInt16("PlayerTwoScore") + 1);
 			UIService::SetWidgetText(UserInterfaces::RuntimeUI.base_window.score_player_2, str(GameStateService::GetFieldUInt16("PlayerTwoScore")));

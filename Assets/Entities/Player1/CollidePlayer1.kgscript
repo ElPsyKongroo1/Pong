@@ -1,16 +1,16 @@
 void CollidePlayer1(entity ballEntity)
 {
-	if (InputService::IsPollingSlotPressed(0))
+	if (InputService::IsPollingSlotPressed(Enums::Polling.Player1Up))
 	{
-		float deflectionFactor = InputService::IsPollingSlotPressed(4) ? 0.55f : 0.33f;
+		float deflectionFactor = InputService::IsPollingSlotPressed(Enums::Polling.Player1SpeedUp) ? 0.55f : 0.33f;
 		vector2 up = {0.0f, 1.0f};
 		vector2 currentVelocity = ballEntity.RigidBody.GetLinearVelocity();
 		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * ballEntity.Speed.CurrentSpeed;
 		ballEntity.RigidBody.SetLinearVelocity(currentVelocity);
 	}
-	if (InputService::IsPollingSlotPressed(1))
+	if (InputService::IsPollingSlotPressed(Enums::Polling.Player1Down))
 	{
-		float deflectionFactor = InputService::IsPollingSlotPressed(4) ? 0.55f : 0.33f;
+		float deflectionFactor = InputService::IsPollingSlotPressed(Enums::Polling.Player1SpeedUp) ? 0.55f : 0.33f;
 		vector2 up = {0.0f, -1.0f};
 		vector2 currentVelocity = ballEntity.RigidBody.GetLinearVelocity();
 		currentVelocity = Math::NormalizeVector2(Math::NormalizeVector2(currentVelocity) + up * deflectionFactor) * ballEntity.Speed.CurrentSpeed;

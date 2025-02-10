@@ -1,7 +1,7 @@
 void Player1UpdateNetwork(entity activeEntity,float deltaTime)
 {
-	uint16 userSlot = NetworkService::GetActiveSessionSlot();
-	if (userSlot == 0)
+	PlayerSlot userSlot = NetworkService::GetActiveSessionSlot();
+	if (userSlot == Enums::PlayerSlot.LeftPlayer)
 	{
 		NetworkService::PushAllEntityLocation(activeEntity, activeEntity.Transform.GetTranslation());
 	}

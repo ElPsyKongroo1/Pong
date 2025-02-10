@@ -1,20 +1,20 @@
 bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 {
-	uint16 userSlot = NetworkService::GetActiveSessionSlot();
+	PlayerSlot userSlot = NetworkService::GetActiveSessionSlot();
 	bool collisionHandled = false;
 	string otherEntityTag = otherEntity.Tag.GetTag();
 	if (otherEntityTag == "Left Wall")
 	{
-		if (userSlot == 0)
+		if (userSlot == Enums::PlayerSlot.LeftPlayer)
 		{
 			Scripts::CollideLeftWall(currentEntity);
 			UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
 			InputService::LoadInputMap(InputMaps::Online_Pre_Start);
-			NetworkService::SignalAll(1);
+			NetworkService::SignalAll(Enums::NetworkSignal.RoundOver);
 			NetworkService::EnableReadyCheck();
 			collisionHandled = true;
 		}
-		else if (userSlot == 1)
+		else if (userSlot == Enums::PlayerSlot.RightPlayer)
 		{
 			currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
 		}
@@ -22,16 +22,16 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 	}
 	else if (otherEntityTag == "Right Wall")
 	{
-		if (userSlot == 1)
+		if (userSlot == Enums::PlayerSlot.RightPlayer)
 		{
 			Scripts::CollideRightWall(currentEntity);
 			UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
 			InputService::LoadInputMap(InputMaps::Online_Pre_Start);
-			NetworkService::SignalAll(1);
+			NetworkService::SignalAll(Enums::NetworkSignal.RoundOver);
 			NetworkService::EnableReadyCheck();
 			collisionHandled = true;
 		}
-		else if (userSlot == 0)
+		else if (userSlot == Enums::PlayerSlot.LeftPlayer)
 		{
 			currentEntity.RigidBody.SetLinearVelocity({0.0f, 0.0f});
 		}
@@ -45,7 +45,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 	
 	else if (otherEntityTag == "Player1")
 	{
-		if (userSlot == 0)
+		if (userSlot == Enums::PlayerSlot.LeftPlayer)
 		{
 			Scripts::CollidePlayer1(currentEntity);
 		}
@@ -57,7 +57,7 @@ bool BallOnlineCollisionStart(entity currentEntity,entity otherEntity)
 	}
 	else if (otherEntityTag == "Player2")
 	{
-		if (userSlot == 1)
+		if (userSlot == Enums::PlayerSlot.RightPlayer)
 		{
 			Scripts::CollidePlayer2(currentEntity);
 		}

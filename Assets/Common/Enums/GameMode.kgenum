@@ -1,0 +1,6 @@
+Name: GameMode
+Identifiers:
+  - SinglePlayer
+  - LocalMultiplayer
+  - OnlineMultiplayer
+  - None
