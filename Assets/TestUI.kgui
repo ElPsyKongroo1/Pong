@@ -19,7 +19,7 @@ Windows:
         YRelativeOrAbsolute: Absolute
         XConstraint: None
         YConstraint: None
-        PercentPosition: [0.161707982, 0.483950585]
+        PercentPosition: [0.224380195, 0.569135785]
         PixelPosition: [0, 0]
         SizeType: Percent
         XPositionType: Percent
@@ -28,7 +28,7 @@ Windows:
         PixelSize: [50, 50]
         WidgetType: TextWidget
         TextWidget:
-          Text: "This is the first line\nasdf\nbf"
+          Text: "This is the first line\nasdf\nbf\nAnd that is a lot of text that needs to be sent into the stratosphere, you know what"
           TextSize: 0.319999993
           TextColor: [1, 1, 1, 1]
           TextAlignment: Right
@@ -170,3 +170,31 @@ Windows:
           Bounds: [0, 1]
           SliderColor: [1, 1, 1, 1]
           LineColor: [1, 1, 1, 1]
+      - Tag: None
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.400000006, 0.400000006]
+        PixelPosition: [0, 0]
+        SizeType: Percent
+        XPositionType: Percent
+        YPositionType: Percent
+        PercentSize: [0.300000012, 0.100000001]
+        PixelSize: [50, 50]
+        WidgetType: DropDownWidget
+        DropDownWidget:
+          DefaultBackgroundColor: [0.478938669, 0.968325794, 0.0744865984, 0.837104082]
+          Selectable: true
+          FunctionPointerOnPress: 0
+          DropDownOptions:
+            - Text: A New Entry
+              TextSize: 0.300000012
+              TextColor: [1, 1, 1, 1]
+              TextAlignment: Center
+            - Text: Another Option
+              TextSize: 0.300000012
+              TextColor: [1, 1, 1, 1]
+              TextAlignment: Center
+          DropDownBackground: [1, 1, 1, 1]
+          OnSelectOption: 0
