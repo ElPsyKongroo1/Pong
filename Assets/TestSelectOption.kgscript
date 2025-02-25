@@ -1,0 +1,5 @@
+void TestSelectOption(string selectedOption)
+{
+	log("We are selecting an option");
+	log(selectedOption);
+}

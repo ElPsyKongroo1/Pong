@@ -6,6 +6,7 @@ FunctionPointerOnHover: 0
 Font: 4654860245843890780
 Windows:
   - Tag: base_window
+    ID: 703637574
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
@@ -15,6 +16,7 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: score_player_1
+        ID: 128068499
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Left
@@ -34,6 +36,7 @@ Windows:
           TextAlignment: Left
           TextWrapped: false
       - Tag: score_player_2
+        ID: 169702511
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Right
@@ -53,6 +56,7 @@ Windows:
           TextAlignment: Right
           TextWrapped: false
   - Tag: pre_game_warning
+    ID: 1749121094
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
@@ -62,6 +66,7 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: Start Warning
+        ID: 1264909123
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -81,6 +86,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
       - Tag: controls_1
+        ID: 1665091489
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
         XConstraint: None
@@ -100,6 +106,7 @@ Windows:
           TextAlignment: Left
           TextWrapped: false
       - Tag: controls_2
+        ID: 1263890807
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Right
@@ -119,6 +126,7 @@ Windows:
           TextAlignment: Right
           TextWrapped: false
   - Tag: online_lobby
+    ID: 2082948954
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 0.635294139, 0.149019614]
@@ -128,6 +136,7 @@ Windows:
     DefaultActiveWidget: 0
     Widgets:
       - Tag: main_text
+        ID: 80147253
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -147,6 +156,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
       - Tag: player_slot_0
+        ID: 434740553
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
         XConstraint: None
@@ -166,6 +176,7 @@ Windows:
           TextAlignment: Left
           TextWrapped: false
       - Tag: player_slot_1
+        ID: 1711827978
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Right
@@ -185,6 +196,7 @@ Windows:
           TextAlignment: Right
           TextWrapped: false
   - Tag: pre_game_level_warning
+    ID: 1581560399
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
@@ -194,6 +206,7 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: start_warning
+        ID: 1085537429
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -213,6 +226,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
       - Tag: controls
+        ID: 810088404
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -232,6 +246,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
   - Tag: win_window
+    ID: 1181515144
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
@@ -241,6 +256,7 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: Title
+        ID: 1149414870
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -260,6 +276,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
       - Tag: NextAction
+        ID: 734174487
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -279,6 +296,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
   - Tag: lose_window
+    ID: 1840282323
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
@@ -288,6 +306,7 @@ Windows:
     DefaultActiveWidget: 18446744073709551615
     Widgets:
       - Tag: Title
+        ID: 2102541187
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -307,6 +326,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
       - Tag: RestartAction
+        ID: 777454229
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center

@@ -6,7 +6,8 @@ FunctionPointerOnHover: 8614612450660904495
 Font: 4654860245843890780
 Windows:
   - Tag: main_window
-    ScreenPosition: [0, 0, 0]
+    ID: 1312719583
+    ScreenPosition: [0.00275482098, 0.00246921112, 0]
     Size: [1, 1]
     BackgroundColor: [1, 0.176470593, 1, 0.141176477]
     ParentIndex: 18446744073709551615
@@ -15,6 +16,7 @@ Windows:
     DefaultActiveWidget: 5
     Widgets:
       - Tag: local_multiplayer
+        ID: 404442555
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -36,6 +38,7 @@ Windows:
           Selectable: true
           FunctionPointerOnPress: 9792081380113944440
       - Tag: exit_app
+        ID: 569823089
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -57,6 +60,7 @@ Windows:
           Selectable: true
           FunctionPointerOnPress: 10882227211325647722
       - Tag: title
+        ID: 1694933693
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -76,6 +80,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
       - Tag: online_multiplayer
+        ID: 1583727356
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center
@@ -97,6 +102,7 @@ Windows:
           Selectable: false
           FunctionPointerOnPress: 4669916971671854194
       - Tag: online_count
+        ID: 1596641779
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
         XConstraint: None
@@ -116,6 +122,7 @@ Windows:
           TextAlignment: Center
           TextWrapped: false
       - Tag: single_player
+        ID: 954770482
         XRelativeOrAbsolute: Relative
         YRelativeOrAbsolute: Absolute
         XConstraint: Center

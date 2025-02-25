@@ -18,7 +18,7 @@ Entities:
         - Color: [0.572549045, 0.905882359, 1, 1]
         - Color: [1, 0.635294139, 0.741176486, 1]
       TextureHandle: 17057334801167380747
-      ShaderHandle: 13003070490235285011
+      ShaderHandle: 10459340131614986920
       ShaderSpecification:
         ColorInputType: VertexColor
         AddProjectionMatrix: true
@@ -49,7 +49,7 @@ Entities:
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 8051163355459938058
-      ShaderHandle: 13851209146974046272
+      ShaderHandle: 13830925404601198934
       ShaderSpecification:
         ColorInputType: None
         AddProjectionMatrix: true

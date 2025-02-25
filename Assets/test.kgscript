@@ -12,4 +12,6 @@ void OpenLevel1()
 	GameStateService::SetField("PlayerTwoScore", 0);
 	GameStateService::SetField("CurrentLevel", 1);
 	GameStateService::SetField("WinConditionValue", 10);
+	entity entt;
+	entt.Speed.CurrentSpeed = 2.0f;
 }

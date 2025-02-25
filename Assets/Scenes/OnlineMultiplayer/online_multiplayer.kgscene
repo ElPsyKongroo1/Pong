@@ -23,7 +23,7 @@ Entities:
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 8051163355459938058
-      ShaderHandle: 16075931647133155393
+      ShaderHandle: 3189072989781877966
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
@@ -44,7 +44,7 @@ Entities:
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 17057334801167380747
-      ShaderHandle: 12997310174580324402
+      ShaderHandle: 16780885188960734472
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
@@ -78,7 +78,7 @@ Entities:
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 17057334801167380747
-      ShaderHandle: 12997310174580324402
+      ShaderHandle: 16780885188960734472
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
@@ -112,7 +112,7 @@ Entities:
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 17057334801167380747
-      ShaderHandle: 12997310174580324402
+      ShaderHandle: 16780885188960734472
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
@@ -146,7 +146,7 @@ Entities:
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 17057334801167380747
-      ShaderHandle: 12997310174580324402
+      ShaderHandle: 16780885188960734472
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
@@ -182,7 +182,7 @@ Entities:
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 1008307395632263226
-      ShaderHandle: 16075931647133155393
+      ShaderHandle: 3189072989781877966
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
@@ -224,7 +224,7 @@ Entities:
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 1008307395632263226
-      ShaderHandle: 16075931647133155393
+      ShaderHandle: 3189072989781877966
       ShaderSpecification:
         ColorInputType: FlatColor
         AddProjectionMatrix: true
@@ -269,7 +269,7 @@ Entities:
         - Color: [1, 0.909803927, 1, 1]
         - Color: [1, 1, 0, 1]
       TextureHandle: 7411058966582404143
-      ShaderHandle: 2670557135485920854
+      ShaderHandle: 4468540036145877977
       ShaderSpecification:
         ColorInputType: VertexColor
         AddProjectionMatrix: true

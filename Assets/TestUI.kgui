@@ -6,6 +6,7 @@ FunctionPointerOnHover: 0
 Font: 0
 Windows:
   - Tag: Window1
+    ID: 1019889646
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [0.300000012, 0.300000012, 0.300000012, 0.300000012]
@@ -14,47 +15,8 @@ Windows:
     ChildBufferSize: 0
     DefaultActiveWidget: 18446744073709551615
     Widgets:
-      - Tag: This is text
-        XRelativeOrAbsolute: Absolute
-        YRelativeOrAbsolute: Absolute
-        XConstraint: None
-        YConstraint: None
-        PercentPosition: [0.224380195, 0.569135785]
-        PixelPosition: [0, 0]
-        SizeType: Percent
-        XPositionType: Percent
-        YPositionType: Percent
-        PercentSize: [0.289999992, 0.360000014]
-        PixelSize: [50, 50]
-        WidgetType: TextWidget
-        TextWidget:
-          Text: "This is the first line\nasdf\nbf\nAnd that is a lot of text that needs to be sent into the stratosphere, you know what"
-          TextSize: 0.319999993
-          TextColor: [1, 1, 1, 1]
-          TextAlignment: Right
-          TextWrapped: true
-      - Tag: Button Widget 1
-        XRelativeOrAbsolute: Absolute
-        YRelativeOrAbsolute: Absolute
-        XConstraint: None
-        YConstraint: None
-        PercentPosition: [0.576308548, 0.424691319]
-        PixelPosition: [0, 0]
-        SizeType: Percent
-        XPositionType: Percent
-        YPositionType: Percent
-        PercentSize: [0.289999992, 0.109999999]
-        PixelSize: [50, 50]
-        WidgetType: ButtonWidget
-        ButtonWidget:
-          Text: New Button Widget
-          TextSize: 0.400000006
-          TextColor: [0.542351723, 1, 0.203619897, 1]
-          TextAlignment: Center
-          DefaultBackgroundColor: [0.97285068, 0.105648935, 0.105648935, 0.5]
-          Selectable: true
-          FunctionPointerOnPress: 0
       - Tag: None
+        ID: 731045759
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
         XConstraint: None
@@ -71,6 +33,7 @@ Windows:
           Image: 8051163355459938058
           FixedAspectRatio: true
       - Tag: asdf
+        ID: 855309366
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
         XConstraint: None
@@ -89,93 +52,13 @@ Windows:
           DefaultBackgroundColor: [0.0407239795, 1, 0.127536297, 0.511312246]
           Selectable: true
           FunctionPointerOnPress: 0
-      - Tag: RandomImage
+      - Tag: DropDown1
+        ID: 876895703
         XRelativeOrAbsolute: Absolute
         YRelativeOrAbsolute: Absolute
         XConstraint: None
         YConstraint: None
-        PercentPosition: [0.514688253, 0.0701837316]
-        PixelPosition: [0, 0]
-        SizeType: Percent
-        XPositionType: Percent
-        YPositionType: Percent
-        PercentSize: [0.41652897, 0.140000001]
-        PixelSize: [48, 9]
-        WidgetType: ImageWidget
-        ImageWidget:
-          Image: 1008307395632263226
-          FixedAspectRatio: true
-      - Tag: Checkhaha
-        XRelativeOrAbsolute: Absolute
-        YRelativeOrAbsolute: Absolute
-        XConstraint: None
-        YConstraint: None
-        PercentPosition: [0.0508264378, 0.722222149]
-        PixelPosition: [0, 0]
-        SizeType: Percent
-        XPositionType: Percent
-        YPositionType: Percent
-        PercentSize: [0.119999997, 0.213647068]
-        PixelSize: [50, 50]
-        WidgetType: CheckboxWidget
-        CheckboxWidget:
-          Checked: true
-          CheckedImage: 9836920366757835393
-          CheckedFixedAspectRatio: true
-          UnCheckedImage: 5664130732050414626
-          UnCheckedFixedAspectRatio: true
-          DefaultBackgroundColor: [0, 0, 0.689999998, 1]
-          Selectable: true
-          FunctionPointerOnPress: 0
-      - Tag: None
-        XRelativeOrAbsolute: Absolute
-        YRelativeOrAbsolute: Absolute
-        XConstraint: None
-        YConstraint: None
-        PercentPosition: [0.128650114, 0.408641934]
-        PixelPosition: [0, 0]
-        SizeType: Percent
-        XPositionType: Percent
-        YPositionType: Percent
-        PercentSize: [0.300000012, 0.100000001]
-        PixelSize: [50, 50]
-        WidgetType: InputTextWidget
-        InputTextWidget:
-          Text: New Widget
-          TextSize: 0.300000012
-          TextColor: [1, 1, 1, 1]
-          TextAlignment: Center
-          DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
-          Selectable: true
-          FunctionPointerOnPress: 0
-          OnMoveCursor: 0
-      - Tag: slider1
-        XRelativeOrAbsolute: Absolute
-        YRelativeOrAbsolute: Absolute
-        XConstraint: None
-        YConstraint: None
-        PercentPosition: [0.573553681, 0.608641922]
-        PixelPosition: [0, 0]
-        SizeType: Percent
-        XPositionType: Percent
-        YPositionType: Percent
-        PercentSize: [0.300000012, 0.100000001]
-        PixelSize: [50, 50]
-        WidgetType: SliderWidget
-        SliderWidget:
-          DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
-          Selectable: true
-          FunctionPointerOnPress: 0
-          OnMoveSlider: 0
-          Bounds: [0, 1]
-          SliderColor: [1, 1, 1, 1]
-          LineColor: [1, 1, 1, 1]
-      - Tag: None
-        XRelativeOrAbsolute: Absolute
-        YRelativeOrAbsolute: Absolute
-        XConstraint: None
-        YConstraint: None
-        PercentPosition: [0.400000006, 0.400000006]
+        PercentPosition: [0.359333962, 0.799719393]
         PixelPosition: [0, 0]
         SizeType: Percent
         XPositionType: Percent
@@ -184,11 +67,11 @@ Windows:
         PixelSize: [50, 50]
         WidgetType: DropDownWidget
         DropDownWidget:
-          DefaultBackgroundColor: [0.478938669, 0.968325794, 0.0744865984, 0.837104082]
+          DefaultBackgroundColor: [1, 0.959999979, 1, 1]
           Selectable: true
           FunctionPointerOnPress: 0
           DropDownOptions:
-            - Text: A New Entry
+            - Text: ABACADABRAaaaa
               TextSize: 0.300000012
               TextColor: [1, 1, 1, 1]
               TextAlignment: Center
@@ -196,5 +79,48 @@ Windows:
               TextSize: 0.300000012
               TextColor: [1, 1, 1, 1]
               TextAlignment: Center
+            - Text: Anther one
+              TextSize: 0.300000012
+              TextColor: [1, 1, 1, 1]
+              TextAlignment: Center
           DropDownBackground: [1, 1, 1, 1]
           OnSelectOption: 0
+      - Tag: Container1
+        ID: 408590248
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Absolute
+        XConstraint: None
+        YConstraint: None
+        PercentPosition: [0.507809877, 0.196042553]
+        PixelPosition: [0, 0]
+        SizeType: Percent
+        XPositionType: Percent
+        YPositionType: Percent
+        PercentSize: [0.300000012, 0.519999981]
+        PixelSize: [50, 50]
+        WidgetType: ContainerWidget
+        ContainerWidget:
+          BackgroundColor: [0.5, 0.5, 0.5, 0.5]
+          ContainerWidgets:
+            - Tag: None
+              ID: 570349282
+              XRelativeOrAbsolute: Absolute
+              YRelativeOrAbsolute: Absolute
+              XConstraint: None
+              YConstraint: None
+              PercentPosition: [0.194077104, 0.57407409]
+              PixelPosition: [0, 0]
+              SizeType: Percent
+              XPositionType: Percent
+              YPositionType: Percent
+              PercentSize: [0.300000012, 0.100000001]
+              PixelSize: [50, 50]
+              WidgetType: ButtonWidget
+              ButtonWidget:
+                Text: New Widget
+                TextSize: 0.300000012
+                TextColor: [1, 1, 1, 1]
+                TextAlignment: Center
+                DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
+                Selectable: true
+                FunctionPointerOnPress: 0
