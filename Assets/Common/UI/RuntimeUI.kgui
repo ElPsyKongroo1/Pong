@@ -10,10 +10,7 @@ Windows:
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
-    ParentIndex: 18446744073709551615
-    ChildBufferIndex: 18446744073709551615
-    ChildBufferSize: 0
-    DefaultActiveWidget: 18446744073709551615
+    DefaultActiveWidget: 2147483647
     Widgets:
       - Tag: score_player_1
         ID: 128068499
@@ -60,10 +57,7 @@ Windows:
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
-    ParentIndex: 18446744073709551615
-    ChildBufferIndex: 18446744073709551615
-    ChildBufferSize: 0
-    DefaultActiveWidget: 18446744073709551615
+    DefaultActiveWidget: 2147483647
     Widgets:
       - Tag: Start Warning
         ID: 1264909123
@@ -130,10 +124,7 @@ Windows:
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 0.635294139, 0.149019614]
-    ParentIndex: 18446744073709551615
-    ChildBufferIndex: 18446744073709551615
-    ChildBufferSize: 0
-    DefaultActiveWidget: 0
+    DefaultActiveWidget: 2147483647
     Widgets:
       - Tag: main_text
         ID: 80147253
@@ -200,10 +191,7 @@ Windows:
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
-    ParentIndex: 18446744073709551615
-    ChildBufferIndex: 18446744073709551615
-    ChildBufferSize: 0
-    DefaultActiveWidget: 18446744073709551615
+    DefaultActiveWidget: 2147483647
     Widgets:
       - Tag: start_warning
         ID: 1085537429
@@ -250,10 +238,7 @@ Windows:
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
-    ParentIndex: 18446744073709551615
-    ChildBufferIndex: 18446744073709551615
-    ChildBufferSize: 0
-    DefaultActiveWidget: 18446744073709551615
+    DefaultActiveWidget: 2147483647
     Widgets:
       - Tag: Title
         ID: 1149414870
@@ -300,10 +285,7 @@ Windows:
     ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 1, 1, 0]
-    ParentIndex: 18446744073709551615
-    ChildBufferIndex: 18446744073709551615
-    ChildBufferSize: 0
-    DefaultActiveWidget: 18446744073709551615
+    DefaultActiveWidget: 2147483647
     Widgets:
       - Tag: Title
         ID: 2102541187
