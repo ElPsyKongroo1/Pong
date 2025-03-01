@@ -2,16 +2,11 @@ Registry: User Interface
 Assets:
   - AssetHandle: 7600774306835675584
     MetaData:
-      CheckSum: 35f9896e9461c34ecced23977e78fc90b58447df64c5d30eeb4dadfd4bf44805
+      CheckSum: bacf0a2428aae432aec7c3d0335c87409ad99e97804467fdbfc41c47f9d8e91b
       FileLocation: Common/UI/Main Menu.kgui
       AssetType: UserInterface
   - AssetHandle: 15231606605394194830
     MetaData:
       CheckSum: 99a2d0d8edca848778d4f613d203ff8127a62cad045cda2247c5c40ec320ec0b
       FileLocation: Common/UI/RuntimeUI.kgui
-      AssetType: UserInterface
-  - AssetHandle: 14623490543965229780
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: TestUI.kgui
       AssetType: UserInterface

@@ -1,10 +1,12 @@
 void OnReceiveSignal(NetworkSignal signalNum)
 {
+	// Get the current player's slot within the active session
 	PlayerSlot userSlot = NetworkService::GetActiveSessionSlot();
 	
+	// Handle incrementing the player score based on the winner
 	if (signalNum == Enums::NetworkSignal.RoundOver)
 	{
-		entity ball = SceneService::GetEntity("Ball");
+		// Handle incrementing the current player's score
 		if (userSlot == Enums::PlayerSlot.LeftPlayer)
 		{
 			GameStateService::SetField("PlayerOneScore", GameStateService::GetFieldUInt16("PlayerOneScore") + 1);
@@ -15,10 +17,13 @@ void OnReceiveSignal(NetworkSignal signalNum)
 			GameStateService::SetField("PlayerTwoScore", GameStateService::GetFieldUInt16("PlayerTwoScore") + 1);
 			UIService::SetWidgetText(UserInterfaces::RuntimeUI.base_window.score_player_2, str(GameStateService::GetFieldUInt16("PlayerTwoScore")));
 		}
+		
+		// Enter the pre-start phase of the game
+		entity ball = SceneService::GetEntity("Ball");
 		ball.RigidBody.SetLinearVelocity({0.0f, 0.0f});
 		AudioService::PlaySound(AudioBuffers::lose_sound);
 		UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, true);
-		InputService::LoadInputMap(InputMaps::Pre_Start);
+		InputService::LoadInputMap(InputMaps::Online_Pre_Start);
 		NetworkService::EnableReadyCheck();
 	}
 }
