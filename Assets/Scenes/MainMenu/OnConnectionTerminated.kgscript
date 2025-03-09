@@ -1,15 +1,4 @@
 void OnConnectionTerminated()
 {
-	if (SceneService::IsSceneActive(Scenes::main_menu))
-	{
-		if (UIService::IsWidgetSelected(UserInterfaces::MainMenu.main_window.online_multiplayer))
-		{
-			UIService::SetSelectedWidget(UserInterfaces::MainMenu.main_window.single_player);
-		}
-		UIService::SetWidgetText(UserInterfaces::MainMenu.main_window.online_count, "Offline");
-		UIService::WidgetSelectable(UserInterfaces::MainMenu.main_window.online_multiplayer, false);
-		UIService::WidgetTextColor(UserInterfaces::MainMenu.main_window.online_multiplayer, {1.0f, 1.0f, 1.0f, 222.0f / 255.0f});
-		UIService::WidgetBackgroundColor(UserInterfaces::MainMenu.main_window.online_multiplayer,
-			{30.0f / 255.0f, 30.0f / 255.0f, 30.0f / 255.0f, 37.0f / 255.0f});
-	}
+
 }

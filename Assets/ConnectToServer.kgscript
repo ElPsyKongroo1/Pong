@@ -10,4 +10,7 @@ void ConnectToServer()
 	UIService::DisplayWindow(UserInterfaces::MainMenu.main_window, false);
 	UIService::DisplayWindow(UserInterfaces::MainMenu.ConnectingWindow, true);
 	UIService::ClearSelectedWidget();
+	
+	// Request to join the server
+	NetworkService::RequestJoinSession();
 }

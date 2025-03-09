@@ -1,3 +1,8 @@
 Registry: Color Palette
 Assets:
-  []
+  - AssetHandle: 14515526461592950868
+    MetaData:
+      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: Common/ColorPalettes/UIColor.kgpalette
+      AssetType: ColorPalette
+      Name: UIColor

@@ -7,7 +7,7 @@ Font: 4654860245843890780
 Windows:
   - Tag: main_window
     ID: 1312719583
-    ScreenPosition: [0.00275482098, 0.00246921112, 0]
+    ScreenPosition: [0, 0, 0]
     Size: [1, 1]
     BackgroundColor: [1, 0.176470593, 1, 0.141176477]
     DefaultActiveWidget: 954770482
@@ -93,31 +93,11 @@ Windows:
         ButtonWidget:
           Text: Online Multiplayer
           TextSize: 0.430000007
-          TextColor: [1, 1, 1, 0.870588243]
-          TextAlignment: Center
-          DefaultBackgroundColor: [0.117647059, 0.117647059, 0.117647059, 0.145098045]
-          Selectable: false
-          FunctionPointerOnPress: 4669916971671854194
-      - Tag: online_count
-        ID: 1596641779
-        XRelativeOrAbsolute: Absolute
-        YRelativeOrAbsolute: Absolute
-        XConstraint: None
-        YConstraint: None
-        PercentPosition: [0.769999981, 0.870000005]
-        PixelPosition: [0, 0]
-        SizeType: Percent
-        XPositionType: Percent
-        YPositionType: Percent
-        PercentSize: [0.140000001, 0.100000001]
-        PixelSize: [50, 50]
-        WidgetType: TextWidget
-        TextWidget:
-          Text: Offline
-          TextSize: 0.469999999
           TextColor: [1, 1, 1, 1]
           TextAlignment: Center
-          TextWrapped: false
+          DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]
+          Selectable: true
+          FunctionPointerOnPress: 4669916971671854194
       - Tag: single_player
         ID: 954770482
         XRelativeOrAbsolute: Relative
@@ -140,3 +120,120 @@ Windows:
           DefaultBackgroundColor: [0.400000006, 0.0700000003, 0.689999998, 0.209999993]
           Selectable: true
           FunctionPointerOnPress: 5289311489000530938
+  - Tag: ConnectingWindow
+    ID: 1208738707
+    ScreenPosition: [0, 0, 0]
+    Size: [1, 1]
+    BackgroundColor: [1, 0.180000007, 1, 0.140000001]
+    DefaultActiveWidget: 2147483647
+    Widgets:
+      - Tag: ButtonWidget
+        ID: 1757470329
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Relative
+        XConstraint: Center
+        YConstraint: Center
+        PercentPosition: [0, 0]
+        PixelPosition: [0, 0]
+        SizeType: Percent
+        XPositionType: Percent
+        YPositionType: Percent
+        PercentSize: [0.519999981, 0.200000003]
+        PixelSize: [50, 50]
+        WidgetType: ButtonWidget
+        ButtonWidget:
+          Text: Connecting To Server...
+          TextSize: 0.589999974
+          TextColor: [1, 1, 1, 1]
+          TextAlignment: Center
+          DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
+          Selectable: false
+          FunctionPointerOnPress: 0
+  - Tag: ServerLobby
+    ID: 885462312
+    ScreenPosition: [0, 0, 0]
+    Size: [1, 1]
+    BackgroundColor: [1, 0.176470593, 1, 0.137254909]
+    DefaultActiveWidget: 2147483647
+    Widgets:
+      - Tag: LobbyTitle
+        ID: 926083855
+        XRelativeOrAbsolute: Absolute
+        YRelativeOrAbsolute: Relative
+        XConstraint: None
+        YConstraint: Top
+        PercentPosition: [0.0241315607, -0.0367724411]
+        PixelPosition: [0, 0]
+        SizeType: Percent
+        XPositionType: Percent
+        YPositionType: Percent
+        PercentSize: [0.200000003, 0.109999999]
+        PixelSize: [50, 50]
+        WidgetType: TextWidget
+        TextWidget:
+          Text: Server Lobby
+          TextSize: 0.560000002
+          TextColor: [1, 1, 1, 1]
+          TextAlignment: Left
+          TextWrapped: false
+      - Tag: VerticalContainerWidget
+        ID: 1181869062
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Right
+        YConstraint: None
+        PercentPosition: [-0.0500000007, 0.0978835374]
+        PixelPosition: [0, 0]
+        SizeType: Percent
+        XPositionType: Percent
+        YPositionType: Percent
+        PercentSize: [0.370000005, 0.649999976]
+        PixelSize: [50, 50]
+        WidgetType: VerticalContainerWidget
+        VerticalContainerWidget:
+          RowHeight: 0.25
+          RowSpacing: 0
+          BackgroundColor: [0.300000012, 0.300000012, 0.300000012, 0.5]
+          ContainerWidgets:
+            - Tag: Session1
+              ID: 1837201611
+              XRelativeOrAbsolute: Absolute
+              YRelativeOrAbsolute: Absolute
+              XConstraint: None
+              YConstraint: None
+              PercentPosition: [0, 0]
+              PixelPosition: [0, 0]
+              SizeType: Percent
+              XPositionType: Percent
+              YPositionType: Percent
+              PercentSize: [1, 1]
+              PixelSize: [50, 50]
+              WidgetType: ButtonWidget
+              ButtonWidget:
+                Text: Session One
+                TextSize: 0.300000012
+                TextColor: [1, 1, 1, 1]
+                TextAlignment: Center
+                DefaultBackgroundColor: [0.5, 0.5, 0.5, 0.5]
+                Selectable: true
+                FunctionPointerOnPress: 0
+      - Tag: SessionsTitle
+        ID: 1018102814
+        XRelativeOrAbsolute: Relative
+        YRelativeOrAbsolute: Absolute
+        XConstraint: Right
+        YConstraint: None
+        PercentPosition: [-0.049999997, 0.748677254]
+        PixelPosition: [0, 0]
+        SizeType: Percent
+        XPositionType: Percent
+        YPositionType: Percent
+        PercentSize: [0.370000005, 0.109999999]
+        PixelSize: [50, 50]
+        WidgetType: TextWidget
+        TextWidget:
+          Text: Sessions
+          TextSize: 0.560000002
+          TextColor: [1, 1, 1, 1]
+          TextAlignment: Center
+          TextWrapped: false
