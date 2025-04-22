@@ -1,13 +1,17 @@
 void StartOnlineGame()
 {
 	PlayerSlot userSlot = NetworkService::GetActiveSessionSlot();
+	
+	log(str(userSlot));
 	if (userSlot == Enums::PlayerSlot.LeftPlayer)
 	{
 		InputService::LoadInputMap(InputMaps::Online_Player1_Runtime);
+		log("We loaded runtime 1 input");
 	}
 	else if (userSlot == Enums::PlayerSlot.RightPlayer)
 	{
 		InputService::LoadInputMap(InputMaps::Online_Player2_Runtime);
+		log("We loaded runtime 2 input");
 	}
 	UIService::DisplayWindow(UserInterfaces::RuntimeUI.pre_game_warning, false);
 	UIService::DisplayWindow(UserInterfaces::RuntimeUI.online_lobby, false);

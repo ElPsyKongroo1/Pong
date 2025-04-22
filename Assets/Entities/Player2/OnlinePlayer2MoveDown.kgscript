@@ -1,4 +1,4 @@
 void OnlinePlayer2MoveDown(float deltaTime)
 {
-	Scripts::Player2MoveDown(deltaTime, InputService::IsPollingSlotPressed(Enums::Polling.Player1SpeedUp));
+	Scripts::Player2MoveDown(deltaTime, InputService::IsPollingSlotPressed(Enums::Polling.Player2SpeedUp));
 }
