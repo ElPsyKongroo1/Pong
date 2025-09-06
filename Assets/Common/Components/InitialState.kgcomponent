@@ -1,7 +1,7 @@
 Name: InitialState
+Identifier: 3544025267
 ComponentSize: 12
-BufferSize: 12
-BufferSlot: 1
+ComponentAlignment: 4
 DataTypes:
   - Vector3
 DataLocations:

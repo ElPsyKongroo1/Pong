@@ -1,7 +1,7 @@
 Name: AIBehaviorProfile
+Identifier: 1064561053
 ComponentSize: 6
-BufferSize: 8
-BufferSlot: 4
+ComponentAlignment: 2
 DataTypes:
   - UInteger16
   - UInteger16

@@ -1,7 +1,7 @@
 Name: Speed
-ComponentSize: 9
-BufferSize: 12
-BufferSlot: 0
+Identifier: 2636520210
+ComponentSize: 12
+ComponentAlignment: 4
 DataTypes:
   - Float
   - Float

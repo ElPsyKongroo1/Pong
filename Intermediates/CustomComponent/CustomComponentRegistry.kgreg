@@ -4,29 +4,29 @@ Assets:
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Common/Components/Speed.kgcomponent
-      AssetType: ProjectComponent
+      AssetType: CustomComponent
       Name: Speed
   - AssetHandle: 2736904612472256316
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Common/Components/InitialState.kgcomponent
-      AssetType: ProjectComponent
+      AssetType: CustomComponent
       Name: InitialState
   - AssetHandle: 1783536221633832415
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Entities/Ball/BallState.kgcomponent
-      AssetType: ProjectComponent
+      AssetType: CustomComponent
       Name: BallState
   - AssetHandle: 15329151067419175107
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Entities/AIPlayer/SeekLocationData.kgcomponent
-      AssetType: ProjectComponent
+      AssetType: CustomComponent
       Name: SeekLocationData
   - AssetHandle: 6324027423643995032
     MetaData:
       CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       FileLocation: Entities/AIPlayer/AIBehaviorProfile.kgcomponent
-      AssetType: ProjectComponent
+      AssetType: CustomComponent
       Name: AIBehaviorProfile

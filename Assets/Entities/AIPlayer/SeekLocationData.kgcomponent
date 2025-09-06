@@ -1,7 +1,7 @@
 Name: SeekLocationData
-ComponentSize: 5
-BufferSize: 8
-BufferSlot: 3
+Identifier: 3824567638
+ComponentSize: 8
+ComponentAlignment: 4
 DataTypes:
   - Float
   - Bool

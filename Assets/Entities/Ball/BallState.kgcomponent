@@ -1,7 +1,7 @@
 Name: BallState
+Identifier: 4156082359
 ComponentSize: 1
-BufferSize: 4
-BufferSlot: 2
+ComponentAlignment: 1
 DataTypes:
   - Bool
 DataLocations:
