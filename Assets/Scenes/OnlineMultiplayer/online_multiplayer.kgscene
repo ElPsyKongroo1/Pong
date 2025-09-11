@@ -1,5 +1,6 @@
 Physics:
   Gravity: [0, 0]
+PrimaryCamera: 14487046616883294273
 BackgroundColor: [0, 0, 0, 1]
 Entities:
   - Entity: 14487046616883294273
@@ -19,7 +20,6 @@ Entities:
         OrthographicSize: 53
         OrthographicNear: 37
         OrthographicFar: 44
-      Primary: true
     ShapeComponent:
       CurrentShape: Quad
       TextureHandle: 8051163355459938058
