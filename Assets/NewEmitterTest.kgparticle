@@ -1,0 +1,16 @@
+BufferSize: 1000
+SpawnRatePerSec: 5
+EmitterLifecycle: Immortal
+EmitterLifetime: 1
+SpawningBounds:
+  - [0, 0, 0]
+  - [0, 0, 0]
+UseGravity: false
+GravityAcceleration: [0, 0, 0]
+ParticleLifetime: 1
+ColorInterpolationType: Linear
+ColorBegin: [1, 1, 1, 1]
+ColorEnd: [1, 1, 1, 1]
+SizeInterpolationType: Linear
+SizeBegin: [1, 1, 1]
+SizeEnd: [1, 1, 1]
