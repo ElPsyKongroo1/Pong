@@ -1,4 +1,6 @@
-Registry: User Interface
+ModuleName: RuntimeUI
+TypeName: UserInterface
+TypeID: 3740352003
 Assets:
   - AssetHandle: 7600774306835675584
     MetaData:

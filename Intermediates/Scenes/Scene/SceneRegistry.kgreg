@@ -1,4 +1,6 @@
-Registry: Scene
+ModuleName: Scenes
+TypeName: Scene
+TypeID: 1226184432
 Assets:
   - AssetHandle: 4149337072942010858
     MetaData:

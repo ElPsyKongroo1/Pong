@@ -1,4 +1,6 @@
-Registry: Particle Emitter Config
+ModuleName: Particles
+TypeName: EmitterConfig
+TypeID: 816252452
 Assets:
   - AssetHandle: 15165415099816405768
     MetaData:

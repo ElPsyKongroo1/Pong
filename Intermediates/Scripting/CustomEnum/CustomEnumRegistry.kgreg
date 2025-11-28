@@ -1,32 +1,34 @@
-Registry: Project Enum
+ModuleName: Scripting
+TypeName: CustomEnum
+TypeID: 2939941529
 Assets:
-  - AssetHandle: 8953653908488313191
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Enums/GameMode.kgenum
-      AssetType: ProjectEnum
+  - Metadata:
       Name: GameMode
-  - AssetHandle: 16693158564943227734
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Enums/PlayerSlot.kgenum
-      AssetType: ProjectEnum
+      Handle: 8953653908488313191
+      Hash:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Common/Enums
+      IsHidden: false
+  - Metadata:
       Name: PlayerSlot
-  - AssetHandle: 12845260243455846877
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Enums/BallDirection.kgenum
-      AssetType: ProjectEnum
+      Handle: 16693158564943227734
+      Hash:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Common/Enums
+      IsHidden: false
+  - Metadata:
       Name: BallDirection
-  - AssetHandle: 6196901651030817723
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Enums/NetworkSignal.kgenum
-      AssetType: ProjectEnum
+      Handle: 12845260243455846877
+      Hash:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Common/Enums
+      IsHidden: false
+  - Metadata:
       Name: NetworkSignal
-  - AssetHandle: 5139994374830772049
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Enums/Polling.kgenum
-      AssetType: ProjectEnum
+      Handle: 6196901651030817723
+      Hash:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Common/Enums
+      IsHidden: false
+  - Metadata:
       Name: Polling
+      Handle: 5139994374830772049
+      Hash:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Common/Enums
+      IsHidden: false

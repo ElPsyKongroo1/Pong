@@ -1,4 +1,6 @@
-Registry: Shader
+ModuleName: Rendering
+TypeName: Shader
+TypeID: 2021333479
 Assets:
   - AssetHandle: 3211993126138191060
     MetaData:

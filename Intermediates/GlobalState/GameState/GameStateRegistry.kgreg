@@ -1,8 +1,10 @@
-Registry: Game State
+ModuleName: GlobalState
+TypeName: GameState
+TypeID: 1107968572
 Assets:
-  - AssetHandle: 13630226515263756832
-    MetaData:
-      CheckSum: f66a0b1f38a829518fa2d693d7376abe8bfd564b6c5f11e46056631a228ebdb2
-      FileLocation: GameStates/RuntimeState.kgstate
-      AssetType: GameState
+  - MetaData:
       Name: RuntimeState
+      Handle: 13630226515263756832
+      Hash: f66a0b1f38a829518fa2d693d7376abe8bfd564b6c5f11e46056631a228ebdb2
+      FileLocation: GameStates
+      IsHidden: false

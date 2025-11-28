@@ -1,32 +1,34 @@
-Registry: Project Component
+ModuleName: ECSInternal
+TypeName: CustomComponent
+TypeID: 211596291
 Assets:
-  - AssetHandle: 8506492999786783749
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Components/Speed.kgcomponent
-      AssetType: CustomComponent
+  - Metadata:
       Name: Speed
-  - AssetHandle: 2736904612472256316
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Components/InitialState.kgcomponent
-      AssetType: CustomComponent
+      Handle: 8506492999786783749
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Common/Components
+      IsHidden: false
+  - Metadata:
       Name: InitialState
-  - AssetHandle: 1783536221633832415
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Ball/BallState.kgcomponent
-      AssetType: CustomComponent
+      Handle: 2736904612472256316
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Common/Components
+      IsHidden: false
+  - Metadata:
       Name: BallState
-  - AssetHandle: 15329151067419175107
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/AIPlayer/SeekLocationData.kgcomponent
-      AssetType: CustomComponent
+      Handle: 1783536221633832415
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Ball
+      IsHidden: false
+  - Metadata:
       Name: SeekLocationData
-  - AssetHandle: 6324027423643995032
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/AIPlayer/AIBehaviorProfile.kgcomponent
-      AssetType: CustomComponent
+      Handle: 15329151067419175107
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/AIPlayer
+      IsHidden: false
+  - Metadata:
       Name: AIBehaviorProfile
+      Handle: 6324027423643995032
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/AIPlayer
+      IsHidden: false

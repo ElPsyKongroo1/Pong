@@ -1,8 +1,10 @@
-Registry: Global State
+ModuleName: GlobalState
+TypeName: GlobalState
+TypeID: 19922187
 Assets:
-  - AssetHandle: 12301042412039964280
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: TestGlobal.kggstate
-      AssetType: GlobalState
+  - Metadata:
       Name: TestGlobal
+      Handle: 12301042412039964280
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileLocation: ""
+      IsHidden: false

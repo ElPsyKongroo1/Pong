@@ -1,4 +1,6 @@
-Registry: Font
+ModuleName: RuntimeUI
+TypeName: Font
+TypeID: 2263496075
 Assets:
   - AssetHandle: 4654860245843890780
     MetaData:

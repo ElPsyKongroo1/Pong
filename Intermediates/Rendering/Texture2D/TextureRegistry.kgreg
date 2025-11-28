@@ -1,4 +1,6 @@
-Registry: Texture
+ModuleName: Rendering
+TypeName: Texture2D
+TypeID: 3019043532
 Assets:
   - AssetHandle: 17057334801167380747
     MetaData:
