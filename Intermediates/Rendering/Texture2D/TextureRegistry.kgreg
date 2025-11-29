@@ -2,111 +2,122 @@ ModuleName: Rendering
 TypeName: Texture2D
 TypeID: 3019043532
 Assets:
-  - AssetHandle: 17057334801167380747
-    MetaData:
-      CheckSum: ad95131bc0b799c0b1af477fb14fcf26a6a9f76079e48bf090acb7e8367bfd0e
-      FileLocation: None
-      IntermediateLocation: Texture2D/17057334801167380747.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: None
+      Handle: 17057334801167380747
+      Hash: ad95131bc0b799c0b1af477fb14fcf26a6a9f76079e48bf090acb7e8367bfd0e
+      IsHidden: true
+    MetadataExtension:
       TextureHeight: 1
       TextureWidth: 1
       TextureChannels: 4
-  - AssetHandle: 8051163355459938058
-    MetaData:
-      CheckSum: f39dff176a7dd17d7d697fe04ed6f2fe580313593978de3b02a68e6fd8f0e521
-      FileLocation: Entities/Camera/camera.kgtexture
-      IntermediateLocation: Texture2D/8051163355459938058.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: camera
+      Handle: 8051163355459938058
+      Hash: f39dff176a7dd17d7d697fe04ed6f2fe580313593978de3b02a68e6fd8f0e521
+      FileDirectory: Entities/Camera
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 512
       TextureWidth: 512
       TextureChannels: 4
-  - AssetHandle: 1008307395632263226
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Common/Textures/base_paddle.kgtexture
-      IntermediateLocation: Texture2D/1008307395632263226.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: base_paddle
+      Handle: 1008307395632263226
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Common/Textures
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 150
       TextureWidth: 800
       TextureChannels: 4
-  - AssetHandle: 4568941339220534383
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player2/Level3PaddleTex.kgtexture
-      IntermediateLocation: Texture2D/4568941339220534383.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: Level3PaddleTex
+      Handle: 4568941339220534383
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 150
       TextureWidth: 800
       TextureChannels: 4
-  - AssetHandle: 7411058966582404143
-    MetaData:
-      CheckSum: f2989b42549f3eb01eeb1f8ccddaaaf02a73b98df04b95c35ee420b9a3d26fce
-      FileLocation: Common/Textures/blue_block.kgtexture
-      IntermediateLocation: Texture2D/7411058966582404143.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: blue_block
+      Handle: 7411058966582404143
+      Hash: f2989b42549f3eb01eeb1f8ccddaaaf02a73b98df04b95c35ee420b9a3d26fce
+      FileDirectory: Common/Textures
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 600
       TextureWidth: 600
       TextureChannels: 4
-  - AssetHandle: 11467886090052234263
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player2/Level1PaddleTex.kgtexture
-      IntermediateLocation: Texture2D/11467886090052234263.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: Level1PaddleTex
+      Handle: 11467886090052234263
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 150
       TextureWidth: 800
       TextureChannels: 4
-  - AssetHandle: 17523732859264026445
-    MetaData:
-      CheckSum: 4c95d5974ecccc1aa13df26f04f9c5afd91eef73be08b63e9baf97c4372e27fe
-      FileLocation: Entities/Ball/baseball.kgtexture
-      IntermediateLocation: Texture2D/17523732859264026445.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: baseball
+      Handle: 17523732859264026445
+      Hash: 4c95d5974ecccc1aa13df26f04f9c5afd91eef73be08b63e9baf97c4372e27fe
+      FileDirectory: Entities/Ball
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 600
       TextureWidth: 600
       TextureChannels: 4
-  - AssetHandle: 13680989623708598949
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player2/Level2PaddleTex.kgtexture
-      IntermediateLocation: Texture2D/13680989623708598949.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: Level2PaddleTex
+      Handle: 13680989623708598949
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 150
       TextureWidth: 800
       TextureChannels: 4
-  - AssetHandle: 1143395742954915528
-    MetaData:
-      CheckSum: fc8f6da59c4f7f5a2fca0b1331e583f403ff9588e65b88c1a2ecf282521c04a5
-      FileLocation: Common/Textures/purple_block.kgtexture
-      IntermediateLocation: Texture2D/1143395742954915528.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: purple_block
+      Handle: 1143395742954915528
+      Hash: fc8f6da59c4f7f5a2fca0b1331e583f403ff9588e65b88c1a2ecf282521c04a5
+      FileDirectory: Common/Textures
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 600
       TextureWidth: 600
       TextureChannels: 4
-  - AssetHandle: 12822293038068013926
-    MetaData:
-      CheckSum: 016687d78cce782db03d439c67e8bb223ec7fcfe58881b419ca9f1d3782c9280
-      FileLocation: Common/Textures/GitLogo.kgtexture
-      IntermediateLocation: Texture2D/12822293038068013926.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: GitLogo
+      Handle: 12822293038068013926
+      Hash: 016687d78cce782db03d439c67e8bb223ec7fcfe58881b419ca9f1d3782c9280
+      FileDirectory: Common/Textures
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 956
       TextureWidth: 980
       TextureChannels: 4
-  - AssetHandle: 5664130732050414626
-    MetaData:
-      CheckSum: 26f681d9bb3056869e318ece5413e91ac375ff21d29f961b369bdc716fb192be
-      FileLocation: Common/Textures/UnCheckedTexture.kgtexture
-      IntermediateLocation: Texture2D/5664130732050414626.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: UnCheckedTexture
+      Handle: 5664130732050414626
+      Hash: 26f681d9bb3056869e318ece5413e91ac375ff21d29f961b369bdc716fb192be
+      FileDirectory: Common/Textures
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 512
       TextureWidth: 512
       TextureChannels: 4
-  - AssetHandle: 9836920366757835393
-    MetaData:
-      CheckSum: 4cea8086d60ee7bf3055ea9f7b42ccd57f8a5370e9e4cce944ff7661d4b55c3f
-      FileLocation: Common/Textures/CheckedTexture.kgtexture
-      IntermediateLocation: Texture2D/9836920366757835393.kgbinary
-      AssetType: Texture
+  - Metadata:
+      Name: CheckedTexture
+      Handle: 9836920366757835393
+      Hash: 4cea8086d60ee7bf3055ea9f7b42ccd57f8a5370e9e4cce944ff7661d4b55c3f
+      FileDirectory: Common/Textures
+      IsHidden: false
+    MetadataExtension:
       TextureHeight: 512
       TextureWidth: 512
       TextureChannels: 4

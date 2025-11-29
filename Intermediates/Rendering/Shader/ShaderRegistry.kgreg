@@ -2,11 +2,12 @@ ModuleName: Rendering
 TypeName: Shader
 TypeID: 2021333479
 Assets:
-  - AssetHandle: 3211993126138191060
-    MetaData:
-      CheckSum: 08ec087bc9e6215be3a2bf5106f2c77fe41efb16fd8be855988550137305202e
-      IntermediateLocation: Shader\3211993126138191060
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 3211993126138191060
+      Hash: 08ec087bc9e6215be3a2bf5106f2c77fe41efb16fd8be855988550137305202e
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: None
       AddProjectionMatrix: true
       AddEntityID: true
@@ -24,11 +25,12 @@ Assets:
         Elements:
           - Name: u_ViewProjection
             Type: mat4
-  - AssetHandle: 6784471122870166746
-    MetaData:
-      CheckSum: 9af16a71ac97eeb7fd4b3aa2d3571f761298021bafa5c4526fc68c30bdf6dfcd
-      IntermediateLocation: Shader\6784471122870166746
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 6784471122870166746
+      Hash: 9af16a71ac97eeb7fd4b3aa2d3571f761298021bafa5c4526fc68c30bdf6dfcd
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: FlatColor
       AddProjectionMatrix: true
       AddEntityID: true
@@ -52,11 +54,12 @@ Assets:
             Type: mat4
           - Name: u_Textures
             Type: sampler2D
-  - AssetHandle: 8380563716032147394
-    MetaData:
-      CheckSum: 4224a0b0374c535eec82c261a1bc65925ced79ecbcbbeb7c87d8d0a0dc6c8703
-      IntermediateLocation: Shader\8380563716032147394
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 8380563716032147394
+      Hash: 4224a0b0374c535eec82c261a1bc65925ced79ecbcbbeb7c87d8d0a0dc6c8703
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: FlatColor
       AddProjectionMatrix: true
       AddEntityID: true
@@ -82,11 +85,12 @@ Assets:
         Elements:
           - Name: u_ViewProjection
             Type: mat4
-  - AssetHandle: 13830925404601198934
-    MetaData:
-      CheckSum: a064a7bd37e698386fda2fe6e930f136ee2195df8bf300b5ba3a60dcaa645670
-      IntermediateLocation: Shader\13830925404601198934
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 13830925404601198934
+      Hash: a064a7bd37e698386fda2fe6e930f136ee2195df8bf300b5ba3a60dcaa645670
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: None
       AddProjectionMatrix: true
       AddEntityID: true
@@ -112,11 +116,12 @@ Assets:
             Type: mat4
           - Name: u_Textures
             Type: sampler2D
-  - AssetHandle: 3189072989781877966
-    MetaData:
-      CheckSum: 553ed1ff5106292988ee791056095771ba8553e59e09e5718dc10e18532388d8
-      IntermediateLocation: Shader\3189072989781877966
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 3189072989781877966
+      Hash: 553ed1ff5106292988ee791056095771ba8553e59e09e5718dc10e18532388d8
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: FlatColor
       AddProjectionMatrix: true
       AddEntityID: true
@@ -144,11 +149,12 @@ Assets:
             Type: mat4
           - Name: u_Textures
             Type: sampler2D
-  - AssetHandle: 10459340131614986920
-    MetaData:
-      CheckSum: 3c8876332468a0607975812d6a74127d5eeb5097d63b2098bd9185db0ffc701f
-      IntermediateLocation: Shader\10459340131614986920
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 10459340131614986920
+      Hash: 3c8876332468a0607975812d6a74127d5eeb5097d63b2098bd9185db0ffc701f
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: VertexColor
       AddProjectionMatrix: true
       AddEntityID: true
@@ -168,11 +174,12 @@ Assets:
         Elements:
           - Name: u_ViewProjection
             Type: mat4
-  - AssetHandle: 16780885188960734472
-    MetaData:
-      CheckSum: 4f1f0aff5e6abccc885e24d8055f0266f15b54d9ae85dd6c0fe304ee1c6aac94
-      IntermediateLocation: Shader\16780885188960734472
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 16780885188960734472
+      Hash: 4f1f0aff5e6abccc885e24d8055f0266f15b54d9ae85dd6c0fe304ee1c6aac94
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: FlatColor
       AddProjectionMatrix: true
       AddEntityID: true
@@ -192,11 +199,12 @@ Assets:
         Elements:
           - Name: u_ViewProjection
             Type: mat4
-  - AssetHandle: 11940255905041447639
-    MetaData:
-      CheckSum: 21587094f76d5c49810497eaf6dc162d9fdf3e1bad13c947e70e0c38f05a5775
-      IntermediateLocation: Shader\11940255905041447639
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 11940255905041447639
+      Hash: 21587094f76d5c49810497eaf6dc162d9fdf3e1bad13c947e70e0c38f05a5775
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: FlatColor
       AddProjectionMatrix: true
       AddEntityID: false
@@ -214,11 +222,12 @@ Assets:
         Elements:
           - Name: u_ViewProjection
             Type: mat4
-  - AssetHandle: 4468540036145877977
-    MetaData:
-      CheckSum: 5ebba0bc183a8db3733c1a4f8d567caf3aef84d8280e70bcb795ead112ffa267
-      IntermediateLocation: Shader\4468540036145877977
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 4468540036145877977
+      Hash: 5ebba0bc183a8db3733c1a4f8d567caf3aef84d8280e70bcb795ead112ffa267
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: VertexColor
       AddProjectionMatrix: true
       AddEntityID: true
@@ -244,11 +253,12 @@ Assets:
         Elements:
           - Name: u_ViewProjection
             Type: mat4
-  - AssetHandle: 8873796332098277330
-    MetaData:
-      CheckSum: 7a09379c059ddd92d4139f7bf07f80071221612f3145f890dbf43128b6b66809
-      IntermediateLocation: Shader\8873796332098277330
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 8873796332098277330
+      Hash: 7a09379c059ddd92d4139f7bf07f80071221612f3145f890dbf43128b6b66809
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: FlatColor
       AddProjectionMatrix: true
       AddEntityID: false
@@ -266,11 +276,12 @@ Assets:
         Elements:
           - Name: u_ViewProjection
             Type: mat4
-  - AssetHandle: 9932182199494494388
-    MetaData:
-      CheckSum: c05d377cab3fa1c4598e9193e9dd384e189df01bebf309b3a55982f48c30cee9
-      IntermediateLocation: Shader\9932182199494494388
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 9932182199494494388
+      Hash: c05d377cab3fa1c4598e9193e9dd384e189df01bebf309b3a55982f48c30cee9
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: FlatColor
       AddProjectionMatrix: true
       AddEntityID: false
@@ -294,11 +305,12 @@ Assets:
         Elements:
           - Name: u_ViewProjection
             Type: mat4
-  - AssetHandle: 541013180163539852
-    MetaData:
-      CheckSum: 6a24a5d432126f01043ff32d217a659009151637a508ce72aee410139d31a209
-      IntermediateLocation: Shader\541013180163539852
-      AssetType: Shader
+  - Metadata:
+      Name: ""
+      Handle: 541013180163539852
+      Hash: 6a24a5d432126f01043ff32d217a659009151637a508ce72aee410139d31a209
+      IsHidden: true
+    MetadataExtension:
       ColorInputType: FlatColor
       AddProjectionMatrix: true
       AddEntityID: false

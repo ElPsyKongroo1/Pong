@@ -2,33 +2,39 @@ ModuleName: Scenes
 TypeName: Scene
 TypeID: 1226184432
 Assets:
-  - AssetHandle: 4149337072942010858
-    MetaData:
-      CheckSum: 171ed5c8163272eec943a747ce8e55cfe39463613e608cbc3b20d90f1ceddb62
-      FileLocation: Scenes/MainMenu/main_menu.kgscene
-      AssetType: Scene
-  - AssetHandle: 12088062788627164698
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Scenes/SinglePlayer/level_3.kgscene
-      AssetType: Scene
-  - AssetHandle: 9638216380065234896
-    MetaData:
-      CheckSum: 64600c5cc2b241804fe43439fffe4b8d32553066cb5b5e880fe7e39848acd7e4
-      FileLocation: Scenes/SinglePlayer/level_1.kgscene
-      AssetType: Scene
-  - AssetHandle: 7990001858466597669
-    MetaData:
-      CheckSum: 4029b8d72560efc7c209bc3fced2053333637d077f560576f071526845cfc333
-      FileLocation: Scenes/LocalMultiplayer/local_multiplayer.kgscene
-      AssetType: Scene
-  - AssetHandle: 2896275651350929705
-    MetaData:
-      CheckSum: 4029b8d72560efc7c209bc3fced2053333637d077f560576f071526845cfc333
-      FileLocation: Scenes/OnlineMultiplayer/online_multiplayer.kgscene
-      AssetType: Scene
-  - AssetHandle: 3787373636680652895
-    MetaData:
-      CheckSum: 8c65f5ae91e06476a931716c65164ce1725f84a2678f1a726767623863f18df4
-      FileLocation: Scenes/SinglePlayer/level_2.kgscene
-      AssetType: Scene
+  - Metadata:
+      Name: main_menu
+      Handle: 4149337072942010858
+      Hash: 171ed5c8163272eec943a747ce8e55cfe39463613e608cbc3b20d90f1ceddb62
+      FileDirectory: Scenes/MainMenu
+      IsHidden: false
+  - Metadata:
+      Name: level_3
+      Handle: 12088062788627164698
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Scenes/SinglePlayer
+      IsHidden: false
+  - Metadata:
+      Name: level_1
+      Handle: 9638216380065234896
+      Hash: 64600c5cc2b241804fe43439fffe4b8d32553066cb5b5e880fe7e39848acd7e4
+      FileDirectory: Scenes/SinglePlayer
+      IsHidden: false
+  - Metadata:
+      Name: local_multiplayer
+      Handle: 7990001858466597669
+      Hash: 4029b8d72560efc7c209bc3fced2053333637d077f560576f071526845cfc333
+      FileDirectory: Scenes/LocalMultiplayer
+      IsHidden: false
+  - Metadata:
+      Name: online_multiplayer
+      Handle: 2896275651350929705
+      Hash: 4029b8d72560efc7c209bc3fced2053333637d077f560576f071526845cfc333
+      FileDirectory: Scenes/OnlineMultiplayer
+      IsHidden: false
+  - Metadata:
+      Name: level_2
+      Handle: 3787373636680652895
+      Hash: 8c65f5ae91e06476a931716c65164ce1725f84a2678f1a726767623863f18df4
+      FileDirectory: Scenes/SinglePlayer
+      IsHidden: false

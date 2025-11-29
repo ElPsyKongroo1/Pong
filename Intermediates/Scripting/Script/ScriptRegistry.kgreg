@@ -119,347 +119,432 @@ Assets:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 52700902773466490
-    Metadata:
-      Hash: ""
-      FileDirectory: ""
+  - Metadata:
       Name: RequestUserCount
+      Handle: 52700902773466490
+      Hash: ""
+      IsHidden: true
+    MetadataExtension:
       SectionLabel: Network
       ScriptType: Engine
       FunctionType: Void_None
-  - Handle: 9792081380113944440
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/LocalMultiplayer/OpenLocalMultiplayer.kgscript
+  - Metadata:
       Name: OpenLocalMultiplayer
+      Handle: 9792081380113944440
+      Hash: ""
+      FileDirectory: Scenes/LocalMultiplayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 3176244785148247992
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/OnlineMultiplayer/UpdateSessionUserSlot.kgscript
+  - Metadata:
       Name: UpdateSessionUserSlot
+      Handle: 3176244785148247992
+      Hash: ""
+      FileDirectory: Scenes/OnlineMultiplayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_UInt16
-  - Handle: 18163504705534252383
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/MainMenu/UpdateOnlineCount.kgscript
+  - Metadata:
       Name: UpdateOnlineCount
+      Handle: 18163504705534252383
+      Hash: ""
+      FileDirectory: Scenes/MainMenu
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_UInt32
-  - Handle: 2531625332741118375
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player1/CollidePlayer1.kgscript
+  - Metadata:
       Name: CollidePlayer1
+      Handle: 2531625332741118375
+      Hash: ""
+      FileDirectory: Entities/Player1
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player1
       ScriptType: Project
       FunctionType: Void_Entity
-  - Handle: 7445822592925037095
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/OnlineMultiplayer/UserLeftSession.kgscript
+  - Metadata:
       Name: UserLeftSession
+      Handle: 7445822592925037095
+      Hash: ""
+      FileDirectory: Scenes/OnlineMultiplayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_UInt16
-  - Handle: 10443826727051684839
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/SinglePlayer/OpenLevel3.kgscript
+  - Metadata:
       Name: OpenLevel3
+      Handle: 10443826727051684839
+      Hash: ""
+      FileDirectory: Scenes/SinglePlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 8444652895326507655
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/OnlineMultiplayer/OnCurrentSessionInit.kgscript
+  - Metadata:
       Name: OnCurrentSessionInit
+      Handle: 8444652895326507655
+      Hash: ""
+      FileDirectory: Scenes/OnlineMultiplayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 14942570159458352892
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/OnlineMultiplayer/ApproveJoinSession.kgscript
+  - Metadata:
       Name: ApproveJoinSession
+      Handle: 14942570159458352892
+      Hash: ""
+      FileDirectory: Scenes/OnlineMultiplayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_UInt16
-  - Handle: 1819971799574496652
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/OnlineMultiplayer/OnStartSession.kgscript
+  - Metadata:
       Name: OnStartSession
+      Handle: 1819971799574496652
+      Hash: ""
+      FileDirectory: Scenes/OnlineMultiplayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 1999882109195364397
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player2/HumanPlayer2MoveDown.kgscript
+  - Metadata:
       Name: HumanPlayer2MoveDown
+      Handle: 1999882109195364397
+      Hash: ""
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player2
       ScriptType: Project
       FunctionType: Void_Float
-  - Handle: 14683932765512752045
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/MainMenu/OpenMainMenu.kgscript
+  - Metadata:
       Name: OpenMainMenu
+      Handle: 14683932765512752045
+      Hash: ""
+      FileDirectory: Scenes/MainMenu
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 8789585231544477845
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/SinglePlayer/AdvanceLevel.kgscript
+  - Metadata:
       Name: AdvanceLevel
+      Handle: 8789585231544477845
+      Hash: ""
+      FileDirectory: Scenes/SinglePlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 6709451835263357269
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/LeftWall/CollideLeftWall.kgscript
+  - Metadata:
       Name: CollideLeftWall
+      Handle: 6709451835263357269
+      Hash: ""
+      FileDirectory: Entities/LeftWall
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_Entity
-  - Handle: 4342390925410131221
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/MainMenu/OnConnectionTerminated.kgscript
+  - Metadata:
       Name: OnConnectionTerminated
+      Handle: 4342390925410131221
+      Hash: ""
+      FileDirectory: Scenes/MainMenu
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 10084874495135235605
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/TopBottomWall/TopAndBottomWallCollision.kgscript
+  - Metadata:
       Name: TopAndBottomWallCollision
+      Handle: 10084874495135235605
+      Hash: ""
+      FileDirectory: Entities/TopBottomWall
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_Entity
-  - Handle: 6410065240318073462
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/OnlineMultiplayer/StartOnlineGame.kgscript
+  - Metadata:
       Name: StartOnlineGame
+      Handle: 6410065240318073462
+      Hash: ""
+      FileDirectory: Scenes/OnlineMultiplayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 11068697129652250038
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/OnlineMultiplayer/OnReceiveSignal.kgscript
+  - Metadata:
       Name: OnReceiveSignal
+      Handle: 11068697129652250038
+      Hash: ""
+      FileDirectory: Scenes/OnlineMultiplayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_UInt16
-  - Handle: 16153596612733903350
-    Metadata:
-      Hash: ""
-      FileDirectory: TestSelectOption.kgscript
+  - Metadata:
       Name: TestSelectOption
+      Handle: 16153596612733903350
+      Hash: ""
+      FileDirectory: ""
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_String
-  - Handle: 16979334666329041451
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/MainMenu/PlayMenuSelect.kgscript
+  - Metadata:
       Name: PlayMenuSelect
+      Handle: 16979334666329041451
+      Hash: ""
+      FileDirectory: Scenes/MainMenu
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 4174533717311968573
-    Metadata:
-      Hash: ""
-      FileDirectory: Common/Scripts/StartGame.kgscript
+  - Metadata:
       Name: StartGame
+      Handle: 4174533717311968573
+      Hash: ""
+      FileDirectory: Common/Scripts
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 7738105161376028605
-    Metadata:
+  - Metadata:
+	  Name: SeekBottomOnUpdate
+	  Handle: 7738105161376028605
       Hash: ""
-      FileDirectory: Entities/AIPlayer/SeekBottomOnUpdate.kgscript
-      Name: SeekBottomOnUpdate
+      FileDirectory: Entities/AIPlayer
+	  IsHidden: false
+	MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - Handle: 9499119451679759743
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/SinglePlayer/OpenLevel1.kgscript
+  - Metadata:
       Name: OpenLevel1
+      Handle: 9499119451679759743
+      Hash: ""
+      FileDirectory: Scenes/SinglePlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 16529960685084797723
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/AIPlayer/SeekBallOnUpdate.kgscript
+  - Metadata:
       Name: SeekBallOnUpdate
+      Handle: 16529960685084797723
+      Hash: ""
+      FileDirectory: Entities/AIPlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - Handle: 6027775384912296269
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/AIPlayer/DeflectBallOnUpdate.kgscript
+  - Metadata:
       Name: DeflectBallOnUpdate
+      Handle: 6027775384912296269
+      Hash: ""
+      FileDirectory: Entities/AIPlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - Handle: 4123990790092982149
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player2/Player2UpdateNetwork.kgscript
+  - Metadata:
       Name: Player2UpdateNetwork
+      Handle: 4123990790092982149
+      Hash: ""
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player2
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - Handle: 17663267411682966021
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player1/HumanPlayer1MoveDown.kgscript
+  - Metadata:
       Name: HumanPlayer1MoveDown
+      Handle: 17663267411682966021
+      Hash: ""
+      FileDirectory: Entities/Player1
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player1
       ScriptType: Project
       FunctionType: Void_Float
-  - Handle: 7368807452301553305
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/MainMenu/OnMoveCursor.kgscript
+  - Metadata:
       Name: OnMoveCursor
+      Handle: 7368807452301553305
+      Hash: ""
+      FileDirectory: Scenes/MainMenu
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 2498594022309521241
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player2/OnlinePlayer2MoveDown.kgscript
+  - Metadata:
       Name: OnlinePlayer2MoveDown
+      Handle: 2498594022309521241
+      Hash: ""
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_Float
-  - Handle: 4215689466214846297
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player1/Player1UpdateNetwork.kgscript
+  - Metadata:
       Name: Player1UpdateNetwork
+      Handle: 4215689466214846297
+      Hash: ""
+      FileDirectory: Entities/Player1
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player1
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - Handle: 999965023660255332
-    Metadata:
+  - Metadata:
+      Name: BallOnlineCollisionS
+      Handle: 999965023660255332
       Hash: ""
-      FileDirectory: Entities/Ball/BallOnlineCollisionStart.kgscript
-      Name: BallOnlineCollisionStart
+      FileDirectory: Entities/Ball
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Bool_EntityEntity
-  - Handle: 3783829485309015347
-    Metadata:
+  - Metadata:
+      Name: BallOnlineCollisionEn
+      Handle: 3783829485309015347
       Hash: ""
-      FileDirectory: Entities/Ball/BallOnlineCollisionEnd.kgscript
-      Name: BallOnlineCollisionEnd
+      FileDirectory: Entities/Ball
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Bool_EntityEntity
-  - Handle: 7644438049354328755
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/MainMenu/OpenGit.kgscript
+  - Metadata:
       Name: OpenGit
+      Handle: 7644438049354328755
+      Hash: ""
+      FileDirectory: Scenes/MainMenu
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 5225808214055830548
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/AIPlayer/SeekTopOnUpdate.kgscript
+  - Metadata:
       Name: SeekTopOnUpdate
+      Handle: 5225808214055830548
+      Hash: ""
+      FileDirectory: Entities/AIPlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - Handle: 14590248082933266772
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player2/CollidePlayer2.kgscript
+  - Metadata:
       Name: CollidePlayer2
+      Handle: 14590248082933266772
+      Hash: ""
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player2
       ScriptType: Project
       FunctionType: Void_Entity
-  - Handle: 5863822563239777620
-    Metadata:
+  - Metadata:
+      Name: BallSinglePlayerColli
+      Handle: 5863822563239777620
       Hash: ""
-      FileDirectory: Entities/Ball/BallSinglePlayerCollisionStart.kgscript
-      Name: BallSinglePlayerCollisionStart
+      FileDirectory: Entities/Ball
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Bool_EntityEntity
-  - Handle: 17122519835301787425
-    Metadata:
+  - Metadata:
+      Name: BallSinglePlayerCollis
+      Handle: 17122519835301787425
       Hash: ""
-      FileDirectory: Entities/Ball/BallSinglePlayerCollisionEnd.kgscript
-      Name: BallSinglePlayerCollisionEnd
+      FileDirectory: Entities/Ball
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Bool_EntityEntity
-  - Handle: 17320919192941041126
-    Metadata:
+  - Metadata:
+      Name: BallLocalMultiCollisio
+      Handle: 17320919192941041126
       Hash: ""
-      FileDirectory: Entities/Ball/BallLocalMultiCollisionStart.kgscript
-      Name: BallLocalMultiCollisionStart
+      FileDirectory: Entities/Ball
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Bool_EntityEntity
-  - Handle: 12011633535146257500
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/RightWall/CollideRightWall.kgscript
+  - Metadata:
       Name: CollideRightWall
+      Handle: 12011633535146257500
+      Hash: ""
+      FileDirectory: Entities/RightWall
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_Entity
-  - Handle: 12910469246813180793
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/SinglePlayer/OpenLevel2.kgscript
+  - Metadata:
       Name: OpenLevel2
+      Handle: 12910469246813180793
+      Hash: ""
+      FileDirectory: Scenes/SinglePlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 6824987728482183937
-    Metadata:
-      Hash: ""
-      FileDirectory: Scenes/SinglePlayer/OpenCurrentLevel.kgscript
+  - Metadata:
       Name: OpenCurrentLevel
+      Handle: 6824987728482183937
+      Hash: ""
+      FileDirectory: Scenes/SinglePlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_None
-  - Handle: 13868106195775915601
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player1/HumanPlayer1MoveUp.kgscript
+  - Metadata:
       Name: HumanPlayer1MoveUp
+      Handle: 13868106195775915601
+      Hash: ""
+      FileDirectory: Entities/Player1
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player1
       ScriptType: Project
       FunctionType: Void_Float
-  - Handle: 8669463774795395936
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player1/Player1MoveUp.kgscript
+  - Metadata:
       Name: Player1MoveUp
+      Handle: 8669463774795395936
+      Hash: ""
+      FileDirectory: Entities/Player1
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player1
       ScriptType: Project
       FunctionType: ArbitraryFunction
@@ -471,11 +556,13 @@ Assets:
         ParameterNames:
           - deltaTime
           - isDashing
-  - Handle: 1703785554788211838
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player1/Player1MoveDown.kgscript
+  - Metadata:
       Name: Player1MoveDown
+      Handle: 1703785554788211838
+      Hash: ""
+      FileDirectory: Entities/Player1
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player1
       ScriptType: Project
       FunctionType: ArbitraryFunction
@@ -487,19 +574,23 @@ Assets:
         ParameterNames:
           - deltaTime
           - isDashing
-  - Handle: 1635208331362123774
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/AIPlayer/DetermineDash.kgscript
+  - Metadata:
       Name: DetermineDash
+      Handle: 1635208331362123774
+      Hash: ""
+      FileDirectory: Entities/AIPlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: None
       ScriptType: Project
       FunctionType: Void_Entity
-  - Handle: 12717461188924100105
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player2/Player2MoveDown.kgscript
+  - Metadata:
       Name: Player2MoveDown
+      Handle: 12717461188924100105
+      Hash: ""
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player2
       ScriptType: Project
       FunctionType: ArbitraryFunction
@@ -511,11 +602,13 @@ Assets:
         ParameterNames:
           - deltaTime
           - isDashing
-  - Handle: 14219351872605321595
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player2/Player2MoveUp.kgscript
+  - Metadata:
       Name: Player2MoveUp
+      Handle: 14219351872605321595
+      Hash: ""
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player2
       ScriptType: Project
       FunctionType: ArbitraryFunction
@@ -527,27 +620,33 @@ Assets:
         ParameterNames:
           - deltaTime
           - isDashing
-  - Handle: 15386152439784142366
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/AIPlayer/SeekMiddleOnUpdate.kgscript
+  - Metadata:
       Name: SeekMiddleOnUpdate
+      Handle: 15386152439784142366
+      Hash: ""
+      FileDirectory: Entities/AIPlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - Handle: 9750592705201690740
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/AIPlayer/AvoidBallOnUpdate.kgscript
+  - Metadata:
       Name: AvoidBallOnUpdate
+      Handle: 9750592705201690740
+      Hash: ""
+      FileDirectory: Entities/AIPlayer
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Ball
       ScriptType: Project
       FunctionType: Void_EntityFloat
-  - Handle: 4166844194915686743
-    Metadata:
-      Hash: ""
-      FileDirectory: Entities/Player2/OnlinePlayer2MoveUp.kgscript
+  - Metadata:
       Name: OnlinePlayer2MoveUp
+      Handle: 4166844194915686743
+      Hash: ""
+      FileDirectory: Entities/Player2
+      IsHidden: false
+    MetadataExtension:
       SectionLabel: Player2
       ScriptType: Project
       FunctionType: Void_Float

@@ -1,1 +1,1343 @@
-Name: Impact
+AtlasWidth: 512
+AtlasHeight: 512
+LineHeight: 1.21972656
+Ascender: 1.00878906
+Descender: -0.2109375
+Characters:
+  - Character: 32
+    Size: [0, 0]
+    TexCoordinateMin: [0, 0]
+    TexCoordinateMax: [0, 0]
+    QuadMin: [0, 0]
+    QuadMax: [0, 0]
+    Advance: 0.176269531
+  - Character: 33
+    Size: [12, 35]
+    TexCoordinateMin: [461.5, 355.5]
+    TexCoordinateMax: [472.5, 389.5]
+    QuadMin: [0.00605468731, -0.0297363289]
+    QuadMax: [0.281054676, 0.820263684]
+    Advance: 0.270019531
+  - Character: 34
+    Size: [17, 14]
+    TexCoordinateMin: [82.5, 240.5]
+    TexCoordinateMax: [98.5, 253.5]
+    QuadMin: [-0.0151855471, 0.500830054]
+    QuadMax: [0.384814441, 0.825830102]
+    Advance: 0.369628906
+  - Character: 35
+    Size: [27, 32]
+    TexCoordinateMin: [340.5, 287.5]
+    TexCoordinateMax: [366.5, 318.5]
+    QuadMin: [-0.0117675783, -0.0349609368]
+    QuadMax: [0.63823241, 0.740039051]
+    Advance: 0.626464844
+  - Character: 36
+    Size: [23, 41]
+    TexCoordinateMin: [358.5, 471.5]
+    TexCoordinateMax: [380.5, 511.5]
+    QuadMin: [-0.00156250002, -0.109619141]
+    QuadMax: [0.548437476, 0.890380859]
+    Advance: 0.547363281
+  - Character: 37
+    Size: [30, 36]
+    TexCoordinateMin: [449.5, 391.5]
+    TexCoordinateMax: [478.5, 426.5]
+    QuadMin: [-0.0160644539, -0.0422363281]
+    QuadMax: [0.708935559, 0.832763672]
+    Advance: 0.692871094
+  - Character: 38
+    Size: [26, 31]
+    TexCoordinateMin: [367.5, 288.5]
+    TexCoordinateMax: [392.5, 318.5]
+    QuadMin: [-0.015625, -0.0463867188]
+    QuadMax: [0.609375, 0.703613281]
+    Advance: 0.576171875
+  - Character: 39
+    Size: [9, 14]
+    TexCoordinateMin: [99.5, 240.5]
+    TexCoordinateMax: [107.5, 253.5]
+    QuadMin: [-0.00771484384, 0.500830054]
+    QuadMax: [0.19228515, 0.825830102]
+    Advance: 0.185058594
+  - Character: 40
+    Size: [14, 35]
+    TexCoordinateMin: [473.5, 355.5]
+    TexCoordinateMax: [486.5, 389.5]
+    QuadMin: [0.00571289053, -0.0297363289]
+    QuadMax: [0.330712885, 0.820263684]
+    Advance: 0.313476562
+  - Character: 41
+    Size: [14, 35]
+    TexCoordinateMin: [0.5, 319.5]
+    TexCoordinateMax: [13.5, 353.5]
+    QuadMin: [-0.017724609, -0.0297363289]
+    QuadMax: [0.307275385, 0.820263684]
+    Advance: 0.313476562
+  - Character: 42
+    Size: [14, 13]
+    TexCoordinateMin: [117.5, 241.5]
+    TexCoordinateMax: [130.5, 253.5]
+    QuadMin: [-0.0221191403, 0.519433618]
+    QuadMax: [0.302880853, 0.81943357]
+    Advance: 0.280761719
+  - Character: 43
+    Size: [22, 22]
+    TexCoordinateMin: [389.5, 262.5]
+    TexCoordinateMax: [410.5, 283.5]
+    QuadMin: [0.00410156231, 0.132519528]
+    QuadMax: [0.529101551, 0.657519519]
+    Advance: 0.533203125
+  - Character: 44
+    Size: [9, 14]
+    TexCoordinateMin: [108.5, 240.5]
+    TexCoordinateMax: [116.5, 253.5]
+    QuadMin: [-0.0162597653, -0.135644525]
+    QuadMax: [0.183740228, 0.189355463]
+    Advance: 0.16796875
+  - Character: 45
+    Size: [14, 9]
+    TexCoordinateMin: [187.5, 245.5]
+    TexCoordinateMax: [200.5, 253.5]
+    QuadMin: [-0.0152832028, 0.223974615]
+    QuadMax: [0.309716791, 0.423974603]
+    Advance: 0.294433594
+  - Character: 46
+    Size: [9, 10]
+    TexCoordinateMin: [164.5, 244.5]
+    TexCoordinateMax: [172.5, 253.5]
+    QuadMin: [-0.007958984, -0.0319335945]
+    QuadMax: [0.19204101, 0.193066403]
+    Advance: 0.184570312
+  - Character: 47
+    Size: [19, 36]
+    TexCoordinateMin: [479.5, 391.5]
+    TexCoordinateMax: [497.5, 426.5]
+    QuadMin: [-0.0272460934, -0.0422363281]
+    QuadMax: [0.4227539, 0.832763672]
+    Advance: 0.395507812
+  - Character: 48
+    Size: [22, 36]
+    TexCoordinateMin: [0.5, 354.5]
+    TexCoordinateMax: [21.5, 389.5]
+    QuadMin: [0.00532226544, -0.0422363281]
+    QuadMax: [0.530322254, 0.832763672]
+    Advance: 0.536132812
+  - Character: 49
+    Size: [17, 35]
+    TexCoordinateMin: [14.5, 319.5]
+    TexCoordinateMax: [30.5, 353.5]
+    QuadMin: [-0.0273925774, -0.0297363289]
+    QuadMax: [0.37260741, 0.820263684]
+    Advance: 0.380859375
+  - Character: 50
+    Size: [22, 36]
+    TexCoordinateMin: [22.5, 354.5]
+    TexCoordinateMax: [43.5, 389.5]
+    QuadMin: [-0.0103027346, -0.0346679688]
+    QuadMax: [0.514697254, 0.840332031]
+    Advance: 0.501953125
+  - Character: 51
+    Size: [22, 36]
+    TexCoordinateMin: [58.5, 354.5]
+    TexCoordinateMax: [79.5, 389.5]
+    QuadMin: [-0.000537109387, -0.0422363281]
+    QuadMax: [0.524462879, 0.832763672]
+    Advance: 0.530273438
+  - Character: 52
+    Size: [23, 35]
+    TexCoordinateMin: [63.5, 319.5]
+    TexCoordinateMax: [85.5, 353.5]
+    QuadMin: [-0.025244141, -0.0297363289]
+    QuadMax: [0.524755836, 0.820263684]
+    Advance: 0.499511719
+  - Character: 53
+    Size: [22, 36]
+    TexCoordinateMin: [80.5, 354.5]
+    TexCoordinateMax: [101.5, 389.5]
+    QuadMin: [0.00581054669, -0.0498046875]
+    QuadMax: [0.530810535, 0.825195312]
+    Advance: 0.536621094
+  - Character: 54
+    Size: [22, 36]
+    TexCoordinateMin: [102.5, 354.5]
+    TexCoordinateMax: [123.5, 389.5]
+    QuadMin: [0.00947265606, -0.0419921875]
+    QuadMax: [0.534472644, 0.833007812]
+    Advance: 0.541503906
+  - Character: 55
+    Size: [19, 35]
+    TexCoordinateMin: [86.5, 319.5]
+    TexCoordinateMax: [104.5, 353.5]
+    QuadMin: [-0.0306640621, -0.0297363289]
+    QuadMax: [0.419335932, 0.820263684]
+    Advance: 0.391601562
+  - Character: 56
+    Size: [22, 36]
+    TexCoordinateMin: [124.5, 354.5]
+    TexCoordinateMax: [145.5, 389.5]
+    QuadMin: [0.00458984356, -0.0422363281]
+    QuadMax: [0.529589832, 0.832763672]
+    Advance: 0.534667969
+  - Character: 57
+    Size: [22, 36]
+    TexCoordinateMin: [146.5, 354.5]
+    TexCoordinateMax: [167.5, 389.5]
+    QuadMin: [0.00947265606, -0.0424804688]
+    QuadMax: [0.534472644, 0.832519531]
+    Advance: 0.541503906
+  - Character: 58
+    Size: [9, 24]
+    TexCoordinateMin: [314.5, 260.5]
+    TexCoordinateMax: [322.5, 283.5]
+    QuadMin: [0.009619141, -0.0301757809]
+    QuadMax: [0.209619135, 0.544824243]
+    Advance: 0.202148438
+  - Character: 59
+    Size: [9, 28]
+    TexCoordinateMin: [247.5, 256.5]
+    TexCoordinateMax: [255.5, 283.5]
+    QuadMin: [0.009619141, -0.130712897]
+    QuadMax: [0.209619135, 0.544287086]
+    Advance: 0.202148438
+  - Character: 60
+    Size: [22, 23]
+    TexCoordinateMin: [345.5, 261.5]
+    TexCoordinateMax: [366.5, 283.5]
+    QuadMin: [0.00410156231, 0.128808588]
+    QuadMax: [0.529101551, 0.67880857]
+    Advance: 0.533203125
+  - Character: 61
+    Size: [22, 16]
+    TexCoordinateMin: [44.5, 238.5]
+    TexCoordinateMax: [65.5, 253.5]
+    QuadMin: [0.00410156231, 0.207519531]
+    QuadMax: [0.529101551, 0.582519531]
+    Advance: 0.533203125
+  - Character: 62
+    Size: [22, 23]
+    TexCoordinateMin: [323.5, 261.5]
+    TexCoordinateMax: [344.5, 283.5]
+    QuadMin: [0.00410156231, 0.128808588]
+    QuadMax: [0.529101551, 0.67880857]
+    Advance: 0.533203125
+  - Character: 63
+    Size: [22, 36]
+    TexCoordinateMin: [168.5, 354.5]
+    TexCoordinateMax: [189.5, 389.5]
+    QuadMin: [0.0114257811, -0.0339355469]
+    QuadMax: [0.536425769, 0.841064453]
+    Advance: 0.524902344
+  - Character: 64
+    Size: [33, 37]
+    TexCoordinateMin: [351.5, 431.5]
+    TexCoordinateMax: [383.5, 467.5]
+    QuadMin: [-0.0120605472, -0.0647460967]
+    QuadMax: [0.787939429, 0.835253894]
+    Advance: 0.774902344
+  - Character: 65
+    Size: [24, 35]
+    TexCoordinateMin: [105.5, 319.5]
+    TexCoordinateMax: [128.5, 353.5]
+    QuadMin: [-0.0335937515, -0.0297363289]
+    QuadMax: [0.541406274, 0.820263684]
+    Advance: 0.5078125
+  - Character: 66
+    Size: [23, 35]
+    TexCoordinateMin: [129.5, 319.5]
+    TexCoordinateMax: [151.5, 353.5]
+    QuadMin: [0.00527343759, -0.0297363289]
+    QuadMax: [0.555273414, 0.820263684]
+    Advance: 0.552246094
+  - Character: 67
+    Size: [23, 36]
+    TexCoordinateMin: [190.5, 354.5]
+    TexCoordinateMax: [212.5, 389.5]
+    QuadMin: [0.00307617197, -0.0422363281]
+    QuadMax: [0.553076148, 0.832763672]
+    Advance: 0.553710938
+  - Character: 68
+    Size: [23, 35]
+    TexCoordinateMin: [152.5, 319.5]
+    TexCoordinateMax: [174.5, 353.5]
+    QuadMin: [0.00405273447, -0.0297363289]
+    QuadMax: [0.554052711, 0.820263684]
+    Advance: 0.552734375
+  - Character: 69
+    Size: [18, 35]
+    TexCoordinateMin: [175.5, 319.5]
+    TexCoordinateMax: [192.5, 353.5]
+    QuadMin: [0.00673828134, -0.0297363289]
+    QuadMax: [0.431738287, 0.820263684]
+    Advance: 0.415527344
+  - Character: 70
+    Size: [17, 35]
+    TexCoordinateMin: [193.5, 319.5]
+    TexCoordinateMax: [209.5, 353.5]
+    QuadMin: [0.0150878904, -0.0297363289]
+    QuadMax: [0.415087879, 0.820263684]
+    Advance: 0.397949219
+  - Character: 71
+    Size: [23, 36]
+    TexCoordinateMin: [213.5, 354.5]
+    TexCoordinateMax: [235.5, 389.5]
+    QuadMin: [-0.00107421877, -0.0422363281]
+    QuadMax: [0.548925757, 0.832763672]
+    Advance: 0.551269531
+  - Character: 72
+    Size: [22, 35]
+    TexCoordinateMin: [210.5, 319.5]
+    TexCoordinateMax: [231.5, 353.5]
+    QuadMin: [0.0148437498, -0.0297363289]
+    QuadMax: [0.539843738, 0.820263684]
+    Advance: 0.555175781
+  - Character: 73
+    Size: [12, 35]
+    TexCoordinateMin: [499.5, 355.5]
+    TexCoordinateMax: [510.5, 389.5]
+    QuadMin: [0.00629882794, -0.0297363289]
+    QuadMax: [0.281298816, 0.820263684]
+    Advance: 0.288085938
+  - Character: 74
+    Size: [15, 35]
+    TexCoordinateMin: [232.5, 319.5]
+    TexCoordinateMax: [246.5, 353.5]
+    QuadMin: [-0.0243652351, -0.0297363289]
+    QuadMax: [0.325634778, 0.820263684]
+    Advance: 0.331054688
+  - Character: 75
+    Size: [24, 35]
+    TexCoordinateMin: [247.5, 319.5]
+    TexCoordinateMax: [270.5, 353.5]
+    QuadMin: [0.00400390616, -0.0297363289]
+    QuadMax: [0.57900393, 0.820263684]
+    Advance: 0.536621094
+  - Character: 76
+    Size: [17, 35]
+    TexCoordinateMin: [271.5, 319.5]
+    TexCoordinateMax: [287.5, 353.5]
+    QuadMin: [0.00629882794, -0.0297363289]
+    QuadMax: [0.406298816, 0.820263684]
+    Advance: 0.380371094
+  - Character: 77
+    Size: [29, 35]
+    TexCoordinateMin: [288.5, 319.5]
+    TexCoordinateMax: [316.5, 353.5]
+    QuadMin: [0.00815429725, -0.0297363289]
+    QuadMax: [0.708154321, 0.820263684]
+    Advance: 0.716796875
+  - Character: 78
+    Size: [22, 35]
+    TexCoordinateMin: [317.5, 319.5]
+    TexCoordinateMax: [338.5, 353.5]
+    QuadMin: [0.00800781231, -0.0297363289]
+    QuadMax: [0.533007801, 0.820263684]
+    Advance: 0.541503906
+  - Character: 79
+    Size: [23, 36]
+    TexCoordinateMin: [236.5, 354.5]
+    TexCoordinateMax: [258.5, 389.5]
+    QuadMin: [-0.00205078116, -0.0422363281]
+    QuadMax: [0.547949195, 0.832763672]
+    Advance: 0.546386719
+  - Character: 80
+    Size: [21, 35]
+    TexCoordinateMin: [339.5, 319.5]
+    TexCoordinateMax: [359.5, 353.5]
+    QuadMin: [0.0124511719, -0.0297363289]
+    QuadMax: [0.512451172, 0.820263684]
+    Advance: 0.501953125
+  - Character: 81
+    Size: [23, 40]
+    TexCoordinateMin: [122.5, 428.5]
+    TexCoordinateMax: [144.5, 467.5]
+    QuadMin: [-0.00180664065, -0.131787106]
+    QuadMax: [0.548193336, 0.843212903]
+    Advance: 0.546386719
+  - Character: 82
+    Size: [22, 35]
+    TexCoordinateMin: [450.5, 319.5]
+    TexCoordinateMax: [471.5, 353.5]
+    QuadMin: [0.00800781231, -0.0297363289]
+    QuadMax: [0.533007801, 0.820263684]
+    Advance: 0.538574219
+  - Character: 83
+    Size: [22, 36]
+    TexCoordinateMin: [259.5, 354.5]
+    TexCoordinateMax: [280.5, 389.5]
+    QuadMin: [-0.00371093745, -0.0422363281]
+    QuadMax: [0.521289051, 0.832763672]
+    Advance: 0.517089844
+  - Character: 84
+    Size: [21, 35]
+    TexCoordinateMin: [487.5, 319.5]
+    TexCoordinateMax: [507.5, 353.5]
+    QuadMin: [-0.01953125, -0.0297363289]
+    QuadMax: [0.48046875, 0.820263684]
+    Advance: 0.4609375
+  - Character: 85
+    Size: [22, 36]
+    TexCoordinateMin: [281.5, 354.5]
+    TexCoordinateMax: [302.5, 389.5]
+    QuadMin: [0.0106933592, -0.0505371094]
+    QuadMax: [0.535693347, 0.824462891]
+    Advance: 0.546875
+  - Character: 86
+    Size: [25, 35]
+    TexCoordinateMin: [487.5, 477.5]
+    TexCoordinateMax: [511.5, 511.5]
+    QuadMin: [-0.0382812507, -0.0297363289]
+    QuadMax: [0.561718762, 0.820263684]
+    Advance: 0.5234375
+  - Character: 87
+    Size: [36, 35]
+    TexCoordinateMin: [45.5, 284.5]
+    TexCoordinateMax: [80.5, 318.5]
+    QuadMin: [-0.0302734375, -0.0297363289]
+    QuadMax: [0.844726562, 0.820263684]
+    Advance: 0.814453125
+  - Character: 88
+    Size: [23, 35]
+    TexCoordinateMin: [81.5, 284.5]
+    TexCoordinateMax: [103.5, 318.5]
+    QuadMin: [-0.0279296879, -0.0297363289]
+    QuadMax: [0.522070289, 0.820263684]
+    Advance: 0.482421875
+  - Character: 89
+    Size: [23, 35]
+    TexCoordinateMin: [104.5, 284.5]
+    TexCoordinateMax: [126.5, 318.5]
+    QuadMin: [-0.0384277329, -0.0297363289]
+    QuadMax: [0.511572242, 0.820263684]
+    Advance: 0.473144531
+  - Character: 90
+    Size: [19, 35]
+    TexCoordinateMin: [127.5, 284.5]
+    TexCoordinateMax: [145.5, 318.5]
+    QuadMin: [-0.0296874996, -0.0297363289]
+    QuadMax: [0.420312494, 0.820263684]
+    Advance: 0.396972656
+  - Character: 91
+    Size: [12, 35]
+    TexCoordinateMin: [146.5, 284.5]
+    TexCoordinateMax: [157.5, 318.5]
+    QuadMin: [0.0150878904, -0.0297363289]
+    QuadMax: [0.290087879, 0.820263684]
+    Advance: 0.282226562
+  - Character: 92
+    Size: [19, 36]
+    TexCoordinateMin: [303.5, 354.5]
+    TexCoordinateMax: [321.5, 389.5]
+    QuadMin: [-0.0272460934, -0.0422363281]
+    QuadMax: [0.4227539, 0.832763672]
+    Advance: 0.395507812
+  - Character: 93
+    Size: [12, 35]
+    TexCoordinateMin: [158.5, 284.5]
+    TexCoordinateMax: [169.5, 318.5]
+    QuadMin: [-0.00834960956, -0.0297363289]
+    QuadMax: [0.266650379, 0.820263684]
+    Advance: 0.282226562
+  - Character: 94
+    Size: [22, 19]
+    TexCoordinateMin: [0.5, 235.5]
+    TexCoordinateMax: [21.5, 253.5]
+    QuadMin: [-0.0210449211, 0.37045899]
+    QuadMax: [0.503955066, 0.820459008]
+    Advance: 0.483398438
+  - Character: 95
+    Size: [26, 5]
+    TexCoordinateMin: [281.5, 249.5]
+    TexCoordinateMax: [306.5, 253.5]
+    QuadMin: [-0.0363769531, -0.150097653]
+    QuadMax: [0.588623047, -0.0500976555]
+    Advance: 0.552246094
+  - Character: 96
+    Size: [14, 9]
+    TexCoordinateMin: [173.5, 245.5]
+    TexCoordinateMax: [186.5, 253.5]
+    QuadMin: [-0.032617189, 0.699072242]
+    QuadMax: [0.292382807, 0.899072289]
+    Advance: 0.333496094
+  - Character: 97
+    Size: [21, 30]
+    TexCoordinateMin: [489.5, 289.5]
+    TexCoordinateMax: [509.5, 318.5]
+    QuadMin: [-0.00122070312, -0.0385253914]
+    QuadMax: [0.498779297, 0.686474621]
+    Advance: 0.50390625
+  - Character: 98
+    Size: [22, 36]
+    TexCoordinateMin: [322.5, 354.5]
+    TexCoordinateMax: [343.5, 389.5]
+    QuadMin: [-4.88281257e-05, -0.0480957031]
+    QuadMax: [0.52495116, 0.826904297]
+    Advance: 0.51953125
+  - Character: 99
+    Size: [21, 30]
+    TexCoordinateMin: [393.5, 289.5]
+    TexCoordinateMax: [413.5, 318.5]
+    QuadMin: [0.000244140625, -0.0385253914]
+    QuadMax: [0.500244141, 0.686474621]
+    Advance: 0.494628906
+  - Character: 100
+    Size: [22, 36]
+    TexCoordinateMin: [344.5, 354.5]
+    TexCoordinateMax: [365.5, 389.5]
+    QuadMin: [-0.00590820331, -0.0480957031]
+    QuadMax: [0.519091785, 0.826904297]
+    Advance: 0.51953125
+  - Character: 101
+    Size: [22, 30]
+    TexCoordinateMin: [414.5, 289.5]
+    TexCoordinateMax: [435.5, 318.5]
+    QuadMin: [-0.00688476581, -0.0385253914]
+    QuadMax: [0.518115222, 0.686474621]
+    Advance: 0.511230469
+  - Character: 102
+    Size: [15, 35]
+    TexCoordinateMin: [472.5, 319.5]
+    TexCoordinateMax: [486.5, 353.5]
+    QuadMin: [-0.0307128914, -0.0297363289]
+    QuadMax: [0.319287121, 0.820263684]
+    Advance: 0.2890625
+  - Character: 103
+    Size: [22, 34]
+    TexCoordinateMin: [214.5, 285.5]
+    TexCoordinateMax: [235.5, 318.5]
+    QuadMin: [-0.00615234394, -0.138574213]
+    QuadMax: [0.518847644, 0.686425805]
+    Advance: 0.518554688
+  - Character: 104
+    Size: [22, 35]
+    TexCoordinateMin: [428.5, 319.5]
+    TexCoordinateMax: [449.5, 353.5]
+    QuadMin: [0.000683593738, -0.0297363289]
+    QuadMax: [0.525683582, 0.820263684]
+    Advance: 0.523925781
+  - Character: 105
+    Size: [12, 35]
+    TexCoordinateMin: [416.5, 319.5]
+    TexCoordinateMax: [427.5, 353.5]
+    QuadMin: [-0.000781250012, -0.0297363289]
+    QuadMax: [0.274218738, 0.820263684]
+    Advance: 0.273925781
+  - Character: 106
+    Size: [13, 39]
+    TexCoordinateMin: [247.5, 429.5]
+    TexCoordinateMax: [259.5, 467.5]
+    QuadMin: [-0.0293945316, -0.125146478]
+    QuadMax: [0.270605475, 0.824853539]
+    Advance: 0.279785156
+  - Character: 107
+    Size: [21, 35]
+    TexCoordinateMin: [372.5, 319.5]
+    TexCoordinateMax: [392.5, 353.5]
+    QuadMin: [0.00952148438, -0.0297363289]
+    QuadMax: [0.509521484, 0.820263684]
+    Advance: 0.478027344
+  - Character: 108
+    Size: [12, 35]
+    TexCoordinateMin: [360.5, 319.5]
+    TexCoordinateMax: [371.5, 353.5]
+    QuadMin: [-0.000781250012, -0.0297363289]
+    QuadMax: [0.274218738, 0.820263684]
+    Advance: 0.273925781
+  - Character: 109
+    Size: [32, 30]
+    TexCoordinateMin: [0.5, 254.5]
+    TexCoordinateMax: [31.5, 283.5]
+    QuadMin: [-0.000781250012, -0.0326660164]
+    QuadMax: [0.774218738, 0.692333996]
+    Advance: 0.770996094
+  - Character: 110
+    Size: [22, 30]
+    TexCoordinateMin: [32.5, 254.5]
+    TexCoordinateMax: [53.5, 283.5]
+    QuadMin: [0.000195312503, -0.0326660164]
+    QuadMax: [0.525195301, 0.692333996]
+    Advance: 0.522949219
+  - Character: 111
+    Size: [22, 30]
+    TexCoordinateMin: [54.5, 254.5]
+    TexCoordinateMax: [75.5, 283.5]
+    QuadMin: [-0.00712890644, -0.0385253914]
+    QuadMax: [0.517871082, 0.686474621]
+    Advance: 0.511230469
+  - Character: 112
+    Size: [22, 34]
+    TexCoordinateMin: [192.5, 285.5]
+    TexCoordinateMax: [213.5, 318.5]
+    QuadMin: [-0.000292968762, -0.128808588]
+    QuadMax: [0.524707019, 0.69619143]
+    Advance: 0.519042969
+  - Character: 113
+    Size: [22, 34]
+    TexCoordinateMin: [170.5, 285.5]
+    TexCoordinateMax: [191.5, 318.5]
+    QuadMin: [-0.00664062519, -0.128808588]
+    QuadMax: [0.518359363, 0.69619143]
+    Advance: 0.518066406
+  - Character: 114
+    Size: [16, 30]
+    TexCoordinateMin: [119.5, 254.5]
+    TexCoordinateMax: [134.5, 283.5]
+    QuadMin: [0.00463867188, -0.0326660164]
+    QuadMax: [0.379638672, 0.692333996]
+    Advance: 0.357910156
+  - Character: 115
+    Size: [21, 30]
+    TexCoordinateMin: [98.5, 254.5]
+    TexCoordinateMax: [118.5, 283.5]
+    QuadMin: [-0.0131835938, -0.0385253914]
+    QuadMax: [0.486816406, 0.686474621]
+    Advance: 0.470703125
+  - Character: 116
+    Size: [16, 33]
+    TexCoordinateMin: [291.5, 286.5]
+    TexCoordinateMax: [306.5, 318.5]
+    QuadMin: [-0.0336914062, -0.0328124985]
+    QuadMax: [0.341308594, 0.767187476]
+    Advance: 0.3046875
+  - Character: 117
+    Size: [22, 30]
+    TexCoordinateMin: [76.5, 254.5]
+    TexCoordinateMax: [97.5, 283.5]
+    QuadMin: [-0.00297851558, -0.0443847664]
+    QuadMax: [0.522021472, 0.680615246]
+    Advance: 0.522460938
+  - Character: 118
+    Size: [21, 29]
+    TexCoordinateMin: [226.5, 255.5]
+    TexCoordinateMax: [246.5, 283.5]
+    QuadMin: [-0.0314941406, -0.0260253903]
+    QuadMax: [0.468505859, 0.673974633]
+    Advance: 0.437011719
+  - Character: 119
+    Size: [31, 29]
+    TexCoordinateMin: [195.5, 255.5]
+    TexCoordinateMax: [225.5, 283.5]
+    QuadMin: [-0.0402832031, -0.0260253903]
+    QuadMax: [0.709716797, 0.673974633]
+    Advance: 0.669433594
+  - Character: 120
+    Size: [21, 29]
+    TexCoordinateMin: [152.5, 255.5]
+    TexCoordinateMax: [172.5, 283.5]
+    QuadMin: [-0.0288085938, -0.0260253903]
+    QuadMax: [0.471191406, 0.673974633]
+    Advance: 0.43359375
+  - Character: 121
+    Size: [22, 33]
+    TexCoordinateMin: [236.5, 286.5]
+    TexCoordinateMax: [257.5, 318.5]
+    QuadMin: [-0.041308593, -0.121435545]
+    QuadMax: [0.483691394, 0.678564429]
+    Advance: 0.448242188
+  - Character: 122
+    Size: [17, 29]
+    TexCoordinateMin: [135.5, 255.5]
+    TexCoordinateMax: [151.5, 283.5]
+    QuadMin: [-0.0259277336, -0.0260253903]
+    QuadMax: [0.374072254, 0.673974633]
+    Advance: 0.351074219
+  - Character: 123
+    Size: [17, 41]
+    TexCoordinateMin: [381.5, 471.5]
+    TexCoordinateMax: [397.5, 511.5]
+    QuadMin: [-0.0154296877, -0.178710938]
+    QuadMax: [0.384570301, 0.821289062]
+    Advance: 0.369628906
+  - Character: 124
+    Size: [8, 40]
+    TexCoordinateMin: [145.5, 428.5]
+    TexCoordinateMax: [152.5, 467.5]
+    QuadMin: [0.0479980484, -0.156933591]
+    QuadMax: [0.222998053, 0.818066418]
+    Advance: 0.270996094
+  - Character: 125
+    Size: [17, 41]
+    TexCoordinateMin: [398.5, 471.5]
+    TexCoordinateMax: [414.5, 511.5]
+    QuadMin: [-0.0154296877, -0.178710938]
+    QuadMax: [0.384570301, 0.821289062]
+    Advance: 0.369628906
+  - Character: 126
+    Size: [22, 12]
+    TexCoordinateMin: [142.5, 242.5]
+    TexCoordinateMax: [163.5, 253.5]
+    QuadMin: [-4.88281257e-05, 0.273876965]
+    QuadMax: [0.52495116, 0.548876941]
+    Advance: 0.524902344
+  - Character: 160
+    Size: [0, 0]
+    TexCoordinateMin: [0, 0]
+    TexCoordinateMax: [0, 0]
+    QuadMin: [0, 0]
+    QuadMax: [0, 0]
+    Advance: 0.176269531
+  - Character: 161
+    Size: [12, 35]
+    TexCoordinateMin: [487.5, 355.5]
+    TexCoordinateMax: [498.5, 389.5]
+    QuadMin: [-0.0115234377, -0.124951169]
+    QuadMax: [0.263476551, 0.72504884]
+    Advance: 0.270019531
+  - Character: 162
+    Size: [22, 37]
+    TexCoordinateMin: [86.5, 390.5]
+    TexCoordinateMax: [107.5, 426.5]
+    QuadMin: [-0.00249023433, -0.0874511749]
+    QuadMax: [0.522509754, 0.812548816]
+    Advance: 0.517089844
+  - Character: 163
+    Size: [23, 36]
+    TexCoordinateMin: [438.5, 354.5]
+    TexCoordinateMax: [460.5, 389.5]
+    QuadMin: [-0.00156250002, -0.0422363281]
+    QuadMax: [0.548437476, 0.832763672]
+    Advance: 0.53515625
+  - Character: 164
+    Size: [24, 24]
+    TexCoordinateMin: [290.5, 260.5]
+    TexCoordinateMax: [313.5, 283.5]
+    QuadMin: [-0.0135742184, 0.0394042954]
+    QuadMax: [0.561425805, 0.614404321]
+    Advance: 0.548339844
+  - Character: 165
+    Size: [23, 35]
+    TexCoordinateMin: [393.5, 319.5]
+    TexCoordinateMax: [415.5, 353.5]
+    QuadMin: [-0.0384277329, -0.0297363289]
+    QuadMax: [0.511572242, 0.820263684]
+    Advance: 0.473144531
+  - Character: 166
+    Size: [8, 40]
+    TexCoordinateMin: [153.5, 428.5]
+    TexCoordinateMax: [160.5, 467.5]
+    QuadMin: [0.0479980484, -0.156933591]
+    QuadMax: [0.222998053, 0.818066418]
+    Advance: 0.270996094
+  - Character: 167
+    Size: [21, 40]
+    TexCoordinateMin: [161.5, 428.5]
+    TexCoordinateMax: [181.5, 467.5]
+    QuadMin: [-0.00805664062, -0.139843747]
+    QuadMax: [0.491943359, 0.835156262]
+    Advance: 0.483886719
+  - Character: 168
+    Size: [17, 9]
+    TexCoordinateMin: [229.5, 245.5]
+    TexCoordinateMax: [245.5, 253.5]
+    QuadMin: [-0.0330078118, 0.696386695]
+    QuadMax: [0.366992176, 0.896386743]
+    Advance: 0.333496094
+  - Character: 169
+    Size: [33, 33]
+    TexCoordinateMin: [307.5, 286.5]
+    TexCoordinateMax: [339.5, 318.5]
+    QuadMin: [-0.00839843787, -0.0259765629]
+    QuadMax: [0.791601539, 0.774023414]
+    Advance: 0.783691406
+  - Character: 170
+    Size: [15, 20]
+    TexCoordinateMin: [448.5, 264.5]
+    TexCoordinateMax: [462.5, 283.5]
+    QuadMin: [-0.0128906248, 0.363330066]
+    QuadMax: [0.337109387, 0.83833009]
+    Advance: 0.324707031
+  - Character: 171
+    Size: [17, 25]
+    TexCoordinateMin: [273.5, 259.5]
+    TexCoordinateMax: [289.5, 283.5]
+    QuadMin: [-0.0144531252, 0.0325195305]
+    QuadMax: [0.385546863, 0.632519543]
+    Advance: 0.37109375
+  - Character: 172
+    Size: [22, 16]
+    TexCoordinateMin: [22.5, 238.5]
+    TexCoordinateMax: [43.5, 253.5]
+    QuadMin: [0.00410156231, 0.207519531]
+    QuadMax: [0.529101551, 0.582519531]
+    Advance: 0.533203125
+  - Character: 173
+    Size: [14, 9]
+    TexCoordinateMin: [201.5, 245.5]
+    TexCoordinateMax: [214.5, 253.5]
+    QuadMin: [-0.0152832028, 0.223974615]
+    QuadMax: [0.309716791, 0.423974603]
+    Advance: 0.294433594
+  - Character: 174
+    Size: [33, 33]
+    TexCoordinateMin: [258.5, 286.5]
+    TexCoordinateMax: [290.5, 318.5]
+    QuadMin: [-0.00839843787, -0.0259765629]
+    QuadMax: [0.791601539, 0.774023414]
+    Advance: 0.783691406
+  - Character: 175
+    Size: [26, 5]
+    TexCoordinateMin: [255.5, 249.5]
+    TexCoordinateMax: [280.5, 253.5]
+    QuadMin: [-0.0363769531, 0.800097644]
+    QuadMax: [0.588623047, 0.900097668]
+    Advance: 0.552246094
+  - Character: 176
+    Size: [16, 16]
+    TexCoordinateMin: [66.5, 238.5]
+    TexCoordinateMax: [81.5, 253.5]
+    QuadMin: [-0.0141601562, 0.458007812]
+    QuadMax: [0.360839844, 0.833007812]
+    Advance: 0.347167969
+  - Character: 177
+    Size: [22, 29]
+    TexCoordinateMin: [173.5, 255.5]
+    TexCoordinateMax: [194.5, 283.5]
+    QuadMin: [0.00410156231, 0.0604003891]
+    QuadMax: [0.529101551, 0.760400414]
+    Advance: 0.533203125
+  - Character: 178
+    Size: [15, 20]
+    TexCoordinateMin: [478.5, 264.5]
+    TexCoordinateMax: [492.5, 283.5]
+    QuadMin: [-0.0163085945, 0.356494129]
+    QuadMax: [0.333691418, 0.831494153]
+    Advance: 0.317871094
+  - Character: 179
+    Size: [15, 21]
+    TexCoordinateMin: [433.5, 263.5]
+    TexCoordinateMax: [447.5, 283.5]
+    QuadMin: [-0.0119140623, 0.33984375]
+    QuadMax: [0.338085949, 0.83984375]
+    Advance: 0.326171875
+  - Character: 180
+    Size: [14, 9]
+    TexCoordinateMin: [215.5, 245.5]
+    TexCoordinateMax: [228.5, 253.5]
+    QuadMin: [0.0411132798, 0.699072242]
+    QuadMax: [0.366113275, 0.899072289]
+    Advance: 0.333496094
+  - Character: 181
+    Size: [20, 37]
+    TexCoordinateMin: [173.5, 390.5]
+    TexCoordinateMax: [192.5, 426.5]
+    QuadMin: [-0.00214843755, -0.225390628]
+    QuadMax: [0.472851574, 0.674609363]
+    Advance: 0.471191406
+  - Character: 182
+    Size: [26, 39]
+    TexCoordinateMin: [260.5, 429.5]
+    TexCoordinateMax: [285.5, 467.5]
+    QuadMin: [-0.0187988281, -0.1336914]
+    QuadMax: [0.606201172, 0.816308618]
+    Advance: 0.576171875
+  - Character: 183
+    Size: [9, 9]
+    TexCoordinateMin: [246.5, 245.5]
+    TexCoordinateMax: [254.5, 253.5]
+    QuadMin: [0.0667480454, 0.240576178]
+    QuadMax: [0.266748041, 0.440576166]
+    Advance: 0.333496094
+  - Character: 184
+    Size: [11, 12]
+    TexCoordinateMin: [131.5, 242.5]
+    TexCoordinateMax: [141.5, 253.5]
+    QuadMin: [0.0300292969, -0.240039065]
+    QuadMax: [0.280029297, 0.0349609368]
+    Advance: 0.333496094
+  - Character: 185
+    Size: [12, 20]
+    TexCoordinateMin: [493.5, 264.5]
+    TexCoordinateMax: [504.5, 283.5]
+    QuadMin: [-0.0271484368, 0.35307616]
+    QuadMax: [0.247851565, 0.828076184]
+    Advance: 0.244628906
+  - Character: 186
+    Size: [15, 20]
+    TexCoordinateMin: [463.5, 264.5]
+    TexCoordinateMax: [477.5, 283.5]
+    QuadMin: [-0.0104492186, 0.363330066]
+    QuadMax: [0.339550793, 0.83833009]
+    Advance: 0.329589844
+  - Character: 187
+    Size: [17, 25]
+    TexCoordinateMin: [256.5, 259.5]
+    TexCoordinateMax: [272.5, 283.5]
+    QuadMin: [-0.0144531252, 0.0325195305]
+    QuadMax: [0.385546863, 0.632519543]
+    Advance: 0.37109375
+  - Character: 188
+    Size: [28, 36]
+    TexCoordinateMin: [421.5, 391.5]
+    TexCoordinateMax: [448.5, 426.5]
+    QuadMin: [-0.0286621097, -0.0422363281]
+    QuadMax: [0.646337867, 0.832763672]
+    Advance: 0.623535156
+  - Character: 189
+    Size: [28, 36]
+    TexCoordinateMin: [393.5, 391.5]
+    TexCoordinateMax: [420.5, 426.5]
+    QuadMin: [-0.0210937504, -0.0422363281]
+    QuadMax: [0.653906226, 0.832763672]
+    Advance: 0.645019531
+  - Character: 190
+    Size: [30, 36]
+    TexCoordinateMin: [363.5, 391.5]
+    TexCoordinateMax: [392.5, 426.5]
+    QuadMin: [-0.0141113279, -0.0422363281]
+    QuadMax: [0.710888684, 0.832763672]
+    Advance: 0.69140625
+  - Character: 191
+    Size: [22, 36]
+    TexCoordinateMin: [341.5, 391.5]
+    TexCoordinateMax: [362.5, 426.5]
+    QuadMin: [-0.0120117189, -0.145751953]
+    QuadMax: [0.512988269, 0.729248047]
+    Advance: 0.524902344
+  - Character: 192
+    Size: [24, 41]
+    TexCoordinateMin: [415.5, 471.5]
+    TexCoordinateMax: [438.5, 511.5]
+    QuadMin: [-0.0335937515, -0.0261230469]
+    QuadMax: [0.541406274, 0.973876953]
+    Advance: 0.5078125
+  - Character: 193
+    Size: [24, 41]
+    TexCoordinateMin: [439.5, 471.5]
+    TexCoordinateMax: [462.5, 511.5]
+    QuadMin: [-0.0335937515, -0.0261230469]
+    QuadMax: [0.541406274, 0.973876953]
+    Advance: 0.5078125
+  - Character: 194
+    Size: [24, 42]
+    TexCoordinateMin: [70.5, 470.5]
+    TexCoordinateMax: [93.5, 511.5]
+    QuadMin: [-0.0335937515, -0.0359374993]
+    QuadMax: [0.541406274, 0.989062488]
+    Advance: 0.5078125
+  - Character: 195
+    Size: [24, 42]
+    TexCoordinateMin: [94.5, 470.5]
+    TexCoordinateMax: [117.5, 511.5]
+    QuadMin: [-0.0335937515, -0.0303222649]
+    QuadMax: [0.541406274, 0.994677722]
+    Advance: 0.5078125
+  - Character: 196
+    Size: [24, 41]
+    TexCoordinateMin: [463.5, 471.5]
+    TexCoordinateMax: [486.5, 511.5]
+    QuadMin: [-0.0335937515, -0.0288085938]
+    QuadMax: [0.541406274, 0.971191406]
+    Advance: 0.5078125
+  - Character: 197
+    Size: [24, 44]
+    TexCoordinateMin: [0.5, 468.5]
+    TexCoordinateMax: [23.5, 511.5]
+    QuadMin: [-0.0335937515, -0.0331054702]
+    QuadMax: [0.541406274, 1.04189456]
+    Advance: 0.5078125
+  - Character: 198
+    Size: [32, 35]
+    TexCoordinateMin: [31.5, 319.5]
+    TexCoordinateMax: [62.5, 353.5]
+    QuadMin: [-0.0427734368, -0.0297363289]
+    QuadMax: [0.732226551, 0.820263684]
+    Advance: 0.713378906
+  - Character: 199
+    Size: [23, 43]
+    TexCoordinateMin: [24.5, 469.5]
+    TexCoordinateMax: [46.5, 511.5]
+    QuadMin: [0.00307617197, -0.212011725]
+    QuadMax: [0.553076148, 0.837988257]
+    Advance: 0.553710938
+  - Character: 200
+    Size: [18, 41]
+    TexCoordinateMin: [0.5, 427.5]
+    TexCoordinateMax: [17.5, 467.5]
+    QuadMin: [0.00673828134, -0.0261230469]
+    QuadMax: [0.431738287, 0.973876953]
+    Advance: 0.415527344
+  - Character: 201
+    Size: [18, 41]
+    TexCoordinateMin: [18.5, 427.5]
+    TexCoordinateMax: [35.5, 467.5]
+    QuadMin: [0.00673828134, -0.0261230469]
+    QuadMax: [0.431738287, 0.973876953]
+    Advance: 0.415527344
+  - Character: 202
+    Size: [19, 42]
+    TexCoordinateMin: [118.5, 470.5]
+    TexCoordinateMax: [136.5, 511.5]
+    QuadMin: [-0.0174804684, -0.0359374993]
+    QuadMax: [0.432519525, 0.989062488]
+    Advance: 0.415527344
+  - Character: 203
+    Size: [18, 41]
+    TexCoordinateMin: [36.5, 427.5]
+    TexCoordinateMax: [53.5, 467.5]
+    QuadMin: [0.00478515634, -0.0288085938]
+    QuadMax: [0.429785162, 0.971191406]
+    Advance: 0.415527344
+  - Character: 204
+    Size: [14, 41]
+    TexCoordinateMin: [54.5, 427.5]
+    TexCoordinateMax: [67.5, 467.5]
+    QuadMin: [-0.0506835952, -0.0261230469]
+    QuadMax: [0.2743164, 0.973876953]
+    Advance: 0.288085938
+  - Character: 205
+    Size: [14, 41]
+    TexCoordinateMin: [68.5, 427.5]
+    TexCoordinateMax: [81.5, 467.5]
+    QuadMin: [0.0132812504, -0.0261230469]
+    QuadMax: [0.338281244, 0.973876953]
+    Advance: 0.288085938
+  - Character: 206
+    Size: [19, 42]
+    TexCoordinateMin: [137.5, 470.5]
+    TexCoordinateMax: [155.5, 511.5]
+    QuadMin: [-0.0809570327, -0.0359374993]
+    QuadMax: [0.369042963, 0.989062488]
+    Advance: 0.288085938
+  - Character: 207
+    Size: [17, 41]
+    TexCoordinateMin: [82.5, 427.5]
+    TexCoordinateMax: [98.5, 467.5]
+    QuadMin: [-0.0559570305, -0.0288085938]
+    QuadMax: [0.344042957, 0.971191406]
+    Advance: 0.288085938
+  - Character: 208
+    Size: [24, 35]
+    TexCoordinateMin: [21.5, 284.5]
+    TexCoordinateMax: [44.5, 318.5]
+    QuadMin: [-0.0226074215, -0.0297363289]
+    QuadMax: [0.552392602, 0.820263684]
+    Advance: 0.55859375
+  - Character: 209
+    Size: [22, 42]
+    TexCoordinateMin: [156.5, 470.5]
+    TexCoordinateMax: [177.5, 511.5]
+    QuadMin: [0.00800781231, -0.0303222649]
+    QuadMax: [0.533007801, 0.994677722]
+    Advance: 0.541503906
+  - Character: 210
+    Size: [23, 42]
+    TexCoordinateMin: [178.5, 470.5]
+    TexCoordinateMax: [200.5, 511.5]
+    QuadMin: [-0.00205078116, -0.0469238274]
+    QuadMax: [0.547949195, 0.97807616]
+    Advance: 0.546386719
+  - Character: 211
+    Size: [23, 42]
+    TexCoordinateMin: [201.5, 470.5]
+    TexCoordinateMax: [223.5, 511.5]
+    QuadMin: [-0.00205078116, -0.0469238274]
+    QuadMax: [0.547949195, 0.97807616]
+    Advance: 0.546386719
+  - Character: 212
+    Size: [23, 42]
+    TexCoordinateMin: [224.5, 470.5]
+    TexCoordinateMax: [246.5, 511.5]
+    QuadMin: [-0.00205078116, -0.0442382805]
+    QuadMax: [0.547949195, 0.980761707]
+    Advance: 0.546386719
+  - Character: 213
+    Size: [23, 43]
+    TexCoordinateMin: [47.5, 469.5]
+    TexCoordinateMax: [69.5, 511.5]
+    QuadMin: [-0.00205078116, -0.0511230454]
+    QuadMax: [0.547949195, 0.998876929]
+    Advance: 0.546386719
+  - Character: 214
+    Size: [23, 42]
+    TexCoordinateMin: [247.5, 470.5]
+    TexCoordinateMax: [269.5, 511.5]
+    QuadMin: [-0.00205078116, -0.0496093743]
+    QuadMax: [0.547949195, 0.975390613]
+    Advance: 0.546386719
+  - Character: 215
+    Size: [22, 22]
+    TexCoordinateMin: [411.5, 262.5]
+    TexCoordinateMax: [432.5, 283.5]
+    QuadMin: [0.00410156231, 0.139599606]
+    QuadMax: [0.529101551, 0.664599597]
+    Advance: 0.533203125
+  - Character: 216
+    Size: [27, 36]
+    TexCoordinateMin: [411.5, 354.5]
+    TexCoordinateMax: [437.5, 389.5]
+    QuadMin: [-0.0520507805, -0.0422363281]
+    QuadMax: [0.597949207, 0.832763672]
+    Advance: 0.546386719
+  - Character: 217
+    Size: [22, 42]
+    TexCoordinateMin: [270.5, 470.5]
+    TexCoordinateMax: [291.5, 511.5]
+    QuadMin: [0.0106933592, -0.0469238274]
+    QuadMax: [0.535693347, 0.97807616]
+    Advance: 0.546875
+  - Character: 218
+    Size: [22, 42]
+    TexCoordinateMin: [292.5, 470.5]
+    TexCoordinateMax: [313.5, 511.5]
+    QuadMin: [0.0106933592, -0.0469238274]
+    QuadMax: [0.535693347, 0.97807616]
+    Advance: 0.546875
+  - Character: 219
+    Size: [22, 42]
+    TexCoordinateMin: [314.5, 470.5]
+    TexCoordinateMax: [335.5, 511.5]
+    QuadMin: [0.0106933592, -0.0442382805]
+    QuadMax: [0.535693347, 0.980761707]
+    Advance: 0.546875
+  - Character: 220
+    Size: [22, 42]
+    TexCoordinateMin: [336.5, 470.5]
+    TexCoordinateMax: [357.5, 511.5]
+    QuadMin: [0.0106933592, -0.0496093743]
+    QuadMax: [0.535693347, 0.975390613]
+    Advance: 0.546875
+  - Character: 221
+    Size: [23, 41]
+    TexCoordinateMin: [99.5, 427.5]
+    TexCoordinateMax: [121.5, 467.5]
+    QuadMin: [-0.0384277329, -0.0261230469]
+    QuadMax: [0.511572242, 0.973876953]
+    Advance: 0.473144531
+  - Character: 222
+    Size: [21, 35]
+    TexCoordinateMin: [0.5, 284.5]
+    TexCoordinateMax: [20.5, 318.5]
+    QuadMin: [0.0124511719, -0.0297363289]
+    QuadMax: [0.512451172, 0.820263684]
+    Advance: 0.501953125
+  - Character: 223
+    Size: [23, 36]
+    TexCoordinateMin: [388.5, 354.5]
+    TexCoordinateMax: [410.5, 389.5]
+    QuadMin: [0.00136718748, -0.0339355469]
+    QuadMax: [0.551367164, 0.841064453]
+    Advance: 0.550292969
+  - Character: 224
+    Size: [21, 37]
+    TexCoordinateMin: [65.5, 390.5]
+    TexCoordinateMax: [85.5, 426.5]
+    QuadMin: [-0.00122070312, -0.0439941399]
+    QuadMax: [0.498779297, 0.856005847]
+    Advance: 0.50390625
+  - Character: 225
+    Size: [21, 37]
+    TexCoordinateMin: [450.5, 431.5]
+    TexCoordinateMax: [470.5, 467.5]
+    QuadMin: [-0.00122070312, -0.0439941399]
+    QuadMax: [0.498779297, 0.856005847]
+    Advance: 0.50390625
+  - Character: 226
+    Size: [21, 37]
+    TexCoordinateMin: [215.5, 390.5]
+    TexCoordinateMax: [235.5, 426.5]
+    QuadMin: [-0.00122070312, -0.041308593]
+    QuadMax: [0.498779297, 0.858691394]
+    Advance: 0.50390625
+  - Character: 227
+    Size: [21, 38]
+    TexCoordinateMin: [308.5, 430.5]
+    TexCoordinateMax: [328.5, 467.5]
+    QuadMin: [-0.00122070312, -0.0481933579]
+    QuadMax: [0.498779297, 0.876806617]
+    Advance: 0.50390625
+  - Character: 228
+    Size: [21, 37]
+    TexCoordinateMin: [44.5, 390.5]
+    TexCoordinateMax: [64.5, 426.5]
+    QuadMin: [-0.00122070312, -0.0466796868]
+    QuadMax: [0.498779297, 0.853320301]
+    Advance: 0.50390625
+  - Character: 229
+    Size: [21, 40]
+    TexCoordinateMin: [204.5, 428.5]
+    TexCoordinateMax: [224.5, 467.5]
+    QuadMin: [-0.00122070312, -0.0448730476]
+    QuadMax: [0.498779297, 0.930126965]
+    Advance: 0.50390625
+  - Character: 230
+    Size: [31, 30]
+    TexCoordinateMin: [458.5, 289.5]
+    TexCoordinateMax: [488.5, 318.5]
+    QuadMin: [0, -0.0385253914]
+    QuadMax: [0.75, 0.686474621]
+    Advance: 0.753417969
+  - Character: 231
+    Size: [21, 37]
+    TexCoordinateMin: [130.5, 390.5]
+    TexCoordinateMax: [150.5, 426.5]
+    QuadMin: [0.000244140625, -0.21074219]
+    QuadMax: [0.500244141, 0.689257801]
+    Advance: 0.494628906
+  - Character: 232
+    Size: [22, 37]
+    TexCoordinateMin: [151.5, 390.5]
+    TexCoordinateMax: [172.5, 426.5]
+    QuadMin: [-0.00688476581, -0.0439941399]
+    QuadMax: [0.518115222, 0.856005847]
+    Advance: 0.511230469
+  - Character: 233
+    Size: [22, 37]
+    TexCoordinateMin: [471.5, 431.5]
+    TexCoordinateMax: [492.5, 467.5]
+    QuadMin: [-0.00688476581, -0.0439941399]
+    QuadMax: [0.518115222, 0.856005847]
+    Advance: 0.511230469
+  - Character: 234
+    Size: [22, 37]
+    TexCoordinateMin: [236.5, 390.5]
+    TexCoordinateMax: [257.5, 426.5]
+    QuadMin: [-0.00688476581, -0.041308593]
+    QuadMax: [0.518115222, 0.858691394]
+    Advance: 0.511230469
+  - Character: 235
+    Size: [22, 37]
+    TexCoordinateMin: [302.5, 390.5]
+    TexCoordinateMax: [323.5, 426.5]
+    QuadMin: [-0.00688476581, -0.0466796868]
+    QuadMax: [0.518115222, 0.853320301]
+    Advance: 0.511230469
+  - Character: 236
+    Size: [14, 36]
+    TexCoordinateMin: [44.5, 354.5]
+    TexCoordinateMax: [57.5, 389.5]
+    QuadMin: [-0.0575195327, -0.0256347656]
+    QuadMax: [0.267480463, 0.849365234]
+    Advance: 0.273925781
+  - Character: 237
+    Size: [14, 36]
+    TexCoordinateMin: [498.5, 391.5]
+    TexCoordinateMax: [511.5, 426.5]
+    QuadMin: [0.00766601553, -0.0256347656]
+    QuadMax: [0.33266601, 0.849365234]
+    Advance: 0.273925781
+  - Character: 238
+    Size: [19, 37]
+    TexCoordinateMin: [493.5, 431.5]
+    TexCoordinateMax: [511.5, 467.5]
+    QuadMin: [-0.0863281265, -0.035449218]
+    QuadMax: [0.363671869, 0.864550769]
+    Advance: 0.273925781
+  - Character: 239
+    Size: [17, 36]
+    TexCoordinateMin: [324.5, 391.5]
+    TexCoordinateMax: [340.5, 426.5]
+    QuadMin: [-0.0613281243, -0.0283203125]
+    QuadMax: [0.338671863, 0.846679688]
+    Advance: 0.273925781
+  - Character: 240
+    Size: [22, 36]
+    TexCoordinateMin: [366.5, 354.5]
+    TexCoordinateMax: [387.5, 389.5]
+    QuadMin: [-0.00688476581, -0.0480957031]
+    QuadMax: [0.518115222, 0.826904297]
+    Advance: 0.511230469
+  - Character: 241
+    Size: [22, 37]
+    TexCoordinateMin: [384.5, 431.5]
+    TexCoordinateMax: [405.5, 467.5]
+    QuadMin: [0.000195312503, -0.0298339836]
+    QuadMax: [0.525195301, 0.870166004]
+    Advance: 0.522949219
+  - Character: 242
+    Size: [22, 37]
+    TexCoordinateMin: [0.5, 390.5]
+    TexCoordinateMax: [21.5, 426.5]
+    QuadMin: [-0.00712890644, -0.0439941399]
+    QuadMax: [0.517871082, 0.856005847]
+    Advance: 0.511230469
+  - Character: 243
+    Size: [22, 37]
+    TexCoordinateMin: [193.5, 390.5]
+    TexCoordinateMax: [214.5, 426.5]
+    QuadMin: [-0.00712890644, -0.0439941399]
+    QuadMax: [0.517871082, 0.856005847]
+    Advance: 0.511230469
+  - Character: 244
+    Size: [22, 37]
+    TexCoordinateMin: [406.5, 431.5]
+    TexCoordinateMax: [427.5, 467.5]
+    QuadMin: [-0.00712890644, -0.041308593]
+    QuadMax: [0.517871082, 0.858691394]
+    Advance: 0.511230469
+  - Character: 245
+    Size: [22, 38]
+    TexCoordinateMin: [329.5, 430.5]
+    TexCoordinateMax: [350.5, 467.5]
+    QuadMin: [-0.00712890644, -0.0481933579]
+    QuadMax: [0.517871082, 0.876806617]
+    Advance: 0.511230469
+  - Character: 246
+    Size: [22, 37]
+    TexCoordinateMin: [428.5, 431.5]
+    TexCoordinateMax: [449.5, 467.5]
+    QuadMin: [-0.00712890644, -0.0466796868]
+    QuadMax: [0.517871082, 0.853320301]
+    Advance: 0.511230469
+  - Character: 247
+    Size: [22, 22]
+    TexCoordinateMin: [367.5, 262.5]
+    TexCoordinateMax: [388.5, 283.5]
+    QuadMin: [0.00410156231, 0.133740231]
+    QuadMax: [0.529101551, 0.658740222]
+    Advance: 0.533203125
+  - Character: 248
+    Size: [22, 30]
+    TexCoordinateMin: [436.5, 289.5]
+    TexCoordinateMax: [457.5, 318.5]
+    QuadMin: [-0.00712890644, -0.0385253914]
+    QuadMax: [0.517871082, 0.686474621]
+    Advance: 0.511230469
+  - Character: 249
+    Size: [22, 37]
+    TexCoordinateMin: [22.5, 390.5]
+    TexCoordinateMax: [43.5, 426.5]
+    QuadMin: [-0.00297851558, -0.0439941399]
+    QuadMax: [0.522021472, 0.856005847]
+    Advance: 0.522460938
+  - Character: 250
+    Size: [22, 37]
+    TexCoordinateMin: [108.5, 390.5]
+    TexCoordinateMax: [129.5, 426.5]
+    QuadMin: [-0.00297851558, -0.0439941399]
+    QuadMax: [0.522021472, 0.856005847]
+    Advance: 0.522460938
+  - Character: 251
+    Size: [22, 37]
+    TexCoordinateMin: [258.5, 390.5]
+    TexCoordinateMax: [279.5, 426.5]
+    QuadMin: [-0.00297851558, -0.041308593]
+    QuadMax: [0.522021472, 0.858691394]
+    Advance: 0.522460938
+  - Character: 252
+    Size: [22, 37]
+    TexCoordinateMin: [280.5, 390.5]
+    TexCoordinateMax: [301.5, 426.5]
+    QuadMin: [-0.00297851558, -0.0466796868]
+    QuadMax: [0.522021472, 0.853320301]
+    Advance: 0.522460938
+  - Character: 253
+    Size: [22, 40]
+    TexCoordinateMin: [225.5, 428.5]
+    TexCoordinateMax: [246.5, 467.5]
+    QuadMin: [-0.041308593, -0.121044919]
+    QuadMax: [0.483691394, 0.85395509]
+    Advance: 0.448242188
+  - Character: 254
+    Size: [22, 39]
+    TexCoordinateMin: [286.5, 429.5]
+    TexCoordinateMax: [307.5, 467.5]
+    QuadMin: [-0.000292968762, -0.1258789]
+    QuadMax: [0.524707019, 0.824121118]
+    Advance: 0.519042969
+  - Character: 255
+    Size: [22, 40]
+    TexCoordinateMin: [182.5, 428.5]
+    TexCoordinateMax: [203.5, 467.5]
+    QuadMin: [-0.041308593, -0.123730466]
+    QuadMax: [0.483691394, 0.851269543]
+    Advance: 0.448242188

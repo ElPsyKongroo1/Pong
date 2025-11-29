@@ -2,43 +2,51 @@ ModuleName: Particles
 TypeName: EmitterConfig
 TypeID: 816252452
 Assets:
-  - AssetHandle: 15165415099816405768
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player1/Player1CollisionEmitter.kgparticle
-      AssetType: EmitterConfig
-  - AssetHandle: 15685594349907782904
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player2/Player2Emitter3.kgparticle
-      AssetType: EmitterConfig
-  - AssetHandle: 2588874753976669831
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Ball/Level3BallEmitter.kgparticle
-      AssetType: EmitterConfig
-  - AssetHandle: 12821986707897963756
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Ball/Level2BallEmitter.kgparticle
-      AssetType: EmitterConfig
-  - AssetHandle: 14941054500510671261
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Ball/Level1BallEmitter.kgparticle
-      AssetType: EmitterConfig
-  - AssetHandle: 10710135964017032765
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player2/Player2Emitter2.kgparticle
-      AssetType: EmitterConfig
-  - AssetHandle: 5035817497470606234
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: Entities/Player2/Player2Emitter1.kgparticle
-      AssetType: EmitterConfig
-  - AssetHandle: 10443423213434206155
-    MetaData:
-      CheckSum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileLocation: ./NewEmitterTest.kgparticle
-      AssetType: EmitterConfig
+  - Metadata:
+      Name: Player1CollisionEmitter
+      Handle: 15165415099816405768
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Player1
+      IsHidden: false
+  - Metadata:
+      Name: Player2Emitter3
+      Handle: 15685594349907782904
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Player2
+      IsHidden: false
+  - Metadata:
+      Name: Level3BallEmitter
+      Handle: 2588874753976669831
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Ball
+      IsHidden: false
+  - Metadata:
+      Name: Level2BallEmitter
+      Handle: 12821986707897963756
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Ball
+      IsHidden: false
+  - Metadata:
+      Name: Level1BallEmitter
+      Handle: 14941054500510671261
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Ball
+      IsHidden: false
+  - Metadata:
+      Name: Player2Emitter2
+      Handle: 10710135964017032765
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Player2
+      IsHidden: false
+  - Metadata:
+      Name: Player2Emitter1
+      Handle: 5035817497470606234
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: Entities/Player2
+      IsHidden: false
+  - Metadata:
+      Name: NewEmitterTest
+      Handle: 10443423213434206155
+      Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      FileDirectory: ""
+      IsHidden: false
