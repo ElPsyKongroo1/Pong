@@ -3,7 +3,7 @@ Physics:
 PrimaryCamera: 4109745557686817395
 BackgroundColor: [0.100000001, 0.100000001, 0.100000001, 1]
 Entities:
-  - Entity: 8434211902844567157
+  - UUID: 8434211902844567157
     TagComponent:
       Tag: Background
       Group: ""
@@ -29,7 +29,7 @@ Entities:
         DrawOutline: false
         RenderType: DrawIndex
       Buffer: !!binary "rskswQKB8UBaPpLAAACAP6OiIj++vT0/AACAPwEAAAA="
-  - Entity: 4109745557686817395
+  - UUID: 4109745557686817395
     TagComponent:
       Tag: Camera
       Group: ""

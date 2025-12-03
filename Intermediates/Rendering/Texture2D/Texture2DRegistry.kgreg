@@ -15,8 +15,8 @@ Assets:
       Name: camera
       Handle: 8051163355459938058
       Hash: f39dff176a7dd17d7d697fe04ed6f2fe580313593978de3b02a68e6fd8f0e521
-      FileDirectory: Entities/Camera
       IsHidden: false
+      FileDirectory: Entities/Camera\camera.kgtexture\camera.kgtexture\camera.kgtexture\camera.kgtexture
     MetadataExtension:
       TextureHeight: 512
       TextureWidth: 512
@@ -25,8 +25,8 @@ Assets:
       Name: base_paddle
       Handle: 1008307395632263226
       Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileDirectory: Common/Textures
       IsHidden: false
+      FileDirectory: Common/Textures\base_paddle.kgtexture\base_paddle.kgtexture\base_paddle.kgtexture\base_paddle.kgtexture
     MetadataExtension:
       TextureHeight: 150
       TextureWidth: 800
@@ -35,8 +35,8 @@ Assets:
       Name: Level3PaddleTex
       Handle: 4568941339220534383
       Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileDirectory: Entities/Player2
       IsHidden: false
+      FileDirectory: Entities/Player2\Level3PaddleTex.kgtexture\Level3PaddleTex.kgtexture\Level3PaddleTex.kgtexture\Level3PaddleTex.kgtexture
     MetadataExtension:
       TextureHeight: 150
       TextureWidth: 800
@@ -45,8 +45,8 @@ Assets:
       Name: blue_block
       Handle: 7411058966582404143
       Hash: f2989b42549f3eb01eeb1f8ccddaaaf02a73b98df04b95c35ee420b9a3d26fce
-      FileDirectory: Common/Textures
       IsHidden: false
+      FileDirectory: Common/Textures\blue_block.kgtexture\blue_block.kgtexture\blue_block.kgtexture\blue_block.kgtexture
     MetadataExtension:
       TextureHeight: 600
       TextureWidth: 600
@@ -55,8 +55,8 @@ Assets:
       Name: Level1PaddleTex
       Handle: 11467886090052234263
       Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileDirectory: Entities/Player2
       IsHidden: false
+      FileDirectory: Entities/Player2\Level1PaddleTex.kgtexture\Level1PaddleTex.kgtexture\Level1PaddleTex.kgtexture\Level1PaddleTex.kgtexture
     MetadataExtension:
       TextureHeight: 150
       TextureWidth: 800
@@ -65,8 +65,8 @@ Assets:
       Name: baseball
       Handle: 17523732859264026445
       Hash: 4c95d5974ecccc1aa13df26f04f9c5afd91eef73be08b63e9baf97c4372e27fe
-      FileDirectory: Entities/Ball
       IsHidden: false
+      FileDirectory: Entities/Ball\baseball.kgtexture\baseball.kgtexture\baseball.kgtexture\baseball.kgtexture
     MetadataExtension:
       TextureHeight: 600
       TextureWidth: 600
@@ -75,8 +75,8 @@ Assets:
       Name: Level2PaddleTex
       Handle: 13680989623708598949
       Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      FileDirectory: Entities/Player2
       IsHidden: false
+      FileDirectory: Entities/Player2\Level2PaddleTex.kgtexture\Level2PaddleTex.kgtexture\Level2PaddleTex.kgtexture\Level2PaddleTex.kgtexture
     MetadataExtension:
       TextureHeight: 150
       TextureWidth: 800
@@ -85,8 +85,8 @@ Assets:
       Name: purple_block
       Handle: 1143395742954915528
       Hash: fc8f6da59c4f7f5a2fca0b1331e583f403ff9588e65b88c1a2ecf282521c04a5
-      FileDirectory: Common/Textures
       IsHidden: false
+      FileDirectory: Common/Textures\purple_block.kgtexture\purple_block.kgtexture\purple_block.kgtexture\purple_block.kgtexture
     MetadataExtension:
       TextureHeight: 600
       TextureWidth: 600
@@ -95,8 +95,8 @@ Assets:
       Name: GitLogo
       Handle: 12822293038068013926
       Hash: 016687d78cce782db03d439c67e8bb223ec7fcfe58881b419ca9f1d3782c9280
-      FileDirectory: Common/Textures
       IsHidden: false
+      FileDirectory: Common/Textures\GitLogo.kgtexture\GitLogo.kgtexture\GitLogo.kgtexture\GitLogo.kgtexture
     MetadataExtension:
       TextureHeight: 956
       TextureWidth: 980
@@ -105,8 +105,8 @@ Assets:
       Name: UnCheckedTexture
       Handle: 5664130732050414626
       Hash: 26f681d9bb3056869e318ece5413e91ac375ff21d29f961b369bdc716fb192be
-      FileDirectory: Common/Textures
       IsHidden: false
+      FileDirectory: Common/Textures\UnCheckedTexture.kgtexture\UnCheckedTexture.kgtexture\UnCheckedTexture.kgtexture\UnCheckedTexture.kgtexture
     MetadataExtension:
       TextureHeight: 512
       TextureWidth: 512
@@ -115,8 +115,8 @@ Assets:
       Name: CheckedTexture
       Handle: 9836920366757835393
       Hash: 4cea8086d60ee7bf3055ea9f7b42ccd57f8a5370e9e4cce944ff7661d4b55c3f
-      FileDirectory: Common/Textures
       IsHidden: false
+      FileDirectory: Common/Textures\CheckedTexture.kgtexture\CheckedTexture.kgtexture\CheckedTexture.kgtexture\CheckedTexture.kgtexture
     MetadataExtension:
       TextureHeight: 512
       TextureWidth: 512

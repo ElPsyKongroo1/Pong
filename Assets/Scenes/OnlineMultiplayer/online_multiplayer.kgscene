@@ -3,7 +3,7 @@ Physics:
 PrimaryCamera: 14487046616883294273
 BackgroundColor: [0, 0, 0, 1]
 Entities:
-  - Entity: 14487046616883294273
+  - UUID: 14487046616883294273
     TagComponent:
       Tag: Camera
       Group: ""
@@ -33,7 +33,7 @@ Entities:
         DrawOutline: false
         RenderType: DrawIndex
       Buffer: !!binary "AADEQQAAAD+lzyJCAACAPwAAgD8AAIA/AACAPwcAAAAAAAAAAACAPwAAAAAAAIA/"
-  - Entity: 5735195652379188677
+  - UUID: 5735195652379188677
     TagComponent:
       Tag: Left Wall
       Group: ""
@@ -67,7 +67,7 @@ Entities:
       Restitution: 0
       RestitutionThreshold: 0.5
       IsSensor: false
-  - Entity: 18014537996866740620
+  - UUID: 18014537996866740620
     TagComponent:
       Tag: Right Wall
       Group: ""
@@ -101,7 +101,7 @@ Entities:
       Restitution: 0
       RestitutionThreshold: 0.5
       IsSensor: false
-  - Entity: 13674711861826053845
+  - UUID: 13674711861826053845
     TagComponent:
       Tag: Top Wall
       Group: ""
@@ -135,7 +135,7 @@ Entities:
       Restitution: 0
       RestitutionThreshold: 0.5
       IsSensor: false
-  - Entity: 3462038330476861318
+  - UUID: 3462038330476861318
     TagComponent:
       Tag: Bottom Wall
       Group: ""
@@ -169,7 +169,7 @@ Entities:
       Restitution: 0
       RestitutionThreshold: 0.5
       IsSensor: false
-  - Entity: 15707814698740903328
+  - UUID: 15707814698740903328
     TagComponent:
       Tag: Player1
       Group: Player1Group
@@ -211,7 +211,7 @@ Entities:
       IsDashing: false
     InitialStateComponent:
       InitialPosition: [4, 0, 0]
-  - Entity: 1623836227372765255
+  - UUID: 1623836227372765255
     TagComponent:
       Tag: Player2
       Group: ""
@@ -253,7 +253,7 @@ Entities:
       IsDashing: false
     InitialStateComponent:
       InitialPosition: [45, 0, 0]
-  - Entity: 1620162373067812695
+  - UUID: 1620162373067812695
     TagComponent:
       Tag: Ball
       Group: ""
